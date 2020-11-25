@@ -9,9 +9,9 @@ from selenium import webdriver
 # '''读取配置文件'''
 # root_path = os.path.dirname(__file__)
 # conf.read(root_path + '\config.ini', encoding='utf-8')  # 文件路径
-# name = conf.get("baojia", "city")  # 获取指定section 的option值
+# name = conf.get("baojia", "city")
 # url = conf.get('host', 'url')
-# conf.set("mysql", "host", "1133")  # 修改指定section 的option
+# conf.set("mysql", "host", "1133")
 # conf.write(open(root_path + '\config\config.ini', 'w', encoding='utf-8'))
 #
 # print([i for i in range(1, 9)])
@@ -55,63 +55,52 @@ from selenium import webdriver
 
 # ------------------------------------------------------------------------
 
-import smtplib
-from email.mime.text import MIMEText
-from email.mime.multipart import MIMEMultipart
-
-
-class SendMail:
-    def send_mail(self, report, smtps):
-        sender = "632604593@qq.com"
-        receiver = "wanyuanhao@91bihu.com"
-        auth_code = "zbrmlqqlhupobchb"
-        subject = "自动化测试报告"
-        html = MIMEText(report, _subtype="html", _charset="utf-8")
-        html["subject"] = subject
-        html["from"] = sender
-        html["to"] = receiver
-        smtp = smtplib.SMTP()
-        smtp.connect(smtps)
-        smtp.login(sender, auth_code)
-        smtp.sendmail(sender, receiver, html.as_string())
-        smtp.quit()
-
-    def send_mail_file(self, report, smtps):
-        sender = "632604593@qq.com"
-        receiver = "wanyuanhao@91bihu.com"
-        auth_code = "zbrmlqqlhupobchb"
-        subject = "自动化测试报告"
-        html = MIMEText(report, _subtype="html", _charset="utf-8")
-
-        file = MIMEText(report, _subtype="base64", _charset="gb2312")
-        file["Content-Type"] = "application/octet-stream"
-        file["Content-Disposition"] = 'attachment; filename="result111.html"'
-
-        msg = MIMEMultipart()
-        msg.attach(html)
-        msg.attach(file)
-        msg["subject"] = subject
-        msg["from"] = sender
-        msg["to"] = receiver
-
-        smtp = smtplib.SMTP()
-        smtp.connect(smtps)
-        smtp.login(sender, auth_code)
-        smtp.sendmail(sender, receiver, msg.as_string())
-        smtp.quit()
-
-
-if __name__ == '__main__':
-    sm = SendMail()
-    sm.send_mail_file("<html><h2>测试结果</h2></html>", "smtp.qq.com")
-
-
-
-
-
-
-
-
-
-
-
+# import smtplib
+# from email.mime.text import MIMEText
+# from email.mime.multipart import MIMEMultipart
+#
+#
+# class SendMail:
+#     def send_mail(self, report, smtps):
+#         sender = "632604593@qq.com"
+#         receiver = "wanyuanhao@91bihu.com"
+#         auth_code = "zbrmlqqlhupobchb"
+#         subject = "自动化测试报告"
+#         html = MIMEText(report, _subtype="html", _charset="utf-8")
+#         html["subject"] = subject
+#         html["from"] = sender
+#         html["to"] = receiver
+#         smtp = smtplib.SMTP()
+#         smtp.connect(smtps)
+#         smtp.login(sender, auth_code)
+#         smtp.sendmail(sender, receiver, html.as_string())
+#         smtp.quit()
+#
+#     def send_mail_file(self, report, smtps):
+#         sender = "632604593@qq.com"
+#         receiver = "wanyuanhao@91bihu.com"
+#         auth_code = "zbrmlqqlhupobchb"
+#         subject = "自动化测试报告"
+#         html = MIMEText(report, _subtype="html", _charset="utf-8")
+#
+#         file = MIMEText(report, _subtype="base64", _charset="gb2312")
+#         file["Content-Type"] = "application/octet-stream"
+#         file["Content-Disposition"] = 'attachment; filename="result111.html"'
+#
+#         msg = MIMEMultipart()
+#         msg.attach(html)
+#         msg.attach(file)
+#         msg["subject"] = subject
+#         msg["from"] = sender
+#         msg["to"] = receiver
+#
+#         smtp = smtplib.SMTP()
+#         smtp.connect(smtps)
+#         smtp.login(sender, auth_code)
+#         smtp.sendmail(sender, receiver, msg.as_string())
+#         smtp.quit()
+#
+#
+# if __name__ == '__main__':
+#     sm = SendMail()
+#     sm.send_mail_file("<html><h2>测试结果</h2></html>", "smtp.qq.com")
