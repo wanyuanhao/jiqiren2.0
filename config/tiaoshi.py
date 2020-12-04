@@ -3,6 +3,8 @@ import os
 import time
 from selenium import webdriver
 
+s = (lambda b:b**2) (8)
+print(s)
 # driver = webdriver.Chrome()
 #
 # conf = configparser.ConfigParser()
@@ -104,3 +106,24 @@ from selenium import webdriver
 # if __name__ == '__main__':
 #     sm = SendMail()
 #     sm.send_mail_file("<html><h2>测试结果</h2></html>", "smtp.qq.com")
+
+import xlrd,json
+
+def read_excel(file_path):
+    data = xlrd.open_workbook(file_path)
+    table = data.sheet_by_index(0)
+    title = table.row_values(0)
+
+    s = table.nrows
+    print(f"数字是：{s}")
+
+    datas = []
+    for i in  range(1,s):
+        data_dict = {}
+        for y  in range(len(title)):
+            data_dict[title[y]]=table.row_values(i)[y]
+        print(data_dict)
+        datas.append(data_dict)
+    json.dumps(datas,ensure_ascii=True)
+    print(datas)
+read_excel('./ttt.xlsx')
