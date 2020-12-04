@@ -5,7 +5,6 @@ import configparser,os
 config = configparser.ConfigParser()
 r = Requests_util()
 # 执行获取token的方法，更新到配置文件
-Headers().token()
 path = os.path.dirname(__file__)
 config.read(path+'\..\..\config\config.ini',encoding='utf-8')
 urls = config.get('host','url')

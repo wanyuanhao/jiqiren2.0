@@ -5,7 +5,7 @@ import os,configparser
 
 # Headers().token()
 config = configparser.ConfigParser()
-path = os.path.join(os.getcwd())
+path = os.path.dirname(__file__)
 config.read(path+'..\..\..\config\config.ini',encoding='utf-8')
 headers = eval(config.get('headers','token'))
 urls = config.get('host','url')

@@ -1,8 +1,6 @@
 import xlrd
 from xlrd import xldate_as_tuple
 import datetime
-import os
-
 '''
 xlrd中单元格的数据类型
 数字一律按浮点型输出，日期输出成一串小数，布尔型输出0或1，所以我们必须在程序中做判断处理转换

@@ -153,7 +153,7 @@ class kehuliebiao:
                         result = r.request(url, 'post', data, headers, content_type='json')
                         # 校验响应是否通过
                         if result['message'] == '成功':
-                            url = urls+'/carbusiness/api/v1/CustomerDetail/QueryUserinfoSteps?buid={0}&groupId=0&pageIndex=1&pageSize=20'.format(
+                            url = urls + '/carbusiness/api/v1/CustomerDetail/QueryUserinfoSteps?buid={0}&groupId=0&pageIndex=1&pageSize=20'.format(
                                 buid)
                             result = r.request(url, 'get', headers=headers, content_type='json')
                             assert_result = json.loads(result['data']['list'][0]['jsonContent'])
@@ -176,13 +176,13 @@ class kehuliebiao:
             print('战败请求异常：{0}'.format(e))
 
     def del_licenseno(self, licenseno):
-        # 查询车牌是否有数据
+        u'查询车牌是否有数据'
         find_result = self.find_licenseno(licenseno)
         # 返回大于1的结果往下执行，否则结果异常
         if len(find_result) > 1:
             # 查询结果为真往下执行
             if find_result[1]:
-                url = urls+'/carbusiness/api/v1/customer/deleteCustomer'
+                url = urls + '/carbusiness/api/v1/customer/deleteCustomer'
                 buid_list = []
                 # 遍历结果拿到buid
                 for result in find_result[0]['data']:
@@ -225,26 +225,34 @@ class kehuliebiao:
     def fenpei_avg(self):
         try:
             # 获取客户列表数据接口
-            url = urls+'/carbusiness/api/v1/customer/querylist'
-            data = {"pageIndex":1,"pageSize":15,"selectType":1,"topLabel":"tab_quanbukehu","orderBy":{"orderByField":"updateTime","orderByType":"desc"},"isFllowUp":"","isDataLable":"","dataTag":"","isOpenGuanjia":1}
-            resutl = r.request(url,'post',data,headers,content_type='json')
+            url = urls + '/carbusiness/api/v1/customer/querylist'
+            data = {"pageIndex": 1, "pageSize": 15, "selectType": 1, "topLabel": "tab_quanbukehu",
+                    "orderBy": {"orderByField": "updateTime", "orderByType": "desc"}, "isFllowUp": "",
+                    "isDataLable": "", "dataTag": "", "isOpenGuanjia": 1}
+            resutl = r.request(url, 'post', data, headers, content_type='json')
             if resutl['message'] == '成功':
-                #默认获取客户列表前4条数据的buid，然后分配
-                buids =[]
-                conut =0
+                # 默认获取客户列表前4条数据的buid，然后分配
+                buids = []
+                conut = 0
                 for buid in resutl['data']:
-                    conut+=1
+                    conut += 1
                     buids.append(buid['buid'])
                     if conut == 4:
                         break
-                #分配接口
-                url = urls+'/carbusiness/api/v1/customer/DistributeCustomer'
-                data = {"pageIndex":1,"pageSize":15,"selectType":1,"topLabel":"tab_quanbukehu","orderBy":{"orderByField":"updateTime","orderByType":"desc"},"isFllowUp":"","isDataLable":"","dataTag":"","distributeEmployeeIds":[287523],"averageCount":4,"allocationRule":1,"buids":buids}
+                # 分配接口
+                url = urls + '/carbusiness/api/v1/customer/DistributeCustomer'
+                data = {"pageIndex": 1, "pageSize": 15, "selectType": 1, "topLabel": "tab_quanbukehu",
+                        "orderBy": {"orderByField": "updateTime", "orderByType": "desc"}, "isFllowUp": "",
+                        "isDataLable": "", "dataTag": "", "distributeEmployeeIds": [287523], "averageCount": 4,
+                        "allocationRule": 1, "buids": buids}
                 # 获取分配结果
-                resutl = r.request(url,'post',data,headers,'json')
+                resutl = r.request(url, 'post', data, headers, 'json')
                 if resutl['message'] == '操作成功':
                     url = urls + '/carbusiness/api/v1/customer/querylist'
-                    data = {"pageIndex":1,"pageSize":15,"buids":buids,"selectType":1,"topLabel":"tab_quanbukehu","orderBy":{"orderByField":"updateTime","orderByType":"desc"},"isFllowUp":"","isDataLable":"","dataTag":"","firstSearch":""}
+                    data = {"pageIndex": 1, "pageSize": 15, "buids": buids, "selectType": 1,
+                            "topLabel": "tab_quanbukehu",
+                            "orderBy": {"orderByField": "updateTime", "orderByType": "desc"}, "isFllowUp": "",
+                            "isDataLable": "", "dataTag": "", "firstSearch": ""}
                     resutl = r.request(url, 'post', data, headers, content_type='json')
                     if resutl['message'] == '成功':
                         for buid in resutl['data']:
@@ -264,51 +272,89 @@ class kehuliebiao:
         except Exception as e:
             print('分配接口异常：{0}'.format(e))
             return
+
     # 客户列表各个TAB总数
-    def kehuliebiao_tab_count(self,headers):
-        url =urls+'/carbusiness/api/v1/customer/queryTopLabelCount'
-        data = {"pageIndex":1,"pageSize":15,"selectType":1,"topLabel":"tab_dangqikehu","orderBy":{"orderByField":"updateTime","orderByType":"desc"},"isFllowUp":"","isDataLable":"","dataTag":"","tabs":["tab_zhinengxubao","tab_dangqikehu","tab_shoufangkehu","tab_jihuahuifang","tab_jinrijindian","tab_yuyuejindian","tab_yuqikehu","tab_quanbukehu","tab_yichangshuju"]}
-        result = r.request(url,'post',data,headers,'json')
+    def kehuliebiao_tab_count(self, headers):
+        url = urls + '/carbusiness/api/v1/customer/queryTopLabelCount'
+        data = {"pageIndex": 1, "pageSize": 15, "selectType": 1, "topLabel": "tab_dangqikehu",
+                "orderBy": {"orderByField": "updateTime", "orderByType": "desc"}, "isFllowUp": "", "isDataLable": "",
+                "dataTag": "", "tabs": ["tab_zhinengxubao", "tab_dangqikehu", "tab_shoufangkehu", "tab_jihuahuifang",
+                                        "tab_jinrijindian", "tab_yuyuejindian", "tab_yuqikehu", "tab_quanbukehu",
+                                        "tab_yichangshuju"]}
+        result = r.request(url, 'post', data, headers, 'json')
         return result
+
     # 出单总数
-    def chudan_count(self,headers):
-        url = urls+'/carbusiness/api/v1/customer/quotationReceiptCount'
-        data = {"pageIndex":1,"pageSize":15}
-        result = r.request(url,'post',data,headers,'json')
+    def chudan_count(self, headers):
+        url = urls + '/carbusiness/api/v1/customer/quotationReceiptCount'
+        data = {"pageIndex": 1, "pageSize": 15}
+        result = r.request(url, 'post', data, headers, 'json')
         return result
+
     # 战败总数
-    def zhanbai_count(self,headers):
-        url = urls+'/carbusiness/api/v1/customer/defeatCount'
-        data = {"pageIndex":1,"pageSize":15}
+    def zhanbai_count(self, headers):
+        url = urls + '/carbusiness/api/v1/customer/defeatCount'
+        data = {"pageIndex": 1, "pageSize": 15}
         result = r.request(url, 'post', data, headers, 'json')
         return result
 
     # 获取顶级ID
-    def get_empolyeeid(self,headers):
+    def get_empolyeeid(self, headers):
         url = urls + '/employee/api/v1/Login/EmployeeModuleAndInfo'
         data = {}
         result = r.request(url, 'post', data, headers, 'json')
         return result['data']['employeeInfo']['agentId']
+
     # 业务员总数
-    def agent_count(self,headers,top_agent):
-        url = urls + '/employee/api/v1/Role/RoleListByCompId'
-        data = {"compId":top_agent,"employeeId":top_agent}
-        result = r.request(url, 'post', data, headers, 'json')
-        return len(result['data'])
-    # 角色总数
-    def juese_count(self,headers,top_agent):
+    def agent_count(self, headers, top_agent):
         url = urls + '/employee/api/v1/Role/RoleListByCompId'
         data = {"compId": top_agent, "employeeId": top_agent}
         result = r.request(url, 'post', data, headers, 'json')
         return len(result['data'])
+
+    # 角色总数
+    def juese_count(self, headers, top_agent):
+        url = urls + '/employee/api/v1/Role/RoleListByCompId'
+        data = {"compId": top_agent, "employeeId": top_agent}
+        result = r.request(url, 'post', data, headers, 'json')
+        return len(result['data'])
+
     # 通话记录总数
-    def call_count(self,headers):
+    def call_count(self, headers):
+        u'通话记录总数'
         url = urls + '/stats/api/v1/Call/GetCallRecordList'
-        data = {"PageIndex":1,"PageSize":15}
+        data = {"PageIndex": 1, "PageSize": 15}
         result = r.request(url, 'post', data, headers, 'json')
         return result['data']['totalCount']
 
+    def plan_count_jinri(self, headers):
+        u'获取接口返回的计划回访数量'
+        try:
+            url = urls + '/carbusiness/api/v1/Customer/QueryReviewCount'
+            data = {"pageIndex": 1, "pageSize": 15, "selectType": 1, "topLabel": "tab_jihuahuifang",
+                    "orderBy": {"orderByField": "updateTime", "orderByType": "desc"}, "isFllowUp": "", "labelTimeSpan": 2,
+                    "isDataLable": "", "dataTag": "", "dataTypeId": 0}
+            result = r.request(url, 'post', data, headers, 'json')
+            results = result['data']
+            count_result = [results['jinrihuifang'], results['mingrihuifang'], results['liangrihuifang'],
+                            results['sanrihuifang'], results['sirihuifang'], results['wurihuifang'],
+                            results['liurihuifang'], results['qirihuifang'], results['qirihouhuifang']]
+            return count_result
+        except Exception as e:
+            return ' plan_count_jinri执行异常'
+
+    def plan_counts(self, headers, data_type=15, type=1):
+        u'循环获取计划回访数据'
+        url = urls + '/carbusiness/api/v1/customer/querylist'
+        data = {"pageIndex": 1, "pageSize": data_type, "selectType": 1, "topLabel": "tab_jihuahuifang",
+                "orderBy": {"orderByField": "updateTime", "orderByType": "desc"}, "isFllowUp": "",
+                "labelTimeSpan": type, "isDataLable": "", "dataTag": "", "dataTypeId": 0}
+        result = r.request(url, 'post', data, headers, 'json')
+        count = result['data']
+        return len(count)
 
 
 if __name__ == '__main__':
     run = kehuliebiao()
+    result = run.plan_counts(headers)
+    print(result)
