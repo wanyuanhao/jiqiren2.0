@@ -13,6 +13,7 @@ print(s)
 # conf.read(root_path + '\config.ini', encoding='utf-8')  # 文件路径
 # name = conf.get("baojia", "city")
 # url = conf.get('host', 'url')
+# '''修改配置文件'''
 # conf.set("mysql", "host", "1133")
 # conf.write(open(root_path + '\config\config.ini', 'w', encoding='utf-8'))
 #
@@ -107,23 +108,23 @@ print(s)
 #     sm = SendMail()
 #     sm.send_mail_file("<html><h2>测试结果</h2></html>", "smtp.qq.com")
 
-import xlrd,json
-
-def read_excel(file_path):
-    data = xlrd.open_workbook(file_path)
-    table = data.sheet_by_index(0)
-    title = table.row_values(0)
-
-    s = table.nrows
-    print(f"数字是：{s}")
-
-    datas = []
-    for i in  range(1,s):
-        data_dict = {}
-        for y  in range(len(title)):
-            data_dict[title[y]]=table.row_values(i)[y]
-        print(data_dict)
-        datas.append(data_dict)
-    json.dumps(datas,ensure_ascii=True)
-    print(datas)
-read_excel('./ttt.xlsx')
+# import xlrd,json
+#
+# def read_excel(file_path):
+#     data = xlrd.open_workbook(file_path)
+#     table = data.sheet_by_index(0)
+#     title = table.row_values(0)
+#
+#     s = table.nrows
+#     print(f"数字是：{s}")
+#
+#     datas = []
+#     for i in  range(1,s):
+#         data_dict = {}
+#         for y  in range(len(title)):
+#             data_dict[title[y]]=table.row_values(i)[y]
+#         print(data_dict)
+#         datas.append(data_dict)
+#     json.dumps(datas,ensure_ascii=True)
+#     print(datas)
+# read_excel('./ttt.xlsx')

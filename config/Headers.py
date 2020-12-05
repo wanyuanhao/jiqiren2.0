@@ -12,8 +12,8 @@ configs.read(path + '\config.ini', encoding='utf-8')
 # 读取配置文件的指定配置
 users = configs.get('host', 'user')
 urls = configs.get('host','url')
-user = users
 class Headers:
+    @classmethod
     def token(self,user):
         try:
             url = urls+'/identity/connect/token'
@@ -34,10 +34,9 @@ class Headers:
                 configs.write(open(path + '\config.ini', 'w', encoding='utf-8'))
                 return token
         except Exception as e:
-
             return e
 
 
 if __name__ == '__main__':
     print('获取token')
-    Headers().token(user)
+    Headers.token(users)

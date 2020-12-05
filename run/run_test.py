@@ -5,7 +5,7 @@ import sender_mail
 
 def run_test_case():
     path = os.path.dirname(os.path.dirname(__file__))
-    result = unittest.defaultTestLoader.discover(path + "/case", pattern="*ui.py", top_level_dir=None)
+    result = unittest.defaultTestLoader.discover(path + "/case", pattern="Test_case.py", top_level_dir=None)
     return result
 
 
@@ -15,7 +15,7 @@ if __name__ == '__main__':
     # 生成测试报告
     runner = HTMLTestRunner.HTMLTestRunner(stream=report_path, title=u"自动化测试报告", description="执行结果")
     runner.run(run_test_case())
-    # 关闭文件，如果不关闭文件后面的程序读取会是空内容
+    # 关闭文件，如果不关闭文件后面的程序读取，会是空内容
     report_path.close()
 
     # 打开测试报告

@@ -5,6 +5,7 @@ import os
 
 
 class SendMail:
+    @classmethod
     def send_mail(self, report):
         sender = "632604593@qq.com"
         receiver = ["wanyuanhao@91bihu.com", "243004032@qq.com"]

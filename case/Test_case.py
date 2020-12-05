@@ -28,8 +28,8 @@ class Test_case(unittest.TestCase):
     def tearDownClass(cls):
         pass
 
-    # 新增续保——录入出单流程
     # def test_case01(self):
+    #     u'新增数据——录入出单流程'
     #     xinzeng.xubao(licenseno, city)
     #     result = kehu.find_licenseno(licenseno)
     #     kehu.enter_chudan(result['data'][0]['buid'])
@@ -52,3 +52,6 @@ class Test_case(unittest.TestCase):
 if __name__ == '__main__':
     print('执行Case')
     unittest.main(verbosity=2)
+
+
+
