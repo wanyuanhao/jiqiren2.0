@@ -28,12 +28,18 @@ class Test_case(unittest.TestCase):
     def tearDownClass(cls):
         pass
 
-    # def test_case01(self):
-    #     u'新增数据——录入出单流程'
-    #     xinzeng.xubao(licenseno, city)
-    #     result = kehu.find_licenseno(licenseno)
-    #     kehu.enter_chudan(result['data'][0]['buid'])
-    #     chudan.find_chudan(licenseno)
+    def test_case01(self):
+        u'新增数据——录入出单流程'
+        xinzeng.xubao(licenseno, city)
+        # 客户列表查询车牌是否在客户列表
+        result = kehu.find_licenseno(licenseno)
+        if isinstance(result[0]['data'][0]['buid'], int):
+            result = kehu.enter_chudan(licenseno)
+            print(result)
+            if result:
+                result = chudan.find_chudan(licenseno)
+                print(result)
+                self.assertTrue(result)
 
     def test_case02(self):
         u'计划回访数据量对比'
@@ -42,16 +48,24 @@ class Test_case(unittest.TestCase):
         plan_name = ["今日", '明日', '两日', '三日', '四日', '五日', '六日', '七日', '七日后']
         result = kehu.plan_count_jinri(headers)
         for i in range(len(result)):
-            plan_count = kehu.plan_counts(headers, result[i] + 10, i + 1)
-            ss = f"接口返回数量：{result[i]}", f'实际条数：{plan_count}'
-            if result[i] == plan_count:
-                pass
+            if i + 1 == 9:
+                plan_count = kehu.plan_counts(headers, result[i] + 10, 9999)
+                ss = f"接口返回数量：{result[i]}", f'实际条数：{plan_count[0]},f"接口响应信息：{plan_count[1]}"'
+                if result[i] != plan_count[0]:
+                    print('计划回访{0}数量不一致，{1}'.format(plan_name[i], ss))
+                self.assertTrue(result[i] == plan_count[0])
             else:
-                return '计划回访{0}数量不一致，{1}'.format(plan_name[i],ss)
+                plan_count = kehu.plan_counts(headers, result[i] + 10, i + 1)
+                ss = f"接口返回数量：{result[i]}", f'实际条数：{plan_count[0]},f"接口响应信息：{plan_count[1]}"'
+                if result[i] != plan_count[0]:
+                    print('计划回访{0}数量不一致，{1}'.format(plan_name[i], ss))
+                self.assertTrue(result[i] == plan_count[0])
+
 
 if __name__ == '__main__':
     print('执行Case')
-    unittest.main(verbosity=2)
-
-
-
+    unittest.main(verbosity=1)
+    # runner = unittest.TextTestRunner(verbosity=2)
+    # suite = unittest.TestSuite()
+    # suite.addTest(Test_case("test_case02"))
+    # print(runner.run(suite))

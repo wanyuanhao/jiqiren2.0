@@ -3,7 +3,7 @@ from util.Requests_util import Requests_util
 # from config.Headers import Headers
 import datetime, json
 import os, configparser
-
+import time
 # Headers().token()
 r = Requests_util()
 config = configparser.ConfigParser()
@@ -17,6 +17,7 @@ urls = config.get('host', 'url')
 class kehuliebiao:
     # 根据车牌查询是否已在客户列表
     def find_licenseno(self, licenseno):
+        "根据车牌查询是否已在客户列表"
         data = {"pageIndex": 1, "pageSize": 15, "selectType": 1, "selectSearchValue": licenseno,
                 "topLabel": "tab_quanbukehu", "orderBy": {"orderByField": "updateTime", "orderByType": "desc"},
                 "isFllowUp": "", "isDataLable": "", "dataTag": "", "isOpenGuanjia": 1, "licenseNo": licenseno}
@@ -351,7 +352,7 @@ class kehuliebiao:
                 "labelTimeSpan": type, "isDataLable": "", "dataTag": "", "dataTypeId": 0}
         result = r.request(url, 'post', data, headers, 'json')
         count = result['data']
-        return len(count)
+        return [len(count),result]
 
 
 if __name__ == '__main__':
