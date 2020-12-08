@@ -50,7 +50,7 @@ class Test_case(unittest.TestCase):
         for i in range(len(result)):
             if i + 1 == 9:
                 plan_count = kehu.plan_counts(headers, result[i] + 10, 9999)
-                ss = f"接口返回数量：{result[i]}", f'实际条数：{plan_count[0]},f"接口响应信息：{plan_count[1]}"'
+                ss = f"接口返回数量：{result[i]}", f'实际条数：{plan_count[0]},f"接口响应：{plan_count[1]}"'
                 if result[i] != plan_count[0]:
                     print('计划回访{0}数量不一致，{1}'.format(plan_name[i], ss))
                 self.assertTrue(result[i] == plan_count[0])

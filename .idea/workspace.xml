@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0a114d94-c570-43d8-9302-05e498174a4a" name="Default Changelist" comment="主干去除没用的配置">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/case/Test_case.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/Test_case.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -46,8 +46,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/case/Test_case.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="235">
-              <caret line="71" lean-forward="true" selection-start-line="71" selection-end-line="71" />
+            <state relative-caret-position="175">
+              <caret line="54" column="70" lean-forward="true" selection-start-line="54" selection-start-column="70" selection-end-line="54" selection-end-column="70" />
               <folding>
                 <element signature="e#19#34#0" expanded="true" />
               </folding>
@@ -70,10 +70,22 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/module/kehuguanli/kehuliebiao.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="346" column="57" lean-forward="true" selection-start-line="346" selection-start-column="57" selection-end-line="346" selection-end-column="57" />
+            <state relative-caret-position="288">
+              <caret line="353" selection-start-line="353" selection-end-line="353" />
               <folding>
                 <element signature="e#19#63#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/case/Test_ui.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="14" column="27" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
+              <folding>
+                <element signature="e#23#53#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -91,8 +103,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/tiaoshi.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="579">
-              <caret line="148" lean-forward="true" selection-start-line="148" selection-end-line="148" />
+            <state relative-caret-position="39">
+              <caret line="130" lean-forward="true" selection-start-line="130" selection-end-line="130" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -375,11 +387,11 @@
     <list>
       <item itemvalue="Python.Test_case" />
       <item itemvalue="Python.gongzuokanban_request" />
-      <item itemvalue="Python tests.Unittests in Test_case.py" />
       <item itemvalue="Python.kehuliebiao" />
-      <item itemvalue="Python tests.Unittests for Test_case.Test_case.test_case02" />
-      <item itemvalue="Python tests.Unittests for Test_case.Test_case.test_case01" />
       <item itemvalue="Python tests.Unittests for Test_case.Test_case" />
+      <item itemvalue="Python tests.Unittests for Test_case.Test_case.test_case01" />
+      <item itemvalue="Python tests.Unittests for Test_case.Test_case.test_case02" />
+      <item itemvalue="Python tests.Unittests in Test_case.py" />
     </list>
     <recent_temporary>
       <list>
@@ -478,12 +490,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="263034000" />
+    <option name="totallyTimeSpent" value="263175000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16684665" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16684665" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -497,7 +510,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32912844" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.44380733" />
+      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.44380733" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -763,20 +776,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/case/Test_ui.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-30">
-          <caret line="14" column="27" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
-          <folding>
-            <element signature="e#23#53#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/tiaoshi.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="579">
-          <caret line="148" lean-forward="true" selection-start-line="148" selection-end-line="148" />
+        <state relative-caret-position="39">
+          <caret line="130" lean-forward="true" selection-start-line="130" selection-end-line="130" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
@@ -856,16 +859,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/module/kehuguanli/kehuliebiao.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="346" column="57" lean-forward="true" selection-start-line="346" selection-start-column="57" selection-end-line="346" selection-end-column="57" />
-          <folding>
-            <element signature="e#19#63#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/module/kehuguanli/chudanzhanbai.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -876,10 +869,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/module/kehuguanli/kehuliebiao.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="353" selection-start-line="353" selection-end-line="353" />
+          <folding>
+            <element signature="e#19#63#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/case/Test_ui.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="14" column="27" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
+          <folding>
+            <element signature="e#23#53#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/case/Test_case.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="71" lean-forward="true" selection-start-line="71" selection-end-line="71" />
+        <state relative-caret-position="175">
+          <caret line="54" column="70" lean-forward="true" selection-start-line="54" selection-start-column="70" selection-end-line="54" selection-end-column="70" />
           <folding>
             <element signature="e#19#34#0" expanded="true" />
           </folding>
