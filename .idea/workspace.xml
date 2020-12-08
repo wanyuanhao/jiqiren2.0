@@ -3,13 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="0a114d94-c570-43d8-9302-05e498174a4a" name="Default Changelist" comment="主干去除没用的配置">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/Test_case.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/Test_case.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/config.ini" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/tiaoshi.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/tiaoshi.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module/kehuguanli/kehuliebiao.py" beforeDir="false" afterPath="$PROJECT_DIR$/module/kehuguanli/kehuliebiao.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/test_report/2020-11-17 18-29-18result.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/test_report/2020-11-17 18-42-34result.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/test_report/2020-11-20 10-18-01result.html" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -53,8 +46,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/case/Test_case.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="960">
-              <caret line="32" selection-start-line="32" selection-end-line="33" />
+            <state relative-caret-position="235">
+              <caret line="71" lean-forward="true" selection-start-line="71" selection-end-line="71" />
               <folding>
                 <element signature="e#19#34#0" expanded="true" />
               </folding>
@@ -426,7 +419,7 @@
       <workItem from="1606268752596" duration="8403000" />
       <workItem from="1606718946768" duration="31801000" />
       <workItem from="1607065418253" duration="14814000" />
-      <workItem from="1607307779062" duration="22184000" />
+      <workItem from="1607307779062" duration="22727000" />
     </task>
     <task id="LOCAL-00001" summary="内容修改">
       <created>1606214706875</created>
@@ -485,7 +478,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="262491000" />
+    <option name="totallyTimeSpent" value="263034000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
@@ -885,8 +878,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/case/Test_case.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="960">
-          <caret line="32" selection-start-line="32" selection-end-line="33" />
+        <state relative-caret-position="235">
+          <caret line="71" lean-forward="true" selection-start-line="71" selection-end-line="71" />
           <folding>
             <element signature="e#19#34#0" expanded="true" />
           </folding>
