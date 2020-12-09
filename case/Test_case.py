@@ -71,7 +71,7 @@ class Test_case(unittest.TestCase):
         self.assertTrue(result)
 
     def test_cese04(self):
-        '校验报价历史是否切换成功'
+        '校验报价历史是否切换失败'
         result = kehu.shaixuan_baojiachenggong()
         #判断结果是否为真
         self.assertTrue(result)
