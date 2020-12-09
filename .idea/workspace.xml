@@ -47,7 +47,7 @@
         <entry file="file://$PROJECT_DIR$/case/Test_case.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="295">
-              <caret line="95" column="49" lean-forward="true" selection-start-line="63" selection-start-column="1" selection-end-line="95" selection-end-column="49" />
+              <caret line="107" column="25" lean-forward="true" selection-start-line="107" selection-start-column="25" selection-end-line="107" selection-end-column="25" />
               <folding>
                 <element signature="e#19#34#0" expanded="true" />
               </folding>
@@ -383,10 +383,10 @@
     <list>
       <item itemvalue="Python.Test_case" />
       <item itemvalue="Python.gongzuokanban_request" />
-      <item itemvalue="Python.run_test" />
       <item itemvalue="Python.tiaoshi" />
-      <item itemvalue="Python tests.Unittests for Test_case.Test_case.test_case01" />
+      <item itemvalue="Python.run_test" />
       <item itemvalue="Python tests.Unittests for Test_case.Test_case.test_case02" />
+      <item itemvalue="Python tests.Unittests for Test_case.Test_case.test_case01" />
       <item itemvalue="Python tests.Unittests for Test_case.Test_case.test_cese04" />
     </list>
     <recent_temporary>
@@ -428,7 +428,7 @@
       <workItem from="1606718946768" duration="31801000" />
       <workItem from="1607065418253" duration="14814000" />
       <workItem from="1607307779062" duration="22727000" />
-      <workItem from="1607510360187" duration="809000" />
+      <workItem from="1607510360187" duration="1108000" />
     </task>
     <task id="LOCAL-00001" summary="内容修改">
       <created>1606214706875</created>
@@ -487,7 +487,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="279895000" />
+    <option name="totallyTimeSpent" value="280194000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
@@ -873,7 +873,7 @@
     <entry file="file://$PROJECT_DIR$/case/Test_case.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="295">
-          <caret line="95" column="49" lean-forward="true" selection-start-line="63" selection-start-column="1" selection-end-line="95" selection-end-column="49" />
+          <caret line="107" column="25" lean-forward="true" selection-start-line="107" selection-start-column="25" selection-end-line="107" selection-end-column="25" />
           <folding>
             <element signature="e#19#34#0" expanded="true" />
           </folding>
