@@ -88,7 +88,24 @@ class Test_case(unittest.TestCase):
                     print(time,time1)
                     self.assertEqual(time,time1)
                     break
-
+    def test_cese05(self):
+        '校验报价历史是否切换成功'
+        result = kehu.shaixuan_baojiachenggong()
+        #判断结果是否为真
+        self.assertTrue(result)
+        for index in range(len(result['data'])):
+            lishi_result = kehu.quote_lishi(result['data'][index]['buid'])
+            # 校验报价历史是否为空
+            if lishi_result:
+                # 校验报价历史数量是否大于1
+                if len(lishi_result['data'])>1:
+                    id = lishi_result['data'][1]['id']
+                    time1 = lishi_result['data'][1]['quoteTime']
+                    lishi = kehu.qiehuan_quote_lishi(id)
+                    time = lishi['data']['quetoTime']
+                    print(time,time1)
+                    self.assertEqual(time,time1)
+                    break
 
 if __name__ == '__main__':
     print('执行Case')
