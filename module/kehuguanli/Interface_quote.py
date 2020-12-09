@@ -24,11 +24,11 @@ class Interface_quote:
             # 获取续保响应结果
             response = r.request(url, 'post', data, headers=headers, content_type='json')
             if response['code'] == 1:
-                print('新增车牌成功')
+                # print('新增车牌成功')
                 return True
             else:
                 print('获取续保结果异常：{0}'.format(response))
-                return
+                return False
         elif response['code'] == 2:
             url =urls+ '/carbusiness/api/v1/Renewal/SubmitRenewalAsync'
             data = {"licenseNo": licenseno, "cityCode": city, "renewalSource": "", "carType": 1, "typeId": 1,
@@ -36,14 +36,14 @@ class Interface_quote:
             # 获取续保响应结果
             response = r.request(url, 'post', data, headers=headers, content_type='json')
             if response['code'] == 1:
-                print('新增车牌成功')
+                # print('新增车牌成功')
                 return True
             else:
                 print('获取续保结果异常：{0}'.format(response))
-                return
+                return False
         else:
             print('续保响应结果异常:{0}'.format(response))
-            return
+            return False
 
     def baojia(self, response):
         msg = response['message']

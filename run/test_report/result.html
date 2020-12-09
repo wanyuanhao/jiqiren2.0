@@ -189,9 +189,9 @@ function showOutput(id, name) {
 
 <div class='heading'>
 <h1>自动化测试报告</h1>
-<p class='attribute'><strong>Start Time:</strong> 2020-12-04 18:24:13</p>
-<p class='attribute'><strong>Duration:</strong> 0:00:07.201983</p>
-<p class='attribute'><strong>Status:</strong> Pass 1</p>
+<p class='attribute'><strong>Start Time:</strong> 2020-12-09 18:31:32</p>
+<p class='attribute'><strong>Duration:</strong> 0:00:18.740895</p>
+<p class='attribute'><strong>Status:</strong> Pass 3 Failure 1</p>
 
 <p class='description'>执行结果</p>
 </div>
@@ -221,25 +221,105 @@ function showOutput(id, name) {
     <td>View</td>
 </tr>
 
-<tr class='passClass'>
+<tr class='failClass'>
     <td>Test_case.Test_case</td>
-    <td>1</td>
+    <td>4</td>
+    <td>3</td>
     <td>1</td>
     <td>0</td>
-    <td>0</td>
-    <td><a href="javascript:showClassDetail('c1',1)">Detail</a></td>
+    <td><a href="javascript:showClassDetail('c1',4)">Detail</a></td>
 </tr>
 
 <tr id='pt1.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_case01: 新增数据——录入出单流程</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.1')" >
+        pass</a>
+
+    <div id='div_pt1.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.1: 
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.2' class='hiddenRow'>
     <td class='none'><div class='testcase'>test_case02: 计划回访数据量对比</div></td>
     <td colspan='5' align='center'>pass</td>
 </tr>
 
+<tr id='ft1.3' class='none'>
+    <td class='failCase'><div class='testcase'>test_cese03: 报价成功的数据是否有报价历史</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.3')" >
+        fail</a>
+
+    <div id='div_ft1.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.3: Traceback (most recent call last):
+  File "D:\python\jiqiren2.0\case\Test_case.py", line 71, in test_cese03
+    self.assertFalse(result)
+AssertionError: {'data': [{'licenseNo': '京MC1656', 'id': '47eebb0a-2136-4fdf-90f2-fc5e75def2f6', 'quoteTime': '2020-07-02 16:35:22', 'result': [{'source': 4, 'status': 0, 'submitStatus': 6, 'totalPrice': 0.0, 'isRepeatSubmit': 0}, {'source': 1, 'status': 1, 'submitStatus': 6, 'totalPrice': 3228.19, 'isRepeatSubmit': 0}, {'source': 2, 'status': 1, 'submitStatus': 6, 'totalPrice': 3228.71, 'isRepeatSubmit': 0}], 'operator': '测试权限', 'employeeId': 189469}, {'licenseNo': '京MC1656', 'id': '430f27b8-137c-40b4-bf9f-1775b294bf23', 'quoteTime': '2020-07-02 16:34:45', 'result': [{'source': 4, 'status': 0, 'submitStatus': 6, 'totalPrice': 0.0, 'isRepeatSubmit': 0}, {'source': 1, 'status': 1, 'submitStatus': 6, 'totalPrice': 4170.56, 'isRepeatSubmit': 0}, {'source': 2, 'status': 0, 'submitStatus': 6, 'totalPrice': 0.0, 'isRepeatSubmit': 0}], 'operator': '测试权限', 'employeeId': 189469}, {'licenseNo': '京MC1656', 'id': '87859326-dd5c-4a6a-a783-808ac1ac5598', 'quoteTime': '2020-07-02 15:36:45', 'result': [{'source': 1, 'status': 1, 'submitStatus': 6, 'totalPrice': 4170.56, 'isRepeatSubmit': 0}], 'operator': '测试权限', 'employeeId': 189469}, {'licenseNo': '京MC1656', 'id': '5933bb83-0792-4639-885b-556e54448611', 'quoteTime': '2020-06-04 19:01:14', 'result': [{'source': 1, 'status': 1, 'submitStatus': 6, 'totalPrice': 4170.56, 'isRepeatSubmit': 0}], 'operator': '测试权限', 'employeeId': 189469}], 'code': 1, 'message': '获取成功'} is not false
+Traceback (most recent call last):
+  File "D:\python\jiqiren2.0\case\Test_case.py", line 71, in test_cese03
+    self.assertFalse(result)
+AssertionError: {'data': [{'licenseNo': '京MC1656', 'id': '47eebb0a-2136-4fdf-90f2-fc5e75def2f6', 'quoteTime': '2020-07-02 16:35:22', 'result': [{'source': 4, 'status': 0, 'submitStatus': 6, 'totalPrice': 0.0, 'isRepeatSubmit': 0}, {'source': 1, 'status': 1, 'submitStatus': 6, 'totalPrice': 3228.19, 'isRepeatSubmit': 0}, {'source': 2, 'status': 1, 'submitStatus': 6, 'totalPrice': 3228.71, 'isRepeatSubmit': 0}], 'operator': '测试权限', 'employeeId': 189469}, {'licenseNo': '京MC1656', 'id': '430f27b8-137c-40b4-bf9f-1775b294bf23', 'quoteTime': '2020-07-02 16:34:45', 'result': [{'source': 4, 'status': 0, 'submitStatus': 6, 'totalPrice': 0.0, 'isRepeatSubmit': 0}, {'source': 1, 'status': 1, 'submitStatus': 6, 'totalPrice': 4170.56, 'isRepeatSubmit': 0}, {'source': 2, 'status': 0, 'submitStatus': 6, 'totalPrice': 0.0, 'isRepeatSubmit': 0}], 'operator': '测试权限', 'employeeId': 189469}, {'licenseNo': '京MC1656', 'id': '87859326-dd5c-4a6a-a783-808ac1ac5598', 'quoteTime': '2020-07-02 15:36:45', 'result': [{'source': 1, 'status': 1, 'submitStatus': 6, 'totalPrice': 4170.56, 'isRepeatSubmit': 0}], 'operator': '测试权限', 'employeeId': 189469}, {'licenseNo': '京MC1656', 'id': '5933bb83-0792-4639-885b-556e54448611', 'quoteTime': '2020-06-04 19:01:14', 'result': [{'source': 1, 'status': 1, 'submitStatus': 6, 'totalPrice': 4170.56, 'isRepeatSubmit': 0}], 'operator': '测试权限', 'employeeId': 189469}], 'code': 1, 'message': '获取成功'} is not false
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.4' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_cese04: 切换报价历史</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.4')" >
+        pass</a>
+
+    <div id='div_pt1.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.4: 
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
 <tr id='total_row'>
     <td>Total</td>
+    <td>4</td>
+    <td>3</td>
     <td>1</td>
-    <td>1</td>
-    <td>0</td>
     <td>0</td>
     <td>&nbsp;</td>
 </tr>

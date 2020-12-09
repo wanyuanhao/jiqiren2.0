@@ -14,7 +14,7 @@ if __name__ == '__main__':
     report_path = open("./test_report/result.html", 'wb')
     # 生成测试报告
     runner = HTMLTestRunner.HTMLTestRunner(stream=report_path, title=u"自动化测试报告", description="执行结果")
-    runner.run(run_test_case())
+    ss = runner.run(run_test_case())
     # 关闭文件，如果不关闭文件后面的程序读取，会是空内容
     report_path.close()
 

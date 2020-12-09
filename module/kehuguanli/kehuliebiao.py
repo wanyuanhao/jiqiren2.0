@@ -4,6 +4,7 @@ from util.Requests_util import Requests_util
 import datetime, json
 import os, configparser
 import time
+
 # Headers().token()
 r = Requests_util()
 config = configparser.ConfigParser()
@@ -27,34 +28,59 @@ class kehuliebiao:
             response = r.request(url, 'post', data, headers, content_type='json')
             if response['message'] == '成功':
                 if response['data'] is not None and len(response['data']) > 0:
-                    print('客户列表查询车牌通过')
-                    return [response, True]
+                    # print('客户列表查询车牌通过')
+                    return [True, response]
                 else:
-                    print('查询结果为空')
-                    return [response, False]
+                    print(f'{licenseno}查询结果为空')
+                    return [False, response]
             else:
                 print('客户列表查询响应异常：{0}'.format(response))
-                return
+                return [False]
 
         except Exception as e:
-            return '查询车牌异常：{0}'.format(e)
+            print('查询车牌异常：{0}'.format(e))
+            return [False]
 
     # 根据buid录入出单，source默认录入人保
     def enter_chudan(self, licenseno, source=4):
         updatetime = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
         chudan_time = datetime.datetime.now().strftime('%Y-%m-%d')
         result = self.find_licenseno(licenseno)
-        if len(result) > 1:
-            if result[1]:
-                # 拿第一buid
-                buid = result[0]['data'][0]['buid']
-                url = urls + '/carbusiness/api/v1/CustomerDetail/SaveConsumerReview'
-                data = {"defeatReasonContent": "", "bizTotal": "1000.99", "forceTotal": "500.11", "taxTotal": "15.01",
-                        "reviewContent": "自动化录入", "singleTime": chudan_time, "jyPrice": "222",
-                        "appointTime": updatetime,
-                        "reviewStatus": 9, "reviewStatusName": "成功出单", "source": source, "buid": buid, "companyType": 4}
-                try:
-                    # 发起录入出单请求
+        if result[0]:
+            # 拿第一buid
+            buid = result[1]['data'][0]['buid']
+            url = urls + '/carbusiness/api/v1/CustomerDetail/SaveConsumerReview'
+            data = {"defeatReasonContent": "", "bizTotal": "1000.99", "forceTotal": "500.11", "taxTotal": "15.01",
+                    "reviewContent": "自动化录入", "singleTime": chudan_time, "jyPrice": "222",
+                    "appointTime": updatetime,
+                    "reviewStatus": 9, "reviewStatusName": "成功出单", "source": source, "buid": buid, "companyType": 4}
+            try:
+                # 发起录入出单请求
+                response = r.request(url, 'post', data, headers, content_type='json')
+                if response['message'] == '成功':
+                    url = urls + '/carbusiness/api/v1/CustomerDetail/QueryUserinfoSteps?buid={0}&groupId=0&pageIndex=1&pageSize=20'.format(
+                        buid)
+                    assert_response = r.request(url, 'get', headers=headers, content_type='json')
+                    # 获取出单记录
+                    result = json.loads(assert_response['data']['list'][0]['jsonContent'])
+                    if result['Buid'] == buid:
+                        if result['ReviewStatusName'] == '成功出单' and int(result['Source']) == source and float(
+                                result['BizTotal']) == 1000.99:
+                            # print('出单成功')
+                            return True
+                    else:
+                        print('获取出单结果的Buid不匹配：{0}'.format(response))
+                        return False
+                # 判断本年度是否出过保单
+                elif '本续保年度已存在' in response['message']:
+                    data = {"defeatReasonContent": "", "bizTotal": "1000.99", "forceTotal": "500.11",
+                            "taxTotal": "15.01",
+                            "reviewContent": "自动化录入", "singleTime": chudan_time, "jyPrice": "222",
+                            "appointTime": updatetime,
+                            "reviewStatus": 9, "reviewStatusName": "成功出单", "source": source, "buid": buid,
+                            "companyType": 4,
+                            "deteatId": "",
+                            "carPolicyId": response['data']['carPolicyId']}
                     response = r.request(url, 'post', data, headers, content_type='json')
                     if response['message'] == '成功':
                         url = urls + '/carbusiness/api/v1/CustomerDetail/QueryUserinfoSteps?buid={0}&groupId=0&pageIndex=1&pageSize=20'.format(
@@ -65,55 +91,24 @@ class kehuliebiao:
                         if result['Buid'] == buid:
                             if result['ReviewStatusName'] == '成功出单' and int(result['Source']) == source and float(
                                     result['BizTotal']) == 1000.99:
-                                print('出单成功')
+                                # print('出单成功')
                                 return True
                         else:
                             print('获取出单结果的Buid不匹配：{0}'.format(response))
-                            return
-                    # 判断本年度是否出过保单
-                    elif '本续保年度已存在' in response['message']:
-                        data = {"defeatReasonContent": "", "bizTotal": "1000.99", "forceTotal": "500.11",
-                                "taxTotal": "15.01",
-                                "reviewContent": "自动化录入", "singleTime": chudan_time, "jyPrice": "222",
-                                "appointTime": updatetime,
-                                "reviewStatus": 9, "reviewStatusName": "成功出单", "source": source, "buid": buid,
-                                "companyType": 4,
-                                "deteatId": "",
-                                "carPolicyId": response['data']['carPolicyId']}
-                        response = r.request(url, 'post', data, headers, content_type='json')
-                        if response['message'] == '成功':
-                            url = urls + '/carbusiness/api/v1/CustomerDetail/QueryUserinfoSteps?buid={0}&groupId=0&pageIndex=1&pageSize=20'.format(
-                                buid)
-                            assert_response = r.request(url, 'get', headers=headers, content_type='json')
-                            # 获取出单记录
-                            result = json.loads(assert_response['data']['list'][0]['jsonContent'])
-                            if result['Buid'] == buid:
-                                if result['ReviewStatusName'] == '成功出单' and int(result['Source']) == source and float(
-                                        result['BizTotal']) == 1000.99:
-                                    print('出单成功')
-                                    return True
-                            else:
-                                print('获取出单结果的Buid不匹配：{0}'.format(response))
-                                return
-                        else:
-                            print('出单覆盖异常：{0}'.format(response))
-                            return
-
+                            return False
                     else:
-                        print('录入出单不通过，msg：{0},响应：{1}'.format(response['message'], response))
-                        return
-                except Exception as e:
-                    print('录入出单请求异常：{0}'.format(e))
-                    return
-            elif result[1] == False:
-                print('客户列表没有这条数据：{0}'.format(result[0]))
-                return
-            else:
-                print('查询结果异常：{0}'.format(result))
-                return
+                        print('出单覆盖异常：{0}'.format(response))
+                        return False
+
+                else:
+                    print('录入出单不通过，msg：{0},响应：{1}'.format(response['message'], response))
+                    return False
+            except Exception as e:
+                print('录入出单请求异常：{0}'.format(e))
+                return False
         else:
-            print(result)
-            return
+            print('查询结果异常：{0}'.format(result))
+            return False
 
     def enter_zhanbai(self, licenseno):
         result = self.find_licenseno(licenseno)
@@ -285,42 +280,41 @@ class kehuliebiao:
         result = r.request(url, 'post', data, headers, 'json')
         return result
 
-    # 出单总数
     def chudan_count(self, headers):
+        '出单总数'
         url = urls + '/carbusiness/api/v1/customer/quotationReceiptCount'
         data = {"pageIndex": 1, "pageSize": 15}
         result = r.request(url, 'post', data, headers, 'json')
         return result
 
-    # 战败总数
     def zhanbai_count(self, headers):
+        '战败总数'
         url = urls + '/carbusiness/api/v1/customer/defeatCount'
         data = {"pageIndex": 1, "pageSize": 15}
         result = r.request(url, 'post', data, headers, 'json')
         return result
 
-    # 获取顶级ID
     def get_empolyeeid(self, headers):
+        '获取顶级ID'
         url = urls + '/employee/api/v1/Login/EmployeeModuleAndInfo'
         data = {}
         result = r.request(url, 'post', data, headers, 'json')
         return result['data']['employeeInfo']['agentId']
 
-    # 业务员总数
     def agent_count(self, headers, top_agent):
+        '业务员总数'
         url = urls + '/employee/api/v1/Role/RoleListByCompId'
         data = {"compId": top_agent, "employeeId": top_agent}
         result = r.request(url, 'post', data, headers, 'json')
         return len(result['data'])
 
-    # 角色总数
     def juese_count(self, headers, top_agent):
+        '角色总数'
         url = urls + '/employee/api/v1/Role/RoleListByCompId'
         data = {"compId": top_agent, "employeeId": top_agent}
         result = r.request(url, 'post', data, headers, 'json')
         return len(result['data'])
 
-    # 通话记录总数
     def call_count(self, headers):
         u'通话记录总数'
         url = urls + '/stats/api/v1/Call/GetCallRecordList'
@@ -333,7 +327,8 @@ class kehuliebiao:
         try:
             url = urls + '/carbusiness/api/v1/Customer/QueryReviewCount'
             data = {"pageIndex": 1, "pageSize": 15, "selectType": 1, "topLabel": "tab_jihuahuifang",
-                    "orderBy": {"orderByField": "updateTime", "orderByType": "desc"}, "isFllowUp": "", "labelTimeSpan": 2,
+                    "orderBy": {"orderByField": "updateTime", "orderByType": "desc"}, "isFllowUp": "",
+                    "labelTimeSpan": 2,
                     "isDataLable": "", "dataTag": "", "dataTypeId": 0}
             result = r.request(url, 'post', data, headers, 'json')
             results = result['data']
@@ -352,7 +347,41 @@ class kehuliebiao:
                 "labelTimeSpan": type, "isDataLable": "", "dataTag": "", "dataTypeId": 0}
         result = r.request(url, 'post', data, headers, 'json')
         count = result['data']
-        return [len(count),result]
+        return [len(count), result]
+
+    def shaixuan_baojiachenggong(self):
+        url = urls + '/carbusiness/api/v1/customer/querylist'
+        data = {"pageIndex": 1, "pageSize": 45, "selectType": 1, "quoteStatus": [1], "topLabel": "tab_quanbukehu",
+                "orderBy": {"orderByField": "updateTime", "orderByType": "desc"}, "isFllowUp": "", "isDataLable": "",
+                "dataTag": "", "dataTypeId": 0, "isMaintain": 1, "firstSearch": True}
+        result = r.request(url, 'post', data, headers, 'json')
+        if len(result['data']) > 0:
+            return result
+        else:
+            print('没有报价成功数据')
+            return False
+
+    def quote_lishi(self, buid):
+        '获取报价历史'
+        url = urls + '/carbusiness/api/v1/Renewal/GetQuoteHistory'
+        data = {"buid": buid}
+        result = r.request(url, 'post', data, headers, 'json')
+        if len(result['data']) > 0:
+            return result
+        else:
+            print(f'buid：{buid}，无报价历史')
+            return False
+
+    def qiehuan_quote_lishi(self, id):
+        '根据报价历史id切换报价历史'
+        url = urls + '/carbusiness/api/v1/Renewal/GetQuoteRecord'
+        data = {"id": id}
+        result = r.request(url, 'post', data, headers, 'json')
+        if result['message'] == "获取成功":
+            return result
+        else:
+            print(f'切换报价历史失败')
+            return False
 
 
 if __name__ == '__main__':

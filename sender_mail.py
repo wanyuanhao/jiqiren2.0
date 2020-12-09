@@ -7,9 +7,9 @@ import os
 class SendMail:
     @classmethod
     def send_mail(self, report):
-        sender = "632604593@qq.com"
+        sender = "wanyuanhao@91bihu.com"
         receiver = ["wanyuanhao@91bihu.com", "243004032@qq.com"]
-        auth_code = "zbrmlqqlhupobchb"
+        auth_code = "ExhBzsuHyxTW9bTp"
         subject = "自动化测试报告"
         # 生成html文件内容
         html = MIMEText(report, _subtype="html", _charset="utf-8")
@@ -32,7 +32,7 @@ class SendMail:
         msg["to"] = str(receiver)
         # 链接smtp服务器
         smtp = smtplib.SMTP()
-        smtp.connect("smtp.qq.com")
+        smtp.connect("smtp.exmail.qq.com")
         # 登录邮箱
         smtp.login(sender, auth_code)
         # 发送邮件给多人使用list，单人可以是字符串

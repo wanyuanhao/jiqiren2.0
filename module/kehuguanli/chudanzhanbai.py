@@ -25,7 +25,7 @@ class chuzhan_zhanbai:
                 if len(response['data']) == 0:
                     return '查询结果为空：{0}'.format(response)
                 elif response['data'][0]['licenseNo'] == licenseno and time in response['data'][0]['appearTime']:
-                    print('出单列表查询通过')
+                    # print('出单列表查询通过')
                     return True
                 else:
                     return '已出保单查询不通过，校验类型（车牌是否匹配、出单时间是否今天）：{0}'.format(response)

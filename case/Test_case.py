@@ -5,7 +5,6 @@ from module.kehuguanli.chudanzhanbai import chuzhan_zhanbai
 from module.kehuguanli.Interface_quote import Interface_quote
 import configparser
 import os
-
 conf = configparser.ConfigParser()
 '''读取配置文件'''
 root_path = os.path.join(os.getcwd(), '..\config\config.ini')
@@ -30,16 +29,17 @@ class Test_case(unittest.TestCase):
 
     def test_case01(self):
         u'新增数据——录入出单流程'
-        xinzeng.xubao(licenseno, city)
+        result = xinzeng.xubao(licenseno, city)
+        self.assertTrue(result)
         # 客户列表查询车牌是否在客户列表
         result = kehu.find_licenseno(licenseno)
-        if isinstance(result[0]['data'][0]['buid'], int):
-            result = kehu.enter_chudan(licenseno)
+        self.assertTrue(result[0])
+        result = kehu.enter_chudan(licenseno)
+        print(result)
+        if result:
+            result = chudan.find_chudan(licenseno)
             print(result)
-            if result:
-                result = chudan.find_chudan(licenseno)
-                print(result)
-                self.assertTrue(result)
+            self.assertTrue(result)
 
     def test_case02(self):
         u'计划回访数据量对比'
@@ -61,11 +61,40 @@ class Test_case(unittest.TestCase):
                     print('计划回访{0}数量不一致:{1}'.format(plan_name[i], ss))
                 self.assertTrue(result[i] == plan_count[0])
 
+    def test_cese03(self):
+        '校验报价成功的数据是否有报价历史'
+        result = kehu.shaixuan_baojiachenggong()
+        #判断结果是否为真
+        self.assertTrue(result)
+        result = kehu.quote_lishi(result['data'][0]['buid'])
+        # 判断结果是否为真
+        self.assertTrue(result)
+
+    def test_cese04(self):
+        '校验报价历史是否切换成功'
+        result = kehu.shaixuan_baojiachenggong()
+        #判断结果是否为真
+        self.assertTrue(result)
+        for index in range(len(result['data'])):
+            lishi_result = kehu.quote_lishi(result['data'][index]['buid'])
+            # 校验报价历史是否为空
+            if lishi_result:
+                # 校验报价历史数量是否大于1
+                if len(lishi_result['data'])>1:
+                    id = lishi_result['data'][1]['id']
+                    time1 = lishi_result['data'][1]['quoteTime']
+                    lishi = kehu.qiehuan_quote_lishi(id)
+                    time = lishi['data']['quetoTime']
+                    print(time,time1)
+                    self.assertEqual(time,time1)
+                    break
+
 
 if __name__ == '__main__':
     print('执行Case')
-    unittest.main(verbosity=1)
-    # runner = unittest.TextTestRunner(verbosity=2)
-    # suite = unittest.TestSuite()
-    # suite.addTest(Test_case("test_case02"))
-    # print(runner.run(suite))
+    # unittest.main(verbosity=2)
+    runner = unittest.TextTestRunner(verbosity=2)
+    suite = unittest.TestSuite()
+    suite.addTest(Test_case("test_cese04"))
+    print(runner.run(suite))
+

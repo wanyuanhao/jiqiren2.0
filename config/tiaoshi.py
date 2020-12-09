@@ -132,17 +132,5 @@ print(s)
 
 # s = [4,3,7,1]
 # print(sorted(s,reverse=True))
-def time_count(func):
-    def my_func():
-        action = time.time()
-        func()
-        time.sleep(1)
-        over = time.time()
-        result = over - action
-        print(result)
-    return my_func
-
-@time_count
-def s():
-    print("demo")
-s()
+s =[1,3]
+print(len(s))
