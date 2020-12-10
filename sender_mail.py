@@ -2,13 +2,13 @@ import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 import os
-
+import datetime
 
 class SendMail:
     @classmethod
     def send_mail(self, report):
         sender = "wanyuanhao@91bihu.com"
-        receiver = ["wanyuanhao@91bihu.com", "243004032@qq.com"]
+        receiver = ["wanyuanhao@91bihu.com"]
         auth_code = "ExhBzsuHyxTW9bTp"
         subject = "自动化测试报告"
         # 生成html文件内容
@@ -17,11 +17,11 @@ class SendMail:
         # html["subject"] = subject
         # html["from"] = sender
         # html["to"] = str(receiver)
-
+        time = datetime.datetime.now().strftime('%Y-%m-%d')
         # 添加到附件，"base64","gb2312" 是编码
         file = MIMEText(report, "base64", "gb2312")
         file["Content-Type"] = "application/octet-stream"
-        file["Content-Disposition"] = 'attachment; filename="result111.html"'
+        file["Content-Disposition"] = f'attachment; filename="{time}result111.html"'
 
         # 把邮件内容和附件添加进去
         msg = MIMEMultipart()

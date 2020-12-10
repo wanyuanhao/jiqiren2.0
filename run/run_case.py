@@ -2,6 +2,9 @@ import unittest
 import os
 import HTMLTestRunner
 import sender_mail
+import datetime
+from config.Headers import Headers
+
 
 def run_test_case():
     path = os.path.dirname(os.path.dirname(__file__))
@@ -10,8 +13,11 @@ def run_test_case():
 
 
 if __name__ == '__main__':
+    # 登录账户获取touken
+    Headers.token('wanyuanhao')
+    time = datetime.datetime.now().strftime('%Y-%m-%d')
     # wb写入内容，没有文件会创建，有文件会覆盖文件内容
-    report_path = open("./test_report/result.html", 'wb')
+    report_path = open(f"./test_report/{time}result.html", 'wb')
     # 生成测试报告
     runner = HTMLTestRunner.HTMLTestRunner(stream=report_path, title=u"自动化测试报告", description="执行结果")
     ss = runner.run(run_test_case())
@@ -20,7 +26,7 @@ if __name__ == '__main__':
 
     # 打开测试报告
     path = os.path.dirname(__file__)
-    file = open(path+"/test_report/result.html", "rb")
+    file = open(path+f"/test_report/{time}result.html", "rb")
     report = file.read()
     file.close()
 
