@@ -19,7 +19,7 @@ if __name__ == '__main__':
     # wb写入内容，没有文件会创建，有文件会覆盖文件内容
     report_path = open(f"./test_report/{time}result.html", 'wb')
     # 生成测试报告
-    runner = HTMLTestRunner.HTMLTestRunner(stream=report_path, title=u"自动化测试报告", description="执行结果")
+    runner = HTMLTestRunner.HTMLTestRunner(stream=report_path, title=u"自动化测试报告", description="执行结果",verbosity=2)
     ss = runner.run(run_test_case())
     # 关闭文件，如果不关闭文件后面的程序读取，会是空内容
     report_path.close()

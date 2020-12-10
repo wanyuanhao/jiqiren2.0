@@ -5,6 +5,8 @@ from module.kehuguanli.chudanzhanbai import chuzhan_zhanbai
 from module.kehuguanli.Interface_quote import Interface_quote
 import configparser
 import os
+from config.Headers import Headers
+
 conf = configparser.ConfigParser()
 '''读取配置文件'''
 root_path = os.path.join(os.getcwd(), '..\config\config.ini')
@@ -32,9 +34,9 @@ class Test_case(unittest.TestCase):
         result = xinzeng.xubao(licenseno, city)
         self.assertTrue(result)
         # 客户列表查询车牌是否在客户列表
-        result = kehu.find_licenseno(licenseno)
+        result = kehu.find_licenseno(licenseno,headers)
         self.assertTrue(result[0])
-        result = kehu.enter_chudan(licenseno)
+        result = kehu.enter_chudan(licenseno,headers)
         print(result)
         if result:
             result = chudan.find_chudan(licenseno)
@@ -42,58 +44,89 @@ class Test_case(unittest.TestCase):
             self.assertTrue(result)
 
     def test_case02(self):
-        u'计划回访数据量对比'
+        u'顶级账户计划回访数据量对比，使用账号：jiao'
+        token = Headers().token_down('jiao')
+        self.assertTrue(token)
         # i+1是计划回访的页码
         # result+10 是在接口返回的数量上+10，避免库里的数据比接口返回的数量多
         plan_name = ["今日", '明日', '两日', '三日', '四日', '五日', '六日', '七日', '七日后']
-        result = kehu.plan_count_jinri(headers)
+        result = kehu.plan_count_jinri(token)
         for i in range(len(result)):
             if i + 1 == 9:
-                plan_count = kehu.plan_counts(headers, result[i] + 10, 9999)
+                plan_count = kehu.plan_counts(token, result[i] + 10, 9999)
                 ss = f"接口返回数量：{result[i]}", f'实际条数：{plan_count[0]},f"接口响应：{plan_count[1]}"'
                 if result[i] != plan_count[0]:
                     print('计划回访{0}数量不一致:{1}'.format(plan_name[i], ss))
                 self.assertTrue(result[i] == plan_count[0])
             else:
-                plan_count = kehu.plan_counts(headers, result[i] + 10, i + 1)
+                plan_count = kehu.plan_counts(token, result[i] + 10, i + 1)
                 ss = f"接口返回数量：{result[i]}", f'实际条数：{plan_count[0]},f"接口响应：{plan_count[1]}"'
                 if result[i] != plan_count[0]:
                     print('计划回访{0}数量不一致:{1}'.format(plan_name[i], ss))
                 self.assertTrue(result[i] == plan_count[0])
 
-    def test_cese03(self):
+    def test_case03(self):
         '校验报价成功的数据是否有报价历史'
-        result = kehu.shaixuan_baojiachenggong()
+        result = kehu.shaixuan_baojiachenggong(headers)
         #判断结果是否为真
         self.assertTrue(result)
-        result = kehu.quote_lishi(result['data'][0]['buid'])
+        lishi_result = kehu.quote_lishi(result['data'][0]['buid'],headers)
         # 判断结果是否为真
-        self.assertTrue(result)
+        self.assertTrue(lishi_result)
 
-    def test_cese04(self):
-        '校验报价历史是否切换失败'
-        result = kehu.shaixuan_baojiachenggong()
+    def test_case04(self):
+        '校验切换报价历史是否成功'
+        result = kehu.shaixuan_baojiachenggong(headers)
         #判断结果是否为真
         self.assertTrue(result)
         for index in range(len(result['data'])):
-            lishi_result = kehu.quote_lishi(result['data'][index]['buid'])
+            lishi_result = kehu.quote_lishi(result['data'][index]['buid'],headers)
             # 校验报价历史是否为空
             if lishi_result:
                 # 校验报价历史数量是否大于1
                 if len(lishi_result['data'])>1:
                     id = lishi_result['data'][1]['id']
                     time1 = lishi_result['data'][1]['quoteTime']
-                    lishi = kehu.qiehuan_quote_lishi(id)
+                    lishi = kehu.qiehuan_quote_lishi(id,headers)
                     time = lishi['data']['quetoTime']
                     print(time,time1)
                     self.assertEqual(time,time1)
                     break
+
+    def test_case05(self):
+        u'下级账户计划回访数据量对比,使用账号：18612938273'
+        token = Headers().token_down('18612938273')
+        self.assertTrue(token)
+        # i+1是计划回访的页码
+        # result+10 是在接口返回的数量上+10，避免库里的数据比接口返回的数量多
+        plan_name = ["今日", '明日', '两日', '三日', '四日', '五日', '六日', '七日', '七日后']
+        result = kehu.plan_count_jinri(token)
+        for i in range(len(result)):
+            if i + 1 == 9:
+                plan_count = kehu.plan_counts(token, result[i] + 10, 9999)
+                ss = f"接口返回数量：{result[i]}", f'实际条数：{plan_count[0]},f"接口响应：{plan_count[1]}"'
+                if result[i] != plan_count[0]:
+                    print('计划回访{0}数量不一致:{1}'.format(plan_name[i], ss))
+                self.assertTrue(result[i] == plan_count[0])
+            else:
+                plan_count = kehu.plan_counts(token, result[i] + 10, i + 1)
+                ss = f"接口返回数量：{result[i]}", f'实际条数：{plan_count[0]},f"接口响应：{plan_count[1]}"'
+                if result[i] != plan_count[0]:
+                    print('计划回访{0}数量不一致:{1}'.format(plan_name[i], ss))
+                self.assertTrue(result[i] == plan_count[0])
+
+    def test_case06(self):
+        '客户列表分配，使用账号wanyuanhao,分配人：17501110001'
+        token = Headers().token_down('wanyuanhao')
+        self.assertTrue(token)
+        result = kehu.fenpei_avg(token)
+        self.assertTrue(result)
 
 if __name__ == '__main__':
     print('执行Case')
     # unittest.main(verbosity=2)
     runner = unittest.TextTestRunner(verbosity=2)
     suite = unittest.TestSuite()
-    suite.addTest(Test_case("test_cese04"))
+    suite.addTest(Test_case("test_case06"))
     print(runner.run(suite))
 

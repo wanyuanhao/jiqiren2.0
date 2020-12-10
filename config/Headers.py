@@ -36,7 +36,26 @@ class Headers:
         except Exception as e:
             return e
 
+    def token_down(self, user):
+        try:
+            url = urls + '/identity/connect/token'
+            data = {'grant_type': 'password',
+                    'username': user,
+                    'password': '91bihu.com',
+                    'scope': 'employee_center car_business smart_car_mgts',
+                    'client_id': 'bot',
+                    'client_secret': 'secret'}
+            response = r.request(url, 'post', data)
+            if 'error' in response:
+                print('账号：{0}，登录报错：{1}'.format(user, response))
+                return False
+            else:
+                token = {'Authorization': 'Bearer ' + response['access_token']}
+                return token
+        except Exception as e:
+            print(e)
+            return False
 
 if __name__ == '__main__':
-    print('获取token')
+    print('执行token')
     Headers.token(users)

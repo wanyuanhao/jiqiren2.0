@@ -3,21 +3,19 @@ from util.Requests_util import Requests_util
 # from config.Headers import Headers
 import datetime, json
 import os, configparser
-import time
 
-# Headers().token()
 r = Requests_util()
 config = configparser.ConfigParser()
 path = os.path.dirname(__file__)
 config.read(path + '..\..\..\config\config.ini', encoding='utf-8')
-headers = eval(config.get('headers', 'token'))
+# headers = eval(config.get('headers', 'token'))
 urls = config.get('host', 'url')
 
 
 # 客户列表
 class kehuliebiao:
     # 根据车牌查询是否已在客户列表
-    def find_licenseno(self, licenseno):
+    def find_licenseno(self, licenseno,headers):
         "根据车牌查询是否已在客户列表"
         data = {"pageIndex": 1, "pageSize": 15, "selectType": 1, "selectSearchValue": licenseno,
                 "topLabel": "tab_quanbukehu", "orderBy": {"orderByField": "updateTime", "orderByType": "desc"},
@@ -42,10 +40,10 @@ class kehuliebiao:
             return [False]
 
     # 根据buid录入出单，source默认录入人保
-    def enter_chudan(self, licenseno, source=4):
+    def enter_chudan(self, licenseno,headers, source=4):
         updatetime = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
         chudan_time = datetime.datetime.now().strftime('%Y-%m-%d')
-        result = self.find_licenseno(licenseno)
+        result = self.find_licenseno(licenseno,headers)
         if result[0]:
             # 拿第一buid
             buid = result[1]['data'][0]['buid']
@@ -110,8 +108,8 @@ class kehuliebiao:
             print('查询结果异常：{0}'.format(result))
             return False
 
-    def enter_zhanbai(self, licenseno):
-        result = self.find_licenseno(licenseno)
+    def enter_zhanbai(self, licenseno,headers):
+        result = self.find_licenseno(licenseno,headers)
         time = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
         try:
             if len(result) > 1:
@@ -170,10 +168,11 @@ class kehuliebiao:
                 return result
         except Exception as e:
             print('战败请求异常：{0}'.format(e))
+            return False
 
-    def del_licenseno(self, licenseno):
+    def del_licenseno(self, licenseno,headers):
         u'查询车牌是否有数据'
-        find_result = self.find_licenseno(licenseno)
+        find_result = self.find_licenseno(licenseno,headers)
         # 返回大于1的结果往下执行，否则结果异常
         if len(find_result) > 1:
             # 查询结果为真往下执行
@@ -218,7 +217,8 @@ class kehuliebiao:
         else:
             return '客户列表查询异常：{0}'.format(find_result)
 
-    def fenpei_avg(self):
+    def fenpei_avg(self,headers):
+        '客户列表分配'
         try:
             # 获取客户列表数据接口
             url = urls + '/carbusiness/api/v1/customer/querylist'
@@ -253,24 +253,26 @@ class kehuliebiao:
                     if resutl['message'] == '成功':
                         for buid in resutl['data']:
                             if buid['employeeId'] == 287523:
-                                print('分配人和查询结果匹配')
+                                pass
                             else:
                                 print('分配的业务员和实际结果业务员不匹配，默认分配人ID是（287523）：{0}'.format(resutl))
+                                return False
                         return True
                     else:
                         print('获取客户列表数据异常：{0}'.format(resutl))
-                        return
+                        return False
                 else:
                     print('分配异常：{0}'.format(resutl))
+                    return False
             else:
                 print('获取客户列表数据异常：{0}'.format(resutl))
-                return
+                return False
         except Exception as e:
             print('分配接口异常：{0}'.format(e))
-            return
+            return False
 
-    # 客户列表各个TAB总数
     def kehuliebiao_tab_count(self, headers):
+        '获取客户列表每个TAB页的数量'
         url = urls + '/carbusiness/api/v1/customer/queryTopLabelCount'
         data = {"pageIndex": 1, "pageSize": 15, "selectType": 1, "topLabel": "tab_dangqikehu",
                 "orderBy": {"orderByField": "updateTime", "orderByType": "desc"}, "isFllowUp": "", "isDataLable": "",
@@ -337,7 +339,7 @@ class kehuliebiao:
                             results['liurihuifang'], results['qirihuifang'], results['qirihouhuifang']]
             return count_result
         except Exception as e:
-            return ' plan_count_jinri执行异常'
+            return f' plan_count_jinri执行异常:{e}'
 
     def plan_counts(self, headers, data_type=15, type=1):
         u'循环获取计划回访数据'
@@ -349,7 +351,8 @@ class kehuliebiao:
         count = result['data']
         return [len(count), result]
 
-    def shaixuan_baojiachenggong(self):
+    def shaixuan_baojiachenggong(self,headers):
+        '筛选报价成功数据'
         url = urls + '/carbusiness/api/v1/customer/querylist'
         data = {"pageIndex": 1, "pageSize": 45, "selectType": 1, "quoteStatus": [1], "topLabel": "tab_quanbukehu",
                 "orderBy": {"orderByField": "updateTime", "orderByType": "desc"}, "isFllowUp": "", "isDataLable": "",
@@ -361,7 +364,7 @@ class kehuliebiao:
             print('没有报价成功数据')
             return False
 
-    def quote_lishi(self, buid):
+    def quote_lishi(self, buid,headers):
         '获取报价历史'
         url = urls + '/carbusiness/api/v1/Renewal/GetQuoteHistory'
         data = {"buid": buid}
@@ -372,7 +375,7 @@ class kehuliebiao:
             print(f'buid：{buid}，无报价历史')
             return False
 
-    def qiehuan_quote_lishi(self, id):
+    def qiehuan_quote_lishi(self, id,headers):
         '根据报价历史id切换报价历史'
         url = urls + '/carbusiness/api/v1/Renewal/GetQuoteRecord'
         data = {"id": id}
@@ -385,6 +388,5 @@ class kehuliebiao:
 
 
 if __name__ == '__main__':
-    run = kehuliebiao()
-    result = run.plan_counts(headers)
-    print(result)
+
+    print('kehuliebiao')
