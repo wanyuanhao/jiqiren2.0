@@ -6,7 +6,8 @@ from module.kehuguanli.Interface_quote import Interface_quote
 import configparser
 import os
 from config.Headers import Headers
-
+from config import Logs
+logger = Logs.logs()
 conf = configparser.ConfigParser()
 '''读取配置文件'''
 root_path = os.path.join(os.getcwd(), '..\config\config.ini')
@@ -31,9 +32,10 @@ class Test_case(unittest.TestCase):
 
     def test_case01(self):
         u'新增数据——录入出单流程'
+        logger.info('新增数据——录入出单流程')
         result = xinzeng.xubao(licenseno, city)
         self.assertTrue(result)
-        # 客户列表查询车牌是否在客户列表
+        logger.info('客户列表查询车牌是否在客户列表')
         result = kehu.find_licenseno(licenseno,headers)
         self.assertTrue(result[0])
         result = kehu.enter_chudan(licenseno,headers)
@@ -45,12 +47,13 @@ class Test_case(unittest.TestCase):
 
     def test_case02(self):
         u'顶级账户计划回访数据量对比，使用账号：jiao'
+        logger.info('顶级账户计划回访数据量对比，使用账号：jiao')
         token = Headers().token_down('jiao')
         self.assertTrue(token)
         # i+1是计划回访的页码
         # result+10 是在接口返回的数量上+10，避免库里的数据比接口返回的数量多
         plan_name = ["今日", '明日', '两日', '三日', '四日', '五日', '六日', '七日', '七日后']
-        result = kehu.plan_count_jinri(token)
+        result = kehu.plan_count(token)
         for i in range(len(result)):
             if i + 1 == 9:
                 plan_count = kehu.plan_counts(token, result[i] + 10, 9999)
@@ -67,6 +70,7 @@ class Test_case(unittest.TestCase):
 
     def test_case03(self):
         '校验报价成功的数据是否有报价历史'
+        logger.info('校验报价成功的数据是否有报价历史')
         result = kehu.shaixuan_baojiachenggong(headers)
         #判断结果是否为真
         self.assertTrue(result)
@@ -76,6 +80,7 @@ class Test_case(unittest.TestCase):
 
     def test_case04(self):
         '校验切换报价历史是否成功'
+        logger.info('校验切换报价历史是否成功')
         result = kehu.shaixuan_baojiachenggong(headers)
         #判断结果是否为真
         self.assertTrue(result)
@@ -95,12 +100,13 @@ class Test_case(unittest.TestCase):
 
     def test_case05(self):
         u'下级账户计划回访数据量对比,使用账号：18612938273'
+        logger.info('下级账户计划回访数据量对比,使用账号：18612938273')
         token = Headers().token_down('18612938273')
         self.assertTrue(token)
         # i+1是计划回访的页码
         # result+10 是在接口返回的数量上+10，避免库里的数据比接口返回的数量多
         plan_name = ["今日", '明日', '两日', '三日', '四日', '五日', '六日', '七日', '七日后']
-        result = kehu.plan_count_jinri(token)
+        result = kehu.plan_count(token)
         for i in range(len(result)):
             if i + 1 == 9:
                 plan_count = kehu.plan_counts(token, result[i] + 10, 9999)
@@ -117,6 +123,8 @@ class Test_case(unittest.TestCase):
 
     def test_case06(self):
         '客户列表分配，使用账号wanyuanhao,分配人：17501110001'
+        logger.info('客户列表分配，使用账号wanyuanhao,分配人：17501110001')
+        logger.info('执行分配用例')
         token = Headers().token_down('wanyuanhao')
         self.assertTrue(token)
         result = kehu.fenpei_avg(token)
@@ -128,5 +136,5 @@ if __name__ == '__main__':
     runner = unittest.TextTestRunner(verbosity=2)
     suite = unittest.TestSuite()
     suite.addTest(Test_case("test_case06"))
-    print(runner.run(suite))
+    runner.run(suite)
 

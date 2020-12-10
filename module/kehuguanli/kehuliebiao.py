@@ -3,13 +3,14 @@ from util.Requests_util import Requests_util
 # from config.Headers import Headers
 import datetime, json
 import os, configparser
-
+from config import Logs
+logger = Logs.logs()
 r = Requests_util()
-config = configparser.ConfigParser()
+conf = configparser.ConfigParser()
 path = os.path.dirname(__file__)
-config.read(path + '..\..\..\config\config.ini', encoding='utf-8')
+conf.read(path + '..\..\..\config\config.ini', encoding='utf-8')
 # headers = eval(config.get('headers', 'token'))
-urls = config.get('host', 'url')
+urls = conf.get('host', 'url')
 
 
 # 客户列表
@@ -17,6 +18,7 @@ class kehuliebiao:
     # 根据车牌查询是否已在客户列表
     def find_licenseno(self, licenseno,headers):
         "根据车牌查询是否已在客户列表"
+        logger.info("根据车牌查询是否已在客户列表")
         data = {"pageIndex": 1, "pageSize": 15, "selectType": 1, "selectSearchValue": licenseno,
                 "topLabel": "tab_quanbukehu", "orderBy": {"orderByField": "updateTime", "orderByType": "desc"},
                 "isFllowUp": "", "isDataLable": "", "dataTag": "", "isOpenGuanjia": 1, "licenseNo": licenseno}
@@ -26,26 +28,28 @@ class kehuliebiao:
             response = r.request(url, 'post', data, headers, content_type='json')
             if response['message'] == '成功':
                 if response['data'] is not None and len(response['data']) > 0:
-                    # print('客户列表查询车牌通过')
+                    logger.info('客户列表查询车牌通过')
                     return [True, response]
                 else:
-                    print(f'{licenseno}查询结果为空')
+                    logger.error(f'{licenseno}查询结果为空')
                     return [False, response]
             else:
-                print('客户列表查询响应异常：{0}'.format(response))
+                logger.error('客户列表查询响应异常：{0}'.format(response))
                 return [False]
 
         except Exception as e:
-            print('查询车牌异常：{0}'.format(e))
+            logger.error('查询车牌异常：{0}'.format(e))
             return [False]
 
     # 根据buid录入出单，source默认录入人保
     def enter_chudan(self, licenseno,headers, source=4):
+        logger.info('根据buid录入出单，source默认录入人保')
         updatetime = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
         chudan_time = datetime.datetime.now().strftime('%Y-%m-%d')
         result = self.find_licenseno(licenseno,headers)
         if result[0]:
             # 拿第一buid
+            logger.info('拿第一buid')
             buid = result[1]['data'][0]['buid']
             url = urls + '/carbusiness/api/v1/CustomerDetail/SaveConsumerReview'
             data = {"defeatReasonContent": "", "bizTotal": "1000.99", "forceTotal": "500.11", "taxTotal": "15.01",
@@ -54,8 +58,10 @@ class kehuliebiao:
                     "reviewStatus": 9, "reviewStatusName": "成功出单", "source": source, "buid": buid, "companyType": 4}
             try:
                 # 发起录入出单请求
+                logger.info('发起录入出单请求')
                 response = r.request(url, 'post', data, headers, content_type='json')
                 if response['message'] == '成功':
+                    logger.info('message响应成功')
                     url = urls + '/carbusiness/api/v1/CustomerDetail/QueryUserinfoSteps?buid={0}&groupId=0&pageIndex=1&pageSize=20'.format(
                         buid)
                     assert_response = r.request(url, 'get', headers=headers, content_type='json')
@@ -64,13 +70,14 @@ class kehuliebiao:
                     if result['Buid'] == buid:
                         if result['ReviewStatusName'] == '成功出单' and int(result['Source']) == source and float(
                                 result['BizTotal']) == 1000.99:
-                            # print('出单成功')
+                            logger.info('出单成功')
                             return True
                     else:
-                        print('获取出单结果的Buid不匹配：{0}'.format(response))
+                        logger.error('获取出单结果的Buid不匹配：{0}'.format(response))
                         return False
                 # 判断本年度是否出过保单
                 elif '本续保年度已存在' in response['message']:
+                    logger.info('本年度已出过保单')
                     data = {"defeatReasonContent": "", "bizTotal": "1000.99", "forceTotal": "500.11",
                             "taxTotal": "15.01",
                             "reviewContent": "自动化录入", "singleTime": chudan_time, "jyPrice": "222",
@@ -89,31 +96,34 @@ class kehuliebiao:
                         if result['Buid'] == buid:
                             if result['ReviewStatusName'] == '成功出单' and int(result['Source']) == source and float(
                                     result['BizTotal']) == 1000.99:
-                                # print('出单成功')
+                                logger.info('出单成功')
                                 return True
                         else:
-                            print('获取出单结果的Buid不匹配：{0}'.format(response))
+                            logger.error('获取出单结果的Buid不匹配：{0}'.format(response))
                             return False
                     else:
-                        print('出单覆盖异常：{0}'.format(response))
+                        logger.error('出单覆盖异常：{0}'.format(response))
                         return False
 
                 else:
-                    print('录入出单不通过，msg：{0},响应：{1}'.format(response['message'], response))
+                    logger.error('录入出单不通过，msg：{0},响应：{1}'.format(response['message'], response))
                     return False
             except Exception as e:
-                print('录入出单请求异常：{0}'.format(e))
+                logger.error('录入出单请求异常：{0}'.format(e))
                 return False
         else:
-            print('查询结果异常：{0}'.format(result))
+            logger.error('查询结果异常：{0}'.format(result))
             return False
 
     def enter_zhanbai(self, licenseno,headers):
+        logger.info('录入战败')
+        logger.info('查询车牌')
         result = self.find_licenseno(licenseno,headers)
         time = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
         try:
             if len(result) > 1:
                 # 校验查询结果是否为真
+                logger.info('校验查询结果')
                 if result[1]:
                     buid = result[0]['data'][0]['buid']
                     url = urls + '/carbusiness/api/v1/CustomerDetail/SaveConsumerReview'
@@ -132,10 +142,11 @@ class kehuliebiao:
                         assert_result = json.loads(result['data']['list'][0]['jsonContent'])
                         # 断言录入结果和实际录入结果是否一致
                         if assert_result['ReviewStatusName'] == '战败':
-                            print('录入战败通过')
+                            logger.info('录入战败通过')
                             return True
                         else:
-                            return '录入结果和实际结果不符，车牌：{0}'.format(licenseno)
+                            logger.error( '录入结果和实际结果不符，车牌：{0}'.format(licenseno))
+                            return False
 
                     # 如果本年度已经录入过，重新覆盖录入结果
                     elif '本续保年度已存在' in result['message']:
@@ -153,25 +164,29 @@ class kehuliebiao:
                             assert_result = json.loads(result['data']['list'][0]['jsonContent'])
                             # 断言录入结果和实际录入结果是否一致
                             if assert_result['ReviewStatusName'] == '战败':
-                                print('录入战败通过')
+                                logger.info('录入战败通过')
                                 return True
                             else:
-                                return '录入结果和实际结果不符，车牌：{0}'.format(licenseno)
+                                logger.error('录入结果和实际结果不符，车牌：{0}'.format(licenseno))
+                                return False
                         else:
-                            return '覆盖战败响应结果异常：{0}'.format(result)
+                            logger.error('覆盖战败响应结果异常：{0}'.format(result))
+                            return False
                     else:
-                        return '录入传单响应异常：{0}'.format(result)
+                        logger.error('录入传单响应异常：{0}'.format(result))
+                        return False
                 elif result[1] == False:
-                    print('客户列表没有这条数据：{0}'.format(result[0]))
-                    return
+                    logger.error('客户列表没有这条数据：{0}'.format(result[0]))
+                    return False
             else:
                 return result
         except Exception as e:
-            print('战败请求异常：{0}'.format(e))
+            logger.error('战败请求异常：{0}'.format(e))
             return False
 
     def del_licenseno(self, licenseno,headers):
-        u'查询车牌是否有数据'
+        f'删除车牌{licenseno}'
+        logger.info('查询车牌是否存在')
         find_result = self.find_licenseno(licenseno,headers)
         # 返回大于1的结果往下执行，否则结果异常
         if len(find_result) > 1:
@@ -182,9 +197,10 @@ class kehuliebiao:
                 # 遍历结果拿到buid
                 for result in find_result[0]['data']:
                     buid_list.append(result['buid'])
-                    print(buid_list)
                 # 如果拿到buid大于1，则把buid全部传过去删除
+
                 if len(buid_list) > 1:
+                    logger.info(f'删除数据，buid：{buid_list}')
                     if find_result:
                         data = {"pageIndex": 1, "pageSize": 15, "selectType": 1, "selectSearchValue": licenseno,
                                 "topLabel": "tab_quanbukehu",
@@ -193,10 +209,11 @@ class kehuliebiao:
                                 "DelFunc": 1}
                         response = r.request(url, 'post', data, headers, content_type='json')
                         if response['message'] == '操作成功':
+                            logger.info('删除成功')
                             return True
                         else:
-                            print('删除失败：{0}'.format(response))
-                            return
+                            logger.error('删除失败：{0}'.format(response))
+                            return False
 
                 # 删除单个
                 else:
@@ -206,19 +223,22 @@ class kehuliebiao:
                             "isFllowUp": "", "isDataLable": "", "dataTag": "", "licenseNo": licenseno, "DelFunc": 1}
                     response = r.request(url, 'post', data, headers, content_type='json')
                     if response['message'] == '操作成功':
+                        logger.info('删除成功')
                         return True
                     else:
-                        print('删除失败：{0}'.format(response))
-                        return
+                        logger.error('删除失败：{0}'.format(response))
+                        return False
             # 等于False代表客户列表查询结果为空
             elif find_result[1] == False:
-                print('客户列表查询结果为空:{0}'.format(find_result[0]))
-                return
+                logger.error('客户列表查询结果为空:{0}'.format(find_result[0]))
+                return False
         else:
-            return '客户列表查询异常：{0}'.format(find_result)
+            logger.error('客户列表查询异常：{0}'.format(find_result))
+            return False
 
     def fenpei_avg(self,headers):
         '客户列表分配'
+        logger.info('客户列表分配')
         try:
             # 获取客户列表数据接口
             url = urls + '/carbusiness/api/v1/customer/querylist'
@@ -255,24 +275,25 @@ class kehuliebiao:
                             if buid['employeeId'] == 287523:
                                 pass
                             else:
-                                print('分配的业务员和实际结果业务员不匹配，默认分配人ID是（287523）：{0}'.format(resutl))
+                                logger.error('分配的业务员和实际结果业务员不匹配，默认分配人ID是（287523）：{0}'.format(resutl['data'][0]))
                                 return False
                         return True
                     else:
-                        print('获取客户列表数据异常：{0}'.format(resutl))
+                        logger.error('获取客户列表数据异常：{0}'.format(resutl))
                         return False
                 else:
-                    print('分配异常：{0}'.format(resutl))
+                    logger.error('分配异常：{0}'.format(resutl))
                     return False
             else:
-                print('获取客户列表数据异常：{0}'.format(resutl))
+                logger.error('获取客户列表数据异常：{0}'.format(resutl))
                 return False
         except Exception as e:
-            print('分配接口异常：{0}'.format(e))
+            logger.error('分配接口异常：{0}'.format(e))
             return False
 
     def kehuliebiao_tab_count(self, headers):
         '获取客户列表每个TAB页的数量'
+        logger.info('获取客户列表每个TAB页的数量')
         url = urls + '/carbusiness/api/v1/customer/queryTopLabelCount'
         data = {"pageIndex": 1, "pageSize": 15, "selectType": 1, "topLabel": "tab_dangqikehu",
                 "orderBy": {"orderByField": "updateTime", "orderByType": "desc"}, "isFllowUp": "", "isDataLable": "",
@@ -283,14 +304,16 @@ class kehuliebiao:
         return result
 
     def chudan_count(self, headers):
-        '出单总数'
+        '获取出单总数'
+        logger.info('获取出单总数')
         url = urls + '/carbusiness/api/v1/customer/quotationReceiptCount'
         data = {"pageIndex": 1, "pageSize": 15}
         result = r.request(url, 'post', data, headers, 'json')
         return result
 
     def zhanbai_count(self, headers):
-        '战败总数'
+        '获取战败总数'
+        logger.info('获取战败总数')
         url = urls + '/carbusiness/api/v1/customer/defeatCount'
         data = {"pageIndex": 1, "pageSize": 15}
         result = r.request(url, 'post', data, headers, 'json')
@@ -298,6 +321,7 @@ class kehuliebiao:
 
     def get_empolyeeid(self, headers):
         '获取顶级ID'
+        logger.info('获取顶级ID')
         url = urls + '/employee/api/v1/Login/EmployeeModuleAndInfo'
         data = {}
         result = r.request(url, 'post', data, headers, 'json')
@@ -324,8 +348,9 @@ class kehuliebiao:
         result = r.request(url, 'post', data, headers, 'json')
         return result['data']['totalCount']
 
-    def plan_count_jinri(self, headers):
+    def plan_count(self, headers):
         u'获取接口返回的计划回访数量'
+        logger.info('获取接口返回的计划回访数量')
         try:
             url = urls + '/carbusiness/api/v1/Customer/QueryReviewCount'
             data = {"pageIndex": 1, "pageSize": 15, "selectType": 1, "topLabel": "tab_jihuahuifang",
@@ -337,12 +362,15 @@ class kehuliebiao:
             count_result = [results['jinrihuifang'], results['mingrihuifang'], results['liangrihuifang'],
                             results['sanrihuifang'], results['sirihuifang'], results['wurihuifang'],
                             results['liurihuifang'], results['qirihuifang'], results['qirihouhuifang']]
+            logger.info(f'返回计划回访数量：{count_result}')
             return count_result
         except Exception as e:
-            return f' plan_count_jinri执行异常:{e}'
+            logger.error(f' plan_count_jinri执行异常:{e}')
+            return False
 
     def plan_counts(self, headers, data_type=15, type=1):
         u'循环获取计划回访数据'
+        logger.info('循环获取计划回访数据')
         url = urls + '/carbusiness/api/v1/customer/querylist'
         data = {"pageIndex": 1, "pageSize": data_type, "selectType": 1, "topLabel": "tab_jihuahuifang",
                 "orderBy": {"orderByField": "updateTime", "orderByType": "desc"}, "isFllowUp": "",
@@ -353,37 +381,43 @@ class kehuliebiao:
 
     def shaixuan_baojiachenggong(self,headers):
         '筛选报价成功数据'
+        logger.info('筛选报价成功数据')
         url = urls + '/carbusiness/api/v1/customer/querylist'
         data = {"pageIndex": 1, "pageSize": 45, "selectType": 1, "quoteStatus": [1], "topLabel": "tab_quanbukehu",
                 "orderBy": {"orderByField": "updateTime", "orderByType": "desc"}, "isFllowUp": "", "isDataLable": "",
                 "dataTag": "", "dataTypeId": 0, "isMaintain": 1, "firstSearch": True}
         result = r.request(url, 'post', data, headers, 'json')
         if len(result['data']) > 0:
+            logger.info('返回筛选结果')
             return result
         else:
-            print('没有报价成功数据')
+            logger.error('没有报价成功数据')
             return False
 
     def quote_lishi(self, buid,headers):
         '获取报价历史'
+        logger.info('获取报价历史')
         url = urls + '/carbusiness/api/v1/Renewal/GetQuoteHistory'
         data = {"buid": buid}
         result = r.request(url, 'post', data, headers, 'json')
         if len(result['data']) > 0:
+            logger.info('返回报价历史结果')
             return result
         else:
-            print(f'buid：{buid}，无报价历史')
+            logger.error(f'buid：{buid}，无报价历史')
             return False
 
     def qiehuan_quote_lishi(self, id,headers):
         '根据报价历史id切换报价历史'
+        logger.info('根据报价历史id切换报价历史')
         url = urls + '/carbusiness/api/v1/Renewal/GetQuoteRecord'
         data = {"id": id}
         result = r.request(url, 'post', data, headers, 'json')
         if result['message'] == "获取成功":
+            logger.info('报价历史已切换')
             return result
         else:
-            print(f'切换报价历史失败')
+            logger.error(f'切换报价历史失败')
             return False
 
 

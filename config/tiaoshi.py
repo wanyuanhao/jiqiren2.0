@@ -132,5 +132,4 @@ print(s)
 
 # s = [4,3,7,1]
 # print(sorted(s,reverse=True))
-s =[1,3]
-print(len(s))
+

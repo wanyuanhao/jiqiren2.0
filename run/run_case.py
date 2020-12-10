@@ -4,7 +4,7 @@ import HTMLTestRunner
 import sender_mail
 import datetime
 from config.Headers import Headers
-
+from config import Logs
 
 def run_test_case():
     path = os.path.dirname(os.path.dirname(__file__))
@@ -13,12 +13,13 @@ def run_test_case():
 
 
 if __name__ == '__main__':
-    # 登录账户获取touken
+    logger = Logs.logs()
+    logger.info('登录账户获取touken')
     Headers.token('wanyuanhao')
     time = datetime.datetime.now().strftime('%Y-%m-%d')
     # wb写入内容，没有文件会创建，有文件会覆盖文件内容
     report_path = open(f"./test_report/{time}result.html", 'wb')
-    # 生成测试报告
+    logger.info('生成测试报告')
     runner = HTMLTestRunner.HTMLTestRunner(stream=report_path, title=u"自动化测试报告", description="执行结果",verbosity=2)
     ss = runner.run(run_test_case())
     # 关闭文件，如果不关闭文件后面的程序读取，会是空内容
@@ -31,5 +32,6 @@ if __name__ == '__main__':
     file.close()
 
     # 发送邮件
+    logger.info('发送邮件')
     sendmail = sender_mail.SendMail()
     sendmail.send_mail(report)

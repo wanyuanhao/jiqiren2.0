@@ -1,0 +1,620 @@
+[2020-12-10 18:20:28] [INFO] 新增数据——录入出单流程
+[2020-12-10 18:20:28] [INFO] 新增数据——录入出单流程
+[2020-12-10 18:20:28] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:20:28] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:20:28] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/Renewal/RenewalCheck HTTP/1.1" 200 None
+[2020-12-10 18:20:28] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/Renewal/RenewalCheck HTTP/1.1" 200 None
+[2020-12-10 18:20:28] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:20:28] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:20:28] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/Renewal/SubmitRenewalAsync HTTP/1.1" 200 None
+[2020-12-10 18:20:28] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/Renewal/SubmitRenewalAsync HTTP/1.1" 200 None
+[2020-12-10 18:20:28] [INFO] 客户列表查询车牌是否在客户列表
+[2020-12-10 18:20:28] [INFO] 客户列表查询车牌是否在客户列表
+[2020-12-10 18:20:28] [INFO] 根据车牌查询是否已在客户列表
+[2020-12-10 18:20:28] [INFO] 根据车牌查询是否已在客户列表
+[2020-12-10 18:20:28] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:20:28] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:20:28] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/customer/querylist HTTP/1.1" 200 None
+[2020-12-10 18:20:28] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/customer/querylist HTTP/1.1" 200 None
+[2020-12-10 18:20:28] [INFO] 客户列表查询车牌通过
+[2020-12-10 18:20:28] [INFO] 客户列表查询车牌通过
+[2020-12-10 18:20:28] [INFO] 根据buid录入出单，source默认录入人保
+[2020-12-10 18:20:28] [INFO] 根据buid录入出单，source默认录入人保
+[2020-12-10 18:20:28] [INFO] 根据车牌查询是否已在客户列表
+[2020-12-10 18:20:28] [INFO] 根据车牌查询是否已在客户列表
+[2020-12-10 18:20:28] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:20:28] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:20:28] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/customer/querylist HTTP/1.1" 200 None
+[2020-12-10 18:20:28] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/customer/querylist HTTP/1.1" 200 None
+[2020-12-10 18:20:28] [INFO] 客户列表查询车牌通过
+[2020-12-10 18:20:28] [INFO] 客户列表查询车牌通过
+[2020-12-10 18:20:28] [INFO] 拿第一buid
+[2020-12-10 18:20:28] [INFO] 拿第一buid
+[2020-12-10 18:20:28] [INFO] 发起录入出单请求
+[2020-12-10 18:20:28] [INFO] 发起录入出单请求
+[2020-12-10 18:20:28] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:20:28] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:20:28] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/CustomerDetail/SaveConsumerReview HTTP/1.1" 200 None
+[2020-12-10 18:20:28] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/CustomerDetail/SaveConsumerReview HTTP/1.1" 200 None
+[2020-12-10 18:20:28] [INFO] 本年度已出过保单
+[2020-12-10 18:20:28] [INFO] 本年度已出过保单
+[2020-12-10 18:20:28] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:20:28] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:20:29] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/CustomerDetail/SaveConsumerReview HTTP/1.1" 200 None
+[2020-12-10 18:20:29] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/CustomerDetail/SaveConsumerReview HTTP/1.1" 200 None
+[2020-12-10 18:20:29] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:20:29] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:20:29] [DEBUG] https://bot.91bihu.com:443 "GET /carbusiness/api/v1/CustomerDetail/QueryUserinfoSteps?buid=600976286&groupId=0&pageIndex=1&pageSize=20 HTTP/1.1" 200 None
+[2020-12-10 18:20:29] [DEBUG] https://bot.91bihu.com:443 "GET /carbusiness/api/v1/CustomerDetail/QueryUserinfoSteps?buid=600976286&groupId=0&pageIndex=1&pageSize=20 HTTP/1.1" 200 None
+[2020-12-10 18:20:29] [INFO] 出单成功
+[2020-12-10 18:20:29] [INFO] 出单成功
+[2020-12-10 18:20:29] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:20:29] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:20:29] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/customer/quotationReceiptList HTTP/1.1" 200 None
+[2020-12-10 18:20:29] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/customer/quotationReceiptList HTTP/1.1" 200 None
+[2020-12-10 18:20:29] [INFO] 顶级账户计划回访数据量对比，使用账号：jiao
+[2020-12-10 18:20:29] [INFO] 顶级账户计划回访数据量对比，使用账号：jiao
+[2020-12-10 18:20:29] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:20:29] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:20:29] [DEBUG] https://bot.91bihu.com:443 "POST /identity/connect/token HTTP/1.1" 200 None
+[2020-12-10 18:20:29] [DEBUG] https://bot.91bihu.com:443 "POST /identity/connect/token HTTP/1.1" 200 None
+[2020-12-10 18:20:29] [INFO] 获取接口返回的计划回访数量
+[2020-12-10 18:20:29] [INFO] 获取接口返回的计划回访数量
+[2020-12-10 18:20:29] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:20:29] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:20:29] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/Customer/QueryReviewCount HTTP/1.1" 200 None
+[2020-12-10 18:20:29] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/Customer/QueryReviewCount HTTP/1.1" 200 None
+[2020-12-10 18:20:29] [INFO] 返回计划回访数量：[61, 466, 166, 91, 216, 186, 152, 145, 96]
+[2020-12-10 18:20:29] [INFO] 返回计划回访数量：[61, 466, 166, 91, 216, 186, 152, 145, 96]
+[2020-12-10 18:20:29] [INFO] 循环获取计划回访数据
+[2020-12-10 18:20:29] [INFO] 循环获取计划回访数据
+[2020-12-10 18:20:29] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:20:29] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:20:30] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/customer/querylist HTTP/1.1" 200 None
+[2020-12-10 18:20:30] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/customer/querylist HTTP/1.1" 200 None
+[2020-12-10 18:20:30] [INFO] 循环获取计划回访数据
+[2020-12-10 18:20:30] [INFO] 循环获取计划回访数据
+[2020-12-10 18:20:30] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:20:30] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:20:30] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/customer/querylist HTTP/1.1" 200 None
+[2020-12-10 18:20:30] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/customer/querylist HTTP/1.1" 200 None
+[2020-12-10 18:20:30] [INFO] 循环获取计划回访数据
+[2020-12-10 18:20:30] [INFO] 循环获取计划回访数据
+[2020-12-10 18:20:30] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:20:30] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:20:30] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/customer/querylist HTTP/1.1" 200 None
+[2020-12-10 18:20:30] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/customer/querylist HTTP/1.1" 200 None
+[2020-12-10 18:20:31] [INFO] 循环获取计划回访数据
+[2020-12-10 18:20:31] [INFO] 循环获取计划回访数据
+[2020-12-10 18:20:31] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:20:31] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:20:31] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/customer/querylist HTTP/1.1" 200 None
+[2020-12-10 18:20:31] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/customer/querylist HTTP/1.1" 200 None
+[2020-12-10 18:20:31] [INFO] 循环获取计划回访数据
+[2020-12-10 18:20:31] [INFO] 循环获取计划回访数据
+[2020-12-10 18:20:31] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:20:31] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:20:31] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/customer/querylist HTTP/1.1" 200 None
+[2020-12-10 18:20:31] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/customer/querylist HTTP/1.1" 200 None
+[2020-12-10 18:20:31] [INFO] 循环获取计划回访数据
+[2020-12-10 18:20:31] [INFO] 循环获取计划回访数据
+[2020-12-10 18:20:31] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:20:31] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:20:32] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/customer/querylist HTTP/1.1" 200 None
+[2020-12-10 18:20:32] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/customer/querylist HTTP/1.1" 200 None
+[2020-12-10 18:20:32] [INFO] 循环获取计划回访数据
+[2020-12-10 18:20:32] [INFO] 循环获取计划回访数据
+[2020-12-10 18:20:32] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:20:32] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:20:32] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/customer/querylist HTTP/1.1" 200 None
+[2020-12-10 18:20:32] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/customer/querylist HTTP/1.1" 200 None
+[2020-12-10 18:20:32] [INFO] 循环获取计划回访数据
+[2020-12-10 18:20:32] [INFO] 循环获取计划回访数据
+[2020-12-10 18:20:32] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:20:32] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:20:32] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/customer/querylist HTTP/1.1" 200 None
+[2020-12-10 18:20:32] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/customer/querylist HTTP/1.1" 200 None
+[2020-12-10 18:20:32] [INFO] 循环获取计划回访数据
+[2020-12-10 18:20:32] [INFO] 循环获取计划回访数据
+[2020-12-10 18:20:32] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:20:32] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:20:33] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/customer/querylist HTTP/1.1" 200 None
+[2020-12-10 18:20:33] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/customer/querylist HTTP/1.1" 200 None
+[2020-12-10 18:20:33] [INFO] 校验报价成功的数据是否有报价历史
+[2020-12-10 18:20:33] [INFO] 校验报价成功的数据是否有报价历史
+[2020-12-10 18:20:33] [INFO] 筛选报价成功数据
+[2020-12-10 18:20:33] [INFO] 筛选报价成功数据
+[2020-12-10 18:20:33] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:20:33] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:20:33] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/customer/querylist HTTP/1.1" 200 None
+[2020-12-10 18:20:33] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/customer/querylist HTTP/1.1" 200 None
+[2020-12-10 18:20:33] [INFO] 返回筛选结果
+[2020-12-10 18:20:33] [INFO] 返回筛选结果
+[2020-12-10 18:20:33] [INFO] 获取报价历史
+[2020-12-10 18:20:33] [INFO] 获取报价历史
+[2020-12-10 18:20:33] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:20:33] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:20:33] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/Renewal/GetQuoteHistory HTTP/1.1" 200 None
+[2020-12-10 18:20:33] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/Renewal/GetQuoteHistory HTTP/1.1" 200 None
+[2020-12-10 18:20:33] [INFO] 返回报价历史结果
+[2020-12-10 18:20:33] [INFO] 返回报价历史结果
+[2020-12-10 18:20:33] [INFO] 校验切换报价历史是否成功
+[2020-12-10 18:20:33] [INFO] 校验切换报价历史是否成功
+[2020-12-10 18:20:33] [INFO] 筛选报价成功数据
+[2020-12-10 18:20:33] [INFO] 筛选报价成功数据
+[2020-12-10 18:20:33] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:20:33] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:20:33] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/customer/querylist HTTP/1.1" 200 None
+[2020-12-10 18:20:33] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/customer/querylist HTTP/1.1" 200 None
+[2020-12-10 18:20:33] [INFO] 返回筛选结果
+[2020-12-10 18:20:33] [INFO] 返回筛选结果
+[2020-12-10 18:20:33] [INFO] 获取报价历史
+[2020-12-10 18:20:33] [INFO] 获取报价历史
+[2020-12-10 18:20:33] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:20:33] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:20:33] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/Renewal/GetQuoteHistory HTTP/1.1" 200 None
+[2020-12-10 18:20:33] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/Renewal/GetQuoteHistory HTTP/1.1" 200 None
+[2020-12-10 18:20:33] [INFO] 返回报价历史结果
+[2020-12-10 18:20:33] [INFO] 返回报价历史结果
+[2020-12-10 18:20:33] [INFO] 获取报价历史
+[2020-12-10 18:20:33] [INFO] 获取报价历史
+[2020-12-10 18:20:33] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:20:33] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:20:33] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/Renewal/GetQuoteHistory HTTP/1.1" 200 None
+[2020-12-10 18:20:33] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/Renewal/GetQuoteHistory HTTP/1.1" 200 None
+[2020-12-10 18:20:33] [INFO] 返回报价历史结果
+[2020-12-10 18:20:33] [INFO] 返回报价历史结果
+[2020-12-10 18:20:33] [INFO] 根据报价历史id切换报价历史
+[2020-12-10 18:20:33] [INFO] 根据报价历史id切换报价历史
+[2020-12-10 18:20:33] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:20:33] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:20:33] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/Renewal/GetQuoteRecord HTTP/1.1" 200 None
+[2020-12-10 18:20:33] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/Renewal/GetQuoteRecord HTTP/1.1" 200 None
+[2020-12-10 18:20:33] [INFO] 报价历史已切换
+[2020-12-10 18:20:33] [INFO] 报价历史已切换
+[2020-12-10 18:20:33] [INFO] 下级账户计划回访数据量对比,使用账号：18612938273
+[2020-12-10 18:20:33] [INFO] 下级账户计划回访数据量对比,使用账号：18612938273
+[2020-12-10 18:20:33] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:20:33] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:20:34] [DEBUG] https://bot.91bihu.com:443 "POST /identity/connect/token HTTP/1.1" 200 None
+[2020-12-10 18:20:34] [DEBUG] https://bot.91bihu.com:443 "POST /identity/connect/token HTTP/1.1" 200 None
+[2020-12-10 18:20:34] [INFO] 获取接口返回的计划回访数量
+[2020-12-10 18:20:34] [INFO] 获取接口返回的计划回访数量
+[2020-12-10 18:20:34] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:20:34] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:20:34] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/Customer/QueryReviewCount HTTP/1.1" 200 None
+[2020-12-10 18:20:34] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/Customer/QueryReviewCount HTTP/1.1" 200 None
+[2020-12-10 18:20:34] [INFO] 返回计划回访数量：[11, 60, 26, 12, 31, 26, 42, 0, 22]
+[2020-12-10 18:20:34] [INFO] 返回计划回访数量：[11, 60, 26, 12, 31, 26, 42, 0, 22]
+[2020-12-10 18:20:34] [INFO] 循环获取计划回访数据
+[2020-12-10 18:20:34] [INFO] 循环获取计划回访数据
+[2020-12-10 18:20:34] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:20:34] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:20:34] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/customer/querylist HTTP/1.1" 200 None
+[2020-12-10 18:20:34] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/customer/querylist HTTP/1.1" 200 None
+[2020-12-10 18:20:34] [INFO] 循环获取计划回访数据
+[2020-12-10 18:20:34] [INFO] 循环获取计划回访数据
+[2020-12-10 18:20:34] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:20:34] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:20:34] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/customer/querylist HTTP/1.1" 200 None
+[2020-12-10 18:20:34] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/customer/querylist HTTP/1.1" 200 None
+[2020-12-10 18:20:34] [INFO] 循环获取计划回访数据
+[2020-12-10 18:20:34] [INFO] 循环获取计划回访数据
+[2020-12-10 18:20:34] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:20:34] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:20:34] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/customer/querylist HTTP/1.1" 200 None
+[2020-12-10 18:20:34] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/customer/querylist HTTP/1.1" 200 None
+[2020-12-10 18:20:34] [INFO] 循环获取计划回访数据
+[2020-12-10 18:20:34] [INFO] 循环获取计划回访数据
+[2020-12-10 18:20:34] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:20:34] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:20:34] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/customer/querylist HTTP/1.1" 200 None
+[2020-12-10 18:20:34] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/customer/querylist HTTP/1.1" 200 None
+[2020-12-10 18:20:34] [INFO] 循环获取计划回访数据
+[2020-12-10 18:20:34] [INFO] 循环获取计划回访数据
+[2020-12-10 18:20:34] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:20:34] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:20:34] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/customer/querylist HTTP/1.1" 200 None
+[2020-12-10 18:20:34] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/customer/querylist HTTP/1.1" 200 None
+[2020-12-10 18:20:34] [INFO] 循环获取计划回访数据
+[2020-12-10 18:20:34] [INFO] 循环获取计划回访数据
+[2020-12-10 18:20:34] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:20:34] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:20:35] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/customer/querylist HTTP/1.1" 200 None
+[2020-12-10 18:20:35] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/customer/querylist HTTP/1.1" 200 None
+[2020-12-10 18:20:35] [INFO] 循环获取计划回访数据
+[2020-12-10 18:20:35] [INFO] 循环获取计划回访数据
+[2020-12-10 18:20:35] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:20:35] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:20:35] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/customer/querylist HTTP/1.1" 200 None
+[2020-12-10 18:20:35] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/customer/querylist HTTP/1.1" 200 None
+[2020-12-10 18:20:35] [INFO] 循环获取计划回访数据
+[2020-12-10 18:20:35] [INFO] 循环获取计划回访数据
+[2020-12-10 18:20:35] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:20:35] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:20:35] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/customer/querylist HTTP/1.1" 200 None
+[2020-12-10 18:20:35] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/customer/querylist HTTP/1.1" 200 None
+[2020-12-10 18:20:35] [INFO] 循环获取计划回访数据
+[2020-12-10 18:20:35] [INFO] 循环获取计划回访数据
+[2020-12-10 18:20:35] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:20:35] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:20:35] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/customer/querylist HTTP/1.1" 200 None
+[2020-12-10 18:20:35] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/customer/querylist HTTP/1.1" 200 None
+[2020-12-10 18:20:35] [INFO] 客户列表分配，使用账号wanyuanhao,分配人：17501110001
+[2020-12-10 18:20:35] [INFO] 客户列表分配，使用账号wanyuanhao,分配人：17501110001
+[2020-12-10 18:20:35] [INFO] 执行分配用例
+[2020-12-10 18:20:35] [INFO] 执行分配用例
+[2020-12-10 18:20:35] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:20:35] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:20:35] [DEBUG] https://bot.91bihu.com:443 "POST /identity/connect/token HTTP/1.1" 200 None
+[2020-12-10 18:20:35] [DEBUG] https://bot.91bihu.com:443 "POST /identity/connect/token HTTP/1.1" 200 None
+[2020-12-10 18:20:35] [INFO] 客户列表分配
+[2020-12-10 18:20:35] [INFO] 客户列表分配
+[2020-12-10 18:20:35] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:20:35] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:20:35] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/customer/querylist HTTP/1.1" 200 None
+[2020-12-10 18:20:35] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/customer/querylist HTTP/1.1" 200 None
+[2020-12-10 18:20:35] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:20:35] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:20:35] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/customer/DistributeCustomer HTTP/1.1" 200 None
+[2020-12-10 18:20:35] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/customer/DistributeCustomer HTTP/1.1" 200 None
+[2020-12-10 18:20:35] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:20:35] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:20:36] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/customer/querylist HTTP/1.1" 200 None
+[2020-12-10 18:20:36] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/customer/querylist HTTP/1.1" 200 None
+[2020-12-10 18:24:42] [INFO] 登录账户获取touken
+[2020-12-10 18:24:42] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:24:43] [DEBUG] https://bot.91bihu.com:443 "POST /identity/connect/token HTTP/1.1" 200 None
+[2020-12-10 18:24:43] [INFO] 生成测试报告
+[2020-12-10 18:24:43] [INFO] 新增数据——录入出单流程
+[2020-12-10 18:24:43] [INFO] 新增数据——录入出单流程
+[2020-12-10 18:24:43] [INFO] 新增数据——录入出单流程
+[2020-12-10 18:24:43] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:24:43] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:24:43] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:24:43] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/Renewal/RenewalCheck HTTP/1.1" 200 None
+[2020-12-10 18:24:43] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/Renewal/RenewalCheck HTTP/1.1" 200 None
+[2020-12-10 18:24:43] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/Renewal/RenewalCheck HTTP/1.1" 200 None
+[2020-12-10 18:24:43] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:24:43] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:24:43] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:24:43] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/Renewal/SubmitRenewalAsync HTTP/1.1" 200 None
+[2020-12-10 18:24:43] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/Renewal/SubmitRenewalAsync HTTP/1.1" 200 None
+[2020-12-10 18:24:43] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/Renewal/SubmitRenewalAsync HTTP/1.1" 200 None
+[2020-12-10 18:24:43] [INFO] 客户列表查询车牌是否在客户列表
+[2020-12-10 18:24:43] [INFO] 客户列表查询车牌是否在客户列表
+[2020-12-10 18:24:43] [INFO] 客户列表查询车牌是否在客户列表
+[2020-12-10 18:24:43] [INFO] 根据车牌查询是否已在客户列表
+[2020-12-10 18:24:43] [INFO] 根据车牌查询是否已在客户列表
+[2020-12-10 18:24:43] [INFO] 根据车牌查询是否已在客户列表
+[2020-12-10 18:24:43] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:24:43] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:24:43] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:24:44] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/customer/querylist HTTP/1.1" 200 None
+[2020-12-10 18:24:44] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/customer/querylist HTTP/1.1" 200 None
+[2020-12-10 18:24:44] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/customer/querylist HTTP/1.1" 200 None
+[2020-12-10 18:24:44] [INFO] 客户列表查询车牌通过
+[2020-12-10 18:24:44] [INFO] 客户列表查询车牌通过
+[2020-12-10 18:24:44] [INFO] 客户列表查询车牌通过
+[2020-12-10 18:24:44] [INFO] 根据buid录入出单，source默认录入人保
+[2020-12-10 18:24:44] [INFO] 根据buid录入出单，source默认录入人保
+[2020-12-10 18:24:44] [INFO] 根据buid录入出单，source默认录入人保
+[2020-12-10 18:24:44] [INFO] 根据车牌查询是否已在客户列表
+[2020-12-10 18:24:44] [INFO] 根据车牌查询是否已在客户列表
+[2020-12-10 18:24:44] [INFO] 根据车牌查询是否已在客户列表
+[2020-12-10 18:24:44] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:24:44] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:24:44] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:26:05] [INFO] 登录账户获取touken
+[2020-12-10 18:26:05] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:26:06] [DEBUG] https://bot.91bihu.com:443 "POST /identity/connect/token HTTP/1.1" 200 None
+[2020-12-10 18:26:06] [INFO] 生成测试报告
+[2020-12-10 18:26:06] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:26:06] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:26:06] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:26:06] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/Renewal/RenewalCheck HTTP/1.1" 200 None
+[2020-12-10 18:26:06] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/Renewal/RenewalCheck HTTP/1.1" 200 None
+[2020-12-10 18:26:06] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/Renewal/RenewalCheck HTTP/1.1" 200 None
+[2020-12-10 18:26:06] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:26:06] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:26:06] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:26:14] [INFO] 登录账户获取touken
+[2020-12-10 18:26:14] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:26:14] [DEBUG] https://bot.91bihu.com:443 "POST /identity/connect/token HTTP/1.1" 200 None
+[2020-12-10 18:26:14] [INFO] 生成测试报告
+[2020-12-10 18:26:14] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:26:14] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:26:14] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:26:14] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/Renewal/RenewalCheck HTTP/1.1" 200 None
+[2020-12-10 18:26:14] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/Renewal/RenewalCheck HTTP/1.1" 200 None
+[2020-12-10 18:26:14] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/Renewal/RenewalCheck HTTP/1.1" 200 None
+[2020-12-10 18:26:14] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:26:14] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:26:14] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:26:14] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/Renewal/SubmitRenewalAsync HTTP/1.1" 200 None
+[2020-12-10 18:26:14] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/Renewal/SubmitRenewalAsync HTTP/1.1" 200 None
+[2020-12-10 18:26:14] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/Renewal/SubmitRenewalAsync HTTP/1.1" 200 None
+[2020-12-10 18:26:14] [INFO] 客户列表查询车牌是否在客户列表
+[2020-12-10 18:26:14] [INFO] 客户列表查询车牌是否在客户列表
+[2020-12-10 18:26:14] [INFO] 客户列表查询车牌是否在客户列表
+[2020-12-10 18:26:14] [INFO] 根据车牌查询是否已在客户列表
+[2020-12-10 18:26:14] [INFO] 根据车牌查询是否已在客户列表
+[2020-12-10 18:26:14] [INFO] 根据车牌查询是否已在客户列表
+[2020-12-10 18:26:14] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:26:14] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:26:14] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:26:15] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/customer/querylist HTTP/1.1" 200 None
+[2020-12-10 18:26:15] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/customer/querylist HTTP/1.1" 200 None
+[2020-12-10 18:26:15] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/customer/querylist HTTP/1.1" 200 None
+[2020-12-10 18:26:15] [INFO] 客户列表查询车牌通过
+[2020-12-10 18:26:15] [INFO] 客户列表查询车牌通过
+[2020-12-10 18:26:15] [INFO] 客户列表查询车牌通过
+[2020-12-10 18:26:15] [INFO] 根据buid录入出单，source默认录入人保
+[2020-12-10 18:26:15] [INFO] 根据buid录入出单，source默认录入人保
+[2020-12-10 18:26:15] [INFO] 根据buid录入出单，source默认录入人保
+[2020-12-10 18:26:15] [INFO] 根据车牌查询是否已在客户列表
+[2020-12-10 18:26:15] [INFO] 根据车牌查询是否已在客户列表
+[2020-12-10 18:26:15] [INFO] 根据车牌查询是否已在客户列表
+[2020-12-10 18:26:15] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:26:15] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:26:15] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:26:15] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/customer/querylist HTTP/1.1" 200 None
+[2020-12-10 18:26:15] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/customer/querylist HTTP/1.1" 200 None
+[2020-12-10 18:26:15] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/customer/querylist HTTP/1.1" 200 None
+[2020-12-10 18:26:15] [INFO] 客户列表查询车牌通过
+[2020-12-10 18:26:15] [INFO] 客户列表查询车牌通过
+[2020-12-10 18:26:15] [INFO] 客户列表查询车牌通过
+[2020-12-10 18:26:15] [INFO] 拿第一buid
+[2020-12-10 18:26:15] [INFO] 拿第一buid
+[2020-12-10 18:26:15] [INFO] 拿第一buid
+[2020-12-10 18:26:15] [INFO] 发起录入出单请求
+[2020-12-10 18:26:15] [INFO] 发起录入出单请求
+[2020-12-10 18:26:15] [INFO] 发起录入出单请求
+[2020-12-10 18:26:15] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:26:15] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:26:15] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:26:15] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/CustomerDetail/SaveConsumerReview HTTP/1.1" 200 None
+[2020-12-10 18:26:15] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/CustomerDetail/SaveConsumerReview HTTP/1.1" 200 None
+[2020-12-10 18:26:15] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/CustomerDetail/SaveConsumerReview HTTP/1.1" 200 None
+[2020-12-10 18:26:15] [INFO] 本年度已出过保单
+[2020-12-10 18:26:15] [INFO] 本年度已出过保单
+[2020-12-10 18:26:15] [INFO] 本年度已出过保单
+[2020-12-10 18:26:15] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:26:15] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:26:15] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:26:15] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/CustomerDetail/SaveConsumerReview HTTP/1.1" 200 None
+[2020-12-10 18:26:15] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/CustomerDetail/SaveConsumerReview HTTP/1.1" 200 None
+[2020-12-10 18:26:15] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/CustomerDetail/SaveConsumerReview HTTP/1.1" 200 None
+[2020-12-10 18:26:15] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:26:15] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:26:15] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:26:15] [DEBUG] https://bot.91bihu.com:443 "GET /carbusiness/api/v1/CustomerDetail/QueryUserinfoSteps?buid=600976286&groupId=0&pageIndex=1&pageSize=20 HTTP/1.1" 200 None
+[2020-12-10 18:26:15] [DEBUG] https://bot.91bihu.com:443 "GET /carbusiness/api/v1/CustomerDetail/QueryUserinfoSteps?buid=600976286&groupId=0&pageIndex=1&pageSize=20 HTTP/1.1" 200 None
+[2020-12-10 18:26:15] [DEBUG] https://bot.91bihu.com:443 "GET /carbusiness/api/v1/CustomerDetail/QueryUserinfoSteps?buid=600976286&groupId=0&pageIndex=1&pageSize=20 HTTP/1.1" 200 None
+[2020-12-10 18:26:15] [INFO] 出单成功
+[2020-12-10 18:26:15] [INFO] 出单成功
+[2020-12-10 18:26:15] [INFO] 出单成功
+[2020-12-10 18:26:15] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:26:15] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:26:15] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:27:48] [INFO] 登录账户获取touken
+[2020-12-10 18:27:48] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:27:48] [DEBUG] https://bot.91bihu.com:443 "POST /identity/connect/token HTTP/1.1" 200 None
+[2020-12-10 18:27:48] [INFO] 生成测试报告
+[2020-12-10 18:27:54] [INFO] 新增数据——录入出单流程
+[2020-12-10 18:27:54] [INFO] 新增数据——录入出单流程
+[2020-12-10 18:27:54] [INFO] 新增数据——录入出单流程
+[2020-12-10 18:27:56] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:27:56] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:27:56] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:27:56] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/Renewal/RenewalCheck HTTP/1.1" 200 None
+[2020-12-10 18:27:56] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/Renewal/RenewalCheck HTTP/1.1" 200 None
+[2020-12-10 18:27:56] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/Renewal/RenewalCheck HTTP/1.1" 200 None
+[2020-12-10 18:27:56] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:27:56] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:27:56] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:27:56] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/Renewal/SubmitRenewalAsync HTTP/1.1" 200 None
+[2020-12-10 18:27:56] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/Renewal/SubmitRenewalAsync HTTP/1.1" 200 None
+[2020-12-10 18:27:56] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/Renewal/SubmitRenewalAsync HTTP/1.1" 200 None
+[2020-12-10 18:27:59] [INFO] 客户列表查询车牌是否在客户列表
+[2020-12-10 18:27:59] [INFO] 客户列表查询车牌是否在客户列表
+[2020-12-10 18:27:59] [INFO] 客户列表查询车牌是否在客户列表
+[2020-12-10 18:28:01] [INFO] 根据车牌查询是否已在客户列表
+[2020-12-10 18:28:01] [INFO] 根据车牌查询是否已在客户列表
+[2020-12-10 18:28:01] [INFO] 根据车牌查询是否已在客户列表
+[2020-12-10 18:28:01] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:28:01] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:28:01] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:28:01] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/customer/querylist HTTP/1.1" 200 None
+[2020-12-10 18:28:01] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/customer/querylist HTTP/1.1" 200 None
+[2020-12-10 18:28:01] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/customer/querylist HTTP/1.1" 200 None
+[2020-12-10 18:28:01] [INFO] 客户列表查询车牌通过
+[2020-12-10 18:28:01] [INFO] 客户列表查询车牌通过
+[2020-12-10 18:28:01] [INFO] 客户列表查询车牌通过
+[2020-12-10 18:28:10] [INFO] 根据buid录入出单，source默认录入人保
+[2020-12-10 18:28:10] [INFO] 根据buid录入出单，source默认录入人保
+[2020-12-10 18:28:10] [INFO] 根据buid录入出单，source默认录入人保
+[2020-12-10 18:28:10] [INFO] 根据车牌查询是否已在客户列表
+[2020-12-10 18:28:10] [INFO] 根据车牌查询是否已在客户列表
+[2020-12-10 18:28:10] [INFO] 根据车牌查询是否已在客户列表
+[2020-12-10 18:28:10] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:28:10] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:28:10] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:28:10] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/customer/querylist HTTP/1.1" 200 None
+[2020-12-10 18:28:10] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/customer/querylist HTTP/1.1" 200 None
+[2020-12-10 18:28:10] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/customer/querylist HTTP/1.1" 200 None
+[2020-12-10 18:28:10] [INFO] 客户列表查询车牌通过
+[2020-12-10 18:28:10] [INFO] 客户列表查询车牌通过
+[2020-12-10 18:28:10] [INFO] 客户列表查询车牌通过
+[2020-12-10 18:28:10] [INFO] 拿第一buid
+[2020-12-10 18:28:10] [INFO] 拿第一buid
+[2020-12-10 18:28:10] [INFO] 拿第一buid
+[2020-12-10 18:28:10] [INFO] 发起录入出单请求
+[2020-12-10 18:28:10] [INFO] 发起录入出单请求
+[2020-12-10 18:28:10] [INFO] 发起录入出单请求
+[2020-12-10 18:28:10] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:28:10] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:28:10] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:28:10] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/CustomerDetail/SaveConsumerReview HTTP/1.1" 200 None
+[2020-12-10 18:28:10] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/CustomerDetail/SaveConsumerReview HTTP/1.1" 200 None
+[2020-12-10 18:28:10] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/CustomerDetail/SaveConsumerReview HTTP/1.1" 200 None
+[2020-12-10 18:28:10] [INFO] 本年度已出过保单
+[2020-12-10 18:28:10] [INFO] 本年度已出过保单
+[2020-12-10 18:28:10] [INFO] 本年度已出过保单
+[2020-12-10 18:28:10] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:28:10] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:28:10] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:28:10] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/CustomerDetail/SaveConsumerReview HTTP/1.1" 200 None
+[2020-12-10 18:28:10] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/CustomerDetail/SaveConsumerReview HTTP/1.1" 200 None
+[2020-12-10 18:28:10] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/CustomerDetail/SaveConsumerReview HTTP/1.1" 200 None
+[2020-12-10 18:28:10] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:28:10] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:28:10] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:28:10] [DEBUG] https://bot.91bihu.com:443 "GET /carbusiness/api/v1/CustomerDetail/QueryUserinfoSteps?buid=600976286&groupId=0&pageIndex=1&pageSize=20 HTTP/1.1" 200 None
+[2020-12-10 18:28:10] [DEBUG] https://bot.91bihu.com:443 "GET /carbusiness/api/v1/CustomerDetail/QueryUserinfoSteps?buid=600976286&groupId=0&pageIndex=1&pageSize=20 HTTP/1.1" 200 None
+[2020-12-10 18:28:10] [DEBUG] https://bot.91bihu.com:443 "GET /carbusiness/api/v1/CustomerDetail/QueryUserinfoSteps?buid=600976286&groupId=0&pageIndex=1&pageSize=20 HTTP/1.1" 200 None
+[2020-12-10 18:28:10] [INFO] 出单成功
+[2020-12-10 18:28:10] [INFO] 出单成功
+[2020-12-10 18:28:10] [INFO] 出单成功
+[2020-12-10 18:28:12] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:28:12] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:28:12] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:28:12] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/customer/quotationReceiptList HTTP/1.1" 200 None
+[2020-12-10 18:28:12] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/customer/quotationReceiptList HTTP/1.1" 200 None
+[2020-12-10 18:28:12] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/customer/quotationReceiptList HTTP/1.1" 200 None
+[2020-12-10 18:28:19] [INFO] 顶级账户计划回访数据量对比，使用账号：jiao
+[2020-12-10 18:28:19] [INFO] 顶级账户计划回访数据量对比，使用账号：jiao
+[2020-12-10 18:28:19] [INFO] 顶级账户计划回访数据量对比，使用账号：jiao
+[2020-12-10 18:28:19] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:28:19] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:28:19] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:28:19] [DEBUG] https://bot.91bihu.com:443 "POST /identity/connect/token HTTP/1.1" 200 None
+[2020-12-10 18:28:19] [DEBUG] https://bot.91bihu.com:443 "POST /identity/connect/token HTTP/1.1" 200 None
+[2020-12-10 18:28:19] [DEBUG] https://bot.91bihu.com:443 "POST /identity/connect/token HTTP/1.1" 200 None
+[2020-12-10 18:28:19] [INFO] 获取接口返回的计划回访数量
+[2020-12-10 18:28:19] [INFO] 获取接口返回的计划回访数量
+[2020-12-10 18:28:19] [INFO] 获取接口返回的计划回访数量
+[2020-12-10 18:28:19] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:28:19] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:28:19] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:28:20] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/Customer/QueryReviewCount HTTP/1.1" 200 None
+[2020-12-10 18:28:20] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/Customer/QueryReviewCount HTTP/1.1" 200 None
+[2020-12-10 18:28:20] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/Customer/QueryReviewCount HTTP/1.1" 200 None
+[2020-12-10 18:28:20] [INFO] 返回计划回访数量：[61, 466, 166, 91, 216, 186, 152, 145, 96]
+[2020-12-10 18:28:20] [INFO] 返回计划回访数量：[61, 466, 166, 91, 216, 186, 152, 145, 96]
+[2020-12-10 18:28:20] [INFO] 返回计划回访数量：[61, 466, 166, 91, 216, 186, 152, 145, 96]
+[2020-12-10 18:28:20] [INFO] 循环获取计划回访数据
+[2020-12-10 18:28:20] [INFO] 循环获取计划回访数据
+[2020-12-10 18:28:20] [INFO] 循环获取计划回访数据
+[2020-12-10 18:28:20] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:28:20] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:28:20] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:28:21] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/customer/querylist HTTP/1.1" 200 None
+[2020-12-10 18:28:21] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/customer/querylist HTTP/1.1" 200 None
+[2020-12-10 18:28:21] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/customer/querylist HTTP/1.1" 200 None
+[2020-12-10 18:28:21] [INFO] 循环获取计划回访数据
+[2020-12-10 18:28:21] [INFO] 循环获取计划回访数据
+[2020-12-10 18:28:21] [INFO] 循环获取计划回访数据
+[2020-12-10 18:28:21] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:28:21] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:28:21] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:28:21] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/customer/querylist HTTP/1.1" 200 None
+[2020-12-10 18:28:21] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/customer/querylist HTTP/1.1" 200 None
+[2020-12-10 18:28:21] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/customer/querylist HTTP/1.1" 200 None
+[2020-12-10 18:28:21] [INFO] 循环获取计划回访数据
+[2020-12-10 18:28:21] [INFO] 循环获取计划回访数据
+[2020-12-10 18:28:21] [INFO] 循环获取计划回访数据
+[2020-12-10 18:28:21] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:28:21] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:28:21] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:28:22] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/customer/querylist HTTP/1.1" 200 None
+[2020-12-10 18:28:22] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/customer/querylist HTTP/1.1" 200 None
+[2020-12-10 18:28:22] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/customer/querylist HTTP/1.1" 200 None
+[2020-12-10 18:28:22] [INFO] 循环获取计划回访数据
+[2020-12-10 18:28:22] [INFO] 循环获取计划回访数据
+[2020-12-10 18:28:22] [INFO] 循环获取计划回访数据
+[2020-12-10 18:28:22] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:28:22] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:28:22] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:28:22] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/customer/querylist HTTP/1.1" 200 None
+[2020-12-10 18:28:22] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/customer/querylist HTTP/1.1" 200 None
+[2020-12-10 18:28:22] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/customer/querylist HTTP/1.1" 200 None
+[2020-12-10 18:28:22] [INFO] 循环获取计划回访数据
+[2020-12-10 18:28:22] [INFO] 循环获取计划回访数据
+[2020-12-10 18:28:22] [INFO] 循环获取计划回访数据
+[2020-12-10 18:28:22] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:28:22] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:28:22] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:28:22] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/customer/querylist HTTP/1.1" 200 None
+[2020-12-10 18:28:22] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/customer/querylist HTTP/1.1" 200 None
+[2020-12-10 18:28:22] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/customer/querylist HTTP/1.1" 200 None
+[2020-12-10 18:28:22] [INFO] 循环获取计划回访数据
+[2020-12-10 18:28:22] [INFO] 循环获取计划回访数据
+[2020-12-10 18:28:22] [INFO] 循环获取计划回访数据
+[2020-12-10 18:28:22] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:28:22] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:28:22] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:28:23] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/customer/querylist HTTP/1.1" 200 None
+[2020-12-10 18:28:23] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/customer/querylist HTTP/1.1" 200 None
+[2020-12-10 18:28:23] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/customer/querylist HTTP/1.1" 200 None
+[2020-12-10 18:28:23] [INFO] 循环获取计划回访数据
+[2020-12-10 18:28:23] [INFO] 循环获取计划回访数据
+[2020-12-10 18:28:23] [INFO] 循环获取计划回访数据
+[2020-12-10 18:28:23] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:28:23] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:28:23] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:28:23] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/customer/querylist HTTP/1.1" 200 None
+[2020-12-10 18:28:23] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/customer/querylist HTTP/1.1" 200 None
+[2020-12-10 18:28:23] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/customer/querylist HTTP/1.1" 200 None
+[2020-12-10 18:28:23] [INFO] 循环获取计划回访数据
+[2020-12-10 18:28:23] [INFO] 循环获取计划回访数据
+[2020-12-10 18:28:23] [INFO] 循环获取计划回访数据
+[2020-12-10 18:28:23] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:28:23] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:28:23] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:28:24] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/customer/querylist HTTP/1.1" 200 None
+[2020-12-10 18:28:24] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/customer/querylist HTTP/1.1" 200 None
+[2020-12-10 18:28:24] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/customer/querylist HTTP/1.1" 200 None
+[2020-12-10 18:28:24] [INFO] 循环获取计划回访数据
+[2020-12-10 18:28:24] [INFO] 循环获取计划回访数据
+[2020-12-10 18:28:24] [INFO] 循环获取计划回访数据
+[2020-12-10 18:28:24] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:28:24] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:28:24] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:28:24] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/customer/querylist HTTP/1.1" 200 None
+[2020-12-10 18:28:24] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/customer/querylist HTTP/1.1" 200 None
+[2020-12-10 18:28:24] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/customer/querylist HTTP/1.1" 200 None
+[2020-12-10 18:28:24] [INFO] 校验报价成功的数据是否有报价历史
+[2020-12-10 18:28:24] [INFO] 校验报价成功的数据是否有报价历史
+[2020-12-10 18:28:24] [INFO] 校验报价成功的数据是否有报价历史
+[2020-12-10 18:28:36] [INFO] 筛选报价成功数据
+[2020-12-10 18:28:36] [INFO] 筛选报价成功数据
+[2020-12-10 18:28:36] [INFO] 筛选报价成功数据
+[2020-12-10 18:28:36] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:28:36] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:28:36] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:28:37] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/customer/querylist HTTP/1.1" 200 None
+[2020-12-10 18:28:37] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/customer/querylist HTTP/1.1" 200 None
+[2020-12-10 18:28:37] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/customer/querylist HTTP/1.1" 200 None
+[2020-12-10 18:28:37] [INFO] 返回筛选结果
+[2020-12-10 18:28:37] [INFO] 返回筛选结果
+[2020-12-10 18:28:37] [INFO] 返回筛选结果
+[2020-12-10 18:29:35] [INFO] 登录账户获取touken
+[2020-12-10 18:29:35] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:29:36] [DEBUG] https://bot.91bihu.com:443 "POST /identity/connect/token HTTP/1.1" 200 None
+[2020-12-10 18:29:36] [INFO] 生成测试报告
+[2020-12-10 18:29:49] [INFO] 新增数据——录入出单流程
+[2020-12-10 18:29:49] [INFO] 新增数据——录入出单流程
+[2020-12-10 18:29:49] [INFO] 新增数据——录入出单流程
+[2020-12-10 18:30:11] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:30:11] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:30:11] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:30:11] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/Renewal/RenewalCheck HTTP/1.1" 200 None
+[2020-12-10 18:30:11] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/Renewal/RenewalCheck HTTP/1.1" 200 None
+[2020-12-10 18:30:11] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/Renewal/RenewalCheck HTTP/1.1" 200 None
+[2020-12-10 18:30:11] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:30:11] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:30:11] [DEBUG] Starting new HTTPS connection (1): bot.91bihu.com:443
+[2020-12-10 18:30:12] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/Renewal/SubmitRenewalAsync HTTP/1.1" 200 None
+[2020-12-10 18:30:12] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/Renewal/SubmitRenewalAsync HTTP/1.1" 200 None
+[2020-12-10 18:30:12] [DEBUG] https://bot.91bihu.com:443 "POST /carbusiness/api/v1/Renewal/SubmitRenewalAsync HTTP/1.1" 200 None
