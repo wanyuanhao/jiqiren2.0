@@ -15,7 +15,6 @@ def run_test_case():
 if __name__ == '__main__':
     # 登录账户获取touken
     Headers.token('wanyuanhao')
-    print('测试')
     time = datetime.datetime.now().strftime('%Y-%m-%d')
     # wb写入内容，没有文件会创建，有文件会覆盖文件内容
     report_path = open(f"./test_report/{time}result.html", 'wb')
