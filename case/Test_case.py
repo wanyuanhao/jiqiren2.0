@@ -1,7 +1,7 @@
 # -*- coding:utf-8
 import unittest
 from module.kehuguanli.kehuliebiao import kehuliebiao
-from module.kehuguanli.chudanzhanbai import chuzhan_zhanbai
+from module.kehuguanli.chudanzhanbai import chudan_zhanbai
 from module.kehuguanli.Interface_quote import Interface_quote
 import configparser
 import os
@@ -15,7 +15,7 @@ conf.read(root_path, encoding='utf-8')  # 文件路径
 licenseno = conf.get("baojia", "licenseno")  # 获取配置文件指定的值
 city = conf.get("baojia", "city")
 xinzeng = Interface_quote()
-chudan = chuzhan_zhanbai()
+chudan = chudan_zhanbai()
 kehu = kehuliebiao()
 headers = eval(conf.get('headers', 'token'))
 
@@ -35,7 +35,6 @@ class Test_case(unittest.TestCase):
         logger.info('新增数据——录入出单流程')
         result = xinzeng.xubao(licenseno, city)
         self.assertTrue(result)
-        logger.info('客户列表查询车牌是否在客户列表')
         result = kehu.find_licenseno(licenseno,headers)
         self.assertTrue(result[0])
         result = kehu.enter_chudan(licenseno,headers)
@@ -130,11 +129,26 @@ class Test_case(unittest.TestCase):
         result = kehu.fenpei_avg(token)
         self.assertTrue(result)
 
+    def test_case07(self):
+        '使用全部客户第5条数据录入战败'
+        query_result = kehu.query(headers)
+        licenseno = query_result['data'][0]['licenseNo']
+        result = kehu.enter_zhanbai(licenseno,headers)
+        self.assertTrue(result)
+        find_result = chudan.find_zhanbai(licenseno)
+        self.assertTrue(find_result)
+
+
+    def test_case08(self):
+        '使用全部客户第8条数据录入跟进'
+        print("")
+        kehu.enter_chudan('苏A6Y0G9',headers)
+
 if __name__ == '__main__':
     print('执行Case')
     # unittest.main(verbosity=2)
     runner = unittest.TextTestRunner(verbosity=2)
     suite = unittest.TestSuite()
-    suite.addTest(Test_case("test_case06"))
+    suite.addTest(Test_case("test_case08"))
     runner.run(suite)
 

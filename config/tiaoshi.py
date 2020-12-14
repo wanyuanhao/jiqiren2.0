@@ -133,32 +133,3 @@ from selenium import webdriver
 
 # s = [4,3,7,1]
 # print(sorted(s,reverse=True))
-
-# class logs():
-#
-#     def __init__(self, class_name=None):
-#         '''
-#
-#         :param class_name: 实例化时传入 函数简介
-#         '''
-#         self.class_name = class_name
-#         day = time.strftime("%Y-%m-%d_%H")
-#         # file_dir =  os.path.join(os.path.dirname(os.path.realpath(".")),'Logs')
-#         # file = os.path.join(file_dir,time.strftime("%Y_%m_%d")+'.log')
-#         file_dir = os.path.dirname(__file__)
-#         file = file_dir + f'/logs2/{day}.log'
-#         self.logger = logging.Logger(self.class_name)
-#         self.logger.setLevel(logging.INFO)
-#         self.logfile = logging.FileHandler(file, encoding='utf-8')
-#         self.logfile.setLevel(logging.INFO)
-#         self.control = logging.StreamHandler()
-#         self.control.setLevel(logging.INFO)
-#         self.formater = logging.Formatter(
-#             '[%(asctime)s] [%(levelname)s] >> %(filename)s >> 第%(lineno)d行 - %(name)s - %(message)s ',
-#             '%Y-%m-%d %H:%M:%S')
-#         # self.formater = logging.Formatter('[%(asctime)s] - %(levelname)s -%(pathname)s - %(filename)s - %(lineno)d行 - %(name)s - 请求函数名>> %(message)s ')
-#
-#         self.logfile.setFormatter(self.formater)
-#         self.control.setFormatter(self.formater)
-#         self.logger.addHandler(self.logfile)
-#         self.logger.addHandler(self.control)
