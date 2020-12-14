@@ -1,4 +1,0 @@
-[2020-12-10 17:03:33] [INFO] this is infoasdadas
-[2020-12-10 17:03:33] [DEBUG] this is debug
-[2020-12-10 17:03:33] [ERROR] this is error
-[2020-12-10 17:03:33] [WARNING] this is warning

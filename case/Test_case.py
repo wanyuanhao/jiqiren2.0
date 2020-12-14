@@ -7,7 +7,7 @@ import configparser
 import os
 from config.Headers import Headers
 from config import Logs
-logger = Logs.logs()
+logger = Logs.logs("Test_case").logger
 conf = configparser.ConfigParser()
 '''读取配置文件'''
 root_path = os.path.join(os.getcwd(), '..\config\config.ini')

@@ -4,7 +4,7 @@ from util.Requests_util import Requests_util
 import datetime, json
 import os, configparser
 from config import Logs
-logger = Logs.logs()
+logger = Logs.logs('kehuliebiao').logger
 r = Requests_util()
 conf = configparser.ConfigParser()
 path = os.path.dirname(__file__)
@@ -369,8 +369,8 @@ class kehuliebiao:
             return False
 
     def plan_counts(self, headers, data_type=15, type=1):
-        u'循环获取计划回访数据'
-        logger.info('循环获取计划回访数据')
+        u'循环获取计划回访每个TAB页的数据'
+        logger.info('循环获取计划回访每个TAB页的数据')
         url = urls + '/carbusiness/api/v1/customer/querylist'
         data = {"pageIndex": 1, "pageSize": data_type, "selectType": 1, "topLabel": "tab_jihuahuifang",
                 "orderBy": {"orderByField": "updateTime", "orderByType": "desc"}, "isFllowUp": "",
