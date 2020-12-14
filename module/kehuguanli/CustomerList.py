@@ -4,7 +4,8 @@ from util.Requests_util import Requests_util
 import datetime, json
 import os, configparser
 from config import Logs
-logger = Logs.logs('kehuliebiao').logger
+
+logger = Logs.logs('CustomerList').logger
 r = Requests_util()
 conf = configparser.ConfigParser()
 path = os.path.dirname(__file__)
@@ -14,9 +15,9 @@ urls = conf.get('host', 'url')
 
 
 # 客户列表
-class kehuliebiao:
+class CustomerList:
     # 根据车牌查询是否已在客户列表
-    def find_licenseno(self, licenseno,headers):
+    def find_licenseno(self, licenseno, headers):
         "根据车牌查询是否已在客户列表"
         data = {"pageIndex": 1, "pageSize": 15, "selectType": 1, "selectSearchValue": licenseno,
                 "topLabel": "tab_quanbukehu", "orderBy": {"orderByField": "updateTime", "orderByType": "desc"},
@@ -41,12 +42,12 @@ class kehuliebiao:
             return [False]
 
     # 根据buid录入出单，source默认录入人保
-    def enter_chudan(self, licenseno,headers, source=4):
+    def enter_chudan(self, licenseno, headers, source=4):
         logger.info('根据buid录入出单，默认录入人保')
         updatetime = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
         chudan_time = datetime.datetime.now().strftime('%Y-%m-%d')
         logger.info(f'客户列表查询{licenseno}是否存在')
-        find_result = self.find_licenseno(licenseno,headers)
+        find_result = self.find_licenseno(licenseno, headers)
         # 查询结果为True则执行
         if find_result[0]:
             # 拿第一buid
@@ -123,11 +124,11 @@ class kehuliebiao:
             logger.info('查询结果异常：{0}'.format(find_result))
             return False
 
-    def enter_zhanbai(self, licenseno,headers):
+    def enter_zhanbai(self, licenseno, headers):
         logger.info('录入战败')
         time = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
         logger.info(f'客户列表查询{licenseno}是否存在')
-        find_result = self.find_licenseno(licenseno,headers)
+        find_result = self.find_licenseno(licenseno, headers)
         try:
             logger.info('校验查询结果是否为真')
             if find_result[0]:
@@ -151,7 +152,7 @@ class kehuliebiao:
                         logger.info('录入战败通过')
                         return True
                     else:
-                        logger.info( '录入结果和实际结果不符，车牌：{0}'.format(licenseno))
+                        logger.info('录入结果和实际结果不符，车牌：{0}'.format(licenseno))
                         return False
 
                 # 如果本年度已经录入过，重新覆盖录入结果
@@ -159,7 +160,7 @@ class kehuliebiao:
                     deteatId = response['data']['carPolicyId']
                     if deteatId is None:
                         logger.info('carPolicyId为None，替换成deteatId')
-                        deteatId =  response['data']['deteatId']
+                        deteatId = response['data']['deteatId']
                     data = {"defeatReasonContent": "无效数据（停机、空号）", "bizTotal": "", "forceTotal": "", "taxTotal": "",
                             "reviewContent": "自动化录入", "singleTime": "", "jyPrice": "", "appointTime": time,
                             "defeatReasonId": 68255, "reviewStatus": 4, "reviewStatusName": "战败", "buid": buid,
@@ -192,10 +193,10 @@ class kehuliebiao:
             logger.error('战败请求异常：{0}'.format(e))
             return False
 
-    def del_licenseno(self, licenseno,headers):
+    def del_licenseno(self, licenseno, headers):
         f'删除车牌{licenseno}'
         logger.info(f'客户列表查询{licenseno}是否存在')
-        find_result = self.find_licenseno(licenseno,headers)
+        find_result = self.find_licenseno(licenseno, headers)
         try:
             logger.info("校验查询结果是否通过")
             if find_result[0]:
@@ -242,7 +243,7 @@ class kehuliebiao:
             logger.info(f'删除车牌异常：{e}')
             return False
 
-    def fenpei_avg(self,headers):
+    def fenpei_avg(self, headers):
         '客户列表分配'
         logger.info('客户列表分配')
         try:
@@ -262,7 +263,7 @@ class kehuliebiao:
                     conut += 1
                     buids.append(buid['buid'])
                     if conut == 4:
-                        continue
+                        break
                 # 分配接口
                 url = urls + '/carbusiness/api/v1/customer/DistributeCustomer'
                 data = {"pageIndex": 1, "pageSize": 15, "selectType": 1, "topLabel": "tab_quanbukehu",
@@ -300,7 +301,7 @@ class kehuliebiao:
             logger.error('分配接口异常：{0}'.format(e))
             return False
 
-    def kehuliebiao_tab_count(self, headers):
+    def customerlist_tab_count(self, headers):
         '获取客户列表每个TAB页的数量'
         logger.info('获取客户列表每个TAB页的数量')
         url = urls + '/carbusiness/api/v1/customer/queryTopLabelCount'
@@ -343,7 +344,7 @@ class kehuliebiao:
         result = r.request(url, 'post', data, headers, 'json')
         return len(result['data'])
 
-    def juese_count(self, headers, top_agent):
+    def role_count(self, headers, top_agent):
         '角色总数'
         url = urls + '/employee/api/v1/Role/RoleListByCompId'
         data = {"compId": top_agent, "employeeId": top_agent}
@@ -388,7 +389,7 @@ class kehuliebiao:
         count = result['data']
         return [len(count), result]
 
-    def shaixuan_baojiachenggong(self,headers):
+    def shaixuan_baojiachenggong(self, headers):
         '筛选报价成功数据'
         logger.info('筛选报价成功数据')
         url = urls + '/carbusiness/api/v1/customer/querylist'
@@ -403,7 +404,7 @@ class kehuliebiao:
             logger.error('没有报价成功数据')
             return False
 
-    def quote_lishi(self, buid,headers):
+    def quote_lishi(self, buid, headers):
         '获取报价历史'
         logger.info('获取报价历史')
         url = urls + '/carbusiness/api/v1/Renewal/GetQuoteHistory'
@@ -416,7 +417,7 @@ class kehuliebiao:
             logger.error(f'buid：{buid}，无报价历史')
             return False
 
-    def qiehuan_quote_lishi(self, id,headers):
+    def qiehuan_quote_lishi(self, id, headers):
         '根据报价历史id切换报价历史'
         logger.info('根据报价历史id切换报价历史')
         url = urls + '/carbusiness/api/v1/Renewal/GetQuoteRecord'
@@ -428,20 +429,27 @@ class kehuliebiao:
         else:
             logger.error(f'切换报价历史失败')
             return False
-    def query(self,headers):
+
+    def query(self, headers):
         logger.info('获取全部客户数据')
-        url = urls+ '/carbusiness/api/v1/customer/querylist'
-        data = {"pageIndex":1,"pageSize":45,"selectType":1,"topLabel":"tab_quanbukehu","orderBy":{"orderByField":"updateTime","orderByType":"desc"},"isFllowUp":"","isDataLable":"","dataTag":"","dataTypeId":0,"lastMaintainDayRange":"","isMaintain":1,"isOpenGuanjia":1,"firstSearch":True}
+        url = urls + '/carbusiness/api/v1/customer/querylist'
+        data = {"pageIndex": 1, "pageSize": 45, "selectType": 1, "topLabel": "tab_quanbukehu",
+                "orderBy": {"orderByField": "updateTime", "orderByType": "desc"}, "isFllowUp": "", "isDataLable": "",
+                "dataTag": "", "dataTypeId": 0, "lastMaintainDayRange": "", "isMaintain": 1, "isOpenGuanjia": 1,
+                "firstSearch": True}
         try:
             result = r.request(url, 'post', data, headers, 'json')
             if result['message'] == '成功':
                 return result
             else:
                 return False
-        except Exception as e :
+        except Exception as e:
             logger.info(f'获取全部客户数据异常：{e}')
             return False
 
-if __name__ == '__main__':
+    def enter_genjin(self, licenseno):
+        logger.info(f'[{licenseno}]录入跟进')
 
-    print('kehuliebiao')
+
+if __name__ == '__main__':
+    print('CustomerList')

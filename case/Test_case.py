@@ -1,6 +1,6 @@
 # -*- coding:utf-8
 import unittest
-from module.kehuguanli.kehuliebiao import kehuliebiao
+from module.kehuguanli.CustomerList import CustomerList
 from module.kehuguanli.chudanzhanbai import chudan_zhanbai
 from module.kehuguanli.Interface_quote import Interface_quote
 import configparser
@@ -16,7 +16,7 @@ licenseno = conf.get("baojia", "licenseno")  # 获取配置文件指定的值
 city = conf.get("baojia", "city")
 xinzeng = Interface_quote()
 chudan = chudan_zhanbai()
-kehu = kehuliebiao()
+kehu = CustomerList()
 headers = eval(conf.get('headers', 'token'))
 
 
@@ -141,14 +141,14 @@ class Test_case(unittest.TestCase):
 
     def test_case08(self):
         '使用全部客户第8条数据录入跟进'
-        print("")
-        kehu.enter_chudan('苏A6Y0G9',headers)
+        query_result = kehu.query(headers)
+        licenseno = query_result['data'][8]['licenseNo']
 
 if __name__ == '__main__':
     print('执行Case')
     # unittest.main(verbosity=2)
     runner = unittest.TextTestRunner(verbosity=2)
     suite = unittest.TestSuite()
-    suite.addTest(Test_case("test_case08"))
+    suite.addTest(Test_case("test_case06"))
     runner.run(suite)
 

@@ -69,5 +69,5 @@ class chudan_zhanbai:
 
 if __name__ == '__main__':
     print('执行出单战败接口')
-    run = chuzhan_zhanbai()
+    run = chudan_zhanbai()
     print(run.find_zhanbai('京NJY977'))
