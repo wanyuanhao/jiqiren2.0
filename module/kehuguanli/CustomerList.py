@@ -5,7 +5,7 @@ import datetime, json
 import os, configparser
 from config import Logs
 
-logger = Logs.logs('CustomerList').logger
+logger = Logs.logs().logger
 r = Requests_util()
 conf = configparser.ConfigParser()
 path = os.path.dirname(__file__)

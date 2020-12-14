@@ -7,7 +7,7 @@ import configparser
 import os
 from config.Headers import Headers
 from config import Logs
-logger = Logs.logs("Test_case").logger
+logger = Logs.logs().logger
 conf = configparser.ConfigParser()
 '''读取配置文件'''
 root_path = os.path.join(os.getcwd(), '..\config\config.ini')
@@ -31,7 +31,7 @@ class Test_case(unittest.TestCase):
         pass
 
     def test_case01(self):
-        u'新增数据——录入出单流程'
+        u'新增车牌—>录入出单'
         logger.info('新增数据——录入出单流程')
         result = xinzeng.xubao(licenseno, city)
         self.assertTrue(result)

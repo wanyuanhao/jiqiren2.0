@@ -2,17 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0a114d94-c570-43d8-9302-05e498174a4a" name="Default Changelist" comment="主干去除没用的配置">
+      <change beforePath="$PROJECT_DIR$/.idea/jiqiren2.0.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jiqiren2.0.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/case/Test_case.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/Test_case.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/config.ini" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/logs2/2020-12-14_11.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/logs2/2020-12-14_13.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/logs2/2020-12-14_17.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/logs2/2020-12-14_18.log" beforeDir="false" afterPath="$PROJECT_DIR$/config/logs2/2020-12-14_18.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/count_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/count_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module/kehuguanli/chudanzhanbai.py" beforeDir="false" afterPath="$PROJECT_DIR$/module/kehuguanli/chudanzhanbai.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module/kehuguanli/kehuliebiao.py" beforeDir="false" afterPath="$PROJECT_DIR$/module/kehuguanli/CustomerList.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/run_case.py" beforeDir="false" afterPath="$PROJECT_DIR$/run/run_case.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/test_report/2020-12-14result.html" beforeDir="false" afterPath="$PROJECT_DIR$/run/test_report/2020-12-14result.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,50 +16,59 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/jiqiren2_0$Test_ui.coverage" NAME="Test_ui Coverage Results" MODIFIED="1605782931204" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case" />
-    <SUITE FILE_PATH="coverage/jiqiren2_0$Headers.coverage" NAME="Headers Coverage Results" MODIFIED="1607585948991" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/config" />
-    <SUITE FILE_PATH="coverage/jiqiren2_0$message.coverage" NAME="message Coverage Results" MODIFIED="1605840676847" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="C:/Python/Python36/Lib/email" />
-    <SUITE FILE_PATH="coverage/jiqiren2_0$gzkb_all_case.coverage" NAME="gzkb_all_case Coverage Results" MODIFIED="1607930618020" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/run" />
-    <SUITE FILE_PATH="coverage/jiqiren2_0$Test_Case.coverage" NAME="Test_Case Coverage Results" MODIFIED="1606728487799" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lianxi/util" />
-    <SUITE FILE_PATH="coverage/jiqiren2_0$Test_case.coverage" NAME="Test_case Coverage Results" MODIFIED="1607941022167" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case" />
-    <SUITE FILE_PATH="coverage/jiqiren2_0$chudanzhanbai_case.coverage" NAME="chudanzhanbai_case Coverage Results" MODIFIED="1603795805152" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case" />
-    <SUITE FILE_PATH="coverage/jiqiren2_0$Unittests_for_Test_case_Test_case_test_cese04.coverage" NAME="Unittests for Test_case.Test_case.test_cese04 Coverage Results" MODIFIED="1607507810376" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case" />
-    <SUITE FILE_PATH="coverage/jiqiren2_0$Unittests_for_Test_case_Test_case.coverage" NAME="Unittests for Test_case.Test_case Coverage Results" MODIFIED="1607941955956" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case" />
-    <SUITE FILE_PATH="coverage/jiqiren2_0$Unittests_for_Test_case_Test_case_test_case07.coverage" NAME="Unittests for Test_case.Test_case.test_case07 Coverage Results" MODIFIED="1607941297997" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case" />
-    <SUITE FILE_PATH="coverage/jiqiren2_0$run_test.coverage" NAME="run_test Coverage Results" MODIFIED="1607509891538" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/run" />
-    <SUITE FILE_PATH="coverage/jiqiren2_0$aatest.coverage" NAME="aatest Coverage Results" MODIFIED="1604392991477" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/jiqiren2_0$kehuliebiao__1_.coverage" NAME="kehuliebiao (1) Coverage Results" MODIFIED="1603870497382" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/module/kehuguanli" />
-    <SUITE FILE_PATH="coverage/jiqiren2_0$tiaoshi.coverage" NAME="tiaoshi Coverage Results" MODIFIED="1607924728530" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/config" />
-    <SUITE FILE_PATH="coverage/jiqiren2_0$count_test.coverage" NAME="count_test Coverage Results" MODIFIED="1605208460597" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/jiqiren2_0$Unittests_for_Test_case_Test_case_test_case01.coverage" NAME="Unittests for Test_case.Test_case.test_case01 Coverage Results" MODIFIED="1607479898376" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case" />
-    <SUITE FILE_PATH="coverage/jiqiren2_0$logg.coverage" NAME="logg Coverage Results" MODIFIED="1607591013374" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/config" />
-    <SUITE FILE_PATH="coverage/jiqiren2_0$Excel_util.coverage" NAME="Excel_util Coverage Results" MODIFIED="1606872267067" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/config" />
-    <SUITE FILE_PATH="coverage/jiqiren2_0$sender_mail.coverage" NAME="sender_mail Coverage Results" MODIFIED="1605923823286" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/jiqiren2_0$Logs.coverage" NAME="Logs Coverage Results" MODIFIED="1607923290252" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/config" />
-    <SUITE FILE_PATH="coverage/jiqiren2_0$Unittests_for_Test_case_Test_case_test_case06.coverage" NAME="Unittests for Test_case.Test_case.test_case06 Coverage Results" MODIFIED="1607941088678" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case" />
-    <SUITE FILE_PATH="coverage/jiqiren2_0$kehuliebiao.coverage" NAME="kehuliebiao Coverage Results" MODIFIED="1607411993809" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/module/kehuguanli" />
-    <SUITE FILE_PATH="coverage/jiqiren2_0$Unittests_in_Test_case_py.coverage" NAME="Unittests in Test_case.py Coverage Results" MODIFIED="1607942011786" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case" />
-    <SUITE FILE_PATH="coverage/jiqiren2_0$xinzengbaojia_case.coverage" NAME="xinzengbaojia_case Coverage Results" MODIFIED="1603795768044" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case" />
-    <SUITE FILE_PATH="coverage/jiqiren2_0$tiaoshi11.coverage" NAME="tiaoshi11 Coverage Results" MODIFIED="1604538407425" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/jiqiren2_0$gongzuokanban_request.coverage" NAME="gongzuokanban_request Coverage Results" MODIFIED="1605188150485" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/module/gongzuokanban" />
-    <SUITE FILE_PATH="coverage/jiqiren2_0$chudanzhanbai_list.coverage" NAME="chudanzhanbai_list Coverage Results" MODIFIED="1603966986413" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/module/kehuguanli" />
     <SUITE FILE_PATH="coverage/jiqiren2_0$tiaoshi__1_.coverage" NAME="tiaoshi (1) Coverage Results" MODIFIED="1604538252300" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/jiqiren2_0$run_case.coverage" NAME="run_case Coverage Results" MODIFIED="1607943981510" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/run" />
-    <SUITE FILE_PATH="coverage/jiqiren2_0$Tase_case.coverage" NAME="Tase_case Coverage Results" MODIFIED="1607077031032" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case" />
-    <SUITE FILE_PATH="coverage/jiqiren2_0$gzkb_Case.coverage" NAME="gzkb_Case Coverage Results" MODIFIED="1603879197953" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/module/gongzuokanban" />
-    <SUITE FILE_PATH="coverage/jiqiren2_0$Unittests_for_Test_case_Test_case_test_case08.coverage" NAME="Unittests for Test_case.Test_case.test_case08 Coverage Results" MODIFIED="1607942072966" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case" />
+    <SUITE FILE_PATH="coverage/jiqiren2_0$logg.coverage" NAME="logg Coverage Results" MODIFIED="1607591013374" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/config" />
+    <SUITE FILE_PATH="coverage/jiqiren2_0$Headers.coverage" NAME="Headers Coverage Results" MODIFIED="1607585948991" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/config" />
+    <SUITE FILE_PATH="coverage/jiqiren2_0$Test_Case.coverage" NAME="Test_Case Coverage Results" MODIFIED="1606728487799" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lianxi/util" />
+    <SUITE FILE_PATH="coverage/jiqiren2_0$count_test.coverage" NAME="count_test Coverage Results" MODIFIED="1605208460597" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/jiqiren2_0$Test_case.coverage" NAME="Test_case Coverage Results" MODIFIED="1607593480213" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case" />
+    <SUITE FILE_PATH="coverage/jiqiren2_0$Unittests_for_Test_case_Test_case_test_case01.coverage" NAME="Unittests for Test_case.Test_case.test_case01 Coverage Results" MODIFIED="1607479898376" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case" />
     <SUITE FILE_PATH="coverage/jiqiren2_0$Unittests_in_gongzuokanban_request_py.coverage" NAME="Unittests in gongzuokanban_request.py Coverage Results" MODIFIED="1605186492258" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/module/gongzuokanban" />
+    <SUITE FILE_PATH="coverage/jiqiren2_0$Test_ui.coverage" NAME="Test_ui Coverage Results" MODIFIED="1605782931204" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case" />
+    <SUITE FILE_PATH="coverage/jiqiren2_0$gzkb_all_case.coverage" NAME="gzkb_all_case Coverage Results" MODIFIED="1607078631527" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/run" />
+    <SUITE FILE_PATH="coverage/jiqiren2_0$tiaoshi.coverage" NAME="tiaoshi Coverage Results" MODIFIED="1607591851705" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/config" />
+    <SUITE FILE_PATH="coverage/jiqiren2_0$run_test.coverage" NAME="run_test Coverage Results" MODIFIED="1607509891538" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/run" />
+    <SUITE FILE_PATH="coverage/jiqiren2_0$kehuliebiao.coverage" NAME="kehuliebiao Coverage Results" MODIFIED="1607411993809" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/module/kehuguanli" />
+    <SUITE FILE_PATH="coverage/jiqiren2_0$xinzengbaojia_case.coverage" NAME="xinzengbaojia_case Coverage Results" MODIFIED="1603795768044" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case" />
+    <SUITE FILE_PATH="coverage/jiqiren2_0$chudanzhanbai_case.coverage" NAME="chudanzhanbai_case Coverage Results" MODIFIED="1603795805152" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case" />
     <SUITE FILE_PATH="coverage/jiqiren2_0$Interface_quote.coverage" NAME="Interface_quote Coverage Results" MODIFIED="1604040090064" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/module/kehuguanli" />
+    <SUITE FILE_PATH="coverage/jiqiren2_0$tiaoshi11.coverage" NAME="tiaoshi11 Coverage Results" MODIFIED="1604538407425" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/git$run_case.coverage" NAME="run_case Coverage Results" MODIFIED="1607951489425" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/run" />
+    <SUITE FILE_PATH="coverage/jiqiren2_0$Unittests_in_Test_case_py.coverage" NAME="Unittests in Test_case.py Coverage Results" MODIFIED="1607583820574" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case" />
+    <SUITE FILE_PATH="coverage/jiqiren2_0$gongzuokanban_request.coverage" NAME="gongzuokanban_request Coverage Results" MODIFIED="1605188150485" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/module/gongzuokanban" />
+    <SUITE FILE_PATH="coverage/jiqiren2_0$aatest.coverage" NAME="aatest Coverage Results" MODIFIED="1604392991477" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/jiqiren2_0$Unittests_for_Test_case_Test_case_test_case02.coverage" NAME="Unittests for Test_case.Test_case.test_case02 Coverage Results" MODIFIED="1607419231923" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case" />
+    <SUITE FILE_PATH="coverage/jiqiren2_0$Tase_case.coverage" NAME="Tase_case Coverage Results" MODIFIED="1607077031032" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case" />
+    <SUITE FILE_PATH="coverage/jiqiren2_0$kehuliebiao__1_.coverage" NAME="kehuliebiao (1) Coverage Results" MODIFIED="1603870497382" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/module/kehuguanli" />
+    <SUITE FILE_PATH="coverage/jiqiren2_0$sender_mail.coverage" NAME="sender_mail Coverage Results" MODIFIED="1605923823286" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/jiqiren2_0$chudanzhanbai_list.coverage" NAME="chudanzhanbai_list Coverage Results" MODIFIED="1603966986413" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/module/kehuguanli" />
+    <SUITE FILE_PATH="coverage/jiqiren2_0$Unittests_for_Test_case_Test_case_test_cese04.coverage" NAME="Unittests for Test_case.Test_case.test_cese04 Coverage Results" MODIFIED="1607507810376" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case" />
+    <SUITE FILE_PATH="coverage/jiqiren2_0$Excel_util.coverage" NAME="Excel_util Coverage Results" MODIFIED="1606872267067" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/config" />
+    <SUITE FILE_PATH="coverage/jiqiren2_0$gzkb_Case.coverage" NAME="gzkb_Case Coverage Results" MODIFIED="1603879197953" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/module/gongzuokanban" />
+    <SUITE FILE_PATH="coverage/jiqiren2_0$run_case.coverage" NAME="run_case Coverage Results" MODIFIED="1607596172558" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/run" />
     <SUITE FILE_PATH="coverage/jiqiren2_0$chudanzhanbai.coverage" NAME="chudanzhanbai Coverage Results" MODIFIED="1604042086325" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/module/kehuguanli" />
+    <SUITE FILE_PATH="coverage/jiqiren2_0$message.coverage" NAME="message Coverage Results" MODIFIED="1605840676847" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="C:/Python/Python36/Lib/email" />
+    <SUITE FILE_PATH="coverage/jiqiren2_0$Unittests_for_Test_case_Test_case.coverage" NAME="Unittests for Test_case.Test_case Coverage Results" MODIFIED="1607415583248" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="525">
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/Headers.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2160">
+              <caret line="60" column="24" selection-start-line="60" selection-start-column="24" selection-end-line="60" selection-end-column="24" />
+              <folding>
+                <element signature="e#0#44#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/case/Test_case.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="12" column="61" lean-forward="true" selection-start-line="12" selection-start-column="61" selection-end-line="12" selection-end-column="61" />
+            <state relative-caret-position="-3866">
+              <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
               <folding>
                 <element signature="e#19#34#0" expanded="true" />
               </folding>
@@ -74,51 +77,43 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/module/kehuguanli/chudanzhanbai.py">
+        <entry file="file://$PROJECT_DIR$/module/kehuguanli/Interface_quote.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1496">
-              <caret line="68" lean-forward="true" selection-start-line="68" selection-end-line="68" />
+            <state relative-caret-position="236">
+              <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
               <folding>
-                <element signature="e#0#44#0" expanded="true" />
+                <element signature="e#18#62#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/module/kehuguanli/CustomerList.py">
+        <entry file="file://$PROJECT_DIR$/case/Test_ui.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="450" column="41" lean-forward="true" selection-start-line="450" selection-start-column="41" selection-end-line="450" selection-end-column="41" />
+            <state relative-caret-position="144">
+              <caret line="10" column="61" selection-start-line="10" selection-start-column="61" selection-end-line="10" selection-end-column="61" />
               <folding>
-                <element signature="e#19#63#0" expanded="true" />
+                <element signature="e#23#53#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/logs2/2020-12-14_18.log">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/count_test.py">
+        <entry file="file://$PROJECT_DIR$/config/Logs.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="16" column="21" lean-forward="true" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
-              <folding>
-                <element signature="e#0#34#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="216">
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/run/run_case.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="17" column="31" lean-forward="true" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
+            <state relative-caret-position="648">
+              <caret line="18" column="55" lean-forward="true" selection-start-line="18" selection-start-column="55" selection-end-line="18" selection-end-column="55" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -127,12 +122,12 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/tiaoshi.py">
+        <entry file="file://$PROJECT_DIR$/sender_mail.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="982">
-              <caret line="131" lean-forward="true" selection-start-line="131" selection-end-line="131" />
+            <state relative-caret-position="252">
+              <caret line="11" column="37" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="37" />
               <folding>
-                <element signature="e#0#19#0" expanded="true" />
+                <element signature="e#0#14#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -220,13 +215,14 @@
         <option value="$PROJECT_DIR$/config/logs2/2020-12-14_18.log" />
         <option value="$PROJECT_DIR$/module/kehuguanli/CustomerList.py" />
         <option value="$PROJECT_DIR$/config/logs2/2020-12-14_17.log" />
-        <option value="$PROJECT_DIR$/case/Test_case.py" />
         <option value="$PROJECT_DIR$/run/run_case.py" />
+        <option value="$PROJECT_DIR$/case/Test_case.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1633" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
   </component>
@@ -242,23 +238,17 @@
         <subPane>
           <expand>
             <path>
-              <item name="jiqiren2.0" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jiqiren2.0" type="462c0819:PsiDirectoryNode" />
+              <item name="git" type="b2602c69:ProjectViewProjectNode" />
+              <item name="git" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="jiqiren2.0" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jiqiren2.0" type="462c0819:PsiDirectoryNode" />
+              <item name="git" type="b2602c69:ProjectViewProjectNode" />
+              <item name="git" type="462c0819:PsiDirectoryNode" />
               <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="jiqiren2.0" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jiqiren2.0" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-              <item name="logs2" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jiqiren2.0" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jiqiren2.0" type="462c0819:PsiDirectoryNode" />
+              <item name="git" type="b2602c69:ProjectViewProjectNode" />
+              <item name="git" type="462c0819:PsiDirectoryNode" />
               <item name="run" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -270,10 +260,10 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="D:/xd_lianxi" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../xd_lianxi" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PythonContentEntriesConfigurable" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -426,11 +416,11 @@
     <list>
       <item itemvalue="Python.Test_case" />
       <item itemvalue="Python.xubao" />
+      <item itemvalue="Python.run_case" />
       <item itemvalue="Python tests.Unittests for Test_case.Test_case.test_case07" />
       <item itemvalue="Python tests.Unittests for Test_case.Test_case" />
       <item itemvalue="Python tests.Unittests in Test_case.py" />
       <item itemvalue="Python tests.Unittests for Test_case.Test_case.test_case08" />
-      <item itemvalue="Python.run_case" />
     </list>
     <recent_temporary>
       <list>
@@ -532,7 +522,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="323728000" />
+    <option name="totallyTimeSpent" value="324589000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -544,15 +534,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15550756" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15458423" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32912844" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.45412844" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.45336226" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49946004" weight="0.68004584" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -676,13 +666,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/Python/Python36/Lib/configparser.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1624">
-          <caret line="1140" selection-start-line="1140" selection-end-line="1140" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://C:/Python/Python36/Lib/configparser.py" />
     <entry file="file://$PROJECT_DIR$/d" />
     <entry file="file://$PROJECT_DIR$/HTMLTestRunner.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -712,13 +696,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/Python/Python36/Lib/typing.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1013">
-          <caret line="452" column="6" selection-start-line="452" selection-start-column="6" selection-end-line="452" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://C:/Python/Python36/Lib/typing.py" />
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/3/unittest/__init__.pyi">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -733,13 +711,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/Python/Python36/Lib/unittest/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="94" selection-start-line="94" selection-end-line="94" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://C:/Python/Python36/Lib/unittest/main.py" />
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/pycharm/teamcity/unittestpy.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="724">
@@ -747,37 +719,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/case/Test_ui.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="14" column="27" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
-          <folding>
-            <element signature="e#23#53#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Python/Python36/Lib/unittest/suite.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="83" selection-start-line="83" selection-end-line="83" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Python/Python36/Lib/unittest/runner.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1428">
-          <caret line="188" selection-start-line="188" selection-end-line="188" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Python/Python36/Lib/unittest/loader.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="152" selection-start-line="152" selection-end-line="152" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://C:/Python/Python36/Lib/unittest/suite.py" />
+    <entry file="file://C:/Python/Python36/Lib/unittest/runner.py" />
+    <entry file="file://C:/Python/Python36/Lib/unittest/loader.py" />
     <entry file="file://$PROJECT_DIR$/run/run_test.py" />
     <entry file="file://$PROJECT_DIR$/run/test_report/result.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -795,19 +739,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/Python/Python36/Lib/codecs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="322" selection-start-line="322" selection-end-line="322" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://C:/Python/Python36/Lib/codecs.py" />
     <entry file="file://$PROJECT_DIR$/config/logs2/2020-12-10.txt" />
     <entry file="file://$PROJECT_DIR$/config/logs2/2020-12-10-16.txt" />
     <entry file="file://$PROJECT_DIR$/config/Headers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        <state relative-caret-position="2160">
+          <caret line="60" column="24" selection-start-line="60" selection-start-column="24" selection-end-line="60" selection-end-column="24" />
           <folding>
             <element signature="e#0#44#0" expanded="true" />
           </folding>
@@ -821,70 +759,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/logs2/2020-12-14_10.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="1" column="88" lean-forward="true" selection-start-line="1" selection-start-column="88" selection-end-line="1" selection-end-column="88" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/logg.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-15">
-          <caret line="6" column="23" lean-forward="true" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/logg2.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/logs2/2020-12-10-17.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/logs2/2020-12-14_11.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/Log.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/config/logs2/2020-12-14_10.log" />
+    <entry file="file://$PROJECT_DIR$/config/logg.py" />
+    <entry file="file://$PROJECT_DIR$/config/logg2.py" />
+    <entry file="file://$PROJECT_DIR$/config/logs2/2020-12-10-17.txt" />
+    <entry file="file://$PROJECT_DIR$/config/logs2/2020-12-14_11.log" />
+    <entry file="file://$PROJECT_DIR$/config/Log.py" />
     <entry file="file://$PROJECT_DIR$/config/Logs.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-          <folding>
-            <element signature="e#116#130#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="216">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/Python/Python36/Lib/logging/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="828">
-          <caret line="1295" column="8" selection-start-line="1295" selection-start-column="8" selection-end-line="1295" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/logs2/2020-12-14_13.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-876">
-          <caret line="27" column="83" lean-forward="true" selection-start-line="27" selection-start-column="83" selection-end-line="27" selection-end-column="83" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/run/logs2/2020-12-10-18.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://C:/Python/Python36/Lib/logging/__init__.py" />
+    <entry file="file://$PROJECT_DIR$/config/logs2/2020-12-14_13.log" />
+    <entry file="file://$PROJECT_DIR$/run/logs2/2020-12-10-18.txt" />
     <entry file="file://$PROJECT_DIR$/run/gzkb_all_case.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -904,8 +794,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sender_mail.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="900">
-          <caret line="30" column="28" lean-forward="true" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
+        <state relative-caret-position="252">
+          <caret line="11" column="37" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="37" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>
@@ -914,8 +804,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/module/kehuguanli/Interface_quote.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2122">
-          <caret line="73" lean-forward="true" selection-start-line="73" selection-end-line="73" />
+        <state relative-caret-position="236">
+          <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
           <folding>
             <element signature="e#18#62#0" expanded="true" />
           </folding>
@@ -932,13 +822,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/Python/Python36/Lib/unittest/case.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="604" selection-start-line="604" selection-end-line="604" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://C:/Python/Python36/Lib/unittest/case.py" />
     <entry file="file://$PROJECT_DIR$/module/kehuguanli/chudanzhanbai.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1496">
@@ -962,9 +846,7 @@
     <entry file="file://$PROJECT_DIR$/config/logs2/2020-12-14_18.log">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/logs2/2020-12-14_17.log">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/config/logs2/2020-12-14_17.log" />
     <entry file="file://$PROJECT_DIR$/module/kehuguanli/CustomerList.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="175">
@@ -975,22 +857,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/case/Test_case.py">
+    <entry file="file://$PROJECT_DIR$/case/Test_ui.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="12" column="61" lean-forward="true" selection-start-line="12" selection-start-column="61" selection-end-line="12" selection-end-column="61" />
+        <state relative-caret-position="144">
+          <caret line="10" column="61" selection-start-line="10" selection-start-column="61" selection-end-line="10" selection-end-column="61" />
           <folding>
-            <element signature="e#19#34#0" expanded="true" />
+            <element signature="e#23#53#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/run/run_case.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="17" column="31" lean-forward="true" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
+        <state relative-caret-position="648">
+          <caret line="18" column="55" lean-forward="true" selection-start-line="18" selection-start-column="55" selection-end-line="18" selection-end-column="55" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/case/Test_case.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3866">
+          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+          <folding>
+            <element signature="e#19#34#0" expanded="true" />
           </folding>
         </state>
       </provider>
