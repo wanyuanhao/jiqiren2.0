@@ -19,8 +19,9 @@ class logs(object):
         self.logfile.setLevel(logging.INFO)
         self.control = logging.StreamHandler()
         self.control.setLevel(logging.INFO)
+        # 去除 - %(name)s
         self.formater = logging.Formatter(
-            '[%(asctime)s] [%(levelname)s] >> %(filename)s >> 第%(lineno)d行 - %(name)s - %(message)s ',
+            '[%(asctime)s] [%(levelname)s] >> %(filename)s >> 第%(lineno)d行  - %(message)s ',
             '%Y-%m-%d %H:%M:%S')
         self.logfile.setFormatter(self.formater)
         self.control.setFormatter(self.formater)

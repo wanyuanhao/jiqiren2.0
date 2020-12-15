@@ -3,17 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="0a114d94-c570-43d8-9302-05e498174a4a" name="Default Changelist" comment="主干去除没用的配置">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/Test_case.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/Test_case.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/config.ini" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/logs2/2020-12-14_11.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/logs2/2020-12-14_13.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/logs2/2020-12-14_17.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/logs2/2020-12-14_18.log" beforeDir="false" afterPath="$PROJECT_DIR$/config/logs2/2020-12-14_18.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/count_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/count_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module/kehuguanli/chudanzhanbai.py" beforeDir="false" afterPath="$PROJECT_DIR$/module/kehuguanli/chudanzhanbai.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module/kehuguanli/kehuliebiao.py" beforeDir="false" afterPath="$PROJECT_DIR$/module/kehuguanli/CustomerList.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/run_case.py" beforeDir="false" afterPath="$PROJECT_DIR$/run/run_case.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/test_report/2020-12-14result.html" beforeDir="false" afterPath="$PROJECT_DIR$/run/test_report/2020-12-14result.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/Logs.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/Logs.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/logs2/2020-12-14_18.log" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,7 +18,7 @@
     <SUITE FILE_PATH="coverage/jiqiren2_0$message.coverage" NAME="message Coverage Results" MODIFIED="1605840676847" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="C:/Python/Python36/Lib/email" />
     <SUITE FILE_PATH="coverage/jiqiren2_0$gzkb_all_case.coverage" NAME="gzkb_all_case Coverage Results" MODIFIED="1607930618020" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/run" />
     <SUITE FILE_PATH="coverage/jiqiren2_0$Test_Case.coverage" NAME="Test_Case Coverage Results" MODIFIED="1606728487799" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lianxi/util" />
-    <SUITE FILE_PATH="coverage/jiqiren2_0$Test_case.coverage" NAME="Test_case Coverage Results" MODIFIED="1607941022167" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case" />
+    <SUITE FILE_PATH="coverage/jiqiren2_0$Test_case.coverage" NAME="Test_case Coverage Results" MODIFIED="1607944636471" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case" />
     <SUITE FILE_PATH="coverage/jiqiren2_0$chudanzhanbai_case.coverage" NAME="chudanzhanbai_case Coverage Results" MODIFIED="1603795805152" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case" />
     <SUITE FILE_PATH="coverage/jiqiren2_0$Unittests_for_Test_case_Test_case_test_cese04.coverage" NAME="Unittests for Test_case.Test_case.test_cese04 Coverage Results" MODIFIED="1607507810376" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case" />
     <SUITE FILE_PATH="coverage/jiqiren2_0$Unittests_for_Test_case_Test_case.coverage" NAME="Unittests for Test_case.Test_case Coverage Results" MODIFIED="1607941955956" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case" />
@@ -35,14 +26,14 @@
     <SUITE FILE_PATH="coverage/jiqiren2_0$run_test.coverage" NAME="run_test Coverage Results" MODIFIED="1607509891538" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/run" />
     <SUITE FILE_PATH="coverage/jiqiren2_0$aatest.coverage" NAME="aatest Coverage Results" MODIFIED="1604392991477" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/jiqiren2_0$kehuliebiao__1_.coverage" NAME="kehuliebiao (1) Coverage Results" MODIFIED="1603870497382" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/module/kehuguanli" />
-    <SUITE FILE_PATH="coverage/jiqiren2_0$tiaoshi.coverage" NAME="tiaoshi Coverage Results" MODIFIED="1607924728530" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/config" />
+    <SUITE FILE_PATH="coverage/jiqiren2_0$tiaoshi.coverage" NAME="tiaoshi Coverage Results" MODIFIED="1607996326094" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/config" />
     <SUITE FILE_PATH="coverage/jiqiren2_0$count_test.coverage" NAME="count_test Coverage Results" MODIFIED="1605208460597" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/jiqiren2_0$Unittests_for_Test_case_Test_case_test_case01.coverage" NAME="Unittests for Test_case.Test_case.test_case01 Coverage Results" MODIFIED="1607479898376" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case" />
     <SUITE FILE_PATH="coverage/jiqiren2_0$logg.coverage" NAME="logg Coverage Results" MODIFIED="1607591013374" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/config" />
     <SUITE FILE_PATH="coverage/jiqiren2_0$Excel_util.coverage" NAME="Excel_util Coverage Results" MODIFIED="1606872267067" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/config" />
     <SUITE FILE_PATH="coverage/jiqiren2_0$sender_mail.coverage" NAME="sender_mail Coverage Results" MODIFIED="1605923823286" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/jiqiren2_0$Logs.coverage" NAME="Logs Coverage Results" MODIFIED="1607923290252" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/config" />
-    <SUITE FILE_PATH="coverage/jiqiren2_0$Unittests_for_Test_case_Test_case_test_case06.coverage" NAME="Unittests for Test_case.Test_case.test_case06 Coverage Results" MODIFIED="1607941088678" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case" />
+    <SUITE FILE_PATH="coverage/jiqiren2_0$Unittests_for_Test_case_Test_case_test_case06.coverage" NAME="Unittests for Test_case.Test_case.test_case06 Coverage Results" MODIFIED="1607944525875" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case" />
     <SUITE FILE_PATH="coverage/jiqiren2_0$kehuliebiao.coverage" NAME="kehuliebiao Coverage Results" MODIFIED="1607411993809" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/module/kehuguanli" />
     <SUITE FILE_PATH="coverage/jiqiren2_0$Unittests_in_Test_case_py.coverage" NAME="Unittests in Test_case.py Coverage Results" MODIFIED="1607942011786" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case" />
     <SUITE FILE_PATH="coverage/jiqiren2_0$xinzengbaojia_case.coverage" NAME="xinzengbaojia_case Coverage Results" MODIFIED="1603795768044" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case" />
@@ -61,11 +52,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="525">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/case/Test_case.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="12" column="61" lean-forward="true" selection-start-line="12" selection-start-column="61" selection-end-line="12" selection-end-column="61" />
+            <state relative-caret-position="660">
+              <caret line="130" lean-forward="true" selection-start-line="130" selection-end-line="130" />
               <folding>
                 <element signature="e#19#34#0" expanded="true" />
               </folding>
@@ -74,9 +65,21 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/case/Test_ui.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="420">
+              <caret line="14" column="27" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
+              <folding>
+                <element signature="e#23#53#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/module/kehuguanli/chudanzhanbai.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1496">
+            <state relative-caret-position="326">
               <caret line="68" lean-forward="true" selection-start-line="68" selection-end-line="68" />
               <folding>
                 <element signature="e#0#44#0" expanded="true" />
@@ -88,8 +91,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/module/kehuguanli/CustomerList.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="450" column="41" lean-forward="true" selection-start-line="450" selection-start-column="41" selection-end-line="450" selection-end-column="41" />
+            <state relative-caret-position="301">
+              <caret line="283" column="51" lean-forward="true" selection-start-line="283" selection-start-column="51" selection-end-line="283" selection-end-column="51" />
               <folding>
                 <element signature="e#19#63#0" expanded="true" />
               </folding>
@@ -98,8 +101,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/logs2/2020-12-14_18.log">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/config/logs2/2020-12-14_19.log">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-5185" />
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -114,11 +119,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/Logs.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="510">
+              <caret line="20" column="43" lean-forward="true" selection-start-line="20" selection-start-column="43" selection-end-line="20" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/run/run_case.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="17" column="31" lean-forward="true" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
+            <state relative-caret-position="-104">
+              <caret line="16" column="31" lean-forward="true" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -129,8 +143,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/tiaoshi.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="982">
-              <caret line="131" lean-forward="true" selection-start-line="131" selection-end-line="131" />
+            <state relative-caret-position="150">
+              <caret line="5" column="25" lean-forward="true" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -209,19 +223,19 @@
         <option value="$PROJECT_DIR$/config/logg.py" />
         <option value="$PROJECT_DIR$/config/logg2.py" />
         <option value="$PROJECT_DIR$/config/Log.py" />
-        <option value="$PROJECT_DIR$/config/Logs.py" />
         <option value="$PROJECT_DIR$/sender_mail.py" />
         <option value="$PROJECT_DIR$/run/gzkb_all_case.py" />
         <option value="$PROJECT_DIR$/module/kehuguanli/Interface_quote.py" />
-        <option value="$PROJECT_DIR$/config/tiaoshi.py" />
         <option value="$PROJECT_DIR$/module/kehuguanli/chudanzhanbai.py" />
         <option value="$PROJECT_DIR$/module/kehuguanli/kehuliebiao.py" />
         <option value="$PROJECT_DIR$/count_test.py" />
         <option value="$PROJECT_DIR$/config/logs2/2020-12-14_18.log" />
-        <option value="$PROJECT_DIR$/module/kehuguanli/CustomerList.py" />
         <option value="$PROJECT_DIR$/config/logs2/2020-12-14_17.log" />
-        <option value="$PROJECT_DIR$/case/Test_case.py" />
         <option value="$PROJECT_DIR$/run/run_case.py" />
+        <option value="$PROJECT_DIR$/module/kehuguanli/CustomerList.py" />
+        <option value="$PROJECT_DIR$/config/Logs.py" />
+        <option value="$PROJECT_DIR$/config/tiaoshi.py" />
+        <option value="$PROJECT_DIR$/case/Test_case.py" />
       </list>
     </option>
   </component>
@@ -248,13 +262,7 @@
             <path>
               <item name="jiqiren2.0" type="b2602c69:ProjectViewProjectNode" />
               <item name="jiqiren2.0" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jiqiren2.0" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jiqiren2.0" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-              <item name="logs2" type="462c0819:PsiDirectoryNode" />
+              <item name="case" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="jiqiren2.0" type="b2602c69:ProjectViewProjectNode" />
@@ -296,7 +304,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.run_case">
+  <component name="RunManager" selected="Python.tiaoshi">
     <configuration name="Test_case" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="jiqiren2.0" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -341,6 +349,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="tiaoshi" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="jiqiren2.0" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/config" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/config/tiaoshi.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="xubao" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="jiqiren2.0" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -363,7 +393,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests for Test_case.Test_case" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittests for Test_case.Test_case.test_case06" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="jiqiren2.0" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -374,22 +404,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;Test_case.Test_case&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Unittests for Test_case.Test_case.test_case07" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <module name="jiqiren2.0" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/case" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;Test_case.Test_case.test_case07&quot;" />
+      <option name="_new_target" value="&quot;Test_case.Test_case.test_case06&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -426,19 +441,19 @@
     <list>
       <item itemvalue="Python.Test_case" />
       <item itemvalue="Python.xubao" />
-      <item itemvalue="Python tests.Unittests for Test_case.Test_case.test_case07" />
-      <item itemvalue="Python tests.Unittests for Test_case.Test_case" />
       <item itemvalue="Python tests.Unittests in Test_case.py" />
       <item itemvalue="Python tests.Unittests for Test_case.Test_case.test_case08" />
       <item itemvalue="Python.run_case" />
+      <item itemvalue="Python tests.Unittests for Test_case.Test_case.test_case06" />
+      <item itemvalue="Python.tiaoshi" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.tiaoshi" />
+        <item itemvalue="Python tests.Unittests for Test_case.Test_case.test_case06" />
         <item itemvalue="Python.run_case" />
         <item itemvalue="Python tests.Unittests for Test_case.Test_case.test_case08" />
         <item itemvalue="Python tests.Unittests in Test_case.py" />
-        <item itemvalue="Python tests.Unittests for Test_case.Test_case" />
-        <item itemvalue="Python tests.Unittests for Test_case.Test_case.test_case07" />
       </list>
     </recent_temporary>
   </component>
@@ -473,7 +488,7 @@
       <workItem from="1607307779062" duration="22727000" />
       <workItem from="1607510360187" duration="1852000" />
       <workItem from="1607675966532" duration="1804000" />
-      <workItem from="1607911637152" duration="23868000" />
+      <workItem from="1607911637152" duration="27329000" />
     </task>
     <task id="LOCAL-00001" summary="内容修改">
       <created>1606214706875</created>
@@ -500,15 +515,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_for_Test_case_Test_case_test_cese04 - 2020.12.09 at 17h 56m 56s.xml">
-      <configuration name="Unittests for Test_case.Test_case.test_cese04" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_Test_case_py - 2020.12.10 at 15h 03m 42s.xml">
-      <configuration name="Unittests in Test_case.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_Test_case_Test_case_test_case07 - 2020.12.14 at 17h 55m 35s.xml">
-      <configuration name="Unittests for Test_case.Test_case.test_case07" configurationId="tests" />
-    </history-entry>
     <history-entry file="Unittests_for_Test_case_Test_case_test_case07 - 2020.12.14 at 18h 01m 08s.xml">
       <configuration name="Unittests for Test_case.Test_case.test_case07" configurationId="tests" />
     </history-entry>
@@ -530,9 +536,18 @@
     <history-entry file="Unittests_for_Test_case_Test_case_test_case08 - 2020.12.14 at 18h 36m 27s.xml">
       <configuration name="Unittests for Test_case.Test_case.test_case08" configurationId="tests" />
     </history-entry>
+    <history-entry file="Unittests_in_Test_case_py - 2020.12.14 at 19h 15m 09s.xml">
+      <configuration name="Unittests in Test_case.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_Test_case_Test_case_test_case06 - 2020.12.14 at 19h 15m 09s.xml">
+      <configuration name="Unittests for Test_case.Test_case.test_case06" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_Test_case_Test_case_test_case06 - 2020.12.14 at 19h 16m 30s.xml">
+      <configuration name="Unittests for Test_case.Test_case.test_case06" configurationId="tests" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="323728000" />
+    <option name="totallyTimeSpent" value="327189000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -545,15 +560,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15550756" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32912844" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.45412844" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49946004" weight="0.68004584" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.43233946" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49946004" weight="0.47133029" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32912844" />
@@ -561,7 +575,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32912844" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50053996" side_tool="true" weight="0.41284403" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.34059632" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.34059632" />
       <window_info anchor="bottom" id="Python Console" order="12" sideWeight="0.49946004" weight="0.32912844" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -652,14 +666,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/module/kehuguanli/CustomerList.py</url>
-          <line>44</line>
-          <option name="timeStamp" value="78" />
+          <line>258</line>
+          <option name="timeStamp" value="84" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/lianxi/util/Mysql.py" />
     <entry file="file://$PROJECT_DIR$/lianxi/util/Test_Case.py" />
     <entry file="file://$PROJECT_DIR$/lianxi/util/configs.ini" />
     <entry file="file://$PROJECT_DIR$/Lib/site-packages/xlrd/book.py">
@@ -744,16 +757,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="724">
           <caret line="306" selection-start-line="306" selection-end-line="306" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/case/Test_ui.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="14" column="27" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
-          <folding>
-            <element signature="e#23#53#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -858,16 +861,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/Logs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-          <folding>
-            <element signature="e#116#130#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/Python/Python36/Lib/logging/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="828">
@@ -922,30 +915,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/tiaoshi.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="982">
-          <caret line="131" lean-forward="true" selection-start-line="131" selection-end-line="131" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/Python/Python36/Lib/unittest/case.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="156">
           <caret line="604" selection-start-line="604" selection-end-line="604" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/module/kehuguanli/chudanzhanbai.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1496">
-          <caret line="68" lean-forward="true" selection-start-line="68" selection-end-line="68" />
-          <folding>
-            <element signature="e#0#44#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -959,38 +932,80 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/logs2/2020-12-14_18.log">
+    <entry file="file://$PROJECT_DIR$/config/logs2/2020-12-14_17.log">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/logs2/2020-12-14_17.log">
+    <entry file="file://$PROJECT_DIR$/run/run_case.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-104">
+          <caret line="16" column="31" lean-forward="true" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/logs2/2020-12-14_18.log">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/module/kehuguanli/CustomerList.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="450" column="41" lean-forward="true" selection-start-line="450" selection-start-column="41" selection-end-line="450" selection-end-column="41" />
+        <state relative-caret-position="301">
+          <caret line="283" column="51" lean-forward="true" selection-start-line="283" selection-start-column="51" selection-end-line="283" selection-end-column="51" />
           <folding>
             <element signature="e#19#63#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/case/Test_case.py">
+    <entry file="file://$PROJECT_DIR$/config/logs2/2020-12-14_19.log">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="12" column="61" lean-forward="true" selection-start-line="12" selection-start-column="61" selection-end-line="12" selection-end-column="61" />
+        <state relative-caret-position="-5185" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/Logs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="20" column="43" lean-forward="true" selection-start-line="20" selection-start-column="43" selection-end-line="20" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/kehuguanli/chudanzhanbai.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="326">
+          <caret line="68" lean-forward="true" selection-start-line="68" selection-end-line="68" />
           <folding>
-            <element signature="e#19#34#0" expanded="true" />
+            <element signature="e#0#44#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/run/run_case.py">
+    <entry file="file://$PROJECT_DIR$/config/tiaoshi.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="17" column="31" lean-forward="true" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
+        <state relative-caret-position="150">
+          <caret line="5" column="25" lean-forward="true" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
           <folding>
-            <element signature="e#0#15#0" expanded="true" />
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/case/Test_ui.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="14" column="27" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
+          <folding>
+            <element signature="e#23#53#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/case/Test_case.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="130" lean-forward="true" selection-start-line="130" selection-end-line="130" />
+          <folding>
+            <element signature="e#19#34#0" expanded="true" />
           </folding>
         </state>
       </provider>
