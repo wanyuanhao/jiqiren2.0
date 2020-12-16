@@ -5,7 +5,7 @@ import datetime, json
 import os, configparser
 from config import Logs
 
-logger = Logs.logs('CustomerList').logger
+logger = Logs.logs().logger
 r = Requests_util()
 conf = configparser.ConfigParser()
 path = os.path.dirname(__file__)
@@ -75,7 +75,7 @@ class CustomerList:
                             logger.info('出单成功')
                             return True
                     else:
-                        logger.info('获取出单结果的Buid不匹配：{0}'.format(response))
+                        logger.info('获取出单结果的Buid({0})不匹配：{1}'.format(buid,response))
                         return False
                 # 判断本年度是否出过保单
                 elif '本续保年度已存在' in response['message']:
@@ -108,7 +108,7 @@ class CustomerList:
                                 logger.info('出单成功')
                                 return True
                         else:
-                            logger.info('获取出单结果的Buid不匹配：{0}'.format(response))
+                            logger.info('获取出单结果的Buid({0})不匹配：{1}'.format(buid,response))
                             return False
                     else:
                         logger.info('出单覆盖异常：{0}'.format(response))
@@ -152,7 +152,7 @@ class CustomerList:
                         logger.info('录入战败通过')
                         return True
                     else:
-                        logger.info('录入结果和实际结果不符，车牌：{0}'.format(licenseno))
+                        logger.info('录入结果和实际结果不符，校验响应字段（ReviewStatusName是否等于战败）车牌：{0}[{1}]'.format(licenseno,assert_result))
                         return False
 
                 # 如果本年度已经录入过，重新覆盖录入结果
@@ -177,7 +177,7 @@ class CustomerList:
                             logger.info('录入战败通过')
                             return True
                         else:
-                            logger.info('录入结果和实际结果不符，车牌：{0}'.format(licenseno))
+                            logger.info('录入结果和实际结果不符，校验响应字段（ReviewStatusName是否等于战败）车牌：{0}[{1}]'.format(licenseno,assert_result))
                             return False
                     else:
                         logger.info('覆盖战败响应结果异常：{0}'.format(result))

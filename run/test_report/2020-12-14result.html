@@ -189,9 +189,9 @@ function showOutput(id, name) {
 
 <div class='heading'>
 <h1>自动化测试报告</h1>
-<p class='attribute'><strong>Start Time:</strong> 2020-12-14 19:06:22</p>
-<p class='attribute'><strong>Duration:</strong> 0:00:09.010960</p>
-<p class='attribute'><strong>Status:</strong> Pass 7 Failure 1</p>
+<p class='attribute'><strong>Start Time:</strong> 2020-12-14 21:11:31</p>
+<p class='attribute'><strong>Duration:</strong> 0:00:11.118947</p>
+<p class='attribute'><strong>Status:</strong> Pass 8</p>
 
 <p class='description'>执行结果</p>
 </div>
@@ -221,11 +221,11 @@ function showOutput(id, name) {
     <td>View</td>
 </tr>
 
-<tr class='failClass'>
+<tr class='passClass'>
     <td>Test_case.Test_case</td>
     <td>8</td>
-    <td>7</td>
-    <td>1</td>
+    <td>8</td>
+    <td>0</td>
     <td>0</td>
     <td><a href="javascript:showClassDetail('c1',8)">Detail</a></td>
 </tr>
@@ -293,40 +293,13 @@ pt1.4:
     <td colspan='5' align='center'>pass</td>
 </tr>
 
-<tr id='ft1.6' class='none'>
-    <td class='failCase'><div class='testcase'>test_case06: 客户列表分配，使用账号wanyuanhao,分配人：17501110001</div></td>
-    <td colspan='5' align='center'>
-
-    <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.6')" >
-        fail</a>
-
-    <div id='div_ft1.6' class="popup_window">
-        <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.6').style.display = 'none' " >
-           [x]</a>
-        </div>
-        <pre>
-        
-ft1.6: Traceback (most recent call last):
-  File "D:\python\jiqiren2.0\case\Test_case.py", line 130, in test_case06
-    self.assertTrue(result)
-AssertionError: False is not true
-Traceback (most recent call last):
-  File "D:\python\jiqiren2.0\case\Test_case.py", line 130, in test_case06
-    self.assertTrue(result)
-AssertionError: False is not true
-
-
-        </pre>
-    </div>
-    <!--css div popup end-->
-
-    </td>
+<tr id='pt1.6' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_case06: 客户列表分配，使用账号wanyuanhao,分配人：17501110001</div></td>
+    <td colspan='5' align='center'>pass</td>
 </tr>
 
 <tr id='pt1.7' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_case07</div></td>
+    <td class='none'><div class='testcase'>test_case07: 使用全部客户第5条数据录入战败</div></td>
     <td colspan='5' align='center'>pass</td>
 </tr>
 
@@ -338,8 +311,8 @@ AssertionError: False is not true
 <tr id='total_row'>
     <td>Total</td>
     <td>8</td>
-    <td>7</td>
-    <td>1</td>
+    <td>8</td>
+    <td>0</td>
     <td>0</td>
     <td>&nbsp;</td>
 </tr>

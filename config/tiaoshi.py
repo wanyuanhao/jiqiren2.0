@@ -1,7 +1,14 @@
 import configparser
 import os
-import time
 from selenium import webdriver
+from config import *
+d = "测试"
+locals()['d'] = '哈哈'
+print(d)
+for a in range(10):
+    print(a)
+    while a ==3:
+        continue
 
 # s = (lambda b:b**2) (8)
 # print(s)
@@ -109,27 +116,37 @@ from selenium import webdriver
 #     sm = SendMail()
 #     sm.send_mail_file("<html><h2>测试结果</h2></html>", "smtp.qq.com")
 
+# # --------------------------------------------------------------------------------------------
+# # 读取excel
 # import xlrd,json
 #
 # def read_excel(file_path):
 #     data = xlrd.open_workbook(file_path)
+#     # 打开第一个sheet
 #     table = data.sheet_by_index(0)
+#     # 读取第一个sheet第一行
 #     title = table.row_values(0)
-#
+#     # 计算有多少行
 #     s = table.nrows
-#     print(f"数字是：{s}")
+#     print(f"行数是：{s}")
 #
 #     datas = []
+#     # 循环每一行
 #     for i in  range(1,s):
 #         data_dict = {}
+#         # 循环每一列，title为key，y值Value
 #         for y  in range(len(title)):
+#             # 把值添加到字典中
 #             data_dict[title[y]]=table.row_values(i)[y]
 #         print(data_dict)
+#         # 把每一个字典添加到列表
 #         datas.append(data_dict)
+#     # 转换列表格式
 #     json.dumps(datas,ensure_ascii=True)
 #     print(datas)
+#
 # read_excel('./ttt.xlsx')
-
+# -----------------------------------------------------------------------------
 
 # s = [4,3,7,1]
 # print(sorted(s,reverse=True))

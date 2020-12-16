@@ -5,7 +5,7 @@ import datetime
 import sender_mail
 def gzkb_all_case():
     case_path = os.path.join(os.getcwd(), '..\module\gongzuokanban')
-    result = unittest.defaultTestLoader.discover(case_path, pattern='xubao.py', top_level_dir=None)
+    result = unittest.defaultTestLoader.discover(case_path, pattern='xubao_count.py', top_level_dir=None)
     return result
 
 

@@ -7,7 +7,7 @@ import configparser
 import os
 from config.Headers import Headers
 from config import Logs
-logger = Logs.logs("Test_case").logger
+logger = Logs.logs().logger
 conf = configparser.ConfigParser()
 '''读取配置文件'''
 root_path = os.path.join(os.getcwd(), '..\config\config.ini')
@@ -31,7 +31,7 @@ class Test_case(unittest.TestCase):
         pass
 
     def test_case01(self):
-        u'新增数据——录入出单流程'
+        u'新增车牌—>录入出单'
         logger.info('新增数据——录入出单流程')
         result = xinzeng.xubao(licenseno, city)
         self.assertTrue(result)
@@ -58,13 +58,13 @@ class Test_case(unittest.TestCase):
                 plan_count = kehu.plan_counts(token, result[i] + 10, 9999)
                 ss = f"接口返回数量：{result[i]}", f'实际条数：{plan_count[0]},f"接口响应：{plan_count[1]}"'
                 if result[i] != plan_count[0]:
-                    print('计划回访{0}数量不一致:{1}'.format(plan_name[i], ss))
+                    logger.info('计划回访{0}数量不一致:{1}'.format(plan_name[i], ss))
                 self.assertTrue(result[i] == plan_count[0])
             else:
                 plan_count = kehu.plan_counts(token, result[i] + 10, i + 1)
                 ss = f"接口返回数量：{result[i]}", f'实际条数：{plan_count[0]},f"接口响应：{plan_count[1]}"'
                 if result[i] != plan_count[0]:
-                    print('计划回访{0}数量不一致:{1}'.format(plan_name[i], ss))
+                    logger.info('计划回访{0}数量不一致:{1}'.format(plan_name[i], ss))
                 self.assertTrue(result[i] == plan_count[0])
 
     def test_case03(self):
@@ -131,6 +131,7 @@ class Test_case(unittest.TestCase):
 
     def test_case07(self):
         '使用全部客户第5条数据录入战败'
+        logger.info('使用全部客户第5条数据录入战败')
         query_result = kehu.query(headers)
         licenseno = query_result['data'][0]['licenseNo']
         result = kehu.enter_zhanbai(licenseno,headers)
@@ -141,14 +142,15 @@ class Test_case(unittest.TestCase):
 
     def test_case08(self):
         '使用全部客户第8条数据录入跟进'
-        query_result = kehu.query(headers)
-        licenseno = query_result['data'][8]['licenseNo']
+        print('case')
+        # query_result = kehu.query(headers)
+        # licenseno = query_result['data'][8]['licenseNo']
 
 if __name__ == '__main__':
     print('执行Case')
     # unittest.main(verbosity=2)
     runner = unittest.TextTestRunner(verbosity=2)
     suite = unittest.TestSuite()
-    suite.addTest(Test_case("test_case06"))
+    suite.addTest(Test_case("test_case07"))
     runner.run(suite)
 
