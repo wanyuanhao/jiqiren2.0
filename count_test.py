@@ -9,7 +9,7 @@ conut = 0
 for i in users:
     user = i.strip('\n').strip(',')
     username.append(user)
-    headers = Headers().token(user)
+    headers = Headers().token_update_config(user)
     if "登录报错" in headers:
         pass
     else:

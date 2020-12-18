@@ -47,7 +47,7 @@ class Test_case(unittest.TestCase):
     def test_case02(self):
         u'顶级账户计划回访数据量对比，使用账号：jiao'
         logger.info('顶级账户计划回访数据量对比，使用账号：jiao')
-        token = Headers().token_down('jiao')
+        token = Headers().tokens('jiao')
         self.assertTrue(token)
         # i+1是计划回访的页码
         # result+10 是在接口返回的数量上+10，避免库里的数据比接口返回的数量多
@@ -100,7 +100,7 @@ class Test_case(unittest.TestCase):
     def test_case05(self):
         u'下级账户计划回访数据量对比,使用账号：18612938273'
         logger.info('下级账户计划回访数据量对比,使用账号：18612938273')
-        token = Headers().token_down('18612938273')
+        token = Headers().tokens('18612938273')
         self.assertTrue(token)
         # i+1是计划回访的页码
         # result+10 是在接口返回的数量上+10，避免库里的数据比接口返回的数量多
@@ -124,7 +124,7 @@ class Test_case(unittest.TestCase):
         '客户列表分配，使用账号wanyuanhao,分配人：17501110001'
         logger.info('客户列表分配，使用账号wanyuanhao,分配人：17501110001')
         logger.info('执行分配用例')
-        token = Headers().token_down('wanyuanhao')
+        token = Headers().tokens('wanyuanhao')
         self.assertTrue(token)
         result = kehu.fenpei_avg(token)
         self.assertTrue(result)

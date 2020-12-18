@@ -1,14 +1,69 @@
 import configparser
 import os
 from selenium import webdriver
-from config import *
-d = "测试"
-locals()['d'] = '哈哈'
-print(d)
-for a in range(10):
-    print(a)
-    while a ==3:
-        continue
+import sys
+from enum import Enum
+
+
+class Tae(Enum):
+    RED = 1
+    YELLOW = 2
+    GREEN =3
+
+def func(value):
+    if value == Tae.RED or value == Tae.YELLOW:
+        print('禁止同行')
+    else:
+        print('允许同行')
+
+func(2)
+print(Tae.YELLOW)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# d = "测试"
+# locals()['d'] = '哈哈'
+# print(d)
+
+class Patname:
+    na =11
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+    def eat(self):
+        global na
+        print('is eat')
+
+# ————————————————————————————————————————————
+# # 递归删除文件
+# def remove_dir(dir):
+#     if os.path.isdir(dir):
+#         for file in os.listdir(dir):
+#             print("递归调用")
+#             remove_dir(os.path.join(dir, file))
+#         print("删除文件夹：{0}".format(dir))
+#         os.rmdir(dir)
+#     elif os.path.isfile(dir):
+#         print(f'行删除文件：{dir}')
+#         os.remove(dir)
+#     else:
+#         print("不确定的文件类型：{0}".format(dir))
+#
+# remove_dir(os.getcwd() + '/a1')
+# ——————————————————————————————————————————
 
 # s = (lambda b:b**2) (8)
 # print(s)

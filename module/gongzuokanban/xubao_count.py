@@ -19,7 +19,7 @@ class Test_Case(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
-        Headers().token('wanyuanhao')
+        Headers().token_update_config('wanyuanhao')
 
     def testcase01(self):
         '工作看板EmpEffectTotalNew'
