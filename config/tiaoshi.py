@@ -2,9 +2,10 @@ import configparser
 import os
 from selenium import webdriver
 import sys
+
+# -------------------------
+# 枚举
 from enum import Enum
-
-
 class Tae(Enum):
     RED = 1
     YELLOW = 2
@@ -18,20 +19,6 @@ def func(value):
 
 func(2)
 print(Tae.YELLOW)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 # d = "测试"
