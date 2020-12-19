@@ -3,8 +3,20 @@ import os
 import time
 from selenium import webdriver
 
-s = (lambda b:b**2) (8)
-print(s)
+import requests
+
+result = requests.get('https://api.xdclass.net/pub/api/v1/study_line/list?size=8').json()
+# ss = result.content.decode('utf-8')
+print(type(result))
+
+
+
+
+
+
+
+
+
 # driver = webdriver.Chrome()
 #
 # conf = configparser.ConfigParser()
@@ -132,5 +144,3 @@ print(s)
 
 # s = [4,3,7,1]
 # print(sorted(s,reverse=True))
-s =[1,3]
-print(len(s))
