@@ -55,7 +55,7 @@ class Patname:
 # s = (lambda b:b**2) (8)
 # print(s)
 
-<<<<<<< HEAD
+
 import requests
 
 result = requests.get('https://api.xdclass.net/pub/api/v1/study_line/list?size=8').json()
@@ -70,8 +70,7 @@ print(type(result))
 
 
 
-=======
->>>>>>> master
+
 # driver = webdriver.Chrome()
 #
 # conf = configparser.ConfigParser()
