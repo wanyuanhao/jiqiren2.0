@@ -3,36 +3,34 @@ import os
 from selenium import webdriver
 import sys
 
+# 有N条数据，每次循环11条，在拿这11条数据录入不同的定保日期。
+n = ['a','b','c','d','e','f']
+a = [1,2,3]
+d={}
+s =0
+for y in n:
+    if s==3:
+        s=0
+    d[y]=a[s]
+    s+=1
+print(d)
+
 # -------------------------
 # 枚举
-from enum import Enum
-class Tae(Enum):
-    RED = 1
-    YELLOW = 2
-    GREEN =3
-
-def func(value):
-    if value == Tae.RED or value == Tae.YELLOW:
-        print('禁止同行')
-    else:
-        print('允许同行')
-
-func(2)
-print(Tae.YELLOW)
-
-
-# d = "测试"
-# locals()['d'] = '哈哈'
-# print(d)
-
-class Patname:
-    na =11
-    def __init__(self, name, age):
-        self.name = name
-        self.age = age
-    def eat(self):
-        global na
-        print('is eat')
+# from enum import Enum
+# class Tae(Enum):
+#     RED = 1
+#     YELLOW = 2
+#     GREEN =3
+#
+# def func(value):
+#     if value == Tae.RED or value == Tae.YELLOW:
+#         print('禁止同行')
+#     else:
+#         print('允许同行')
+#
+# func(2)
+# print(Tae.YELLOW)
 
 # ————————————————————————————————————————————
 # # 递归删除文件
@@ -51,25 +49,6 @@ class Patname:
 #
 # remove_dir(os.getcwd() + '/a1')
 # ——————————————————————————————————————————
-
-# s = (lambda b:b**2) (8)
-# print(s)
-
-
-import requests
-
-result = requests.get('https://api.xdclass.net/pub/api/v1/study_line/list?size=8').json()
-# ss = result.content.decode('utf-8')
-print(type(result))
-
-
-
-
-
-
-
-
-
 
 # driver = webdriver.Chrome()
 #
