@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="0a114d94-c570-43d8-9302-05e498174a4a" name="Default Changelist" comment="主干去除没用的配置">
       <change afterPath="$PROJECT_DIR$/config/Thread.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/enter_dingbao.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/debug_server.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/debug_server.py" afterDir="false" />
+=======
+    <list default="true" id="bcb7506c-b978-4db3-93f0-f1a35ba2b6af" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/config/tiaoshi.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/tiaoshi.py" afterDir="false" />
+>>>>>>> master
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,6 +19,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
+<<<<<<< HEAD
     <SUITE FILE_PATH="coverage/jiqiren2_0$debug_client.coverage" NAME="debug_client Coverage Results" MODIFIED="1608362482291" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/config" />
     <SUITE FILE_PATH="coverage/jiqiren2_0$Headers.coverage" NAME="Headers Coverage Results" MODIFIED="1608260589348" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/config" />
     <SUITE FILE_PATH="coverage/jiqiren2_0$Thread.coverage" NAME="Thread Coverage Results" MODIFIED="1608363276903" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/config" />
@@ -97,6 +103,18 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="210">
               <caret line="7" column="14" lean-forward="true" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+=======
+    <SUITE FILE_PATH="coverage/jiqiren2_0$Headers.coverage" NAME="Headers Coverage Results" MODIFIED="1608260589348" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/config" />
+    <SUITE FILE_PATH="coverage/jiqiren2_0$tiaoshi.coverage" NAME="tiaoshi Coverage Results" MODIFIED="1608259240454" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/config" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/config/tiaoshi.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+>>>>>>> master
             </state>
           </provider>
         </entry>
@@ -108,68 +126,14 @@
       </file>
     </leaf>
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Python Script" />
-      </list>
-    </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>id</find>
-      <find>employee</find>
-      <find>3</find>
-      <find>null</find>
-    </findStrings>
-    <replaceStrings>
-      <replace>6</replace>
-      <replace>3</replace>
-      <replace>&quot;&quot;</replace>
-    </replaceStrings>
-  </component>
   <component name="Git.Settings">
-    <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="PUSH_TAGS">
-      <GitPushTagMode />
-    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/util/Requests.py" />
-        <option value="$PROJECT_DIR$/case/xinzengbaojia.py" />
-        <option value="$PROJECT_DIR$/case/chudanzhanbai.py" />
-        <option value="$PROJECT_DIR$/config/headers.py" />
-        <option value="$PROJECT_DIR$/config/Headers_token.py" />
-        <option value="$PROJECT_DIR$/case/xinzengbaojia_case.py" />
-        <option value="$PROJECT_DIR$/case/chudanzhanbai_case.py" />
-        <option value="$PROJECT_DIR$/case/chudanzhanbai_list.py" />
-        <option value="$PROJECT_DIR$/case/kehuliebiao.py" />
-        <option value="$PROJECT_DIR$/module/gongzuokanban/gzkb_Case.py" />
-        <option value="$PROJECT_DIR$/run/gongzuokanban_all_case.py" />
-        <option value="$PROJECT_DIR$/config/chepai.txt" />
-        <option value="$PROJECT_DIR$/module/kehuguanli/chudanzhanbai_list.py" />
-        <option value="$PROJECT_DIR$/aatest.py" />
-        <option value="$PROJECT_DIR$/tiaoshi.py" />
-        <option value="$PROJECT_DIR$/util/Requests_util.py" />
-        <option value="$PROJECT_DIR$/HTMLTestRunner.py" />
-        <option value="$PROJECT_DIR$/count_test.py" />
-        <option value="$PROJECT_DIR$/module/gongzuokanban/gongzuokanban_request.py" />
-        <option value="$PROJECT_DIR$/config/Element_method.json" />
-        <option value="$PROJECT_DIR$/lianxi/util/Request.py" />
-        <option value="$PROJECT_DIR$/lianxi/util/configs.ini" />
-        <option value="$PROJECT_DIR$/lianxi/util/Mysql.py" />
-        <option value="$PROJECT_DIR$/lianxi/util/Test_Case.py" />
-        <option value="$PROJECT_DIR$/config/xls_util.py" />
-        <option value="$PROJECT_DIR$/config/Excel_util.py" />
-        <option value="$PROJECT_DIR$/util/Excel_util.py" />
-        <option value="$PROJECT_DIR$/case/Test_ui.py" />
-        <option value="$PROJECT_DIR$/case/Tase_case.py" />
-        <option value="$PROJECT_DIR$/run/gzkb_all_case.py" />
-        <option value="$PROJECT_DIR$/module/kehuguanli/chudanzhanbai.py" />
         <option value="$PROJECT_DIR$/config/config.ini" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/module/kehuguanli/Interface_quote.py" />
         <option value="$PROJECT_DIR$/module/kehuguanli/kehuliebiao.py" />
         <option value="$PROJECT_DIR$/run/run_test.py" />
@@ -185,6 +149,11 @@
         <option value="$PROJECT_DIR$/config/Thread.py" />
         <option value="$PROJECT_DIR$/config/RE.py" />
         <option value="$PROJECT_DIR$/enter_dingbao.py" />
+=======
+        <option value="$PROJECT_DIR$/config/Headers.py" />
+        <option value="$PROJECT_DIR$/case/Test_case.py" />
+        <option value="$PROJECT_DIR$/config/tiaoshi.py" />
+>>>>>>> master
       </list>
     </option>
   </component>
@@ -210,7 +179,16 @@
             <path>
               <item name="jiqiren2.0" type="b2602c69:ProjectViewProjectNode" />
               <item name="jiqiren2.0" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
               <item name="module" type="462c0819:PsiDirectoryNode" />
+=======
+              <item name="case" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jiqiren2.0" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jiqiren2.0" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+>>>>>>> master
             </path>
           </expand>
           <select />
@@ -221,19 +199,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="D:/xd_lianxi" />
-    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="settings.github" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\python\jiqiren2.0\module\gongzuokanban" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\python\jiqiren2.0\util" />
-      <recent name="D:\python\jiqiren2.0\module\kehuguanli" />
-    </key>
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -247,6 +213,7 @@
       </list>
     </option>
   </component>
+<<<<<<< HEAD
   <component name="RunManager" selected="Python.RE">
     <configuration name="RE" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="jiqiren2.0" />
@@ -315,6 +282,10 @@
       <method v="2" />
     </configuration>
     <configuration name="debug_client" type="PythonConfigurationType" factoryName="Python" temporary="true">
+=======
+  <component name="RunManager" selected="Python.Headers">
+    <configuration name="Headers" type="PythonConfigurationType" factoryName="Python" temporary="true">
+>>>>>>> master
       <module name="jiqiren2.0" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -327,7 +298,11 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+<<<<<<< HEAD
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/config/debug_client.py" />
+=======
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/config/Headers.py" />
+>>>>>>> master
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -358,6 +333,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+<<<<<<< HEAD
     <configuration name="gongzuokanban_request" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="jiqiren2.0" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -417,6 +393,11 @@
         <item itemvalue="Python.Thread" />
         <item itemvalue="Python.debug_client" />
         <item itemvalue="Python.debug_server" />
+=======
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.Headers" />
+>>>>>>> master
         <item itemvalue="Python.tiaoshi" />
       </list>
     </recent_temporary>
@@ -426,10 +407,11 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="0a114d94-c570-43d8-9302-05e498174a4a" name="Default Changelist" comment="" />
-      <created>1603708030654</created>
+      <changelist id="bcb7506c-b978-4db3-93f0-f1a35ba2b6af" name="Default Changelist" comment="" />
+      <created>1608110421941</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
+<<<<<<< HEAD
       <updated>1603708030654</updated>
       <workItem from="1603708050228" duration="74461000" />
       <workItem from="1604371280447" duration="16720000" />
@@ -453,64 +435,18 @@
       <workItem from="1607510360187" duration="1852000" />
       <workItem from="1608522313162" duration="820000" />
       <workItem from="1608691119770" duration="737000" />
+=======
+      <updated>1608110421941</updated>
+      <workItem from="1608110423139" duration="124000" />
+      <workItem from="1608110548660" duration="25000" />
+      <workItem from="1608110607334" duration="610000" />
+      <workItem from="1608169329218" duration="23807000" />
+>>>>>>> master
     </task>
-    <task id="LOCAL-00001" summary="内容修改">
-      <created>1606214706875</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1606214706876</updated>
-    </task>
-    <task id="LOCAL-00002" summary="只修改分支">
-      <created>1606215021085</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1606215021085</updated>
-    </task>
-    <task id="LOCAL-00003" summary="主干去除没用的配置">
-      <created>1606215197425</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1606215197425</updated>
-    </task>
-    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
-  <component name="TestHistory">
-    <history-entry file="Unittests_for_Test_case_Test_case_test_case01 - 2020.12.09 at 10h 13m 02s.xml">
-      <configuration name="Unittests for Test_case.Test_case.test_case01" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_Test_case_Test_case - 2020.12.09 at 10h 13m 30s.xml">
-      <configuration name="Unittests for Test_case.Test_case" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_Test_case_Test_case_test_case02 - 2020.12.09 at 10h 13m 42s.xml">
-      <configuration name="Unittests for Test_case.Test_case.test_case02" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_Test_case_Test_case - 2020.12.09 at 10h 13m 42s.xml">
-      <configuration name="Unittests for Test_case.Test_case" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_Test_case_Test_case_test_cese04 - 2020.12.09 at 17h 31m 24s.xml">
-      <configuration name="Unittests for Test_case.Test_case.test_cese04" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_Test_case_Test_case_test_cese04 - 2020.12.09 at 17h 31m 40s.xml">
-      <configuration name="Unittests for Test_case.Test_case.test_cese04" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_Test_case_Test_case_test_cese04 - 2020.12.09 at 17h 33m 56s.xml">
-      <configuration name="Unittests for Test_case.Test_case.test_cese04" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_Test_case_Test_case_test_cese04 - 2020.12.09 at 17h 53m 47s.xml">
-      <configuration name="Unittests for Test_case.Test_case.test_cese04" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_Test_case_Test_case_test_cese04 - 2020.12.09 at 17h 54m 49s.xml">
-      <configuration name="Unittests for Test_case.Test_case.test_cese04" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_Test_case_Test_case_test_cese04 - 2020.12.09 at 17h 56m 56s.xml">
-      <configuration name="Unittests for Test_case.Test_case.test_cese04" configurationId="tests" />
-    </history-entry>
-  </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="306685000" />
   </component>
   <component name="ToolWindowManager">
@@ -541,49 +477,42 @@
     </layout>
     <layout-to-restore>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18112798" />
+=======
+    <option name="totallyTimeSpent" value="24566000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17764579" />
+>>>>>>> master
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.43728018" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.5041032" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946004" weight="0.26949543" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.25802752" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32942554" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50053996" side_tool="true" weight="0.32912844" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.32912844" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" />
       <window_info anchor="right" id="Database" order="4" />
-    </layout-to-restore>
+    </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="内容修改" />
-    <MESSAGE value="只修改分支" />
-    <MESSAGE value="主干去除没用的配置" />
-    <option name="LAST_COMMIT_MESSAGE" value="主干去除没用的配置" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/lianxi/util/Test_Case.py</url>
-          <line>1</line>
-          <option name="timeStamp" value="51" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
     <entry file="file://C:/Python/Python36/Lib/email/mime/text.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1050">
@@ -637,146 +566,77 @@
         </state>
       </provider>
     </entry>
+=======
+>>>>>>> master
     <entry file="file://$PROJECT_DIR$/count_test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="531">
-          <caret line="28" column="45" selection-start-line="28" selection-start-column="45" selection-end-line="28" selection-end-column="45" />
+        <state>
           <folding>
             <element signature="e#0#34#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/Python/Python36/Lib/configparser.py">
+    <entry file="file://$PROJECT_DIR$/run/run_case.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1624">
-          <caret line="1140" selection-start-line="1140" selection-end-line="1140" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/d" />
-    <entry file="file://$PROJECT_DIR$/HTMLTestRunner.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="622">
-          <caret line="823" column="21" lean-forward="true" selection-start-line="823" selection-start-column="21" selection-end-line="823" selection-end-column="21" />
-          <folding>
-            <element signature="e#3215#3230#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/生成html报告和邮件发送.py" />
-    <entry file="file://$PROJECT_DIR$/module/gongzuokanban/gongzuokanban_request.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="34" column="39" lean-forward="true" selection-start-line="34" selection-start-column="39" selection-end-line="34" selection-end-column="39" />
+        <state relative-caret-position="305">
+          <caret line="24" column="23" lean-forward="true" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/util/Excel_util.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="461">
-          <caret line="56" column="36" selection-start-line="56" selection-start-column="36" selection-end-line="56" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/Element_method.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="2" column="1" lean-forward="true" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
+<<<<<<< HEAD
     <entry file="file://C:/Python/Python36/Lib/typing.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1013">
           <caret line="452" column="6" selection-start-line="452" selection-start-column="6" selection-end-line="452" selection-end-column="6" />
         </state>
       </provider>
+=======
+    <entry file="file://$PROJECT_DIR$/config/te1/ss/1.txt">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/3/unittest/__init__.pyi">
+    <entry file="file://$PROJECT_DIR$/config/te1/aa/1.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+>>>>>>> master
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/te1/aa/2.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/a1/b1.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/111.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/a1/b1/c2.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/a1/b1/c1.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://C:/Python/Python36/Lib/ntpath.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="13" column="8" lean-forward="true" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
+        <state relative-caret-position="611">
+          <caret line="75" selection-start-line="75" selection-end-line="75" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pycharm/_jb_unittest_runner.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="34" selection-start-line="34" selection-end-line="34" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/config/a1/b3.txt">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://C:/Python/Python36/Lib/unittest/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="94" selection-start-line="94" selection-end-line="94" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/config/a1/b2/b21.txt">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pycharm/teamcity/unittestpy.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="724">
-          <caret line="306" selection-start-line="306" selection-end-line="306" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/config/Logs.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/case/Test_ui.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="14" column="27" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
-          <folding>
-            <element signature="e#23#53#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Python/Python36/Lib/unittest/suite.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="83" selection-start-line="83" selection-end-line="83" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Python/Python36/Lib/unittest/runner.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1428">
-          <caret line="188" selection-start-line="188" selection-end-line="188" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Python/Python36/Lib/unittest/loader.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="152" selection-start-line="152" selection-end-line="152" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/module/kehuguanli/chudanzhanbai.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="930">
-          <caret line="31" column="17" selection-start-line="31" selection-start-column="17" selection-end-line="31" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#44#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/run/run_test.py" />
-    <entry file="file://C:/Python/Python36/Lib/unittest/case.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1046">
-          <caret line="604" selection-start-line="604" selection-end-line="604" />
-        </state>
-      </provider>
-    </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/module/kehuguanli/Interface_quote.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="355">
@@ -798,15 +658,23 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/run/gzkb_all_case.py">
+=======
+    <entry file="file://$PROJECT_DIR$/case/Test_case.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="180">
+          <caret line="13" column="46" lean-forward="true" selection-start-line="13" selection-start-column="46" selection-end-line="13" selection-end-column="46" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/config/config.ini">
+>>>>>>> master
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="3" column="19" lean-forward="true" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/config/config.ini">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -815,41 +683,26 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/run/test_report/result.html">
+=======
+    <entry file="file://$PROJECT_DIR$/config/Headers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="11" column="52" lean-forward="true" selection-start-line="11" selection-start-column="52" selection-end-line="11" selection-end-column="52" />
+          <folding>
+            <element signature="e#0#44#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/tiaoshi.py">
+>>>>>>> master
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
-          <caret line="5" column="59" lean-forward="true" selection-start-line="5" selection-start-column="59" selection-end-line="5" selection-end-column="59" />
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/run/test_report/2020-12-10result.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-6300">
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#td#1;n#tr#2;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sender_mail.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1380">
-          <caret line="46" column="57" lean-forward="true" selection-start-line="46" selection-start-column="57" selection-end-line="46" selection-end-column="57" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/case/Test_case.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="649">
-          <caret line="72" column="26" selection-start-line="72" selection-start-column="26" selection-end-line="72" selection-end-column="26" />
-          <folding>
-            <element signature="e#19#34#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/run/run_case.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="235">
@@ -964,5 +817,7 @@
         </settings>
       </state>
     </states>
+=======
+>>>>>>> master
   </component>
 </project>

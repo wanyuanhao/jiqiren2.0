@@ -7,8 +7,6 @@ xlrd中单元格的数据类型
 成我们想要的数据类型
 0 empty,1 string, 2 number, 3 date, 4 boolean, 5 error
 '''
-
-
 class ExcelData():
     # 初始化方法
     def __init__(self, data_path, sheetname):

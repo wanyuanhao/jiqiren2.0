@@ -21,7 +21,7 @@ class SendMail:
         # 添加到附件，"base64","gb2312" 是编码
         file = MIMEText(report, "base64", "gb2312")
         file["Content-Type"] = "application/octet-stream"
-        file["Content-Disposition"] = f'attachment; filename="{time}result111.html"'
+        file["Content-Disposition"] = f'attachment; filename="{time}result.html"'
 
         # 把邮件内容和附件添加进去
         msg = MIMEMultipart()
