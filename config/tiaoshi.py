@@ -2,18 +2,19 @@ import configparser
 import os
 from selenium import webdriver
 import sys
+import re
+str = """<h1 class=1>  爱撒娇的克拉
+斯极度空灵  </h1>
+         <h2 class = 2>阿萨德撒大</h2> 
+      """
+st = "1a2b3c1c1a"
+res = re.findall('<h1.*>(.*)</h1>[\s\S]*<h2.*>(.*)</h2>',str)
+res1 = re.search('<h1.*>(?P<titile>[\s\S]*)</h1>[\s\S]*<h2.*>(.*)</h2>',str)
+result = res1.group("titile")
+print(type(result))
+print(result.replace('\n',''))
 
-# 有N条数据，每次循环11条，在拿这11条数据录入不同的定保日期。
-n = ['a','b','c','d','e','f']
-a = [1,2,3]
-d={}
-s =0
-for y in n:
-    if s==3:
-        s=0
-    d[y]=a[s]
-    s+=1
-print(d)
+
 
 # -------------------------
 # 枚举
