@@ -11,9 +11,13 @@ class SpiderMain:
         self.url = Url_mannager()
 
     def start(self):
+        # 从url管理器获取url
         url = self.url.url_manager()
+        # 将获取到的url使用下载器进行下载
         response = self.downloader.downloader(url)
+        # 将下载内容进行解析
         result = self.parser.parser(response)
+        # 把解析结果进行存储
         self.datastorage.stoage(result)
 if __name__ == '__main__':
     spider = SpiderMain()

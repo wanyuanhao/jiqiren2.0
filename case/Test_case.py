@@ -7,6 +7,7 @@ import configparser
 import os
 from config.Headers import Headers
 from config import Logs
+
 logger = Logs.logs().logger
 conf = configparser.ConfigParser()
 '''读取配置文件'''
@@ -18,6 +19,7 @@ xinzeng = Interface_quote()
 chudan = chudan_zhanbai()
 kehu = CustomerList()
 headers = eval(conf.get('headers', 'token'))
+urls = conf.get('host', 'url')
 
 
 class Test_case(unittest.TestCase):
@@ -35,9 +37,9 @@ class Test_case(unittest.TestCase):
         logger.info('新增数据——录入出单流程')
         result = xinzeng.xubao(licenseno, city)
         self.assertTrue(result)
-        result = kehu.find_licenseno(licenseno,headers)
+        result = kehu.find_licenseno(licenseno, headers)
         self.assertTrue(result[0])
-        result = kehu.enter_chudan(licenseno,headers)
+        result = kehu.enter_chudan(licenseno, headers)
         print(result)
         if result:
             result = chudan.find_chudan(licenseno)
@@ -71,9 +73,9 @@ class Test_case(unittest.TestCase):
         '校验报价成功的数据是否有报价历史'
         logger.info('校验报价成功的数据是否有报价历史')
         result = kehu.shaixuan_baojiachenggong(headers)
-        #判断结果是否为真
+        # 判断结果是否为真
         self.assertTrue(result)
-        lishi_result = kehu.quote_lishi(result['data'][0]['buid'],headers)
+        lishi_result = kehu.quote_lishi(result['data'][0]['buid'], headers)
         # 判断结果是否为真
         self.assertTrue(lishi_result)
 
@@ -81,20 +83,20 @@ class Test_case(unittest.TestCase):
         '校验切换报价历史是否成功'
         logger.info('校验切换报价历史是否成功')
         result = kehu.shaixuan_baojiachenggong(headers)
-        #判断结果是否为真
+        # 判断结果是否为真
         self.assertTrue(result)
         for index in range(len(result['data'])):
-            lishi_result = kehu.quote_lishi(result['data'][index]['buid'],headers)
+            lishi_result = kehu.quote_lishi(result['data'][index]['buid'], headers)
             # 校验报价历史是否为空
             if lishi_result:
                 # 校验报价历史数量是否大于1
-                if len(lishi_result['data'])>1:
+                if len(lishi_result['data']) > 1:
                     id = lishi_result['data'][1]['id']
                     time1 = lishi_result['data'][1]['quoteTime']
-                    lishi = kehu.qiehuan_quote_lishi(id,headers)
+                    lishi = kehu.qiehuan_quote_lishi(id, headers)
                     time = lishi['data']['quetoTime']
-                    print(time,time1)
-                    self.assertEqual(time,time1)
+                    print(time, time1)
+                    self.assertEqual(time, time1)
                     break
 
     def test_case05(self):
@@ -133,24 +135,35 @@ class Test_case(unittest.TestCase):
         '使用全部客户第5条数据录入战败'
         logger.info('使用全部客户第5条数据录入战败')
         query_result = kehu.query(headers)
-        licenseno = query_result['data'][0]['licenseNo']
-        result = kehu.enter_zhanbai(licenseno,headers)
+        licenseno = query_result['data'][4]['licenseNo']
+        result = kehu.enter_zhanbai(licenseno, headers)
         self.assertTrue(result)
         find_result = chudan.find_zhanbai(licenseno)
         self.assertTrue(find_result)
 
-
     def test_case08(self):
-        '使用全部客户第8条数据录入跟进'
-        print('case')
-        # query_result = kehu.query(headers)
-        # licenseno = query_result['data'][8]['licenseNo']
+        '使用全部客户第8条数据录入续保跟进'
+        query_result = kehu.query(headers)
+        buid = query_result['data'][7]['buid']
+        response = kehu.enter_genjin(buid, headers)
+        self.assertTrue(response['message'] == '成功')
+
+    def test_case09(self):
+        '客户列表不筛选导出全部客户TAB数据'
+        result = kehu.export_customer(headers)
+        self.assertTrue(result['message'] == '操作成功' or result['message'] == '未找到对应的内容')
+
+    def test_case10(self):
+        '客户列表筛选（战败）导出全部客户数据'
+        # [4] 是战败的筛选条件
+        result = kehu.export_customer(headers,[4])
+        self.assertTrue(result['message'] == '操作成功' or result['message'] == '未找到对应的内容')
+
 
 if __name__ == '__main__':
     print('执行Case')
     # unittest.main(verbosity=2)
     runner = unittest.TextTestRunner(verbosity=2)
     suite = unittest.TestSuite()
-    suite.addTest(Test_case("test_case07"))
+    suite.addTest(Test_case("test_case10"))
     runner.run(suite)
-

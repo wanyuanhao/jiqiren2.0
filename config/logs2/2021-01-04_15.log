@@ -1,0 +1,127 @@
+[2021-01-04 15:08:47] [INFO] >> CustomerList.py >> 第436行  - 获取全部客户数据 
+[2021-01-04 15:10:16] [INFO] >> CustomerList.py >> 第453行  - [buid:600996698]录入普通跟进 
+[2021-01-04 15:10:26] [INFO] >> CustomerList.py >> 第459行  - 请求录入跟进 
+[2021-01-04 15:10:29] [INFO] >> CustomerList.py >> 第461行  - 返回录入跟进响应结果：{'type': 'https://tools.ietf.org/html/rfc7231#section-6.5.13', 'title': 'Unsupported Media Type', 'status': 415, 'traceId': '80068c7e-0006-3d00-b63f-84710c7967bb'} 
+[2021-01-04 15:16:38] [INFO] >> CustomerList.py >> 第436行  - 获取全部客户数据 
+[2021-01-04 15:16:45] [INFO] >> CustomerList.py >> 第453行  - [buid:600996697]录入普通跟进 
+[2021-01-04 15:17:04] [INFO] >> CustomerList.py >> 第459行  - 请求录入跟进 
+[2021-01-04 15:17:36] [INFO] >> CustomerList.py >> 第436行  - 获取全部客户数据 
+[2021-01-04 15:17:39] [INFO] >> CustomerList.py >> 第453行  - [buid:600996697]录入普通跟进 
+[2021-01-04 15:17:41] [INFO] >> CustomerList.py >> 第459行  - 请求录入跟进 
+[2021-01-04 15:19:06] [INFO] >> CustomerList.py >> 第436行  - 获取全部客户数据 
+[2021-01-04 15:19:07] [INFO] >> CustomerList.py >> 第453行  - [buid:600996697]录入普通跟进 
+[2021-01-04 15:19:09] [INFO] >> CustomerList.py >> 第459行  - 请求录入跟进 
+[2021-01-04 15:19:15] [INFO] >> CustomerList.py >> 第461行  - 返回录入跟进响应结果：{'data': {'coverCode': 0, 'deteatId': None, 'carPolicyId': None}, 'code': 1, 'message': '成功'} 
+[2021-01-04 15:19:50] [INFO] >> CustomerList.py >> 第436行  - 获取全部客户数据 
+[2021-01-04 15:19:53] [INFO] >> CustomerList.py >> 第453行  - [buid:600976286]录入普通跟进 
+[2021-01-04 15:19:59] [INFO] >> CustomerList.py >> 第459行  - 请求录入跟进 
+[2021-01-04 15:20:06] [INFO] >> CustomerList.py >> 第461行  - 返回录入跟进响应结果：{'data': {'coverCode': 0, 'deteatId': None, 'carPolicyId': None}, 'code': 1, 'message': '成功'} 
+[2021-01-04 15:32:31] [INFO] >> Test_case.py >> 第37行  - 新增数据——录入出单流程 
+[2021-01-04 15:32:31] [INFO] >> Interface_quote.py >> 第22行  - 京AC1122发起续保 
+[2021-01-04 15:32:32] [INFO] >> Interface_quote.py >> 第41行  - 获取续保响应结果 
+[2021-01-04 15:32:32] [INFO] >> Interface_quote.py >> 第44行  - 新增车牌成功 
+[2021-01-04 15:32:32] [INFO] >> CustomerList.py >> 第27行  - 获取京AC1122查询结果 
+[2021-01-04 15:32:32] [INFO] >> CustomerList.py >> 第31行  - 客户列表查询车牌通过 
+[2021-01-04 15:32:32] [INFO] >> CustomerList.py >> 第46行  - 根据buid录入出单，默认录入人保 
+[2021-01-04 15:32:32] [INFO] >> CustomerList.py >> 第49行  - 客户列表查询京AC1122是否存在 
+[2021-01-04 15:32:32] [INFO] >> CustomerList.py >> 第27行  - 获取京AC1122查询结果 
+[2021-01-04 15:32:32] [INFO] >> CustomerList.py >> 第31行  - 客户列表查询车牌通过 
+[2021-01-04 15:32:32] [INFO] >> CustomerList.py >> 第54行  - 查询结果拿第一个buid 
+[2021-01-04 15:32:32] [INFO] >> CustomerList.py >> 第63行  - 发起录入出单请求 
+[2021-01-04 15:32:32] [INFO] >> CustomerList.py >> 第82行  - 本年度已出过保单,提交覆盖 
+[2021-01-04 15:32:32] [INFO] >> CustomerList.py >> 第96行  - 获取响应message校验是否出单成功 
+[2021-01-04 15:32:33] [INFO] >> CustomerList.py >> 第102行  - 出单成功，校验buid[600976286]是否一致 
+[2021-01-04 15:32:33] [INFO] >> CustomerList.py >> 第105行  - 校验出单状态、录入保司、金额是否一致 
+[2021-01-04 15:32:33] [INFO] >> CustomerList.py >> 第108行  - 出单成功 
+[2021-01-04 15:32:33] [INFO] >> chudanzhanbai.py >> 第21行  - 出单列表查询 
+[2021-01-04 15:32:33] [INFO] >> chudanzhanbai.py >> 第32行  - 出单列表查询通过 
+[2021-01-04 15:32:33] [INFO] >> Test_case.py >> 第51行  - 顶级账户计划回访数据量对比，使用账号：jiao 
+[2021-01-04 15:32:33] [INFO] >> Headers.py >> 第64行  - 返回token 
+[2021-01-04 15:32:33] [INFO] >> CustomerList.py >> 第365行  - 获取接口返回的计划回访数量 
+[2021-01-04 15:32:33] [INFO] >> CustomerList.py >> 第377行  - 列表形式返回计划回访数量：[168, 340, 260, 253, 154, 51, 37, 119, 108] 
+[2021-01-04 15:32:33] [INFO] >> CustomerList.py >> 第385行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-04 15:32:34] [INFO] >> CustomerList.py >> 第385行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-04 15:32:34] [INFO] >> CustomerList.py >> 第385行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-04 15:32:35] [INFO] >> CustomerList.py >> 第385行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-04 15:32:35] [INFO] >> CustomerList.py >> 第385行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-04 15:32:36] [INFO] >> CustomerList.py >> 第385行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-04 15:32:36] [INFO] >> CustomerList.py >> 第385行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-04 15:32:37] [INFO] >> CustomerList.py >> 第385行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-04 15:32:37] [INFO] >> CustomerList.py >> 第385行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-04 15:32:38] [INFO] >> Test_case.py >> 第74行  - 校验报价成功的数据是否有报价历史 
+[2021-01-04 15:32:38] [INFO] >> CustomerList.py >> 第396行  - 筛选报价成功数据 
+[2021-01-04 15:32:38] [INFO] >> CustomerList.py >> 第403行  - 返回筛选结果 
+[2021-01-04 15:32:38] [INFO] >> CustomerList.py >> 第411行  - 获取报价历史 
+[2021-01-04 15:32:38] [INFO] >> CustomerList.py >> 第416行  - 返回报价历史结果 
+[2021-01-04 15:32:38] [INFO] >> Test_case.py >> 第84行  - 校验切换报价历史是否成功 
+[2021-01-04 15:32:38] [INFO] >> CustomerList.py >> 第396行  - 筛选报价成功数据 
+[2021-01-04 15:32:38] [INFO] >> CustomerList.py >> 第403行  - 返回筛选结果 
+[2021-01-04 15:32:38] [INFO] >> CustomerList.py >> 第411行  - 获取报价历史 
+[2021-01-04 15:32:38] [INFO] >> CustomerList.py >> 第416行  - 返回报价历史结果 
+[2021-01-04 15:32:38] [INFO] >> CustomerList.py >> 第424行  - 根据报价历史id切换报价历史 
+[2021-01-04 15:32:38] [INFO] >> CustomerList.py >> 第429行  - 报价历史已切换 
+[2021-01-04 15:32:38] [INFO] >> Test_case.py >> 第104行  - 下级账户计划回访数据量对比,使用账号：18612938273 
+[2021-01-04 15:32:39] [INFO] >> Headers.py >> 第64行  - 返回token 
+[2021-01-04 15:32:39] [INFO] >> CustomerList.py >> 第365行  - 获取接口返回的计划回访数量 
+[2021-01-04 15:32:39] [INFO] >> CustomerList.py >> 第377行  - 列表形式返回计划回访数量：[0, 42, 47, 19, 28, 16, 14, 35, 38] 
+[2021-01-04 15:32:39] [INFO] >> CustomerList.py >> 第385行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-04 15:32:39] [INFO] >> CustomerList.py >> 第385行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-04 15:32:39] [INFO] >> CustomerList.py >> 第385行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-04 15:32:39] [INFO] >> CustomerList.py >> 第385行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-04 15:32:39] [INFO] >> CustomerList.py >> 第385行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-04 15:32:39] [INFO] >> CustomerList.py >> 第385行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-04 15:32:40] [INFO] >> CustomerList.py >> 第385行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-04 15:32:40] [INFO] >> CustomerList.py >> 第385行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-04 15:32:40] [INFO] >> CustomerList.py >> 第385行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-04 15:32:40] [INFO] >> Test_case.py >> 第127行  - 客户列表分配，使用账号wanyuanhao,分配人：17501110001 
+[2021-01-04 15:32:40] [INFO] >> Test_case.py >> 第128行  - 执行分配用例 
+[2021-01-04 15:32:41] [INFO] >> Headers.py >> 第64行  - 返回token 
+[2021-01-04 15:32:41] [INFO] >> CustomerList.py >> 第250行  - 客户列表分配 
+[2021-01-04 15:32:41] [INFO] >> CustomerList.py >> 第257行  - 获取客户列表全部客户的数据 
+[2021-01-04 15:32:50] [INFO] >> CustomerList.py >> 第465行  - 客户列表导出 
+[2021-01-04 15:32:54] [INFO] >> CustomerList.py >> 第471行  - 返回导出响应结构：{'code': 1, 'message': '操作成功', 'data': 'https://image.91bihu.com/customer/2021/1/4/171383/0eb7949dc7754d73904989ff11615db7.zip'} 
+[2021-01-04 15:34:14] [INFO] >> CustomerList.py >> 第465行  - 客户列表导出 
+[2021-01-04 15:34:15] [INFO] >> CustomerList.py >> 第471行  - 返回导出响应结构：{'code': 404, 'message': '未找到对应的内容', 'data': None} 
+[2021-01-04 15:38:30] [INFO] >> CustomerList.py >> 第436行  - 获取全部客户数据 
+[2021-01-04 15:38:31] [INFO] >> CustomerList.py >> 第453行  - [buid:600996685]录入普通跟进 
+[2021-01-04 15:38:31] [INFO] >> CustomerList.py >> 第459行  - 请求录入跟进 
+[2021-01-04 15:38:31] [INFO] >> CustomerList.py >> 第461行  - 返回录入跟进响应结果：{'data': {'coverCode': 0, 'deteatId': None, 'carPolicyId': None}, 'code': 1, 'message': '成功'} 
+[2021-01-04 15:39:06] [INFO] >> Test_case.py >> 第37行  - 新增数据——录入出单流程 
+[2021-01-04 15:39:06] [INFO] >> Interface_quote.py >> 第22行  - 京AC1122发起续保 
+[2021-01-04 15:39:07] [INFO] >> Interface_quote.py >> 第41行  - 获取续保响应结果 
+[2021-01-04 15:39:07] [INFO] >> Interface_quote.py >> 第44行  - 新增车牌成功 
+[2021-01-04 15:39:07] [INFO] >> CustomerList.py >> 第27行  - 获取京AC1122查询结果 
+[2021-01-04 15:39:08] [INFO] >> CustomerList.py >> 第31行  - 客户列表查询车牌通过 
+[2021-01-04 15:39:08] [INFO] >> CustomerList.py >> 第46行  - 根据buid录入出单，默认录入人保 
+[2021-01-04 15:39:08] [INFO] >> CustomerList.py >> 第49行  - 客户列表查询京AC1122是否存在 
+[2021-01-04 15:39:08] [INFO] >> CustomerList.py >> 第27行  - 获取京AC1122查询结果 
+[2021-01-04 15:39:08] [INFO] >> CustomerList.py >> 第31行  - 客户列表查询车牌通过 
+[2021-01-04 15:39:08] [INFO] >> CustomerList.py >> 第54行  - 查询结果拿第一个buid 
+[2021-01-04 15:39:08] [INFO] >> CustomerList.py >> 第63行  - 发起录入出单请求 
+[2021-01-04 15:39:08] [INFO] >> CustomerList.py >> 第82行  - 本年度已出过保单,提交覆盖 
+[2021-01-04 15:39:08] [INFO] >> CustomerList.py >> 第96行  - 获取响应message校验是否出单成功 
+[2021-01-04 15:39:08] [INFO] >> CustomerList.py >> 第102行  - 出单成功，校验buid[600976286]是否一致 
+[2021-01-04 15:39:08] [INFO] >> CustomerList.py >> 第105行  - 校验出单状态、录入保司、金额是否一致 
+[2021-01-04 15:39:08] [INFO] >> CustomerList.py >> 第108行  - 出单成功 
+[2021-01-04 15:39:08] [INFO] >> chudanzhanbai.py >> 第21行  - 出单列表查询 
+[2021-01-04 15:39:08] [INFO] >> chudanzhanbai.py >> 第32行  - 出单列表查询通过 
+[2021-01-04 15:39:08] [INFO] >> Test_case.py >> 第51行  - 顶级账户计划回访数据量对比，使用账号：jiao 
+[2021-01-04 15:39:08] [INFO] >> Headers.py >> 第64行  - 返回token 
+[2021-01-04 15:39:08] [INFO] >> CustomerList.py >> 第365行  - 获取接口返回的计划回访数量 
+[2021-01-04 15:39:09] [INFO] >> CustomerList.py >> 第377行  - 列表形式返回计划回访数量：[167, 340, 260, 254, 154, 51, 37, 119, 109] 
+[2021-01-04 15:39:09] [INFO] >> CustomerList.py >> 第385行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-04 15:39:09] [INFO] >> CustomerList.py >> 第385行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-04 15:39:10] [INFO] >> CustomerList.py >> 第385行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-04 15:39:11] [INFO] >> CustomerList.py >> 第385行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-04 15:39:44] [INFO] >> CustomerList.py >> 第465行  - 客户列表导出 
+[2021-01-04 15:39:45] [INFO] >> CustomerList.py >> 第471行  - 返回导出响应结构：{'code': 404, 'message': '未找到对应的内容', 'data': None} 
+[2021-01-04 15:40:15] [INFO] >> CustomerList.py >> 第465行  - 客户列表导出 
+[2021-01-04 15:40:16] [INFO] >> CustomerList.py >> 第471行  - 返回导出响应结构：{'code': 404, 'message': '未找到对应的内容', 'data': None} 
+[2021-01-04 15:40:28] [INFO] >> CustomerList.py >> 第465行  - 客户列表导出 
+[2021-01-04 15:40:29] [INFO] >> CustomerList.py >> 第471行  - 返回导出响应结构：{'code': 404, 'message': '未找到对应的内容', 'data': None} 
+[2021-01-04 15:40:50] [INFO] >> CustomerList.py >> 第465行  - 客户列表导出 
+[2021-01-04 15:40:53] [INFO] >> CustomerList.py >> 第471行  - 返回导出响应结构：{'code': 1, 'message': '操作成功', 'data': 'https://image.91bihu.com/customer/2021/1/4/171383/58241c6821c6412bb0a13d31e8f6a527.zip'} 
+[2021-01-04 15:55:57] [INFO] >> CustomerList.py >> 第477行  - 客户列表导出 
+[2021-01-04 15:55:59] [INFO] >> CustomerList.py >> 第485行  - 返回导出响应结构：{'code': 1, 'message': '操作成功', 'data': 'https://image.91bihu.com/customer/2021/1/4/171383/57082772bb7f4e13b685c3aa1a41f816.zip'} 
+[2021-01-04 15:56:34] [INFO] >> CustomerList.py >> 第477行  - 客户列表导出 
+[2021-01-04 15:56:44] [INFO] >> CustomerList.py >> 第485行  - 返回导出响应结构：{'code': 1, 'message': '操作成功', 'data': 'https://image.91bihu.com/customer/2021/1/4/171383/246adae6f2d4493086d2f3c3dbc17239.zip'} 

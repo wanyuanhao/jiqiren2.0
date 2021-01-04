@@ -75,7 +75,7 @@ class CustomerList:
                             logger.info('出单成功')
                             return True
                     else:
-                        logger.info('获取出单结果的Buid({0})不匹配：{1}'.format(buid,response))
+                        logger.info('获取出单结果的Buid({0})不匹配：{1}'.format(buid, response))
                         return False
                 # 判断本年度是否出过保单
                 elif '本续保年度已存在' in response['message']:
@@ -108,7 +108,7 @@ class CustomerList:
                                 logger.info('出单成功')
                                 return True
                         else:
-                            logger.info('获取出单结果的Buid({0})不匹配：{1}'.format(buid,response))
+                            logger.info('获取出单结果的Buid({0})不匹配：{1}'.format(buid, response))
                             return False
                     else:
                         logger.info('出单覆盖异常：{0}'.format(response))
@@ -152,7 +152,8 @@ class CustomerList:
                         logger.info('录入战败通过')
                         return True
                     else:
-                        logger.info('录入结果和实际结果不符，校验响应字段（ReviewStatusName是否等于战败）车牌：{0}[{1}]'.format(licenseno,assert_result))
+                        logger.info(
+                            '录入结果和实际结果不符，校验响应字段（ReviewStatusName是否等于战败）车牌：{0}[{1}]'.format(licenseno, assert_result))
                         return False
 
                 # 如果本年度已经录入过，重新覆盖录入结果
@@ -177,7 +178,8 @@ class CustomerList:
                             logger.info('录入战败通过')
                             return True
                         else:
-                            logger.info('录入结果和实际结果不符，校验响应字段（ReviewStatusName是否等于战败）车牌：{0}[{1}]'.format(licenseno,assert_result))
+                            logger.info('录入结果和实际结果不符，校验响应字段（ReviewStatusName是否等于战败）车牌：{0}[{1}]'.format(licenseno,
+                                                                                                       assert_result))
                             return False
                     else:
                         logger.info('覆盖战败响应结果异常：{0}'.format(result))
@@ -447,8 +449,45 @@ class CustomerList:
             logger.info(f'获取全部客户数据异常：{e}')
             return False
 
-    def enter_genjin(self, licenseno):
-        logger.info(f'[{licenseno}]录入跟进')
+    def enter_genjin(self, buid, headers):
+        logger.info(f'[buid:{buid}]录入普通跟进')
+        time = (datetime.datetime.now() + datetime.timedelta(days=1)).strftime('%Y-%m-%d %H:%M:%S')
+        url = urls + '/carbusiness/api/v1/CustomerDetail/SaveConsumerReview'
+        data = {"defeatReasonContent": "", "bizTotal": "", "forceTotal": "", "taxTotal": "", "reviewContent": "自动化录入",
+                "singleTime": "", "jyPrice": "", "appointTime": f"{time}", "reviewStatus": 205619,
+                "reviewStatusName": "自动化录入", "isTrusted": True, "buid": buid, "companyType": 4, "groupId": 1}
+        logger.info('请求录入跟进')
+        result = r.request(url, 'post', data, headers=headers, content_type='json')
+        logger.info(f'返回录入跟进响应结果：{result}')
+        return result
+
+    def export_customer(self, headers, body=None):
+        # body为None则是不筛选导出
+        try :
+            if body == None:
+                logger.info('客户列表导出')
+                url = urls + '/carbusiness/api/v1/customer/exportCustomer'
+                data = {"pageIndex": 1, "pageSize": 15, "selectType": 1, "topLabel": "tab_quanbukehu",
+                        "orderBy": {"orderByField": "updateTime", "orderByType": "desc"}, "isFllowUp": "",
+                        "isDataLable": "",
+                        "dataTag": "", "dataTypeId": 0, "lastMaintainDayRange": "", "isMaintain": 1}
+                response = r.request(url, 'post', data, headers, 'json')
+                logger.info(f'返回导出响应结构：{response}')
+                return response
+            else:
+                logger.info('客户列表导出')
+                url = urls + '/carbusiness/api/v1/customer/exportCustomer'
+                data = {"pageIndex": 1, "pageSize": 15, "selectType": 1, "topLabel": "tab_quanbukehu",
+                        "customerStatusIds": body,
+                        "orderBy": {"orderByField": "updateTime", "orderByType": "desc"}, "isFllowUp": "",
+                        "isDataLable": "",
+                        "dataTag": "", "dataTypeId": 0, "lastMaintainDayRange": "", "isMaintain": 1}
+                response = r.request(url, 'post', data, headers, 'json')
+                logger.info(f'返回导出响应结构：{response}')
+                return response
+        except Exception as e :
+            logger.error(f'export_customer 执行异常：{e}')
+            return f'export_customer 执行异常：{e}'
 
 
 if __name__ == '__main__':

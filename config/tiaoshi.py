@@ -1,18 +1,44 @@
 import configparser
+import datetime
 import os
 from selenium import webdriver
 import sys
-import re
-str = """<h1 class=1>  爱撒娇的克拉
-斯极度空灵  </h1>
-         <h2 class = 2>阿萨德撒大</h2> 
-      """
-st = "1a2b3c1c1a"
-res = re.findall('<h1.*>(.*)</h1>[\s\S]*<h2.*>(.*)</h2>',str)
-res1 = re.search('<h1.*>(?P<titile>[\s\S]*)</h1>[\s\S]*<h2.*>(.*)</h2>',str)
-result = res1.group("titile")
-print(type(result))
-print(result.replace('\n',''))
+time = (datetime.datetime.now()+datetime.timedelta(days=1)).strftime('%Y-%m-%d %H:%M:%S')
+print(time)
+
+
+# 集合
+# info = ["a",'b','c','d']
+# info = set(info)
+# info1 = set([2,22,33,4,55])
+
+# # 取交集
+# print(info.intersection(info1))
+# print(info & info1)
+#
+# # 取并集
+# print(info.union(info1))
+# print(info | info1)
+
+# 差集 去info里面有的 info1里面没有的
+# print(info.difference(info1))
+# print(info - info1)
+
+# # 子集
+# print(info.issubset(info1))
+# print(info.isdisjoint(info1))
+
+# 集合添加
+# info.add(999)
+# # 集合添加多个
+# info.update([888,999,9999])
+# print(info)
+
+# # 删除
+# info.remove(999)
+# 随机删除
+# info.pop()
+# print(info)
 
 
 
