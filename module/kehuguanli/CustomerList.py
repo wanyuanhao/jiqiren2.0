@@ -463,7 +463,7 @@ class CustomerList:
 
     def export_customer(self, headers, body=None):
         # body为None则是不筛选导出
-        try :
+        try:
             if body == None:
                 logger.info('客户列表导出')
                 url = urls + '/carbusiness/api/v1/customer/exportCustomer'
@@ -472,7 +472,7 @@ class CustomerList:
                         "isDataLable": "",
                         "dataTag": "", "dataTypeId": 0, "lastMaintainDayRange": "", "isMaintain": 1}
                 response = r.request(url, 'post', data, headers, 'json')
-                logger.info(f'返回导出响应结构：{response}')
+                logger.info(f'返回导出响应结果：{response}')
                 return response
             else:
                 logger.info('客户列表导出')
@@ -483,11 +483,66 @@ class CustomerList:
                         "isDataLable": "",
                         "dataTag": "", "dataTypeId": 0, "lastMaintainDayRange": "", "isMaintain": 1}
                 response = r.request(url, 'post', data, headers, 'json')
-                logger.info(f'返回导出响应结构：{response}')
+                logger.info(f'返回导出响应结果：{response}')
                 return response
-        except Exception as e :
+        except Exception as e:
             logger.error(f'export_customer 执行异常：{e}')
             return f'export_customer 执行异常：{e}'
+
+    def enter_dingbao_chudan(self, buid, headers, deteatId=None, carPolicyId=None):
+        '定保录入成功预约'
+        try:
+            logger.info('定保录入成功预约')
+            time = (datetime.datetime.now() + datetime.timedelta(days=1)).strftime("%Y-%m-%d %H:%M:%S")
+            url = urls + '/carbusiness/api/v1/CustomerDetail/SaveConsumerReview'
+            data = {"groupId": 7, "defeatReasonContent": "", "maintainAmount": "1000", "reviewContent": "自动化录入内容",
+                    "singleTime": "2021-01-06", "appointTime": time, "reviewStatusName": "成功预约",
+                    "reviewStatus": 9, "contentCategoryId": 8193, "contentCategoryInfo": "自动化录入", "isTrusted": True,
+                    "deteatId": deteatId, "carPolicyId": carPolicyId, "buid": buid, "companyType": 4}
+            result = r.request(url, 'post', data, headers, 'json')
+            logger.info(f'校验响应结果：{result}')
+            if result['message'] == '成功':
+                logger.info('定保录入成功')
+                return [True]
+            elif '已存在定保预约出单/战败记录' in result['message']:
+                logger.info('定保出单重复，确认覆盖')
+                carPolicyId = result['data']['carPolicyId']
+                deteatId = result['data']['deteatId']
+                result = self.enter_dingbao_chudan(buid, headers, deteatId=deteatId, carPolicyId=carPolicyId)
+                return result
+            else:
+                return [False, f'响应结果异常：{result}']
+        except Exception as e:
+            logger.error(f'enter_dingbao_chudan方法执行异常：{e}')
+            return [False, f'enter_dingbao_chudan方法执行异常：{e}']
+
+    def enter_dingbao_zhanbai(self, buid, headers, deteatId=None, carPolicyId=None):
+        '定保录入战败'
+        try:
+            logger.info('定保录入战败')
+            time = (datetime.datetime.now() + datetime.timedelta(days=1)).strftime("%Y-%m-%d %H:%M:%S")
+            url = urls + '/carbusiness/api/v1/CustomerDetail/SaveConsumerReview'
+            data = {"groupId": 7, "defeatReasonContent": "自动化录入", "maintainAmount": 0, "reviewContent": "自动化录入内容",
+                   "singleTime": "", "appointTime": time, "reviewStatusName": "战败", "reviewStatus": 4,
+                   "defeatReasonId": 8193, "contentCategoryId": 8193, "contentCategoryInfo": "自动化录入", "isTrusted": True,
+                    "deteatId": deteatId, "carPolicyId": carPolicyId,"buid": buid, "companyType": 4}
+            result = r.request(url, 'post', data, headers, 'json')
+            logger.info(f'校验响应结果：{result}')
+            if result['message'] == '成功':
+                logger.info('定保录入成功')
+                return [True]
+            elif '已存在定保预约出单/战败记录' in result['message']:
+                logger.info('定保出单重复，确认覆盖')
+                carPolicyId = result['data']['carPolicyId']
+                deteatId = result['data']['deteatId']
+                result = self.enter_dingbao_zhanbai(buid, headers, deteatId=deteatId, carPolicyId=carPolicyId)
+                return result
+            else:
+                return [False, f'响应结果异常：{result}']
+
+        except Exception as e:
+            logger.error(f'enter_dingbao_chudan方法执行异常：{e}')
+            return [False, f'enter_dingbao_chudan方法执行异常：{e}']
 
 
 if __name__ == '__main__':
