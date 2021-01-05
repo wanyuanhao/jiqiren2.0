@@ -189,9 +189,9 @@ function showOutput(id, name) {
 
 <div class='heading'>
 <h1>自动化测试报告(详情请看附件)</h1>
-<p class='attribute'><strong>Start Time:</strong> 2021-01-05 14:48:31</p>
-<p class='attribute'><strong>Duration:</strong> 0:00:12.693982</p>
-<p class='attribute'><strong>Status:</strong> Pass 10 Failure 3</p>
+<p class='attribute'><strong>Start Time:</strong> 2021-01-05 15:27:02</p>
+<p class='attribute'><strong>Duration:</strong> 0:00:16.853911</p>
+<p class='attribute'><strong>Status:</strong> Pass 11 Failure 2</p>
 
 <p class='description'>执行结果</p>
 </div>
@@ -224,8 +224,8 @@ function showOutput(id, name) {
 <tr class='failClass'>
     <td>TestCase.TestCase</td>
     <td>13</td>
-    <td>10</td>
-    <td>3</td>
+    <td>11</td>
+    <td>2</td>
     <td>0</td>
     <td><a href="javascript:showClassDetail('c1',13)">Detail</a></td>
 </tr>
@@ -298,36 +298,9 @@ pt1.4:
     <td colspan='5' align='center'>pass</td>
 </tr>
 
-<tr id='ft1.7' class='none'>
-    <td class='failCase'><div class='testcase'>test_case07: 使用全部客户第5条数据录入战败</div></td>
-    <td colspan='5' align='center'>
-
-    <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.7')" >
-        fail</a>
-
-    <div id='div_ft1.7' class="popup_window">
-        <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.7').style.display = 'none' " >
-           [x]</a>
-        </div>
-        <pre>
-        
-ft1.7: Traceback (most recent call last):
-  File "D:\python\jiqiren2.0\case\TestCase.py", line 137, in test_case07
-    self.assertTrue(result)
-AssertionError: False is not true
-Traceback (most recent call last):
-  File "D:\python\jiqiren2.0\case\TestCase.py", line 137, in test_case07
-    self.assertTrue(result)
-AssertionError: False is not true
-
-
-        </pre>
-    </div>
-    <!--css div popup end-->
-
-    </td>
+<tr id='pt1.7' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_case07: 使用全部客户第5条数据录入战败</div></td>
+    <td colspan='5' align='center'>pass</td>
 </tr>
 
 <tr id='pt1.8' class='hiddenRow'>
@@ -417,8 +390,8 @@ AssertionError: False is not true
 <tr id='total_row'>
     <td>Total</td>
     <td>13</td>
-    <td>10</td>
-    <td>3</td>
+    <td>11</td>
+    <td>2</td>
     <td>0</td>
     <td>&nbsp;</td>
 </tr>
