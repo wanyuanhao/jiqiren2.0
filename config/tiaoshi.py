@@ -1,10 +1,95 @@
 import configparser
+import datetime
 import os
-import time
-from selenium import webdriver
+import unittest
+from module.kehuguanli.CustomerList import CustomerList
+import sys
 
-# s = (lambda b:b**2) (8)
-# print(s)
+class TestCase(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.customer = CustomerList()
+        print('开始')
+    @classmethod
+    def tearDownClass(cls):
+        print('结束')
+    def test_case1(self):
+        print('case1')
+        self.customer.test()
+
+    def test_case2(self):
+        print('case2')
+if __name__ == '__main__':
+    unittest.main()
+# 集合
+# info = ["a",'b','c','d']
+# info = set(info)
+# info1 = set([2,22,33,4,55])
+
+# # 取交集
+# print(info.intersection(info1))
+# print(info & info1)
+#
+# # 取并集
+# print(info.union(info1))
+# print(info | info1)
+
+# 差集 去info里面有的 info1里面没有的
+# print(info.difference(info1))
+# print(info - info1)
+
+# # 子集
+# print(info.issubset(info1))
+# print(info.isdisjoint(info1))
+
+# 集合添加
+# info.add(999)
+# # 集合添加多个
+# info.update([888,999,9999])
+# print(info)
+
+# # 删除
+# info.remove(999)
+# 随机删除
+# info.pop()
+# print(info)
+
+
+
+# -------------------------
+# 枚举
+# from enum import Enum
+# class Tae(Enum):
+#     RED = 1
+#     YELLOW = 2
+#     GREEN =3
+#
+# def func(value):
+#     if value == Tae.RED or value == Tae.YELLOW:
+#         print('禁止同行')
+#     else:
+#         print('允许同行')
+#
+# func(2)
+# print(Tae.YELLOW)
+
+# ————————————————————————————————————————————
+# # 递归删除文件
+# def remove_dir(dir):
+#     if os.path.isdir(dir):
+#         for file in os.listdir(dir):
+#             print("递归调用")
+#             remove_dir(os.path.join(dir, file))
+#         print("删除文件夹：{0}".format(dir))
+#         os.rmdir(dir)
+#     elif os.path.isfile(dir):
+#         print(f'行删除文件：{dir}')
+#         os.remove(dir)
+#     else:
+#         print("不确定的文件类型：{0}".format(dir))
+#
+# remove_dir(os.getcwd() + '/a1')
+# ——————————————————————————————————————————
 
 # driver = webdriver.Chrome()
 #
@@ -109,27 +194,37 @@ from selenium import webdriver
 #     sm = SendMail()
 #     sm.send_mail_file("<html><h2>测试结果</h2></html>", "smtp.qq.com")
 
+# # --------------------------------------------------------------------------------------------
+# # 读取excel
 # import xlrd,json
 #
 # def read_excel(file_path):
 #     data = xlrd.open_workbook(file_path)
+#     # 打开第一个sheet
 #     table = data.sheet_by_index(0)
+#     # 读取第一个sheet第一行
 #     title = table.row_values(0)
-#
+#     # 计算有多少行
 #     s = table.nrows
-#     print(f"数字是：{s}")
+#     print(f"行数是：{s}")
 #
 #     datas = []
+#     # 循环每一行
 #     for i in  range(1,s):
 #         data_dict = {}
+#         # 循环每一列，title为key，y值Value
 #         for y  in range(len(title)):
+#             # 把值添加到字典中
 #             data_dict[title[y]]=table.row_values(i)[y]
 #         print(data_dict)
+#         # 把每一个字典添加到列表
 #         datas.append(data_dict)
+#     # 转换列表格式
 #     json.dumps(datas,ensure_ascii=True)
 #     print(datas)
+#
 # read_excel('./ttt.xlsx')
-
+# -----------------------------------------------------------------------------
 
 # s = [4,3,7,1]
 # print(sorted(s,reverse=True))
