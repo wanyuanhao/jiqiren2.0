@@ -1,12 +1,26 @@
 import configparser
 import datetime
 import os
-from selenium import webdriver
+import unittest
+from module.kehuguanli.CustomerList import CustomerList
 import sys
-time = (datetime.datetime.now()+datetime.timedelta(days=1)).strftime('%Y-%m-%d %H:%M:%S')
-print(time)
 
+class TestCase(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.customer = CustomerList()
+        print('开始')
+    @classmethod
+    def tearDownClass(cls):
+        print('结束')
+    def test_case1(self):
+        print('case1')
+        self.customer.test()
 
+    def test_case2(self):
+        print('case2')
+if __name__ == '__main__':
+    unittest.main()
 # 集合
 # info = ["a",'b','c','d']
 # info = set(info)

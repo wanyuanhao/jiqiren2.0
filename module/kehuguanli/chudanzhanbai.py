@@ -4,7 +4,7 @@ import datetime
 import os, configparser
 from config import Logs
 
-logger = Logs.logs().logger
+logger = Logs.Logs().logger
 # Headers().token()
 config = configparser.ConfigParser()
 path = os.path.dirname(__file__)

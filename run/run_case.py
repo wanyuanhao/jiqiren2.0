@@ -8,12 +8,12 @@ from config import Logs
 
 def run_test_case():
     path = os.path.dirname(os.path.dirname(__file__))
-    result = unittest.defaultTestLoader.discover(path + "/case", pattern="Test_case.py", top_level_dir=None)
+    result = unittest.defaultTestLoader.discover(path + "/case", pattern="TestCase.py", top_level_dir=None)
     return result
 
 
 if __name__ == '__main__':
-    logger = Logs.logs('run_case').logger
+    logger = Logs.Logs('run_case').logger
     logger.info('登录账户获取touken')
     Headers.token_update_config('wanyuanhao')
     time = datetime.datetime.now().strftime('%Y-%m-%d')

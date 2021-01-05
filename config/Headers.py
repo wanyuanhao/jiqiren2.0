@@ -13,7 +13,7 @@ configs.read(path + '\config.ini', encoding='utf-8')
 # 读取配置文件的指定配置
 users = configs.get('host', 'user')
 urls = configs.get('host', 'url')
-logger = Logs.logs().logger
+logger = Logs.Logs().logger
 
 
 class Headers:

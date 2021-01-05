@@ -4,8 +4,9 @@ from util.Requests_util import Requests_util
 import datetime, json
 import os, configparser
 from config import Logs
-
-logger = Logs.logs().logger
+# 后引入的包，有的方法里面存在time所以改名为times
+import time as times
+logger = Logs.Logs().logger
 r = Requests_util()
 conf = configparser.ConfigParser()
 path = os.path.dirname(__file__)
@@ -66,6 +67,8 @@ class CustomerList:
                     logger.info('message响应成功')
                     url = urls + '/carbusiness/api/v1/CustomerDetail/QueryUserinfoSteps?buid={0}&groupId=0&pageIndex=1&pageSize=20'.format(
                         buid)
+                    # 等待2秒，录完之后库里有延迟会导致刚录入的获取不到
+                    times.sleep(2)
                     assert_response = r.request(url, 'get', headers=headers, content_type='json')
                     logger.info('获取响应message校验是否出单成功')
                     result = json.loads(assert_response['data']['list'][0]['jsonContent'])
@@ -98,6 +101,8 @@ class CustomerList:
                     if response['message'] == '成功':
                         url = urls + '/carbusiness/api/v1/CustomerDetail/QueryUserinfoSteps?buid={0}&groupId=0&pageIndex=1&pageSize=20'.format(
                             buid)
+                        # 等待2秒，录完之后库里有延迟会导致刚录入的获取不到
+                        times.sleep(2)
                         assert_response = r.request(url, 'get', headers=headers, content_type='json')
                         logger.info(f'出单成功，校验buid[{buid}]是否一致')
                         result = json.loads(assert_response['data']['list'][0]['jsonContent'])
@@ -145,7 +150,8 @@ class CustomerList:
                     url = urls + '/carbusiness/api/v1/CustomerDetail/QueryUserinfoSteps?buid={0}&groupId=0&pageIndex=1&pageSize=20'.format(
                         buid)
                     result = r.request(url, 'get', headers=headers, content_type='json')
-                    # 断言录入结果和实际录入结果是否一致
+                    # 等待2秒，录完之后库里有延迟会导致刚录入的获取不到
+                    times.sleep(2)
                     assert_result = json.loads(result['data']['list'][0]['jsonContent'])
                     # 断言录入结果和实际录入结果是否一致
                     if assert_result['ReviewStatusName'] == '战败':
@@ -153,7 +159,7 @@ class CustomerList:
                         return True
                     else:
                         logger.info(
-                            '录入结果和实际结果不符，校验响应字段（ReviewStatusName是否等于战败）车牌：{0}[{1}]'.format(licenseno, assert_result))
+                            '录入结果和实际结果不符，校验字段（[ReviewStatusName]是否等于战败）车牌：{0}[{1}]'.format(licenseno, assert_result))
                         return False
 
                 # 如果本年度已经录入过，重新覆盖录入结果
@@ -172,13 +178,15 @@ class CustomerList:
                         url = urls + '/carbusiness/api/v1/CustomerDetail/QueryUserinfoSteps?buid={0}&groupId=0&pageIndex=1&pageSize=20'.format(
                             buid)
                         result = r.request(url, 'get', headers=headers, content_type='json')
+                        # 等待2秒，录完之后库里有延迟会导致刚录入的获取不到
+                        times.sleep(2)
                         assert_result = json.loads(result['data']['list'][0]['jsonContent'])
                         # 断言录入结果和实际录入结果是否一致
                         if assert_result['ReviewStatusName'] == '战败':
                             logger.info('录入战败通过')
                             return True
                         else:
-                            logger.info('录入结果和实际结果不符，校验响应字段（ReviewStatusName是否等于战败）车牌：{0}[{1}]'.format(licenseno,
+                            logger.info('录入结果和实际结果不符，校验字段（[ReviewStatusName]是否等于战败）车牌：{0}[{1}]'.format(licenseno,
                                                                                                        assert_result))
                             return False
                     else:
@@ -543,6 +551,8 @@ class CustomerList:
         except Exception as e:
             logger.error(f'enter_dingbao_chudan方法执行异常：{e}')
             return [False, f'enter_dingbao_chudan方法执行异常：{e}']
+    def test(self):
+        print('haha')
 
 
 if __name__ == '__main__':

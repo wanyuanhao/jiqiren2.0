@@ -189,9 +189,9 @@ function showOutput(id, name) {
 
 <div class='heading'>
 <h1>自动化测试报告(详情请看附件)</h1>
-<p class='attribute'><strong>Start Time:</strong> 2021-01-05 09:51:08</p>
-<p class='attribute'><strong>Duration:</strong> 0:00:10.812503</p>
-<p class='attribute'><strong>Status:</strong> Pass 8 Failure 2</p>
+<p class='attribute'><strong>Start Time:</strong> 2021-01-05 14:48:31</p>
+<p class='attribute'><strong>Duration:</strong> 0:00:12.693982</p>
+<p class='attribute'><strong>Status:</strong> Pass 10 Failure 3</p>
 
 <p class='description'>执行结果</p>
 </div>
@@ -222,12 +222,12 @@ function showOutput(id, name) {
 </tr>
 
 <tr class='failClass'>
-    <td>Test_case.Test_case</td>
+    <td>TestCase.TestCase</td>
+    <td>13</td>
     <td>10</td>
-    <td>8</td>
-    <td>2</td>
+    <td>3</td>
     <td>0</td>
-    <td><a href="javascript:showClassDetail('c1',10)">Detail</a></td>
+    <td><a href="javascript:showClassDetail('c1',13)">Detail</a></td>
 </tr>
 
 <tr id='pt1.1' class='hiddenRow'>
@@ -298,9 +298,36 @@ pt1.4:
     <td colspan='5' align='center'>pass</td>
 </tr>
 
-<tr id='pt1.7' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_case07: 使用全部客户第5条数据录入战败</div></td>
-    <td colspan='5' align='center'>pass</td>
+<tr id='ft1.7' class='none'>
+    <td class='failCase'><div class='testcase'>test_case07: 使用全部客户第5条数据录入战败</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.7')" >
+        fail</a>
+
+    <div id='div_ft1.7' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.7').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.7: Traceback (most recent call last):
+  File "D:\python\jiqiren2.0\case\TestCase.py", line 137, in test_case07
+    self.assertTrue(result)
+AssertionError: False is not true
+Traceback (most recent call last):
+  File "D:\python\jiqiren2.0\case\TestCase.py", line 137, in test_case07
+    self.assertTrue(result)
+AssertionError: False is not true
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
 </tr>
 
 <tr id='pt1.8' class='hiddenRow'>
@@ -324,11 +351,11 @@ pt1.4:
         <pre>
         
 ft1.9: Traceback (most recent call last):
-  File "D:\python\jiqiren2.0\case\Test_case.py", line 154, in test_case09
+  File "D:\python\jiqiren2.0\case\TestCase.py", line 153, in test_case09
     self.assertTrue(result['message'] == '操作成功' or result['message'] == '未找到对应的内容')
 AssertionError: False is not true
 Traceback (most recent call last):
-  File "D:\python\jiqiren2.0\case\Test_case.py", line 154, in test_case09
+  File "D:\python\jiqiren2.0\case\TestCase.py", line 153, in test_case09
     self.assertTrue(result['message'] == '操作成功' or result['message'] == '未找到对应的内容')
 AssertionError: False is not true
 
@@ -356,11 +383,11 @@ AssertionError: False is not true
         <pre>
         
 ft1.10: Traceback (most recent call last):
-  File "D:\python\jiqiren2.0\case\Test_case.py", line 160, in test_case10
+  File "D:\python\jiqiren2.0\case\TestCase.py", line 160, in test_case10
     self.assertTrue(result['message'] == '操作成功' or result['message'] == '未找到对应的内容')
 AssertionError: False is not true
 Traceback (most recent call last):
-  File "D:\python\jiqiren2.0\case\Test_case.py", line 160, in test_case10
+  File "D:\python\jiqiren2.0\case\TestCase.py", line 160, in test_case10
     self.assertTrue(result['message'] == '操作成功' or result['message'] == '未找到对应的内容')
 AssertionError: False is not true
 
@@ -372,11 +399,26 @@ AssertionError: False is not true
     </td>
 </tr>
 
+<tr id='pt1.11' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_case11: 客户列表第9条数据录入定保成功预约</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.12' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_case12: 客户列表第10条数据录入定保成功预约</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.13' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_case13</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
 <tr id='total_row'>
     <td>Total</td>
+    <td>13</td>
     <td>10</td>
-    <td>8</td>
-    <td>2</td>
+    <td>3</td>
     <td>0</td>
     <td>&nbsp;</td>
 </tr>

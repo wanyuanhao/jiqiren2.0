@@ -3,7 +3,7 @@ from util.Requests_util import Requests_util
 from config.Headers import Headers
 import configparser,os
 from config import Logs
-logger = Logs.logs().logger
+logger = Logs.Logs().logger
 config = configparser.ConfigParser()
 r = Requests_util()
 # 执行获取token的方法，更新到配置文件

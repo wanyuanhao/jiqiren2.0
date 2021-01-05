@@ -6,7 +6,7 @@ import os
 import time
 
 
-class logs(object):
+class Logs(object):
 
     def __init__(self, class_name=None):
         self.class_name = class_name
