@@ -586,7 +586,7 @@ class CustomerList:
             return [False, f'upload_file方法执行异常：{e}']
 
     def assert_upload(self, headers, response):
-        '通过上传j结果校验列表是否存在该批次'
+        '通过上传响应结果校验列表是否存在该批次'
         try:
             self.logger.info(f'通过上传响应结果校验列表是否存在该批次，响应信息:{response}')
             upload_id = response['data']['batchRenewalId']
