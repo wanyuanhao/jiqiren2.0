@@ -107,12 +107,14 @@ class TestCase(unittest.TestCase):
         result = self.customer.plan_count(token)
         for i in range(len(result)):
             if i + 1 == 9:
+                # 七日后Tab的ID
                 plan_count = self.customer.plan_counts(token, result[i] + 10, 9999)
                 ss = f"接口返回数量：{result[i]}", f'实际条数：{plan_count[0]},f"接口响应：{plan_count[1]}"'
                 if result[i] != plan_count[0]:
                     print('计划回访{0}数量不一致:{1}'.format(plan_name[i], ss))
                 self.assertTrue(result[i] == plan_count[0])
             else:
+                # i+1 是TABid
                 plan_count = self.customer.plan_counts(token, result[i] + 10, i + 1)
                 ss = f"接口返回数量：{result[i]}", f'实际条数：{plan_count[0]},f"接口响应：{plan_count[1]}"'
                 if result[i] != plan_count[0]:
@@ -176,12 +178,18 @@ class TestCase(unittest.TestCase):
         self.assertTrue(result[0], True)
 
     def test_case13(self):
-        pass
+        '批量续保文件上传，上传完成后校验批次ID是否存在列表'
+        self.logger.info('用例：批量续保文件上传')
+        path = os.path.dirname(__file__)+'/自动化上传.xlsx'
+        response = self.customer.upload_file('自动化上传.xlsx',path,self.headers)
+        self.assertTrue(response[0],True)
+        resutl = self.customer.assert_upload(self.headers,response[1])
+        self.assertTrue(resutl[0],True)
 
 if __name__ == '__main__':
     print('执行Case')
     # unittest.main(verbosity=2)
     runner = unittest.TextTestRunner(verbosity=2)
     suite = unittest.TestSuite()
-    suite.addTest(TestCase("test_case12"))
+    suite.addTest(TestCase("test_case13"))
     runner.run(suite)

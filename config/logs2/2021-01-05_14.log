@@ -1,0 +1,101 @@
+[2021-01-05 14:48:31] [INFO] >> run_case.py >> 第17行  - 登录账户获取touken 
+[2021-01-05 14:48:31] [INFO] >> Headers.py >> 第40行  - token更新到config文件 
+[2021-01-05 14:48:31] [INFO] >> Headers.py >> 第42行  - 返回token 
+[2021-01-05 14:48:31] [INFO] >> TestCase.py >> 第35行  - 用例：新增数据——录入出单流程 
+[2021-01-05 14:48:31] [INFO] >> Interface_quote.py >> 第22行  - 京AC1122发起续保 
+[2021-01-05 14:48:31] [INFO] >> Interface_quote.py >> 第41行  - 获取续保响应结果 
+[2021-01-05 14:48:32] [INFO] >> Interface_quote.py >> 第44行  - 新增车牌成功 
+[2021-01-05 14:48:32] [INFO] >> CustomerList.py >> 第27行  - 获取京AC1122查询结果 
+[2021-01-05 14:48:32] [INFO] >> CustomerList.py >> 第31行  - 客户列表查询车牌通过 
+[2021-01-05 14:48:32] [INFO] >> CustomerList.py >> 第46行  - 根据buid录入出单，默认录入人保 
+[2021-01-05 14:48:32] [INFO] >> CustomerList.py >> 第49行  - 客户列表查询京AC1122是否存在 
+[2021-01-05 14:48:32] [INFO] >> CustomerList.py >> 第27行  - 获取京AC1122查询结果 
+[2021-01-05 14:48:32] [INFO] >> CustomerList.py >> 第31行  - 客户列表查询车牌通过 
+[2021-01-05 14:48:32] [INFO] >> CustomerList.py >> 第54行  - 查询结果拿第一个buid 
+[2021-01-05 14:48:32] [INFO] >> CustomerList.py >> 第63行  - 发起录入出单请求 
+[2021-01-05 14:48:32] [INFO] >> CustomerList.py >> 第82行  - 本年度已出过保单,提交覆盖 
+[2021-01-05 14:48:32] [INFO] >> CustomerList.py >> 第96行  - 获取响应message校验是否出单成功 
+[2021-01-05 14:48:33] [INFO] >> CustomerList.py >> 第102行  - 出单成功，校验buid[600976286]是否一致 
+[2021-01-05 14:48:33] [INFO] >> CustomerList.py >> 第105行  - 校验出单状态、录入保司、金额是否一致 
+[2021-01-05 14:48:33] [INFO] >> CustomerList.py >> 第108行  - 出单成功 
+[2021-01-05 14:48:33] [INFO] >> chudanzhanbai.py >> 第21行  - 出单列表查询 
+[2021-01-05 14:48:33] [INFO] >> chudanzhanbai.py >> 第32行  - 出单列表查询通过 
+[2021-01-05 14:48:33] [INFO] >> TestCase.py >> 第48行  - 用例：顶级账户计划回访数据量对比，使用账号：jiao 
+[2021-01-05 14:48:33] [INFO] >> Headers.py >> 第64行  - 返回token 
+[2021-01-05 14:48:33] [INFO] >> CustomerList.py >> 第365行  - 获取接口返回的计划回访数量 
+[2021-01-05 14:48:33] [INFO] >> CustomerList.py >> 第377行  - 列表形式返回计划回访数量：[285, 278, 319, 271, 52, 38, 162, 82, 100] 
+[2021-01-05 14:48:33] [INFO] >> CustomerList.py >> 第385行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-05 14:48:34] [INFO] >> CustomerList.py >> 第385行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-05 14:48:34] [INFO] >> CustomerList.py >> 第385行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-05 14:48:35] [INFO] >> CustomerList.py >> 第385行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-05 14:48:35] [INFO] >> CustomerList.py >> 第385行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-05 14:48:36] [INFO] >> CustomerList.py >> 第385行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-05 14:48:36] [INFO] >> CustomerList.py >> 第385行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-05 14:48:36] [INFO] >> CustomerList.py >> 第385行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-05 14:48:37] [INFO] >> CustomerList.py >> 第385行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-05 14:48:37] [INFO] >> TestCase.py >> 第71行  - 用例：校验报价成功的数据是否有报价历史 
+[2021-01-05 14:48:37] [INFO] >> CustomerList.py >> 第396行  - 筛选报价成功数据 
+[2021-01-05 14:48:37] [INFO] >> CustomerList.py >> 第403行  - 返回筛选结果 
+[2021-01-05 14:48:37] [INFO] >> CustomerList.py >> 第411行  - 获取报价历史 
+[2021-01-05 14:48:37] [INFO] >> CustomerList.py >> 第416行  - 返回报价历史结果 
+[2021-01-05 14:48:37] [INFO] >> TestCase.py >> 第81行  - 用例：校验切换报价历史是否成功 
+[2021-01-05 14:48:37] [INFO] >> CustomerList.py >> 第396行  - 筛选报价成功数据 
+[2021-01-05 14:48:38] [INFO] >> CustomerList.py >> 第403行  - 返回筛选结果 
+[2021-01-05 14:48:38] [INFO] >> CustomerList.py >> 第411行  - 获取报价历史 
+[2021-01-05 14:48:38] [INFO] >> CustomerList.py >> 第416行  - 返回报价历史结果 
+[2021-01-05 14:48:38] [INFO] >> CustomerList.py >> 第424行  - 根据报价历史id切换报价历史 
+[2021-01-05 14:48:38] [INFO] >> CustomerList.py >> 第429行  - 报价历史已切换 
+[2021-01-05 14:48:38] [INFO] >> TestCase.py >> 第101行  - 用例：下级账户计划回访数据量对比,使用账号：18612938273 
+[2021-01-05 14:48:38] [INFO] >> Headers.py >> 第64行  - 返回token 
+[2021-01-05 14:48:38] [INFO] >> CustomerList.py >> 第365行  - 获取接口返回的计划回访数量 
+[2021-01-05 14:48:38] [INFO] >> CustomerList.py >> 第377行  - 列表形式返回计划回访数量：[40, 48, 21, 28, 15, 14, 36, 13, 25] 
+[2021-01-05 14:48:38] [INFO] >> CustomerList.py >> 第385行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-05 14:48:38] [INFO] >> CustomerList.py >> 第385行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-05 14:48:38] [INFO] >> CustomerList.py >> 第385行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-05 14:48:39] [INFO] >> CustomerList.py >> 第385行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-05 14:48:39] [INFO] >> CustomerList.py >> 第385行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-05 14:48:39] [INFO] >> CustomerList.py >> 第385行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-05 14:48:39] [INFO] >> CustomerList.py >> 第385行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-05 14:48:39] [INFO] >> CustomerList.py >> 第385行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-05 14:48:39] [INFO] >> CustomerList.py >> 第385行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-05 14:48:40] [INFO] >> TestCase.py >> 第124行  - 用例：客户列表分配，使用账号wanyuanhao,分配人：17501110001 
+[2021-01-05 14:48:40] [INFO] >> TestCase.py >> 第125行  - 执行分配用例 
+[2021-01-05 14:48:40] [INFO] >> Headers.py >> 第64行  - 返回token 
+[2021-01-05 14:48:40] [INFO] >> CustomerList.py >> 第250行  - 客户列表分配 
+[2021-01-05 14:48:40] [INFO] >> CustomerList.py >> 第257行  - 获取客户列表全部客户的数据 
+[2021-01-05 14:48:41] [INFO] >> CustomerList.py >> 第263行  - 拿到前4个buid 
+[2021-01-05 14:48:41] [INFO] >> CustomerList.py >> 第275行  - 分配数据[[600976286, 600996685, 600996696, 600996698]]给ID为(287523)的用户 
+[2021-01-05 14:48:41] [INFO] >> CustomerList.py >> 第285行  - 校验分配人员是否匹配 
+[2021-01-05 14:48:41] [INFO] >> TestCase.py >> 第133行  - 用例：使用全部客户第5条数据录入战败 
+[2021-01-05 14:48:41] [INFO] >> CustomerList.py >> 第436行  - 获取全部客户数据 
+[2021-01-05 14:48:41] [INFO] >> CustomerList.py >> 第128行  - 录入战败 
+[2021-01-05 14:48:41] [INFO] >> CustomerList.py >> 第130行  - 客户列表查询京Q09WB5是否存在 
+[2021-01-05 14:48:41] [INFO] >> CustomerList.py >> 第27行  - 获取京Q09WB5查询结果 
+[2021-01-05 14:48:41] [INFO] >> CustomerList.py >> 第31行  - 客户列表查询车牌通过 
+[2021-01-05 14:48:41] [INFO] >> CustomerList.py >> 第133行  - 校验查询结果是否为真 
+[2021-01-05 14:48:42] [INFO] >> CustomerList.py >> 第156行  - 录入结果和实际结果不符，校验响应字段（ReviewStatusName是否等于战败）车牌：京Q09WB5[{'EmplId': 171383, 'Buid': 600309493, 'ReviewContent': '自动化录入', 'ReviewStatus': 205619, 'ReviewStatusName': '自动化录入', 'AppointTime': '2021-01-06 09:51:18', 'DefeatReasonContent': '', 'Source': 0, 'SourceName': '', 'SingleTime': '', 'BizTotal': 0.0, 'ForceTotal': 0.0, 'TaxTotal': 0.0, 'EmplName': '万园浩', 'JYPrice': 0.0, 'MaintainAmount': 0.0, 'MaintainContent': None, 'CategoryFieldName': '', 'OldCategoryName': '', 'OldCategoryId': 0, 'NewCategoryName': '', 'NewCategoryId': 0, 'ContentCategoryId': 0, 'ContentCategoryInfo': ''}] 
+[2021-01-05 14:48:42] [INFO] >> TestCase.py >> 第143行  - 用例：使用全部客户第8条数据录入续保跟进 
+[2021-01-05 14:48:42] [INFO] >> CustomerList.py >> 第436行  - 获取全部客户数据 
+[2021-01-05 14:48:42] [INFO] >> CustomerList.py >> 第453行  - [buid:600993945]录入普通跟进 
+[2021-01-05 14:48:42] [INFO] >> CustomerList.py >> 第459行  - 请求录入跟进 
+[2021-01-05 14:48:42] [INFO] >> CustomerList.py >> 第461行  - 返回录入跟进响应结果：{'data': {'coverCode': 0, 'deteatId': None, 'carPolicyId': None}, 'code': 1, 'message': '成功'} 
+[2021-01-05 14:48:42] [INFO] >> TestCase.py >> 第151行  - 用例：客户列表不筛选导出全部客户TAB数据 
+[2021-01-05 14:48:42] [INFO] >> CustomerList.py >> 第468行  - 客户列表导出 
+[2021-01-05 14:48:43] [INFO] >> CustomerList.py >> 第475行  - 返回导出响应结果：{'code': 10003, 'message': '请求发生异常', 'data': None} 
+[2021-01-05 14:48:43] [INFO] >> TestCase.py >> 第157行  - 用例：客户列表筛选（战败）导出全部客户数据 
+[2021-01-05 14:48:43] [INFO] >> CustomerList.py >> 第478行  - 客户列表导出 
+[2021-01-05 14:48:43] [INFO] >> CustomerList.py >> 第486行  - 返回导出响应结果：{'code': 10003, 'message': '请求发生异常', 'data': None} 
+[2021-01-05 14:48:43] [INFO] >> TestCase.py >> 第164行  - 用例：定保录入成功预约 
+[2021-01-05 14:48:43] [INFO] >> CustomerList.py >> 第436行  - 获取全部客户数据 
+[2021-01-05 14:48:43] [INFO] >> CustomerList.py >> 第495行  - 定保录入成功预约 
+[2021-01-05 14:48:43] [INFO] >> CustomerList.py >> 第503行  - 校验响应结果：{'data': {'coverCode': 0, 'deteatId': None, 'carPolicyId': None}, 'code': 1, 'message': '成功'} 
+[2021-01-05 14:48:43] [INFO] >> CustomerList.py >> 第505行  - 定保录入成功 
+[2021-01-05 14:48:43] [INFO] >> TestCase.py >> 第172行  - 用例：定保录入战败 
+[2021-01-05 14:48:43] [INFO] >> CustomerList.py >> 第436行  - 获取全部客户数据 
+[2021-01-05 14:48:43] [INFO] >> CustomerList.py >> 第522行  - 定保录入战败 
+[2021-01-05 14:48:44] [INFO] >> CustomerList.py >> 第530行  - 校验响应结果：{'data': {'coverCode': 1, 'deteatId': None, 'carPolicyId': 53}, 'code': 1, 'message': '系统监测您今天已存在定保预约出单/战败记录，重新提交后会覆盖原预约出单/战败记录，确认执行？'} 
+[2021-01-05 14:48:44] [INFO] >> CustomerList.py >> 第535行  - 定保出单重复，确认覆盖 
+[2021-01-05 14:48:44] [INFO] >> CustomerList.py >> 第522行  - 定保录入战败 
+[2021-01-05 14:48:44] [INFO] >> CustomerList.py >> 第530行  - 校验响应结果：{'data': {'coverCode': 0, 'deteatId': None, 'carPolicyId': None}, 'code': 1, 'message': '成功'} 
+[2021-01-05 14:48:44] [INFO] >> CustomerList.py >> 第532行  - 定保录入成功 
+[2021-01-05 14:48:44] [INFO] >> run_case.py >> 第34行  - 发送邮件 

@@ -554,8 +554,57 @@ class CustomerList:
             self.logger.error(f'enter_dingbao_chudan方法执行异常：{e}')
             return [False, f'enter_dingbao_chudan方法执行异常：{e}']
 
-    def test(self):
-        print('haha')
+    def upload_file(self, filename, filepath, headers):
+        '批量续保文件上传'
+        try:
+            self.logger.info('上传文件')
+            url = self.urls + '/carbusiness/api/v1/BatchRenewal/BatchRenewalUpload'
+            form_data = {'file': (filename, open(filepath, 'rb').read())}
+            result_response = self.r.request(url, 'post', headers=headers, files=form_data)
+            if result_response['message'] == '成功':
+                file_path = result_response["data"]["filePath"]
+                file_name = result_response['data']['fileName']
+                self.logger.info(f'文件已上传到服务器：{file_path}')
+                self.logger.info('默认FindDeptId: 2869（部门ID），只适用于wanyuanhao账号，上传城市为【北京】')
+                # 默认FindDeptId: 2869（部门ID），只适用于wanyuanhao账号
+                upload_url = self.urls + '/carbusiness/api/v1/BatchRenewal/BatchRenewalMethod'
+                data = {"cityId": 1, "channelType": 2, "isHistoryRenewal": 0, "batchRenewalType": 1, "FindDeptId": 2869,
+                        "isCoverSalesman": 0, "isAddWechat": 0, "fileName": file_name,
+                        "filePath": file_path, "businessType": 0}
+                upload_result = self.r.request(upload_url, 'post', data, headers, 'json')
+                if upload_result['message'] == '上传成功':
+                    self.logger.info(f'文件上传成功：{upload_result}')
+                    return [True, upload_result]
+                else:
+                    self.logger.info(f"文件上传失败:{upload_result}")
+                    return [False]
+            else:
+                self.logger.info(f"文件上传到服务器失败:{result_response}")
+                return [False, f"文件上传到服务器失败:{result_response}"]
+        except Exception as e:
+            self.logger.error(f'upload_file方法执行异常：{e}')
+            return [False, f'upload_file方法执行异常：{e}']
+
+    def assert_upload(self, headers, response):
+        '通过上传j结果校验列表是否存在该批次'
+        try:
+            self.logger.info(f'通过上传响应结果校验列表是否存在该批次，响应信息:{response}')
+            upload_id = response['data']['batchRenewalId']
+            url = self.urls + '/carbusiness/api/v1/BatchRenewal/GetBatchRenewalListMethod'
+            data = {"pageIndex": 1, "pageSize": 15}
+            self.logger.info('等待3秒获取列表批次，校验ID是否存在列表')
+            times.sleep(3)
+            # 获取列表批次
+            result = self.r.request(url, 'post', data, headers, 'json')
+            result_id = result['data']['dataList'][0]['id']
+            if result_id == upload_id:
+                return [True]
+            else:
+                self.logger.info(f'批次ID不存在列表，上传结果返回的id：{upload_id}，响应结果：{result}')
+                return [False, f'批次ID不存在列表，上传结果返回的id：{upload_id}，响应结果：{result}']
+        except Exception as e:
+            self.logger.error(f'assert_upload方法执行异常：{e}')
+            return [False, f'assert_upload方法执行异常：{e}']
 
 
 if __name__ == '__main__':
