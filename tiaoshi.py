@@ -2,12 +2,12 @@ import configparser
 import datetime
 import os
 import unittest
-from module.kehuguanli.CustomerList import CustomerList
+from module.customer_management.CustomerList import CustomerList
 import sys
 from urllib3 import encode_multipart_formdata
 import requests
 from requests_toolbelt import MultipartEncoder
-from module.kehuguanli.CustomerList import CustomerList
+from module.customer_management.CustomerList import CustomerList
 
 s = {"data": {"pageIndex": 1, "pageSize": 15, "totalCount": 97, "dataList": [
     {"id": 401334, "fileName": "批续模板1.1.xlsx", "isCompleted": 0, "isAgainRenewal": 0,

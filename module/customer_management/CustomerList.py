@@ -77,10 +77,10 @@ class CustomerList:
                         if result['ReviewStatusName'] == '成功出单' and int(result['Source']) == source and float(
                                 result['BizTotal']) == 1000.99:
                             self.logger.info('出单成功')
-                            return True
+                            return [True,response]
                     else:
                         self.logger.info('获取出单结果的Buid({0})不匹配：{1}'.format(buid, response))
-                        return False
+                        return [False]
                 # 判断本年度是否出过保单
                 elif '本续保年度已存在' in response['message']:
                     self.logger.info('本年度已出过保单,提交覆盖')
@@ -112,23 +112,23 @@ class CustomerList:
                             if result['ReviewStatusName'] == '成功出单' and int(result['Source']) == source and float(
                                     result['BizTotal']) == 1000.99:
                                 self.logger.info('出单成功')
-                                return True
+                                return [True,response]
                         else:
                             self.logger.info('获取出单结果的Buid({0})不匹配：{1}'.format(buid, response))
-                            return False
+                            return [False]
                     else:
                         self.logger.info('出单覆盖异常：{0}'.format(response))
-                        return False
+                        return [False]
 
                 else:
                     self.logger.info('录入出单不通过，msg：{0},响应：{1}'.format(response['message'], response))
-                    return False
+                    return [False]
             except Exception as e:
                 self.logger.error('录入出单请求异常：{0}'.format(e))
-                return False
+                return [False]
         else:
             self.logger.info('查询结果异常：{0}'.format(find_result))
-            return False
+            return [False]
 
     def enter_zhanbai(self, licenseno, headers):
         self.logger.info('录入战败')
@@ -157,11 +157,11 @@ class CustomerList:
                     # 断言录入结果和实际录入结果是否一致
                     if assert_result['ReviewStatusName'] == '战败':
                         self.logger.info('录入战败通过')
-                        return True
+                        return [True,response]
                     else:
                         self.logger.info(
                             '录入结果和实际结果不符，校验字段（[ReviewStatusName]是否等于战败）车牌：{0}[{1}]'.format(licenseno, assert_result))
-                        return False
+                        return [False]
 
                 # 如果本年度已经录入过，重新覆盖录入结果
                 elif '本续保年度已存在' in response['message']:
@@ -185,24 +185,24 @@ class CustomerList:
                         # 断言录入结果和实际录入结果是否一致
                         if assert_result['ReviewStatusName'] == '战败':
                             self.logger.info('录入战败通过')
-                            return True
+                            return [True,response]
                         else:
                             self.logger.info('录入结果和实际结果不符，校验字段（[ReviewStatusName]是否等于战败）车牌：{0}[{1}]'.format(licenseno,
                                                                                                             assert_result))
-                            return False
+                            return [False]
                     else:
                         self.logger.info('覆盖战败响应结果异常：{0}'.format(result))
-                        return False
+                        return [False]
                 else:
                     self.logger.info('录入传单响应异常：{0}'.format(response))
-                    return False
+                    return [False]
             elif find_result[1] == False:
                 self.logger.info('客户列表没有这条数据：{0}'.format(find_result[0]))
-                return False
+                return [False]
 
         except Exception as e:
             self.logger.error('战败请求异常：{0}'.format(e))
-            return False
+            return [False]
 
     def del_licenseno(self, licenseno, headers):
         f'删除车牌{licenseno}'
@@ -459,6 +459,7 @@ class CustomerList:
             return False
 
     def enter_genjin(self, buid, headers):
+        '录入跟进'
         self.logger.info(f'[buid:{buid}]录入普通跟进')
         time = (datetime.datetime.now() + datetime.timedelta(days=1)).strftime('%Y-%m-%d %H:%M:%S')
         url = self.urls + '/carbusiness/api/v1/CustomerDetail/SaveConsumerReview'
@@ -472,6 +473,7 @@ class CustomerList:
 
     def export_customer(self, headers, body=None):
         # body为None则是不筛选导出
+        '客户列表导出'
         try:
             if body == None:
                 self.logger.info('客户列表导出')
@@ -511,7 +513,7 @@ class CustomerList:
             result = self.r.request(url, 'post', data, headers, 'json')
             self.logger.info(f'校验响应结果：{result}')
             if result['message'] == '成功':
-                self.logger.info('定保录入成功')
+                self.logger.info(f'定保录入成功:{result}')
                 return [True]
             elif '已存在定保预约出单/战败记录' in result['message']:
                 self.logger.info('定保出单重复，确认覆盖')
@@ -520,10 +522,11 @@ class CustomerList:
                 result = self.enter_dingbao_chudan(buid, headers, deteatId=deteatId, carPolicyId=carPolicyId)
                 return result
             else:
-                return [False, f'响应结果异常：{result}']
+                self.logger.info(f'响应结果异常：{result}')
+                return [False]
         except Exception as e:
             self.logger.error(f'enter_dingbao_chudan方法执行异常：{e}')
-            return [False, f'enter_dingbao_chudan方法执行异常：{e}']
+            return [False]
 
     def enter_dingbao_zhanbai(self, buid, headers, deteatId=None, carPolicyId=None):
         '定保录入战败'
@@ -548,11 +551,12 @@ class CustomerList:
                 result = self.enter_dingbao_zhanbai(buid, headers, deteatId=deteatId, carPolicyId=carPolicyId)
                 return result
             else:
-                return [False, f'响应结果异常：{result}']
+                self.logger.info(f'响应结果异常：{result}')
+                return [False]
 
         except Exception as e:
             self.logger.error(f'enter_dingbao_chudan方法执行异常：{e}')
-            return [False, f'enter_dingbao_chudan方法执行异常：{e}']
+            return [False]
 
     def upload_file(self, filename, filepath, headers):
         '批量续保文件上传'
@@ -580,10 +584,10 @@ class CustomerList:
                     return [False]
             else:
                 self.logger.info(f"文件上传到服务器失败:{result_response}")
-                return [False, f"文件上传到服务器失败:{result_response}"]
+                return [False]
         except Exception as e:
             self.logger.error(f'upload_file方法执行异常：{e}')
-            return [False, f'upload_file方法执行异常：{e}']
+            return [False]
 
     def assert_upload(self, headers, response):
         '通过上传响应结果校验列表是否存在该批次'
@@ -598,13 +602,13 @@ class CustomerList:
             result = self.r.request(url, 'post', data, headers, 'json')
             result_id = result['data']['dataList'][0]['id']
             if result_id == upload_id:
-                return [True]
+                return [True, result]
             else:
                 self.logger.info(f'批次ID不存在列表，上传结果返回的id：{upload_id}，响应结果：{result}')
-                return [False, f'批次ID不存在列表，上传结果返回的id：{upload_id}，响应结果：{result}']
+                return [False]
         except Exception as e:
             self.logger.error(f'assert_upload方法执行异常：{e}')
-            return [False, f'assert_upload方法执行异常：{e}']
+            return [False]
 
 
 if __name__ == '__main__':

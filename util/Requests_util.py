@@ -1,7 +1,10 @@
 import requests
+from config.Logs import Logs
 
 
 class Requests_util:
+    def __init__(self):
+        self.logger = Logs().logger
 
     def request(self, url, method, params=None, headers=None, content_type=None,files = None):
         try:
@@ -16,8 +19,11 @@ class Requests_util:
                     result = requests.post(url=url, data=params, headers=headers,files=files).json()
                     return result
         except Exception as e:
-            print(e)
-            return
+            if type(headers) is not dict:
+                self.logger.error(f'headers类型错误：{type(headers)}')
+                return f'headers类型错误：{type(headers)}'
+            self.logger.error(f'request方法执行异常,url：{e}')
+            return f'request方法执行异常：{e}'
 
 
 if __name__ == '__main__':

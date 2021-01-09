@@ -1,5 +1,5 @@
 from config.Headers import Headers
-from module.kehuguanli.CustomerList import CustomerList
+from module.customer_management.CustomerList import CustomerList
 
 path = open('d:/zhanghao1.txt', encoding='utf-8')
 users = path.readlines()
