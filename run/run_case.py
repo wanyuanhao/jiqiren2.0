@@ -21,6 +21,7 @@ if __name__ == '__main__':
     report_path = open(f"./test_report/{time}result.html", 'wb')
     runner = HTMLTestRunner.HTMLTestRunner(stream=report_path, title=u"自动化测试报告(详情请看附件)", description="执行结果",verbosity=2)
     ss = runner.run(run_test_case())
+    # 关闭报告
     report_path.close()
 
     # 打开测试报告
