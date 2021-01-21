@@ -1,0 +1,791 @@
+[2021-01-21 10:11:15] [INFO] >> TestCase.py >> 第40行  - 用例：新增数据——录入出单流程 
+[2021-01-21 10:11:15] [INFO] >> Interface_quote.py >> 第24行  - 京AC1122发起续保 
+[2021-01-21 10:11:15] [ERROR] >> Requests_util.py >> 第25行  - request方法执行异常,url：Expecting value: line 1 column 1 (char 0) 
+[2021-01-21 10:11:15] [ERROR] >> Interface_quote.py >> 第55行  - 续保执行异常：string indices must be integers 
+[2021-01-21 10:11:15] [INFO] >> TestCase.py >> 第52行  - 用例：顶级账户计划回访数据量对比，使用账号：jiao 
+[2021-01-21 10:11:15] [INFO] >> Headers.py >> 第64行  - 返回token 
+[2021-01-21 10:11:15] [INFO] >> CustomerList.py >> 第374行  - 获取接口返回的计划回访数量 
+[2021-01-21 10:11:16] [INFO] >> CustomerList.py >> 第386行  - 列表形式返回计划回访数量：[353, 390, 159, 109, 173, 117, 178, 83, 180] 
+[2021-01-21 10:11:16] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:11:16] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:11:17] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:11:18] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:11:18] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:11:18] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:11:19] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:11:19] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:11:20] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:11:20] [INFO] >> TestCase.py >> 第75行  - 用例：校验报价成功的数据是否有报价历史 
+[2021-01-21 10:11:20] [INFO] >> CustomerList.py >> 第405行  - 筛选报价成功数据 
+[2021-01-21 10:11:20] [ERROR] >> Requests_util.py >> 第25行  - request方法执行异常,url：Expecting value: line 1 column 1 (char 0) 
+[2021-01-21 10:11:20] [INFO] >> TestCase.py >> 第85行  - 用例：校验切换报价历史是否成功 
+[2021-01-21 10:11:20] [INFO] >> CustomerList.py >> 第405行  - 筛选报价成功数据 
+[2021-01-21 10:11:20] [ERROR] >> Requests_util.py >> 第25行  - request方法执行异常,url：Expecting value: line 1 column 1 (char 0) 
+[2021-01-21 10:11:20] [INFO] >> TestCase.py >> 第105行  - 用例：下级账户计划回访数据量对比,使用账号：18612938273 
+[2021-01-21 10:11:21] [INFO] >> Headers.py >> 第64行  - 返回token 
+[2021-01-21 10:11:21] [INFO] >> CustomerList.py >> 第374行  - 获取接口返回的计划回访数量 
+[2021-01-21 10:11:21] [INFO] >> CustomerList.py >> 第386行  - 列表形式返回计划回访数量：[0, 28, 34, 19, 33, 33, 21, 3, 29] 
+[2021-01-21 10:11:21] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:11:21] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:11:21] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:11:21] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:11:21] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:11:22] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:11:22] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:11:22] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:11:22] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:11:22] [INFO] >> TestCase.py >> 第130行  - 用例：客户列表分配，使用账号wanyuanhao,分配人：17501110001 
+[2021-01-21 10:11:22] [INFO] >> TestCase.py >> 第131行  - 执行分配用例 
+[2021-01-21 10:11:22] [INFO] >> Headers.py >> 第64行  - 返回token 
+[2021-01-21 10:11:22] [INFO] >> CustomerList.py >> 第259行  - 客户列表分配 
+[2021-01-21 10:11:22] [INFO] >> CustomerList.py >> 第266行  - 获取客户列表全部客户的数据 
+[2021-01-21 10:11:30] [INFO] >> TestCase.py >> 第40行  - 用例：新增数据——录入出单流程 
+[2021-01-21 10:11:30] [INFO] >> Interface_quote.py >> 第24行  - 京AC1122发起续保 
+[2021-01-21 10:11:31] [ERROR] >> Requests_util.py >> 第25行  - request方法执行异常,url：Expecting value: line 1 column 1 (char 0) 
+[2021-01-21 10:11:31] [ERROR] >> Interface_quote.py >> 第55行  - 续保执行异常：string indices must be integers 
+[2021-01-21 10:11:31] [INFO] >> TestCase.py >> 第52行  - 用例：顶级账户计划回访数据量对比，使用账号：jiao 
+[2021-01-21 10:11:31] [INFO] >> Headers.py >> 第64行  - 返回token 
+[2021-01-21 10:11:31] [INFO] >> CustomerList.py >> 第374行  - 获取接口返回的计划回访数量 
+[2021-01-21 10:11:35] [INFO] >> CustomerList.py >> 第386行  - 列表形式返回计划回访数量：[353, 390, 159, 109, 173, 117, 178, 83, 180] 
+[2021-01-21 10:11:35] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:11:35] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:11:36] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:12:42] [INFO] >> TestCase.py >> 第40行  - 用例：新增数据——录入出单流程 
+[2021-01-21 10:12:42] [INFO] >> Interface_quote.py >> 第24行  - 京AC1122发起续保 
+[2021-01-21 10:12:43] [ERROR] >> Requests_util.py >> 第25行  - request方法执行异常,url：Expecting value: line 1 column 1 (char 0) 
+[2021-01-21 10:12:43] [ERROR] >> Interface_quote.py >> 第55行  - 续保执行异常：string indices must be integers 
+[2021-01-21 10:12:43] [INFO] >> TestCase.py >> 第52行  - 用例：顶级账户计划回访数据量对比，使用账号：jiao 
+[2021-01-21 10:12:43] [INFO] >> Headers.py >> 第64行  - 返回token 
+[2021-01-21 10:12:43] [INFO] >> CustomerList.py >> 第374行  - 获取接口返回的计划回访数量 
+[2021-01-21 10:12:43] [INFO] >> CustomerList.py >> 第386行  - 列表形式返回计划回访数量：[353, 390, 159, 109, 173, 117, 178, 83, 180] 
+[2021-01-21 10:12:43] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:12:44] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:12:44] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:12:45] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:12:45] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:12:46] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:12:46] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:12:47] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:12:47] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:12:47] [INFO] >> TestCase.py >> 第75行  - 用例：校验报价成功的数据是否有报价历史 
+[2021-01-21 10:12:47] [INFO] >> CustomerList.py >> 第405行  - 筛选报价成功数据 
+[2021-01-21 10:12:47] [ERROR] >> Requests_util.py >> 第25行  - request方法执行异常,url：Expecting value: line 1 column 1 (char 0) 
+[2021-01-21 10:12:47] [INFO] >> TestCase.py >> 第85行  - 用例：校验切换报价历史是否成功 
+[2021-01-21 10:12:47] [INFO] >> CustomerList.py >> 第405行  - 筛选报价成功数据 
+[2021-01-21 10:12:48] [ERROR] >> Requests_util.py >> 第25行  - request方法执行异常,url：Expecting value: line 1 column 1 (char 0) 
+[2021-01-21 10:12:48] [INFO] >> TestCase.py >> 第105行  - 用例：下级账户计划回访数据量对比,使用账号：18612938273 
+[2021-01-21 10:12:48] [INFO] >> Headers.py >> 第64行  - 返回token 
+[2021-01-21 10:12:48] [INFO] >> CustomerList.py >> 第374行  - 获取接口返回的计划回访数量 
+[2021-01-21 10:12:48] [INFO] >> CustomerList.py >> 第386行  - 列表形式返回计划回访数量：[0, 28, 34, 19, 33, 33, 21, 3, 29] 
+[2021-01-21 10:12:48] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:12:48] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:14:12] [INFO] >> TestCase.py >> 第40行  - 用例：新增数据——录入出单流程 
+[2021-01-21 10:14:12] [INFO] >> Interface_quote.py >> 第24行  - 京AC1122发起续保 
+[2021-01-21 10:14:12] [ERROR] >> Requests_util.py >> 第25行  - request方法执行异常,url：Expecting value: line 1 column 1 (char 0) 
+[2021-01-21 10:14:12] [ERROR] >> Interface_quote.py >> 第55行  - 续保执行异常：string indices must be integers 
+[2021-01-21 10:14:12] [INFO] >> TestCase.py >> 第52行  - 用例：顶级账户计划回访数据量对比，使用账号：jiao 
+[2021-01-21 10:14:12] [INFO] >> Headers.py >> 第64行  - 返回token 
+[2021-01-21 10:14:12] [INFO] >> CustomerList.py >> 第374行  - 获取接口返回的计划回访数量 
+[2021-01-21 10:14:13] [INFO] >> CustomerList.py >> 第386行  - 列表形式返回计划回访数量：[351, 390, 159, 109, 173, 117, 178, 85, 180] 
+[2021-01-21 10:14:13] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:14:13] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:14:14] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:14:14] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:14:15] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:14:15] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:14:16] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:14:16] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:14:16] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:14:17] [INFO] >> TestCase.py >> 第75行  - 用例：校验报价成功的数据是否有报价历史 
+[2021-01-21 10:14:17] [INFO] >> CustomerList.py >> 第405行  - 筛选报价成功数据 
+[2021-01-21 10:14:17] [ERROR] >> Requests_util.py >> 第25行  - request方法执行异常,url：Expecting value: line 1 column 1 (char 0) 
+[2021-01-21 10:14:17] [INFO] >> TestCase.py >> 第85行  - 用例：校验切换报价历史是否成功 
+[2021-01-21 10:14:17] [INFO] >> CustomerList.py >> 第405行  - 筛选报价成功数据 
+[2021-01-21 10:14:17] [ERROR] >> Requests_util.py >> 第25行  - request方法执行异常,url：Expecting value: line 1 column 1 (char 0) 
+[2021-01-21 10:14:17] [INFO] >> TestCase.py >> 第105行  - 用例：下级账户计划回访数据量对比,使用账号：18612938273 
+[2021-01-21 10:14:17] [INFO] >> Headers.py >> 第64行  - 返回token 
+[2021-01-21 10:14:17] [INFO] >> CustomerList.py >> 第374行  - 获取接口返回的计划回访数量 
+[2021-01-21 10:14:17] [INFO] >> CustomerList.py >> 第386行  - 列表形式返回计划回访数量：[0, 28, 34, 19, 33, 33, 21, 3, 29] 
+[2021-01-21 10:14:17] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:14:17] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:14:18] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:14:18] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:14:18] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:14:18] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:14:18] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:14:18] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:14:19] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:14:19] [INFO] >> TestCase.py >> 第130行  - 用例：客户列表分配，使用账号wanyuanhao,分配人：17501110001 
+[2021-01-21 10:14:19] [INFO] >> TestCase.py >> 第131行  - 执行分配用例 
+[2021-01-21 10:14:19] [INFO] >> Headers.py >> 第64行  - 返回token 
+[2021-01-21 10:14:19] [INFO] >> CustomerList.py >> 第259行  - 客户列表分配 
+[2021-01-21 10:14:19] [INFO] >> CustomerList.py >> 第266行  - 获取客户列表全部客户的数据 
+[2021-01-21 10:14:19] [INFO] >> CustomerList.py >> 第272行  - 拿到前4个buid 
+[2021-01-21 10:14:19] [INFO] >> CustomerList.py >> 第284行  - 分配数据[[601041385, 600940316, 600940311, 600940270]]给ID为(287523)的用户 
+[2021-01-21 10:14:20] [INFO] >> CustomerList.py >> 第294行  - 校验分配人员是否匹配 
+[2021-01-21 10:14:20] [INFO] >> CustomerList.py >> 第299行  - 分配的业务员和实际结果业务员不匹配，默认分配人ID是（287523）：{'buid': 601041385, 'dueDays': {'forceDueDays': None, 'bizDueDays': None, 'maintainDays': None, 'lastMaintainDays': None, 'qaDays': None}, 'quoteStatus': [], 'submitStatus': [], 'lastYearSource': 0, 'customerStatusId': 0, 'categoryinfoId': -1, 'employeeId': 171383, 'wechatImg': None, 'renewalStatus': 0, 'createTime': '2021-01-21 09:57:11', 'isFllowUp': 2, 'customerStar': 6.0, 'taskTypeId': 0, 'taskTypeName': '', 'lastFollowUpUrl': '', 'followContentTypeId': 1, 'isIntelligentRenewal': 0, 'followContent': '', 'headImgUrl': '', 'nickName': '', 'deleteTime': '', 'delEmpName': '', 'deleteType': '', 'maintainEndDate': None, 'maintainStatus': 0, 'maintainCategoryName': None, 'maintainEmployeeId': 0, 'maintainEmployeeName': None, 'mileage': 0, 'maintainDate': None, 'maintainStatusName': None, 'maintainDetName': None, 'maintainClintLevelRmark': None, 'maintainActive': None, 'maintainImportFollowUp': None, 'licenseNo': '京A23456', 'clientName': '', 'carVin': '', 'moldName': None, 'registerDate': '', 'lastBizEndDate': '', 'lastForceEndDate': '', 'followUpTimes': 0, 'lastFollowUpDate': '', 'lastFollowUpContent': '', 'plannedFollowUpDateTime': '', 'customerStatusName': '首访客户', 'categoryinfoName': '', 'lastYearSourceName': '', 'lastOrganizationName': '', 'employeeName': '万园浩', 'departmentName': '线上测试用', 'updateTime': '2021-01-21 09:57:08', 'renewalTypeName': '批量导入', 'ownerName': ''} 
+[2021-01-21 10:14:20] [INFO] >> TestCase.py >> 第139行  - 用例：使用全部客户第5条数据录入战败 
+[2021-01-21 10:14:20] [INFO] >> CustomerList.py >> 第445行  - 获取全部客户数据 
+[2021-01-21 10:14:20] [ERROR] >> Requests_util.py >> 第25行  - request方法执行异常,url：Expecting value: line 1 column 1 (char 0) 
+[2021-01-21 10:14:20] [INFO] >> CustomerList.py >> 第458行  - 获取全部客户数据异常：string indices must be integers 
+[2021-01-21 10:14:20] [INFO] >> TestCase.py >> 第149行  - 用例：使用全部客户第8条数据录入续保跟进 
+[2021-01-21 10:14:20] [INFO] >> CustomerList.py >> 第445行  - 获取全部客户数据 
+[2021-01-21 10:14:20] [ERROR] >> Requests_util.py >> 第25行  - request方法执行异常,url：Expecting value: line 1 column 1 (char 0) 
+[2021-01-21 10:14:20] [INFO] >> CustomerList.py >> 第458行  - 获取全部客户数据异常：string indices must be integers 
+[2021-01-21 10:14:20] [INFO] >> TestCase.py >> 第157行  - 用例：客户列表不筛选导出全部客户TAB数据 
+[2021-01-21 10:14:20] [INFO] >> CustomerList.py >> 第479行  - 客户列表导出 
+[2021-01-21 10:14:20] [ERROR] >> Requests_util.py >> 第25行  - request方法执行异常,url：Expecting value: line 1 column 1 (char 0) 
+[2021-01-21 10:14:20] [INFO] >> CustomerList.py >> 第486行  - 返回导出响应结果：request方法执行异常：Expecting value: line 1 column 1 (char 0) 
+[2021-01-21 10:14:20] [INFO] >> TestCase.py >> 第163行  - 用例：客户列表筛选（战败）导出全部客户数据 
+[2021-01-21 10:14:20] [INFO] >> CustomerList.py >> 第489行  - 客户列表导出 
+[2021-01-21 10:14:20] [ERROR] >> Requests_util.py >> 第25行  - request方法执行异常,url：Expecting value: line 1 column 1 (char 0) 
+[2021-01-21 10:14:20] [INFO] >> CustomerList.py >> 第497行  - 返回导出响应结果：request方法执行异常：Expecting value: line 1 column 1 (char 0) 
+[2021-01-21 10:14:20] [INFO] >> TestCase.py >> 第170行  - 用例：定保录入成功预约 
+[2021-01-21 10:14:20] [INFO] >> CustomerList.py >> 第445行  - 获取全部客户数据 
+[2021-01-21 10:14:20] [ERROR] >> Requests_util.py >> 第25行  - request方法执行异常,url：Expecting value: line 1 column 1 (char 0) 
+[2021-01-21 10:14:20] [INFO] >> CustomerList.py >> 第458行  - 获取全部客户数据异常：string indices must be integers 
+[2021-01-21 10:14:20] [INFO] >> TestCase.py >> 第178行  - 用例：定保录入战败 
+[2021-01-21 10:14:20] [INFO] >> CustomerList.py >> 第445行  - 获取全部客户数据 
+[2021-01-21 10:14:20] [ERROR] >> Requests_util.py >> 第25行  - request方法执行异常,url：Expecting value: line 1 column 1 (char 0) 
+[2021-01-21 10:14:20] [INFO] >> CustomerList.py >> 第458行  - 获取全部客户数据异常：string indices must be integers 
+[2021-01-21 10:14:20] [INFO] >> TestCase.py >> 第186行  - 用例：批量续保文件上传 
+[2021-01-21 10:14:20] [INFO] >> CustomerList.py >> 第564行  - 上传文件 
+[2021-01-21 10:14:20] [ERROR] >> Requests_util.py >> 第25行  - request方法执行异常,url：Expecting value: line 1 column 1 (char 0) 
+[2021-01-21 10:14:20] [ERROR] >> CustomerList.py >> 第589行  - upload_file方法执行异常：string indices must be integers 
+[2021-01-21 10:14:20] [INFO] >> TestCase.py >> 第195行  - 用例：工作看板人员效能统计，校验录入出单、保费是否有统计 
+[2021-01-21 10:14:20] [INFO] >> TestCase.py >> 第198行  - 校验人员效能响应结果是否为None ：{'code': 401, 'message': '授权失败', 'data': None} 
+[2021-01-21 10:14:30] [INFO] >> TestCase.py >> 第40行  - 用例：新增数据——录入出单流程 
+[2021-01-21 10:14:30] [INFO] >> Interface_quote.py >> 第24行  - 京AC1122发起续保 
+[2021-01-21 10:14:30] [ERROR] >> Requests_util.py >> 第25行  - request方法执行异常,url：Expecting value: line 1 column 1 (char 0) 
+[2021-01-21 10:14:30] [ERROR] >> Interface_quote.py >> 第55行  - 续保执行异常：string indices must be integers 
+[2021-01-21 10:14:30] [INFO] >> TestCase.py >> 第52行  - 用例：顶级账户计划回访数据量对比，使用账号：jiao 
+[2021-01-21 10:14:30] [INFO] >> Headers.py >> 第64行  - 返回token 
+[2021-01-21 10:14:30] [INFO] >> CustomerList.py >> 第374行  - 获取接口返回的计划回访数量 
+[2021-01-21 10:14:31] [INFO] >> CustomerList.py >> 第386行  - 列表形式返回计划回访数量：[351, 390, 159, 109, 173, 117, 178, 85, 180] 
+[2021-01-21 10:14:31] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:14:31] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:14:32] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:14:32] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:14:33] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:14:33] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:14:33] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:14:34] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:14:34] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:14:35] [INFO] >> TestCase.py >> 第75行  - 用例：校验报价成功的数据是否有报价历史 
+[2021-01-21 10:14:35] [INFO] >> CustomerList.py >> 第405行  - 筛选报价成功数据 
+[2021-01-21 10:14:35] [ERROR] >> Requests_util.py >> 第25行  - request方法执行异常,url：Expecting value: line 1 column 1 (char 0) 
+[2021-01-21 10:14:35] [INFO] >> TestCase.py >> 第85行  - 用例：校验切换报价历史是否成功 
+[2021-01-21 10:14:35] [INFO] >> CustomerList.py >> 第405行  - 筛选报价成功数据 
+[2021-01-21 10:14:35] [ERROR] >> Requests_util.py >> 第25行  - request方法执行异常,url：Expecting value: line 1 column 1 (char 0) 
+[2021-01-21 10:14:35] [INFO] >> TestCase.py >> 第105行  - 用例：下级账户计划回访数据量对比,使用账号：18612938273 
+[2021-01-21 10:14:35] [INFO] >> Headers.py >> 第64行  - 返回token 
+[2021-01-21 10:14:35] [INFO] >> CustomerList.py >> 第374行  - 获取接口返回的计划回访数量 
+[2021-01-21 10:14:35] [INFO] >> CustomerList.py >> 第386行  - 列表形式返回计划回访数量：[0, 28, 34, 19, 33, 33, 21, 3, 29] 
+[2021-01-21 10:14:35] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:14:35] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:14:35] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:14:36] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:14:36] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:14:36] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:14:36] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:14:36] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:14:36] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:14:37] [INFO] >> TestCase.py >> 第130行  - 用例：客户列表分配，使用账号wanyuanhao,分配人：17501110001 
+[2021-01-21 10:14:37] [INFO] >> TestCase.py >> 第131行  - 执行分配用例 
+[2021-01-21 10:14:37] [INFO] >> Headers.py >> 第64行  - 返回token 
+[2021-01-21 10:14:37] [INFO] >> CustomerList.py >> 第259行  - 客户列表分配 
+[2021-01-21 10:14:37] [INFO] >> CustomerList.py >> 第266行  - 获取客户列表全部客户的数据 
+[2021-01-21 10:14:37] [INFO] >> CustomerList.py >> 第272行  - 拿到前4个buid 
+[2021-01-21 10:14:37] [INFO] >> CustomerList.py >> 第284行  - 分配数据[[601041385, 600940316, 600940311, 600940270]]给ID为(287523)的用户 
+[2021-01-21 10:14:37] [INFO] >> CustomerList.py >> 第294行  - 校验分配人员是否匹配 
+[2021-01-21 10:14:37] [INFO] >> TestCase.py >> 第139行  - 用例：使用全部客户第5条数据录入战败 
+[2021-01-21 10:14:37] [INFO] >> CustomerList.py >> 第445行  - 获取全部客户数据 
+[2021-01-21 10:14:37] [ERROR] >> Requests_util.py >> 第25行  - request方法执行异常,url：Expecting value: line 1 column 1 (char 0) 
+[2021-01-21 10:14:37] [INFO] >> CustomerList.py >> 第458行  - 获取全部客户数据异常：string indices must be integers 
+[2021-01-21 10:14:37] [INFO] >> TestCase.py >> 第149行  - 用例：使用全部客户第8条数据录入续保跟进 
+[2021-01-21 10:14:37] [INFO] >> CustomerList.py >> 第445行  - 获取全部客户数据 
+[2021-01-21 10:14:37] [ERROR] >> Requests_util.py >> 第25行  - request方法执行异常,url：Expecting value: line 1 column 1 (char 0) 
+[2021-01-21 10:14:37] [INFO] >> CustomerList.py >> 第458行  - 获取全部客户数据异常：string indices must be integers 
+[2021-01-21 10:14:37] [INFO] >> TestCase.py >> 第157行  - 用例：客户列表不筛选导出全部客户TAB数据 
+[2021-01-21 10:14:37] [INFO] >> CustomerList.py >> 第479行  - 客户列表导出 
+[2021-01-21 10:14:37] [ERROR] >> Requests_util.py >> 第25行  - request方法执行异常,url：Expecting value: line 1 column 1 (char 0) 
+[2021-01-21 10:14:37] [INFO] >> CustomerList.py >> 第486行  - 返回导出响应结果：request方法执行异常：Expecting value: line 1 column 1 (char 0) 
+[2021-01-21 10:14:37] [INFO] >> TestCase.py >> 第163行  - 用例：客户列表筛选（战败）导出全部客户数据 
+[2021-01-21 10:14:37] [INFO] >> CustomerList.py >> 第489行  - 客户列表导出 
+[2021-01-21 10:14:38] [ERROR] >> Requests_util.py >> 第25行  - request方法执行异常,url：Expecting value: line 1 column 1 (char 0) 
+[2021-01-21 10:14:38] [INFO] >> CustomerList.py >> 第497行  - 返回导出响应结果：request方法执行异常：Expecting value: line 1 column 1 (char 0) 
+[2021-01-21 10:14:38] [INFO] >> TestCase.py >> 第170行  - 用例：定保录入成功预约 
+[2021-01-21 10:14:38] [INFO] >> CustomerList.py >> 第445行  - 获取全部客户数据 
+[2021-01-21 10:14:38] [ERROR] >> Requests_util.py >> 第25行  - request方法执行异常,url：Expecting value: line 1 column 1 (char 0) 
+[2021-01-21 10:14:38] [INFO] >> CustomerList.py >> 第458行  - 获取全部客户数据异常：string indices must be integers 
+[2021-01-21 10:14:38] [INFO] >> TestCase.py >> 第178行  - 用例：定保录入战败 
+[2021-01-21 10:14:38] [INFO] >> CustomerList.py >> 第445行  - 获取全部客户数据 
+[2021-01-21 10:14:38] [ERROR] >> Requests_util.py >> 第25行  - request方法执行异常,url：Expecting value: line 1 column 1 (char 0) 
+[2021-01-21 10:14:38] [INFO] >> CustomerList.py >> 第458行  - 获取全部客户数据异常：string indices must be integers 
+[2021-01-21 10:14:38] [INFO] >> TestCase.py >> 第186行  - 用例：批量续保文件上传 
+[2021-01-21 10:14:38] [INFO] >> CustomerList.py >> 第564行  - 上传文件 
+[2021-01-21 10:14:38] [ERROR] >> Requests_util.py >> 第25行  - request方法执行异常,url：Expecting value: line 1 column 1 (char 0) 
+[2021-01-21 10:14:38] [ERROR] >> CustomerList.py >> 第589行  - upload_file方法执行异常：string indices must be integers 
+[2021-01-21 10:14:38] [INFO] >> TestCase.py >> 第195行  - 用例：工作看板人员效能统计，校验录入出单、保费是否有统计 
+[2021-01-21 10:14:38] [INFO] >> TestCase.py >> 第198行  - 校验人员效能响应结果是否为None ：{'code': 401, 'message': '授权失败', 'data': None} 
+[2021-01-21 10:15:00] [INFO] >> TestCase.py >> 第40行  - 用例：新增数据——录入出单流程 
+[2021-01-21 10:15:00] [INFO] >> Interface_quote.py >> 第24行  - 京AC1122发起续保 
+[2021-01-21 10:15:01] [ERROR] >> Requests_util.py >> 第25行  - request方法执行异常,url：Expecting value: line 1 column 1 (char 0) 
+[2021-01-21 10:15:01] [ERROR] >> Interface_quote.py >> 第55行  - 续保执行异常：string indices must be integers 
+[2021-01-21 10:15:01] [INFO] >> TestCase.py >> 第52行  - 用例：顶级账户计划回访数据量对比，使用账号：jiao 
+[2021-01-21 10:15:01] [INFO] >> Headers.py >> 第64行  - 返回token 
+[2021-01-21 10:15:01] [INFO] >> CustomerList.py >> 第374行  - 获取接口返回的计划回访数量 
+[2021-01-21 10:15:01] [INFO] >> CustomerList.py >> 第386行  - 列表形式返回计划回访数量：[350, 390, 159, 109, 173, 117, 178, 86, 180] 
+[2021-01-21 10:15:01] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:15:02] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:15:02] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:15:03] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:15:03] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:15:03] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:15:04] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:15:04] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:15:04] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:15:05] [INFO] >> TestCase.py >> 第75行  - 用例：校验报价成功的数据是否有报价历史 
+[2021-01-21 10:15:05] [INFO] >> CustomerList.py >> 第405行  - 筛选报价成功数据 
+[2021-01-21 10:15:05] [ERROR] >> Requests_util.py >> 第25行  - request方法执行异常,url：Expecting value: line 1 column 1 (char 0) 
+[2021-01-21 10:15:05] [INFO] >> TestCase.py >> 第85行  - 用例：校验切换报价历史是否成功 
+[2021-01-21 10:15:05] [INFO] >> CustomerList.py >> 第405行  - 筛选报价成功数据 
+[2021-01-21 10:15:05] [ERROR] >> Requests_util.py >> 第25行  - request方法执行异常,url：Expecting value: line 1 column 1 (char 0) 
+[2021-01-21 10:15:05] [INFO] >> TestCase.py >> 第105行  - 用例：下级账户计划回访数据量对比,使用账号：18612938273 
+[2021-01-21 10:15:05] [INFO] >> Headers.py >> 第64行  - 返回token 
+[2021-01-21 10:15:05] [INFO] >> CustomerList.py >> 第374行  - 获取接口返回的计划回访数量 
+[2021-01-21 10:15:05] [INFO] >> CustomerList.py >> 第386行  - 列表形式返回计划回访数量：[0, 28, 34, 19, 33, 33, 21, 3, 29] 
+[2021-01-21 10:15:05] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:15:05] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:15:05] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:15:05] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:15:06] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:15:06] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:15:06] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:15:06] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:15:06] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:15:06] [INFO] >> TestCase.py >> 第130行  - 用例：客户列表分配，使用账号wanyuanhao,分配人：17501110001 
+[2021-01-21 10:15:06] [INFO] >> TestCase.py >> 第131行  - 执行分配用例 
+[2021-01-21 10:15:07] [INFO] >> Headers.py >> 第64行  - 返回token 
+[2021-01-21 10:15:07] [INFO] >> CustomerList.py >> 第259行  - 客户列表分配 
+[2021-01-21 10:15:07] [INFO] >> CustomerList.py >> 第266行  - 获取客户列表全部客户的数据 
+[2021-01-21 10:15:07] [INFO] >> CustomerList.py >> 第272行  - 拿到前4个buid 
+[2021-01-21 10:15:07] [INFO] >> CustomerList.py >> 第284行  - 分配数据[[601041385, 600940316, 600940311, 600940270]]给ID为(287523)的用户 
+[2021-01-21 10:15:07] [INFO] >> CustomerList.py >> 第294行  - 校验分配人员是否匹配 
+[2021-01-21 10:15:07] [INFO] >> TestCase.py >> 第139行  - 用例：使用全部客户第5条数据录入战败 
+[2021-01-21 10:15:07] [INFO] >> CustomerList.py >> 第445行  - 获取全部客户数据 
+[2021-01-21 10:15:07] [ERROR] >> Requests_util.py >> 第25行  - request方法执行异常,url：Expecting value: line 1 column 1 (char 0) 
+[2021-01-21 10:15:07] [INFO] >> CustomerList.py >> 第458行  - 获取全部客户数据异常：string indices must be integers 
+[2021-01-21 10:15:07] [INFO] >> TestCase.py >> 第149行  - 用例：使用全部客户第8条数据录入续保跟进 
+[2021-01-21 10:15:07] [INFO] >> CustomerList.py >> 第445行  - 获取全部客户数据 
+[2021-01-21 10:15:07] [ERROR] >> Requests_util.py >> 第25行  - request方法执行异常,url：Expecting value: line 1 column 1 (char 0) 
+[2021-01-21 10:15:07] [INFO] >> CustomerList.py >> 第458行  - 获取全部客户数据异常：string indices must be integers 
+[2021-01-21 10:15:07] [INFO] >> TestCase.py >> 第157行  - 用例：客户列表不筛选导出全部客户TAB数据 
+[2021-01-21 10:15:07] [INFO] >> CustomerList.py >> 第479行  - 客户列表导出 
+[2021-01-21 10:15:07] [ERROR] >> Requests_util.py >> 第25行  - request方法执行异常,url：Expecting value: line 1 column 1 (char 0) 
+[2021-01-21 10:15:07] [INFO] >> CustomerList.py >> 第486行  - 返回导出响应结果：request方法执行异常：Expecting value: line 1 column 1 (char 0) 
+[2021-01-21 10:15:07] [INFO] >> TestCase.py >> 第163行  - 用例：客户列表筛选（战败）导出全部客户数据 
+[2021-01-21 10:15:07] [INFO] >> CustomerList.py >> 第489行  - 客户列表导出 
+[2021-01-21 10:15:07] [ERROR] >> Requests_util.py >> 第25行  - request方法执行异常,url：Expecting value: line 1 column 1 (char 0) 
+[2021-01-21 10:15:07] [INFO] >> CustomerList.py >> 第497行  - 返回导出响应结果：request方法执行异常：Expecting value: line 1 column 1 (char 0) 
+[2021-01-21 10:15:07] [INFO] >> TestCase.py >> 第170行  - 用例：定保录入成功预约 
+[2021-01-21 10:15:07] [INFO] >> CustomerList.py >> 第445行  - 获取全部客户数据 
+[2021-01-21 10:15:07] [ERROR] >> Requests_util.py >> 第25行  - request方法执行异常,url：Expecting value: line 1 column 1 (char 0) 
+[2021-01-21 10:15:07] [INFO] >> CustomerList.py >> 第458行  - 获取全部客户数据异常：string indices must be integers 
+[2021-01-21 10:15:07] [INFO] >> TestCase.py >> 第178行  - 用例：定保录入战败 
+[2021-01-21 10:15:07] [INFO] >> CustomerList.py >> 第445行  - 获取全部客户数据 
+[2021-01-21 10:15:07] [ERROR] >> Requests_util.py >> 第25行  - request方法执行异常,url：Expecting value: line 1 column 1 (char 0) 
+[2021-01-21 10:15:07] [INFO] >> CustomerList.py >> 第458行  - 获取全部客户数据异常：string indices must be integers 
+[2021-01-21 10:15:07] [INFO] >> TestCase.py >> 第186行  - 用例：批量续保文件上传 
+[2021-01-21 10:15:07] [INFO] >> CustomerList.py >> 第564行  - 上传文件 
+[2021-01-21 10:15:07] [ERROR] >> Requests_util.py >> 第25行  - request方法执行异常,url：Expecting value: line 1 column 1 (char 0) 
+[2021-01-21 10:15:07] [ERROR] >> CustomerList.py >> 第589行  - upload_file方法执行异常：string indices must be integers 
+[2021-01-21 10:15:08] [INFO] >> TestCase.py >> 第195行  - 用例：工作看板人员效能统计，校验录入出单、保费是否有统计 
+[2021-01-21 10:15:08] [INFO] >> TestCase.py >> 第198行  - 校验人员效能响应结果是否为None ：{'code': 401, 'message': '授权失败', 'data': None} 
+[2021-01-21 10:17:38] [INFO] >> TestCase.py >> 第40行  - 用例：新增数据——录入出单流程 
+[2021-01-21 10:17:38] [INFO] >> Interface_quote.py >> 第24行  - 京AC1122发起续保 
+[2021-01-21 10:17:39] [ERROR] >> Requests_util.py >> 第25行  - request方法执行异常,url：Expecting value: line 1 column 1 (char 0) 
+[2021-01-21 10:17:39] [ERROR] >> Interface_quote.py >> 第55行  - 续保执行异常：string indices must be integers 
+[2021-01-21 10:17:39] [INFO] >> TestCase.py >> 第52行  - 用例：顶级账户计划回访数据量对比，使用账号：jiao 
+[2021-01-21 10:17:39] [INFO] >> Headers.py >> 第64行  - 返回token 
+[2021-01-21 10:17:39] [INFO] >> CustomerList.py >> 第374行  - 获取接口返回的计划回访数量 
+[2021-01-21 10:17:39] [INFO] >> CustomerList.py >> 第386行  - 列表形式返回计划回访数量：[348, 390, 159, 109, 173, 117, 178, 86, 181] 
+[2021-01-21 10:17:39] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:17:40] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:17:40] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:17:41] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:17:43] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:17:43] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:17:43] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:17:44] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:17:44] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:17:45] [INFO] >> TestCase.py >> 第75行  - 用例：校验报价成功的数据是否有报价历史 
+[2021-01-21 10:17:45] [INFO] >> CustomerList.py >> 第405行  - 筛选报价成功数据 
+[2021-01-21 10:17:45] [ERROR] >> Requests_util.py >> 第25行  - request方法执行异常,url：Expecting value: line 1 column 1 (char 0) 
+[2021-01-21 10:17:45] [INFO] >> TestCase.py >> 第85行  - 用例：校验切换报价历史是否成功 
+[2021-01-21 10:17:45] [INFO] >> CustomerList.py >> 第405行  - 筛选报价成功数据 
+[2021-01-21 10:17:45] [ERROR] >> Requests_util.py >> 第25行  - request方法执行异常,url：Expecting value: line 1 column 1 (char 0) 
+[2021-01-21 10:17:45] [INFO] >> TestCase.py >> 第105行  - 用例：下级账户计划回访数据量对比,使用账号：18612938273 
+[2021-01-21 10:17:45] [INFO] >> Headers.py >> 第64行  - 返回token 
+[2021-01-21 10:17:45] [INFO] >> CustomerList.py >> 第374行  - 获取接口返回的计划回访数量 
+[2021-01-21 10:17:45] [INFO] >> CustomerList.py >> 第386行  - 列表形式返回计划回访数量：[0, 28, 34, 19, 33, 33, 21, 3, 29] 
+[2021-01-21 10:17:45] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:17:45] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:17:45] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:17:46] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:17:46] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:17:46] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:17:46] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:17:46] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:17:46] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:17:46] [INFO] >> TestCase.py >> 第130行  - 用例：客户列表分配，使用账号wanyuanhao,分配人：17501110001 
+[2021-01-21 10:17:46] [INFO] >> TestCase.py >> 第131行  - 执行分配用例 
+[2021-01-21 10:17:47] [INFO] >> Headers.py >> 第64行  - 返回token 
+[2021-01-21 10:17:47] [INFO] >> CustomerList.py >> 第259行  - 客户列表分配 
+[2021-01-21 10:17:47] [INFO] >> CustomerList.py >> 第266行  - 获取客户列表全部客户的数据 
+[2021-01-21 10:17:47] [INFO] >> CustomerList.py >> 第272行  - 拿到前4个buid 
+[2021-01-21 10:17:47] [INFO] >> CustomerList.py >> 第284行  - 分配数据[[601041385, 600940316, 600940311, 600940270]]给ID为(287523)的用户 
+[2021-01-21 10:17:47] [INFO] >> CustomerList.py >> 第294行  - 校验分配人员是否匹配 
+[2021-01-21 10:17:47] [INFO] >> TestCase.py >> 第139行  - 用例：使用全部客户第5条数据录入战败 
+[2021-01-21 10:17:47] [INFO] >> CustomerList.py >> 第445行  - 获取全部客户数据 
+[2021-01-21 10:17:47] [ERROR] >> Requests_util.py >> 第25行  - request方法执行异常,url：Expecting value: line 1 column 1 (char 0) 
+[2021-01-21 10:17:47] [INFO] >> CustomerList.py >> 第458行  - 获取全部客户数据异常：string indices must be integers 
+[2021-01-21 10:17:47] [INFO] >> TestCase.py >> 第149行  - 用例：使用全部客户第8条数据录入续保跟进 
+[2021-01-21 10:17:47] [INFO] >> CustomerList.py >> 第445行  - 获取全部客户数据 
+[2021-01-21 10:17:47] [ERROR] >> Requests_util.py >> 第25行  - request方法执行异常,url：Expecting value: line 1 column 1 (char 0) 
+[2021-01-21 10:17:47] [INFO] >> CustomerList.py >> 第458行  - 获取全部客户数据异常：string indices must be integers 
+[2021-01-21 10:17:47] [INFO] >> TestCase.py >> 第157行  - 用例：客户列表不筛选导出全部客户TAB数据 
+[2021-01-21 10:17:47] [INFO] >> CustomerList.py >> 第479行  - 客户列表导出 
+[2021-01-21 10:17:47] [ERROR] >> Requests_util.py >> 第25行  - request方法执行异常,url：Expecting value: line 1 column 1 (char 0) 
+[2021-01-21 10:17:47] [INFO] >> CustomerList.py >> 第486行  - 返回导出响应结果：request方法执行异常：Expecting value: line 1 column 1 (char 0) 
+[2021-01-21 10:17:47] [INFO] >> TestCase.py >> 第163行  - 用例：客户列表筛选（战败）导出全部客户数据 
+[2021-01-21 10:17:47] [INFO] >> CustomerList.py >> 第489行  - 客户列表导出 
+[2021-01-21 10:17:47] [ERROR] >> Requests_util.py >> 第25行  - request方法执行异常,url：Expecting value: line 1 column 1 (char 0) 
+[2021-01-21 10:17:47] [INFO] >> CustomerList.py >> 第497行  - 返回导出响应结果：request方法执行异常：Expecting value: line 1 column 1 (char 0) 
+[2021-01-21 10:17:47] [INFO] >> TestCase.py >> 第170行  - 用例：定保录入成功预约 
+[2021-01-21 10:17:47] [INFO] >> CustomerList.py >> 第445行  - 获取全部客户数据 
+[2021-01-21 10:17:47] [ERROR] >> Requests_util.py >> 第25行  - request方法执行异常,url：Expecting value: line 1 column 1 (char 0) 
+[2021-01-21 10:17:47] [INFO] >> CustomerList.py >> 第458行  - 获取全部客户数据异常：string indices must be integers 
+[2021-01-21 10:17:47] [INFO] >> TestCase.py >> 第178行  - 用例：定保录入战败 
+[2021-01-21 10:17:47] [INFO] >> CustomerList.py >> 第445行  - 获取全部客户数据 
+[2021-01-21 10:17:47] [ERROR] >> Requests_util.py >> 第25行  - request方法执行异常,url：Expecting value: line 1 column 1 (char 0) 
+[2021-01-21 10:17:47] [INFO] >> CustomerList.py >> 第458行  - 获取全部客户数据异常：string indices must be integers 
+[2021-01-21 10:17:47] [INFO] >> TestCase.py >> 第186行  - 用例：批量续保文件上传 
+[2021-01-21 10:17:47] [INFO] >> CustomerList.py >> 第564行  - 上传文件 
+[2021-01-21 10:17:48] [ERROR] >> Requests_util.py >> 第25行  - request方法执行异常,url：Expecting value: line 1 column 1 (char 0) 
+[2021-01-21 10:17:48] [ERROR] >> CustomerList.py >> 第589行  - upload_file方法执行异常：string indices must be integers 
+[2021-01-21 10:17:48] [INFO] >> TestCase.py >> 第195行  - 用例：工作看板人员效能统计，校验录入出单、保费是否有统计 
+[2021-01-21 10:17:48] [INFO] >> TestCase.py >> 第198行  - 校验人员效能响应结果是否为None ：{'code': 401, 'message': '授权失败', 'data': None} 
+[2021-01-21 10:18:37] [INFO] >> TestCase.py >> 第40行  - 用例：新增数据——录入出单流程 
+[2021-01-21 10:18:56] [INFO] >> Interface_quote.py >> 第24行  - 京AC1122发起续保 
+[2021-01-21 10:23:10] [ERROR] >> Requests_util.py >> 第25行  - request方法执行异常,url：Expecting value: line 1 column 1 (char 0) 
+[2021-01-21 10:23:20] [ERROR] >> Interface_quote.py >> 第55行  - 续保执行异常：string indices must be integers 
+[2021-01-21 10:35:09] [INFO] >> TestCase.py >> 第40行  - 用例：新增数据——录入出单流程 
+[2021-01-21 10:35:42] [INFO] >> Interface_quote.py >> 第24行  - 京AC1122发起续保:[url:https://bot.91bihu.com/carbusiness/api/v1/Renewal/RenewalCheck,data:{'licenseNo': '京AC1122', 'cityCode': '1', 'renewalSource': '', 'carType': 1, 'typeId': 1, 'sixDigitsAfterIdCard': '', 'renewalType': 4}] 
+[2021-01-21 10:45:43] [INFO] >> TestCase.py >> 第40行  - 用例：新增数据——录入出单流程 
+[2021-01-21 10:45:43] [INFO] >> Interface_quote.py >> 第24行  - 京AC1122发起续保:[参数:https://bot.91bihu.com/carbusiness/api/v1/Renewal/RenewalCheck{'licenseNo': '京AC1122', 'cityCode': '1', 'renewalSource': '', 'carType': 1, 'typeId': 1, 'sixDigitsAfterIdCard': '', 'renewalType': 4}] 
+[2021-01-21 10:45:43] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/Renewal/RenewalCheck{'licenseNo': '京AC1122', 'cityCode': '1', 'renewalSource': '', 'carType': 1, 'typeId': 1, 'sixDigitsAfterIdCard': '', 'renewalType': 4}] 
+[2021-01-21 10:45:44] [ERROR] >> Requests_util.py >> 第26行  - request方法执行异常,url：Expecting value: line 1 column 1 (char 0) 
+[2021-01-21 10:45:44] [ERROR] >> Interface_quote.py >> 第55行  - 续保执行异常：string indices must be integers 
+[2021-01-21 10:45:53] [INFO] >> run_case.py >> 第17行  - 登录账户获取touken 
+[2021-01-21 10:45:53] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/identity/connect/token{'grant_type': 'password', 'username': 'wanyuanhao', 'password': '91bihu.com', 'scope': 'employee_center car_business smart_car_mgts', 'client_id': 'bot', 'client_secret': 'secret'}] 
+[2021-01-21 10:45:54] [INFO] >> Headers.py >> 第40行  - token更新到config文件 
+[2021-01-21 10:45:54] [INFO] >> Headers.py >> 第42行  - 返回token 
+[2021-01-21 10:45:54] [INFO] >> TestCase.py >> 第40行  - 用例：新增数据——录入出单流程 
+[2021-01-21 10:45:54] [INFO] >> Interface_quote.py >> 第24行  - 京AC1122发起续保:[参数:https://bot.91bihu.com/carbusiness/api/v1/Renewal/RenewalCheck{'licenseNo': '京AC1122', 'cityCode': '1', 'renewalSource': '', 'carType': 1, 'typeId': 1, 'sixDigitsAfterIdCard': '', 'renewalType': 4}] 
+[2021-01-21 10:45:54] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/Renewal/RenewalCheck{'licenseNo': '京AC1122', 'cityCode': '1', 'renewalSource': '', 'carType': 1, 'typeId': 1, 'sixDigitsAfterIdCard': '', 'renewalType': 4}] 
+[2021-01-21 10:45:54] [INFO] >> Interface_quote.py >> 第43行  - 获取续保响应结果 
+[2021-01-21 10:45:54] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/Renewal/SubmitRenewalAsync{'licenseNo': '京AC1122', 'cityCode': '1', 'renewalSource': '', 'carType': 1, 'typeId': 1, 'sixDigitsAfterIdCard': '', 'renewalType': 4, 'buid': 0}] 
+[2021-01-21 10:45:54] [INFO] >> Interface_quote.py >> 第46行  - 新增车牌成功 
+[2021-01-21 10:45:54] [INFO] >> CustomerList.py >> 第29行  - 获取京AC1122查询结果 
+[2021-01-21 10:45:54] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/customer/querylist{'pageIndex': 1, 'pageSize': 15, 'selectType': 1, 'selectSearchValue': '京AC1122', 'topLabel': 'tab_quanbukehu', 'orderBy': {'orderByField': 'updateTime', 'orderByType': 'desc'}, 'isFllowUp': '', 'isDataLable': '', 'dataTag': '', 'isOpenGuanjia': 1, 'licenseNo': '京AC1122'}] 
+[2021-01-21 10:45:55] [INFO] >> CustomerList.py >> 第33行  - 客户列表查询车牌通过 
+[2021-01-21 10:45:55] [INFO] >> CustomerList.py >> 第48行  - 根据buid录入出单，默认录入人保 
+[2021-01-21 10:45:55] [INFO] >> CustomerList.py >> 第51行  - 客户列表查询京AC1122是否存在 
+[2021-01-21 10:45:55] [INFO] >> CustomerList.py >> 第29行  - 获取京AC1122查询结果 
+[2021-01-21 10:45:55] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/customer/querylist{'pageIndex': 1, 'pageSize': 15, 'selectType': 1, 'selectSearchValue': '京AC1122', 'topLabel': 'tab_quanbukehu', 'orderBy': {'orderByField': 'updateTime', 'orderByType': 'desc'}, 'isFllowUp': '', 'isDataLable': '', 'dataTag': '', 'isOpenGuanjia': 1, 'licenseNo': '京AC1122'}] 
+[2021-01-21 10:45:55] [INFO] >> CustomerList.py >> 第33行  - 客户列表查询车牌通过 
+[2021-01-21 10:45:55] [INFO] >> CustomerList.py >> 第56行  - 查询结果拿第一个buid 
+[2021-01-21 10:45:55] [INFO] >> CustomerList.py >> 第65行  - 发起录入出单请求 
+[2021-01-21 10:45:55] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/CustomerDetail/SaveConsumerReview{'defeatReasonContent': '', 'bizTotal': '1000.99', 'forceTotal': '500.11', 'taxTotal': '15.01', 'reviewContent': '自动化录入', 'singleTime': '2021-01-21', 'jyPrice': '222', 'appointTime': '2021-01-21 10:45:55', 'reviewStatus': 9, 'reviewStatusName': '成功出单', 'source': 4, 'buid': 600976286, 'companyType': 4}] 
+[2021-01-21 10:45:55] [INFO] >> CustomerList.py >> 第86行  - 本年度已出过保单,提交覆盖 
+[2021-01-21 10:45:55] [INFO] >> CustomerList.py >> 第100行  - 获取响应message校验是否出单成功 
+[2021-01-21 10:45:55] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/CustomerDetail/SaveConsumerReview{'defeatReasonContent': '', 'bizTotal': '1000.99', 'forceTotal': '500.11', 'taxTotal': '15.01', 'reviewContent': '自动化录入', 'singleTime': '2021-01-21', 'jyPrice': '222', 'appointTime': '2021-01-21 10:45:55', 'reviewStatus': 9, 'reviewStatusName': '成功出单', 'source': 4, 'buid': 600976286, 'companyType': 4, 'deteatId': None, 'carPolicyId': 3008202}] 
+[2021-01-21 10:45:57] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/CustomerDetail/QueryUserinfoSteps?buid=600976286&groupId=0&pageIndex=1&pageSize=20None] 
+[2021-01-21 10:45:57] [INFO] >> CustomerList.py >> 第108行  - 出单成功，校验buid[600976286]是否一致 
+[2021-01-21 10:45:57] [INFO] >> CustomerList.py >> 第111行  - 校验出单状态、录入保司、金额是否一致 
+[2021-01-21 10:45:57] [INFO] >> CustomerList.py >> 第114行  - 出单成功 
+[2021-01-21 10:45:57] [INFO] >> chudan_and_zhanbai.py >> 第26行  - 出单列表查询 
+[2021-01-21 10:45:57] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/customer/quotationReceiptList{'pageIndex': 1, 'pageSize': 15, 'LicenseNo': '京AC1122'}] 
+[2021-01-21 10:45:57] [INFO] >> chudan_and_zhanbai.py >> 第37行  - 出单列表查询通过 
+[2021-01-21 10:45:57] [INFO] >> TestCase.py >> 第52行  - 用例：顶级账户计划回访数据量对比，使用账号：jiao 
+[2021-01-21 10:45:57] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/identity/connect/token{'grant_type': 'password', 'username': 'jiao', 'password': '91bihu.com', 'scope': 'employee_center car_business smart_car_mgts', 'client_id': 'bot', 'client_secret': 'secret'}] 
+[2021-01-21 10:45:58] [INFO] >> Headers.py >> 第64行  - 返回token 
+[2021-01-21 10:45:58] [INFO] >> CustomerList.py >> 第374行  - 获取接口返回的计划回访数量 
+[2021-01-21 10:45:58] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/Customer/QueryReviewCount{'pageIndex': 1, 'pageSize': 15, 'selectType': 1, 'topLabel': 'tab_jihuahuifang', 'orderBy': {'orderByField': 'updateTime', 'orderByType': 'desc'}, 'isFllowUp': '', 'labelTimeSpan': 2, 'isDataLable': '', 'dataTag': '', 'dataTypeId': 0}] 
+[2021-01-21 10:45:58] [INFO] >> CustomerList.py >> 第386行  - 列表形式返回计划回访数量：[329, 390, 160, 110, 173, 118, 178, 100, 191] 
+[2021-01-21 10:45:58] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:45:58] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/customer/querylist{'pageIndex': 1, 'pageSize': 339, 'selectType': 1, 'topLabel': 'tab_jihuahuifang', 'orderBy': {'orderByField': 'updateTime', 'orderByType': 'desc'}, 'isFllowUp': '', 'labelTimeSpan': 1, 'isDataLable': '', 'dataTag': '', 'dataTypeId': 0}] 
+[2021-01-21 10:45:59] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:45:59] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/customer/querylist{'pageIndex': 1, 'pageSize': 400, 'selectType': 1, 'topLabel': 'tab_jihuahuifang', 'orderBy': {'orderByField': 'updateTime', 'orderByType': 'desc'}, 'isFllowUp': '', 'labelTimeSpan': 2, 'isDataLable': '', 'dataTag': '', 'dataTypeId': 0}] 
+[2021-01-21 10:45:59] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:45:59] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/customer/querylist{'pageIndex': 1, 'pageSize': 170, 'selectType': 1, 'topLabel': 'tab_jihuahuifang', 'orderBy': {'orderByField': 'updateTime', 'orderByType': 'desc'}, 'isFllowUp': '', 'labelTimeSpan': 3, 'isDataLable': '', 'dataTag': '', 'dataTypeId': 0}] 
+[2021-01-21 10:46:00] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:46:00] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/customer/querylist{'pageIndex': 1, 'pageSize': 120, 'selectType': 1, 'topLabel': 'tab_jihuahuifang', 'orderBy': {'orderByField': 'updateTime', 'orderByType': 'desc'}, 'isFllowUp': '', 'labelTimeSpan': 4, 'isDataLable': '', 'dataTag': '', 'dataTypeId': 0}] 
+[2021-01-21 10:46:00] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:46:00] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/customer/querylist{'pageIndex': 1, 'pageSize': 183, 'selectType': 1, 'topLabel': 'tab_jihuahuifang', 'orderBy': {'orderByField': 'updateTime', 'orderByType': 'desc'}, 'isFllowUp': '', 'labelTimeSpan': 5, 'isDataLable': '', 'dataTag': '', 'dataTypeId': 0}] 
+[2021-01-21 10:46:01] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:46:01] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/customer/querylist{'pageIndex': 1, 'pageSize': 128, 'selectType': 1, 'topLabel': 'tab_jihuahuifang', 'orderBy': {'orderByField': 'updateTime', 'orderByType': 'desc'}, 'isFllowUp': '', 'labelTimeSpan': 6, 'isDataLable': '', 'dataTag': '', 'dataTypeId': 0}] 
+[2021-01-21 10:46:01] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:46:01] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/customer/querylist{'pageIndex': 1, 'pageSize': 188, 'selectType': 1, 'topLabel': 'tab_jihuahuifang', 'orderBy': {'orderByField': 'updateTime', 'orderByType': 'desc'}, 'isFllowUp': '', 'labelTimeSpan': 7, 'isDataLable': '', 'dataTag': '', 'dataTypeId': 0}] 
+[2021-01-21 10:46:02] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:46:02] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/customer/querylist{'pageIndex': 1, 'pageSize': 110, 'selectType': 1, 'topLabel': 'tab_jihuahuifang', 'orderBy': {'orderByField': 'updateTime', 'orderByType': 'desc'}, 'isFllowUp': '', 'labelTimeSpan': 8, 'isDataLable': '', 'dataTag': '', 'dataTypeId': 0}] 
+[2021-01-21 10:46:02] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:46:02] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/customer/querylist{'pageIndex': 1, 'pageSize': 201, 'selectType': 1, 'topLabel': 'tab_jihuahuifang', 'orderBy': {'orderByField': 'updateTime', 'orderByType': 'desc'}, 'isFllowUp': '', 'labelTimeSpan': 9999, 'isDataLable': '', 'dataTag': '', 'dataTypeId': 0}] 
+[2021-01-21 10:46:02] [INFO] >> TestCase.py >> 第75行  - 用例：校验报价成功的数据是否有报价历史 
+[2021-01-21 10:46:02] [INFO] >> CustomerList.py >> 第405行  - 筛选报价成功数据 
+[2021-01-21 10:46:02] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/customer/querylist{'pageIndex': 1, 'pageSize': 45, 'selectType': 1, 'quoteStatus': [1], 'topLabel': 'tab_quanbukehu', 'orderBy': {'orderByField': 'updateTime', 'orderByType': 'desc'}, 'isFllowUp': '', 'isDataLable': '', 'dataTag': '', 'dataTypeId': 0, 'isMaintain': 1, 'firstSearch': True}] 
+[2021-01-21 10:46:03] [INFO] >> CustomerList.py >> 第412行  - 返回筛选结果 
+[2021-01-21 10:46:03] [INFO] >> CustomerList.py >> 第420行  - 获取报价历史 
+[2021-01-21 10:46:03] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/Renewal/GetQuoteHistory{'buid': 600971318}] 
+[2021-01-21 10:46:03] [INFO] >> CustomerList.py >> 第425行  - 返回报价历史结果 
+[2021-01-21 10:46:03] [INFO] >> TestCase.py >> 第85行  - 用例：校验切换报价历史是否成功 
+[2021-01-21 10:46:03] [INFO] >> CustomerList.py >> 第405行  - 筛选报价成功数据 
+[2021-01-21 10:46:03] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/customer/querylist{'pageIndex': 1, 'pageSize': 45, 'selectType': 1, 'quoteStatus': [1], 'topLabel': 'tab_quanbukehu', 'orderBy': {'orderByField': 'updateTime', 'orderByType': 'desc'}, 'isFllowUp': '', 'isDataLable': '', 'dataTag': '', 'dataTypeId': 0, 'isMaintain': 1, 'firstSearch': True}] 
+[2021-01-21 10:46:03] [INFO] >> CustomerList.py >> 第412行  - 返回筛选结果 
+[2021-01-21 10:46:03] [INFO] >> CustomerList.py >> 第420行  - 获取报价历史 
+[2021-01-21 10:46:03] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/Renewal/GetQuoteHistory{'buid': 600971318}] 
+[2021-01-21 10:46:03] [INFO] >> CustomerList.py >> 第425行  - 返回报价历史结果 
+[2021-01-21 10:46:03] [INFO] >> CustomerList.py >> 第433行  - 根据报价历史id切换报价历史 
+[2021-01-21 10:46:03] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/Renewal/GetQuoteRecord{'id': '93de9abf-d304-4b35-b87d-1e6362f94f6c'}] 
+[2021-01-21 10:46:03] [INFO] >> CustomerList.py >> 第438行  - 报价历史已切换 
+[2021-01-21 10:46:03] [INFO] >> TestCase.py >> 第105行  - 用例：下级账户计划回访数据量对比,使用账号：18612938273 
+[2021-01-21 10:46:03] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/identity/connect/token{'grant_type': 'password', 'username': '18612938273', 'password': '91bihu.com', 'scope': 'employee_center car_business smart_car_mgts', 'client_id': 'bot', 'client_secret': 'secret'}] 
+[2021-01-21 10:46:03] [INFO] >> Headers.py >> 第64行  - 返回token 
+[2021-01-21 10:46:03] [INFO] >> CustomerList.py >> 第374行  - 获取接口返回的计划回访数量 
+[2021-01-21 10:46:03] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/Customer/QueryReviewCount{'pageIndex': 1, 'pageSize': 15, 'selectType': 1, 'topLabel': 'tab_jihuahuifang', 'orderBy': {'orderByField': 'updateTime', 'orderByType': 'desc'}, 'isFllowUp': '', 'labelTimeSpan': 2, 'isDataLable': '', 'dataTag': '', 'dataTypeId': 0}] 
+[2021-01-21 10:46:03] [INFO] >> CustomerList.py >> 第386行  - 列表形式返回计划回访数量：[0, 28, 34, 19, 33, 33, 21, 3, 29] 
+[2021-01-21 10:46:03] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:46:03] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/customer/querylist{'pageIndex': 1, 'pageSize': 10, 'selectType': 1, 'topLabel': 'tab_jihuahuifang', 'orderBy': {'orderByField': 'updateTime', 'orderByType': 'desc'}, 'isFllowUp': '', 'labelTimeSpan': 1, 'isDataLable': '', 'dataTag': '', 'dataTypeId': 0}] 
+[2021-01-21 10:46:04] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:46:04] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/customer/querylist{'pageIndex': 1, 'pageSize': 38, 'selectType': 1, 'topLabel': 'tab_jihuahuifang', 'orderBy': {'orderByField': 'updateTime', 'orderByType': 'desc'}, 'isFllowUp': '', 'labelTimeSpan': 2, 'isDataLable': '', 'dataTag': '', 'dataTypeId': 0}] 
+[2021-01-21 10:46:04] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:46:04] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/customer/querylist{'pageIndex': 1, 'pageSize': 44, 'selectType': 1, 'topLabel': 'tab_jihuahuifang', 'orderBy': {'orderByField': 'updateTime', 'orderByType': 'desc'}, 'isFllowUp': '', 'labelTimeSpan': 3, 'isDataLable': '', 'dataTag': '', 'dataTypeId': 0}] 
+[2021-01-21 10:46:04] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:46:04] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/customer/querylist{'pageIndex': 1, 'pageSize': 29, 'selectType': 1, 'topLabel': 'tab_jihuahuifang', 'orderBy': {'orderByField': 'updateTime', 'orderByType': 'desc'}, 'isFllowUp': '', 'labelTimeSpan': 4, 'isDataLable': '', 'dataTag': '', 'dataTypeId': 0}] 
+[2021-01-21 10:46:04] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:46:04] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/customer/querylist{'pageIndex': 1, 'pageSize': 43, 'selectType': 1, 'topLabel': 'tab_jihuahuifang', 'orderBy': {'orderByField': 'updateTime', 'orderByType': 'desc'}, 'isFllowUp': '', 'labelTimeSpan': 5, 'isDataLable': '', 'dataTag': '', 'dataTypeId': 0}] 
+[2021-01-21 10:46:04] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:46:04] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/customer/querylist{'pageIndex': 1, 'pageSize': 43, 'selectType': 1, 'topLabel': 'tab_jihuahuifang', 'orderBy': {'orderByField': 'updateTime', 'orderByType': 'desc'}, 'isFllowUp': '', 'labelTimeSpan': 6, 'isDataLable': '', 'dataTag': '', 'dataTypeId': 0}] 
+[2021-01-21 10:46:04] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:46:04] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/customer/querylist{'pageIndex': 1, 'pageSize': 31, 'selectType': 1, 'topLabel': 'tab_jihuahuifang', 'orderBy': {'orderByField': 'updateTime', 'orderByType': 'desc'}, 'isFllowUp': '', 'labelTimeSpan': 7, 'isDataLable': '', 'dataTag': '', 'dataTypeId': 0}] 
+[2021-01-21 10:46:04] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:46:04] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/customer/querylist{'pageIndex': 1, 'pageSize': 13, 'selectType': 1, 'topLabel': 'tab_jihuahuifang', 'orderBy': {'orderByField': 'updateTime', 'orderByType': 'desc'}, 'isFllowUp': '', 'labelTimeSpan': 8, 'isDataLable': '', 'dataTag': '', 'dataTypeId': 0}] 
+[2021-01-21 10:46:05] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:46:05] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/customer/querylist{'pageIndex': 1, 'pageSize': 39, 'selectType': 1, 'topLabel': 'tab_jihuahuifang', 'orderBy': {'orderByField': 'updateTime', 'orderByType': 'desc'}, 'isFllowUp': '', 'labelTimeSpan': 9999, 'isDataLable': '', 'dataTag': '', 'dataTypeId': 0}] 
+[2021-01-21 10:46:05] [INFO] >> TestCase.py >> 第130行  - 用例：客户列表分配，使用账号wanyuanhao,分配人：17501110001 
+[2021-01-21 10:46:05] [INFO] >> TestCase.py >> 第131行  - 执行分配用例 
+[2021-01-21 10:46:05] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/identity/connect/token{'grant_type': 'password', 'username': 'wanyuanhao', 'password': '91bihu.com', 'scope': 'employee_center car_business smart_car_mgts', 'client_id': 'bot', 'client_secret': 'secret'}] 
+[2021-01-21 10:46:05] [INFO] >> Headers.py >> 第64行  - 返回token 
+[2021-01-21 10:46:05] [INFO] >> CustomerList.py >> 第259行  - 客户列表分配 
+[2021-01-21 10:46:05] [INFO] >> CustomerList.py >> 第266行  - 获取客户列表全部客户的数据 
+[2021-01-21 10:46:05] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/customer/querylist{'pageIndex': 1, 'pageSize': 15, 'selectType': 1, 'topLabel': 'tab_quanbukehu', 'orderBy': {'orderByField': 'updateTime', 'orderByType': 'desc'}, 'isFllowUp': '', 'isDataLable': '', 'dataTag': '', 'isOpenGuanjia': 1}] 
+[2021-01-21 10:46:05] [INFO] >> CustomerList.py >> 第272行  - 拿到前4个buid 
+[2021-01-21 10:46:05] [INFO] >> CustomerList.py >> 第284行  - 分配数据[[600976286, 600940311, 600940270, 601041385]]给ID为(287523)的用户 
+[2021-01-21 10:46:05] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/customer/DistributeCustomer{'pageIndex': 1, 'pageSize': 15, 'selectType': 1, 'topLabel': 'tab_quanbukehu', 'orderBy': {'orderByField': 'updateTime', 'orderByType': 'desc'}, 'isFllowUp': '', 'isDataLable': '', 'dataTag': '', 'distributeEmployeeIds': [287523], 'averageCount': 4, 'allocationRule': 1, 'buids': [600976286, 600940311, 600940270, 601041385]}] 
+[2021-01-21 10:46:05] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/customer/querylist{'pageIndex': 1, 'pageSize': 15, 'buids': [600976286, 600940311, 600940270, 601041385], 'selectType': 1, 'topLabel': 'tab_quanbukehu', 'orderBy': {'orderByField': 'updateTime', 'orderByType': 'desc'}, 'isFllowUp': '', 'isDataLable': '', 'dataTag': '', 'firstSearch': ''}] 
+[2021-01-21 10:46:06] [INFO] >> CustomerList.py >> 第294行  - 校验分配人员是否匹配 
+[2021-01-21 10:46:06] [INFO] >> TestCase.py >> 第139行  - 用例：使用全部客户第5条数据录入战败 
+[2021-01-21 10:46:06] [INFO] >> CustomerList.py >> 第445行  - 获取全部客户数据 
+[2021-01-21 10:46:06] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/customer/querylist{'pageIndex': 1, 'pageSize': 45, 'selectType': 1, 'topLabel': 'tab_quanbukehu', 'orderBy': {'orderByField': 'updateTime', 'orderByType': 'desc'}, 'isFllowUp': '', 'isDataLable': '', 'dataTag': '', 'dataTypeId': 0, 'lastMaintainDayRange': '', 'isMaintain': 1, 'isOpenGuanjia': 1, 'firstSearch': True}] 
+[2021-01-21 10:46:07] [INFO] >> CustomerList.py >> 第134行  - 录入战败 
+[2021-01-21 10:46:07] [INFO] >> CustomerList.py >> 第136行  - 客户列表查询京A23456是否存在 
+[2021-01-21 10:46:07] [INFO] >> CustomerList.py >> 第29行  - 获取京A23456查询结果 
+[2021-01-21 10:46:07] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/customer/querylist{'pageIndex': 1, 'pageSize': 15, 'selectType': 1, 'selectSearchValue': '京A23456', 'topLabel': 'tab_quanbukehu', 'orderBy': {'orderByField': 'updateTime', 'orderByType': 'desc'}, 'isFllowUp': '', 'isDataLable': '', 'dataTag': '', 'isOpenGuanjia': 1, 'licenseNo': '京A23456'}] 
+[2021-01-21 10:46:07] [INFO] >> CustomerList.py >> 第33行  - 客户列表查询车牌通过 
+[2021-01-21 10:46:07] [INFO] >> CustomerList.py >> 第139行  - 校验查询结果是否为真 
+[2021-01-21 10:46:07] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/CustomerDetail/SaveConsumerReview{'defeatReasonContent': '无效数据（停机、空号）', 'bizTotal': '', 'forceTotal': '', 'taxTotal': '', 'reviewContent': '自动化录入', 'singleTime': '', 'jyPrice': '', 'appointTime': '2021-01-21 10:46:07', 'reviewStatus': 4, 'reviewStatusName': '战败', 'defeatReasonId': 68255, 'buid': 601041385, 'companyType': 4}] 
+[2021-01-21 10:46:07] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/CustomerDetail/QueryUserinfoSteps?buid=601041385&groupId=0&pageIndex=1&pageSize=20None] 
+[2021-01-21 10:46:09] [INFO] >> CustomerList.py >> 第159行  - 录入战败通过 
+[2021-01-21 10:46:09] [INFO] >> chudan_and_zhanbai.py >> 第51行  - 战败列表查询 
+[2021-01-21 10:46:09] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/customer/defeatList{'pageIndex': 1, 'pageSize': 15, 'LicenseNo': '京A23456'}] 
+[2021-01-21 10:46:09] [INFO] >> chudan_and_zhanbai.py >> 第62行  - 战败列表查询通过 
+[2021-01-21 10:46:09] [INFO] >> TestCase.py >> 第149行  - 用例：使用全部客户第8条数据录入续保跟进 
+[2021-01-21 10:46:09] [INFO] >> CustomerList.py >> 第445行  - 获取全部客户数据 
+[2021-01-21 10:46:09] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/customer/querylist{'pageIndex': 1, 'pageSize': 45, 'selectType': 1, 'topLabel': 'tab_quanbukehu', 'orderBy': {'orderByField': 'updateTime', 'orderByType': 'desc'}, 'isFllowUp': '', 'isDataLable': '', 'dataTag': '', 'dataTypeId': 0, 'lastMaintainDayRange': '', 'isMaintain': 1, 'isOpenGuanjia': 1, 'firstSearch': True}] 
+[2021-01-21 10:46:09] [INFO] >> CustomerList.py >> 第463行  - [buid:600940273]录入普通跟进 
+[2021-01-21 10:46:09] [INFO] >> CustomerList.py >> 第469行  - 请求录入跟进 
+[2021-01-21 10:46:09] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/CustomerDetail/SaveConsumerReview{'defeatReasonContent': '', 'bizTotal': '', 'forceTotal': '', 'taxTotal': '', 'reviewContent': '自动化录入', 'singleTime': '', 'jyPrice': '', 'appointTime': '2021-01-22 10:46:09', 'reviewStatus': 205619, 'reviewStatusName': '自动化录入', 'isTrusted': True, 'buid': 600940273, 'companyType': 4, 'groupId': 1}] 
+[2021-01-21 10:46:10] [INFO] >> CustomerList.py >> 第471行  - 返回录入跟进响应结果：{'data': {'coverCode': 0, 'deteatId': None, 'carPolicyId': None}, 'code': 1, 'message': '成功'} 
+[2021-01-21 10:46:10] [INFO] >> TestCase.py >> 第157行  - 用例：客户列表不筛选导出全部客户TAB数据 
+[2021-01-21 10:46:10] [INFO] >> CustomerList.py >> 第479行  - 客户列表导出 
+[2021-01-21 10:46:10] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/customer/exportCustomer{'pageIndex': 1, 'pageSize': 15, 'selectType': 1, 'topLabel': 'tab_quanbukehu', 'orderBy': {'orderByField': 'updateTime', 'orderByType': 'desc'}, 'isFllowUp': '', 'isDataLable': '', 'dataTag': '', 'dataTypeId': 0, 'lastMaintainDayRange': '', 'isMaintain': 1}] 
+[2021-01-21 10:46:14] [INFO] >> CustomerList.py >> 第486行  - 返回导出响应结果：{'code': 1, 'message': '操作成功', 'data': 'https://image.91bihu.com/customer/2021/1/21/171383/6ee1a914f1874c3f88277c0272e8beed.zip'} 
+[2021-01-21 10:46:14] [INFO] >> TestCase.py >> 第163行  - 用例：客户列表筛选（战败）导出全部客户数据 
+[2021-01-21 10:46:14] [INFO] >> CustomerList.py >> 第489行  - 客户列表导出 
+[2021-01-21 10:46:14] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/customer/exportCustomer{'pageIndex': 1, 'pageSize': 15, 'selectType': 1, 'topLabel': 'tab_quanbukehu', 'customerStatusIds': [4], 'orderBy': {'orderByField': 'updateTime', 'orderByType': 'desc'}, 'isFllowUp': '', 'isDataLable': '', 'dataTag': '', 'dataTypeId': 0, 'lastMaintainDayRange': '', 'isMaintain': 1}] 
+[2021-01-21 10:46:15] [INFO] >> CustomerList.py >> 第497行  - 返回导出响应结果：{'code': 1, 'message': '操作成功', 'data': 'https://image.91bihu.com/customer/2021/1/21/171383/105b846a06674dec8f626caf6bdf8424.zip'} 
+[2021-01-21 10:46:15] [INFO] >> TestCase.py >> 第170行  - 用例：定保录入成功预约 
+[2021-01-21 10:46:15] [INFO] >> CustomerList.py >> 第445行  - 获取全部客户数据 
+[2021-01-21 10:46:15] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/customer/querylist{'pageIndex': 1, 'pageSize': 45, 'selectType': 1, 'topLabel': 'tab_quanbukehu', 'orderBy': {'orderByField': 'updateTime', 'orderByType': 'desc'}, 'isFllowUp': '', 'isDataLable': '', 'dataTag': '', 'dataTypeId': 0, 'lastMaintainDayRange': '', 'isMaintain': 1, 'isOpenGuanjia': 1, 'firstSearch': True}] 
+[2021-01-21 10:46:15] [INFO] >> CustomerList.py >> 第506行  - 定保录入成功预约 
+[2021-01-21 10:46:15] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/CustomerDetail/SaveConsumerReview{'groupId': 7, 'defeatReasonContent': '', 'maintainAmount': '1000', 'reviewContent': '自动化录入内容', 'singleTime': '2021-01-06', 'appointTime': '2021-01-22 10:46:15', 'reviewStatusName': '成功预约', 'reviewStatus': 9, 'contentCategoryId': 8193, 'contentCategoryInfo': '自动化录入', 'isTrusted': True, 'deteatId': None, 'carPolicyId': None, 'buid': 600940277, 'companyType': 4}] 
+[2021-01-21 10:46:16] [INFO] >> CustomerList.py >> 第514行  - 校验响应结果：{'data': {'coverCode': 0, 'deteatId': None, 'carPolicyId': None}, 'code': 1, 'message': '成功'} 
+[2021-01-21 10:46:16] [INFO] >> CustomerList.py >> 第516行  - 定保录入成功:{'data': {'coverCode': 0, 'deteatId': None, 'carPolicyId': None}, 'code': 1, 'message': '成功'} 
+[2021-01-21 10:46:16] [INFO] >> TestCase.py >> 第178行  - 用例：定保录入战败 
+[2021-01-21 10:46:16] [INFO] >> CustomerList.py >> 第445行  - 获取全部客户数据 
+[2021-01-21 10:46:16] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/customer/querylist{'pageIndex': 1, 'pageSize': 45, 'selectType': 1, 'topLabel': 'tab_quanbukehu', 'orderBy': {'orderByField': 'updateTime', 'orderByType': 'desc'}, 'isFllowUp': '', 'isDataLable': '', 'dataTag': '', 'dataTypeId': 0, 'lastMaintainDayRange': '', 'isMaintain': 1, 'isOpenGuanjia': 1, 'firstSearch': True}] 
+[2021-01-21 10:46:16] [INFO] >> CustomerList.py >> 第534行  - 定保录入战败 
+[2021-01-21 10:46:16] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/CustomerDetail/SaveConsumerReview{'groupId': 7, 'defeatReasonContent': '自动化录入', 'maintainAmount': 0, 'reviewContent': '自动化录入内容', 'singleTime': '', 'appointTime': '2021-01-22 10:46:16', 'reviewStatusName': '战败', 'reviewStatus': 4, 'defeatReasonId': 8193, 'contentCategoryId': 8193, 'contentCategoryInfo': '自动化录入', 'isTrusted': True, 'deteatId': None, 'carPolicyId': None, 'buid': 600940277, 'companyType': 4}] 
+[2021-01-21 10:46:16] [INFO] >> CustomerList.py >> 第543行  - 校验响应结果：{'data': {'coverCode': 1, 'deteatId': None, 'carPolicyId': 66}, 'code': 1, 'message': '系统监测您今天已存在定保预约出单/战败记录，重新提交后会覆盖原预约出单/战败记录，确认执行？'} 
+[2021-01-21 10:46:16] [INFO] >> CustomerList.py >> 第548行  - 定保出单重复，确认覆盖 
+[2021-01-21 10:46:16] [INFO] >> CustomerList.py >> 第534行  - 定保录入战败 
+[2021-01-21 10:46:16] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/CustomerDetail/SaveConsumerReview{'groupId': 7, 'defeatReasonContent': '自动化录入', 'maintainAmount': 0, 'reviewContent': '自动化录入内容', 'singleTime': '', 'appointTime': '2021-01-22 10:46:16', 'reviewStatusName': '战败', 'reviewStatus': 4, 'defeatReasonId': 8193, 'contentCategoryId': 8193, 'contentCategoryInfo': '自动化录入', 'isTrusted': True, 'deteatId': None, 'carPolicyId': 66, 'buid': 600940277, 'companyType': 4}] 
+[2021-01-21 10:46:16] [INFO] >> CustomerList.py >> 第543行  - 校验响应结果：{'data': {'coverCode': 0, 'deteatId': None, 'carPolicyId': None}, 'code': 1, 'message': '成功'} 
+[2021-01-21 10:46:16] [INFO] >> CustomerList.py >> 第545行  - 定保录入成功 
+[2021-01-21 10:46:16] [INFO] >> TestCase.py >> 第186行  - 用例：批量续保文件上传 
+[2021-01-21 10:46:16] [INFO] >> CustomerList.py >> 第564行  - 上传文件 
+[2021-01-21 10:46:16] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/BatchRenewal/BatchRenewalUploadNone] 
+[2021-01-21 10:46:16] [INFO] >> CustomerList.py >> 第571行  - 文件已上传到服务器：BatchRenewal/2021/1/21/171383/aac4f42043234e60aa7ae7f5e3d7dd4f.xlsx 
+[2021-01-21 10:46:16] [INFO] >> CustomerList.py >> 第572行  - 默认FindDeptId: 2869（部门ID），只适用于wanyuanhao账号，上传城市为【北京】 
+[2021-01-21 10:46:16] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/BatchRenewal/BatchRenewalMethod{'cityId': 1, 'channelType': 2, 'isHistoryRenewal': 0, 'batchRenewalType': 1, 'FindDeptId': 2869, 'isCoverSalesman': 0, 'isAddWechat': 0, 'fileName': '自动化上传.xlsx', 'filePath': 'BatchRenewal/2021/1/21/171383/aac4f42043234e60aa7ae7f5e3d7dd4f.xlsx', 'businessType': 0}] 
+[2021-01-21 10:46:17] [INFO] >> CustomerList.py >> 第580行  - 文件上传成功：{'data': {'isValid': True, 'name': '自动化上传.xlsx', 'batchRenewalId': 401377}, 'code': 1, 'message': '上传成功'} 
+[2021-01-21 10:46:17] [INFO] >> CustomerList.py >> 第595行  - 通过上传响应结果校验列表是否存在该批次，响应信息:{'data': {'isValid': True, 'name': '自动化上传.xlsx', 'batchRenewalId': 401377}, 'code': 1, 'message': '上传成功'} 
+[2021-01-21 10:46:17] [INFO] >> CustomerList.py >> 第599行  - 等待3秒获取列表批次，校验ID是否存在列表 
+[2021-01-21 10:46:20] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/BatchRenewal/GetBatchRenewalListMethod{'pageIndex': 1, 'pageSize': 15}] 
+[2021-01-21 10:46:20] [INFO] >> TestCase.py >> 第195行  - 用例：工作看板人员效能统计，校验录入出单、保费是否有统计 
+[2021-01-21 10:46:20] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/stats/api/v1/Panel/EmpEffectTotalNew{'deptId': [], 'categoryinfoId': [], 'searchEmployeeId': [], 'dataRangeTime': ['2021-01-21 00:00:00', '2021-01-21 23:59:59'], 'pageIndex': 1, 'pageSize': 50, 'total': 1, 'compId': '171383', 'employeeId': '171383'}] 
+[2021-01-21 10:46:20] [INFO] >> TestCase.py >> 第198行  - 校验人员效能响应结果是否为None ：{'code': 1, 'message': '成功', 'data': {'employeeId': 0, 'employeeName': None, 'compId': 0, 'insurancedCount': 0, 'defeatCount': 0, 'insuranceAmount': 0.0, 'bizAmount': 0.0, 'forceAmount': 0.0, 'taxAmount': 0.0, 'jyPrice': 0.0, 'reviewCount': 0, 'actualReviewCount': 0, 'planReviewCount': 0, 'dueToStoretCount': 0, 'entryCount': 0, 'callTime': 0.0, 'callCount': 0, 'avgCallTime': 0.0, 'renewalInquiryCount': 0, 'quotationCount': 0, 'quotationNumber': 0, 'smsSendCount': 0}} 
+[2021-01-21 10:46:20] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/customer/quotationReceiptList{'pageIndex': 1, 'pageSize': 15, 'appearTimeRange': ['2021-01-21 00:00:00', '2021-01-21 23:59:59']}] 
+[2021-01-21 10:46:20] [INFO] >> TestCase.py >> 第212行  - 获取客户列表buid 
+[2021-01-21 10:46:20] [INFO] >> CustomerList.py >> 第445行  - 获取全部客户数据 
+[2021-01-21 10:46:20] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/customer/querylist{'pageIndex': 1, 'pageSize': 45, 'selectType': 1, 'topLabel': 'tab_quanbukehu', 'orderBy': {'orderByField': 'updateTime', 'orderByType': 'desc'}, 'isFllowUp': '', 'isDataLable': '', 'dataTag': '', 'dataTypeId': 0, 'lastMaintainDayRange': '', 'isMaintain': 1, 'isOpenGuanjia': 1, 'firstSearch': True}] 
+[2021-01-21 10:46:20] [INFO] >> CustomerList.py >> 第48行  - 根据buid录入出单，默认录入人保 
+[2021-01-21 10:46:20] [INFO] >> CustomerList.py >> 第51行  - 客户列表查询L1234567000000000是否存在 
+[2021-01-21 10:46:20] [INFO] >> CustomerList.py >> 第29行  - 获取L1234567000000000查询结果 
+[2021-01-21 10:46:20] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/customer/querylist{'pageIndex': 1, 'pageSize': 15, 'selectType': 1, 'selectSearchValue': 'L1234567000000000', 'topLabel': 'tab_quanbukehu', 'orderBy': {'orderByField': 'updateTime', 'orderByType': 'desc'}, 'isFllowUp': '', 'isDataLable': '', 'dataTag': '', 'isOpenGuanjia': 1, 'licenseNo': 'L1234567000000000'}] 
+[2021-01-21 10:46:20] [INFO] >> CustomerList.py >> 第33行  - 客户列表查询车牌通过 
+[2021-01-21 10:46:20] [INFO] >> CustomerList.py >> 第56行  - 查询结果拿第一个buid 
+[2021-01-21 10:46:20] [INFO] >> CustomerList.py >> 第65行  - 发起录入出单请求 
+[2021-01-21 10:46:20] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/CustomerDetail/SaveConsumerReview{'defeatReasonContent': '', 'bizTotal': '1000.99', 'forceTotal': '500.11', 'taxTotal': '15.01', 'reviewContent': '自动化录入', 'singleTime': '2021-01-21', 'jyPrice': '222', 'appointTime': '2021-01-21 10:46:20', 'reviewStatus': 9, 'reviewStatusName': '成功出单', 'source': 4, 'buid': 601006446, 'companyType': 4}] 
+[2021-01-21 10:46:20] [INFO] >> CustomerList.py >> 第86行  - 本年度已出过保单,提交覆盖 
+[2021-01-21 10:46:20] [INFO] >> CustomerList.py >> 第100行  - 获取响应message校验是否出单成功 
+[2021-01-21 10:46:20] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/CustomerDetail/SaveConsumerReview{'defeatReasonContent': '', 'bizTotal': '1000.99', 'forceTotal': '500.11', 'taxTotal': '15.01', 'reviewContent': '自动化录入', 'singleTime': '2021-01-21', 'jyPrice': '222', 'appointTime': '2021-01-21 10:46:20', 'reviewStatus': 9, 'reviewStatusName': '成功出单', 'source': 4, 'buid': 601006446, 'companyType': 4, 'deteatId': None, 'carPolicyId': 3008203}] 
+[2021-01-21 10:46:23] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/CustomerDetail/QueryUserinfoSteps?buid=601006446&groupId=0&pageIndex=1&pageSize=20None] 
+[2021-01-21 10:46:23] [INFO] >> CustomerList.py >> 第108行  - 出单成功，校验buid[601006446]是否一致 
+[2021-01-21 10:46:23] [INFO] >> CustomerList.py >> 第111行  - 校验出单状态、录入保司、金额是否一致 
+[2021-01-21 10:46:23] [INFO] >> CustomerList.py >> 第114行  - 出单成功 
+[2021-01-21 10:46:28] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/stats/api/v1/Panel/EmpEffectTotalNew{'deptId': [], 'categoryinfoId': [], 'searchEmployeeId': [], 'dataRangeTime': ['2021-01-21 00:00:00', '2021-01-21 23:59:59'], 'pageIndex': 1, 'pageSize': 50, 'total': 1, 'compId': '171383', 'employeeId': '171383'}] 
+[2021-01-21 10:46:28] [INFO] >> TestCase.py >> 第226行  - 二次获取人员效能响应结果，断言响应结果是否为None ：{'code': 1, 'message': '成功', 'data': {'employeeId': 0, 'employeeName': None, 'compId': 0, 'insurancedCount': 0, 'defeatCount': 0, 'insuranceAmount': 0.0, 'bizAmount': 0.0, 'forceAmount': 0.0, 'taxAmount': 0.0, 'jyPrice': 0.0, 'reviewCount': 0, 'actualReviewCount': 0, 'planReviewCount': 0, 'dueToStoretCount': 0, 'entryCount': 0, 'callTime': 0.0, 'callCount': 0, 'avgCallTime': 0.0, 'renewalInquiryCount': 0, 'quotationCount': 0, 'quotationNumber': 0, 'smsSendCount': 0}} 
+[2021-01-21 10:46:28] [INFO] >> TestCase.py >> 第230行  - 历史出单台次：0+1，出单后台次：0 
+[2021-01-21 10:46:28] [INFO] >> run_case.py >> 第34行  - 发送邮件 
+[2021-01-21 10:59:15] [INFO] >> run_case.py >> 第17行  - 登录账户获取touken 
+[2021-01-21 10:59:15] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/identity/connect/token{'grant_type': 'password', 'username': 'wanyuanhao', 'password': '91bihu.com', 'scope': 'employee_center car_business smart_car_mgts', 'client_id': 'bot', 'client_secret': 'secret'}] 
+[2021-01-21 10:59:16] [INFO] >> Headers.py >> 第40行  - token更新到config文件 
+[2021-01-21 10:59:16] [INFO] >> Headers.py >> 第42行  - 返回token 
+[2021-01-21 10:59:16] [INFO] >> TestCase.py >> 第40行  - 用例：新增数据——录入出单流程 
+[2021-01-21 10:59:16] [INFO] >> Interface_quote.py >> 第24行  - 京AC1122发起续保 
+[2021-01-21 10:59:16] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/Renewal/RenewalCheck{'licenseNo': '京AC1122', 'cityCode': '1', 'renewalSource': '', 'carType': 1, 'typeId': 1, 'sixDigitsAfterIdCard': '', 'renewalType': 4}] 
+[2021-01-21 10:59:16] [INFO] >> Interface_quote.py >> 第43行  - 获取续保响应结果 
+[2021-01-21 10:59:16] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/Renewal/SubmitRenewalAsync{'licenseNo': '京AC1122', 'cityCode': '1', 'renewalSource': '', 'carType': 1, 'typeId': 1, 'sixDigitsAfterIdCard': '', 'renewalType': 4, 'buid': 0}] 
+[2021-01-21 10:59:16] [INFO] >> Interface_quote.py >> 第46行  - 新增车牌成功 
+[2021-01-21 10:59:16] [INFO] >> CustomerList.py >> 第29行  - 获取京AC1122查询结果 
+[2021-01-21 10:59:16] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/customer/querylist{'pageIndex': 1, 'pageSize': 15, 'selectType': 1, 'selectSearchValue': '京AC1122', 'topLabel': 'tab_quanbukehu', 'orderBy': {'orderByField': 'updateTime', 'orderByType': 'desc'}, 'isFllowUp': '', 'isDataLable': '', 'dataTag': '', 'isOpenGuanjia': 1, 'licenseNo': '京AC1122'}] 
+[2021-01-21 10:59:17] [INFO] >> CustomerList.py >> 第33行  - 客户列表查询车牌通过 
+[2021-01-21 10:59:17] [INFO] >> CustomerList.py >> 第48行  - 根据buid录入出单，默认录入人保 
+[2021-01-21 10:59:17] [INFO] >> CustomerList.py >> 第51行  - 客户列表查询京AC1122是否存在 
+[2021-01-21 10:59:17] [INFO] >> CustomerList.py >> 第29行  - 获取京AC1122查询结果 
+[2021-01-21 10:59:17] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/customer/querylist{'pageIndex': 1, 'pageSize': 15, 'selectType': 1, 'selectSearchValue': '京AC1122', 'topLabel': 'tab_quanbukehu', 'orderBy': {'orderByField': 'updateTime', 'orderByType': 'desc'}, 'isFllowUp': '', 'isDataLable': '', 'dataTag': '', 'isOpenGuanjia': 1, 'licenseNo': '京AC1122'}] 
+[2021-01-21 10:59:17] [INFO] >> CustomerList.py >> 第33行  - 客户列表查询车牌通过 
+[2021-01-21 10:59:17] [INFO] >> CustomerList.py >> 第56行  - 查询结果拿第一个buid 
+[2021-01-21 10:59:17] [INFO] >> CustomerList.py >> 第65行  - 发起录入出单请求 
+[2021-01-21 10:59:17] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/CustomerDetail/SaveConsumerReview{'defeatReasonContent': '', 'bizTotal': '1000.99', 'forceTotal': '500.11', 'taxTotal': '15.01', 'reviewContent': '自动化录入', 'singleTime': '2021-01-21', 'jyPrice': '222', 'appointTime': '2021-01-21 10:59:17', 'reviewStatus': 9, 'reviewStatusName': '成功出单', 'source': 4, 'buid': 600976286, 'companyType': 4}] 
+[2021-01-21 10:59:17] [INFO] >> CustomerList.py >> 第86行  - 本年度已出过保单,提交覆盖 
+[2021-01-21 10:59:17] [INFO] >> CustomerList.py >> 第100行  - 获取响应message校验是否出单成功 
+[2021-01-21 10:59:17] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/CustomerDetail/SaveConsumerReview{'defeatReasonContent': '', 'bizTotal': '1000.99', 'forceTotal': '500.11', 'taxTotal': '15.01', 'reviewContent': '自动化录入', 'singleTime': '2021-01-21', 'jyPrice': '222', 'appointTime': '2021-01-21 10:59:17', 'reviewStatus': 9, 'reviewStatusName': '成功出单', 'source': 4, 'buid': 600976286, 'companyType': 4, 'deteatId': None, 'carPolicyId': 3008290}] 
+[2021-01-21 10:59:35] [INFO] >> TestCase.py >> 第40行  - 用例：新增数据——录入出单流程 
+[2021-01-21 10:59:35] [INFO] >> Interface_quote.py >> 第24行  - 京AC1122发起续保 
+[2021-01-21 10:59:35] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/Renewal/RenewalCheck{'licenseNo': '京AC1122', 'cityCode': '1', 'renewalSource': '', 'carType': 1, 'typeId': 1, 'sixDigitsAfterIdCard': '', 'renewalType': 4}] 
+[2021-01-21 10:59:36] [INFO] >> Interface_quote.py >> 第43行  - 获取续保响应结果 
+[2021-01-21 10:59:36] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/Renewal/SubmitRenewalAsync{'licenseNo': '京AC1122', 'cityCode': '1', 'renewalSource': '', 'carType': 1, 'typeId': 1, 'sixDigitsAfterIdCard': '', 'renewalType': 4, 'buid': 0}] 
+[2021-01-21 10:59:36] [INFO] >> Interface_quote.py >> 第46行  - 新增车牌成功 
+[2021-01-21 10:59:36] [INFO] >> CustomerList.py >> 第29行  - 获取京AC1122查询结果 
+[2021-01-21 10:59:36] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/customer/querylist{'pageIndex': 1, 'pageSize': 15, 'selectType': 1, 'selectSearchValue': '京AC1122', 'topLabel': 'tab_quanbukehu', 'orderBy': {'orderByField': 'updateTime', 'orderByType': 'desc'}, 'isFllowUp': '', 'isDataLable': '', 'dataTag': '', 'isOpenGuanjia': 1, 'licenseNo': '京AC1122'}] 
+[2021-01-21 10:59:36] [INFO] >> CustomerList.py >> 第33行  - 客户列表查询车牌通过 
+[2021-01-21 10:59:36] [INFO] >> CustomerList.py >> 第48行  - 根据buid录入出单，默认录入人保 
+[2021-01-21 10:59:36] [INFO] >> CustomerList.py >> 第51行  - 客户列表查询京AC1122是否存在 
+[2021-01-21 10:59:36] [INFO] >> CustomerList.py >> 第29行  - 获取京AC1122查询结果 
+[2021-01-21 10:59:36] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/customer/querylist{'pageIndex': 1, 'pageSize': 15, 'selectType': 1, 'selectSearchValue': '京AC1122', 'topLabel': 'tab_quanbukehu', 'orderBy': {'orderByField': 'updateTime', 'orderByType': 'desc'}, 'isFllowUp': '', 'isDataLable': '', 'dataTag': '', 'isOpenGuanjia': 1, 'licenseNo': '京AC1122'}] 
+[2021-01-21 10:59:36] [INFO] >> CustomerList.py >> 第33行  - 客户列表查询车牌通过 
+[2021-01-21 10:59:36] [INFO] >> CustomerList.py >> 第56行  - 查询结果拿第一个buid 
+[2021-01-21 10:59:36] [INFO] >> CustomerList.py >> 第65行  - 发起录入出单请求 
+[2021-01-21 10:59:36] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/CustomerDetail/SaveConsumerReview{'defeatReasonContent': '', 'bizTotal': '1000.99', 'forceTotal': '500.11', 'taxTotal': '15.01', 'reviewContent': '自动化录入', 'singleTime': '2021-01-21', 'jyPrice': '222', 'appointTime': '2021-01-21 10:59:36', 'reviewStatus': 9, 'reviewStatusName': '成功出单', 'source': 4, 'buid': 600976286, 'companyType': 4}] 
+[2021-01-21 10:59:36] [INFO] >> CustomerList.py >> 第86行  - 本年度已出过保单,提交覆盖 
+[2021-01-21 10:59:36] [INFO] >> CustomerList.py >> 第100行  - 获取响应message校验是否出单成功 
+[2021-01-21 10:59:36] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/CustomerDetail/SaveConsumerReview{'defeatReasonContent': '', 'bizTotal': '1000.99', 'forceTotal': '500.11', 'taxTotal': '15.01', 'reviewContent': '自动化录入', 'singleTime': '2021-01-21', 'jyPrice': '222', 'appointTime': '2021-01-21 10:59:36', 'reviewStatus': 9, 'reviewStatusName': '成功出单', 'source': 4, 'buid': 600976286, 'companyType': 4, 'deteatId': None, 'carPolicyId': 3008292}] 
+[2021-01-21 10:59:39] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/CustomerDetail/QueryUserinfoSteps?buid=600976286&groupId=0&pageIndex=1&pageSize=20None] 
+[2021-01-21 10:59:39] [INFO] >> CustomerList.py >> 第108行  - 出单成功，校验buid[600976286]是否一致 
+[2021-01-21 10:59:39] [INFO] >> CustomerList.py >> 第111行  - 校验出单状态、录入保司、金额是否一致 
+[2021-01-21 10:59:39] [INFO] >> CustomerList.py >> 第114行  - 出单成功 
+[2021-01-21 10:59:39] [INFO] >> chudan_and_zhanbai.py >> 第26行  - 出单列表查询 
+[2021-01-21 10:59:39] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/customer/quotationReceiptList{'pageIndex': 1, 'pageSize': 15, 'LicenseNo': '京AC1122'}] 
+[2021-01-21 10:59:39] [INFO] >> chudan_and_zhanbai.py >> 第37行  - 出单列表查询通过 
+[2021-01-21 10:59:39] [INFO] >> TestCase.py >> 第52行  - 用例：顶级账户计划回访数据量对比，使用账号：jiao 
+[2021-01-21 10:59:39] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/identity/connect/token{'grant_type': 'password', 'username': 'jiao', 'password': '91bihu.com', 'scope': 'employee_center car_business smart_car_mgts', 'client_id': 'bot', 'client_secret': 'secret'}] 
+[2021-01-21 10:59:39] [INFO] >> Headers.py >> 第64行  - 返回token 
+[2021-01-21 10:59:39] [INFO] >> CustomerList.py >> 第374行  - 获取接口返回的计划回访数量 
+[2021-01-21 10:59:39] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/Customer/QueryReviewCount{'pageIndex': 1, 'pageSize': 15, 'selectType': 1, 'topLabel': 'tab_jihuahuifang', 'orderBy': {'orderByField': 'updateTime', 'orderByType': 'desc'}, 'isFllowUp': '', 'labelTimeSpan': 2, 'isDataLable': '', 'dataTag': '', 'dataTypeId': 0}] 
+[2021-01-21 10:59:40] [INFO] >> CustomerList.py >> 第386行  - 列表形式返回计划回访数量：[314, 391, 160, 113, 173, 119, 179, 112, 194] 
+[2021-01-21 10:59:40] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:59:40] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/customer/querylist{'pageIndex': 1, 'pageSize': 324, 'selectType': 1, 'topLabel': 'tab_jihuahuifang', 'orderBy': {'orderByField': 'updateTime', 'orderByType': 'desc'}, 'isFllowUp': '', 'labelTimeSpan': 1, 'isDataLable': '', 'dataTag': '', 'dataTypeId': 0}] 
+[2021-01-21 10:59:40] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:59:40] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/customer/querylist{'pageIndex': 1, 'pageSize': 401, 'selectType': 1, 'topLabel': 'tab_jihuahuifang', 'orderBy': {'orderByField': 'updateTime', 'orderByType': 'desc'}, 'isFllowUp': '', 'labelTimeSpan': 2, 'isDataLable': '', 'dataTag': '', 'dataTypeId': 0}] 
+[2021-01-21 10:59:41] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:59:41] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/customer/querylist{'pageIndex': 1, 'pageSize': 170, 'selectType': 1, 'topLabel': 'tab_jihuahuifang', 'orderBy': {'orderByField': 'updateTime', 'orderByType': 'desc'}, 'isFllowUp': '', 'labelTimeSpan': 3, 'isDataLable': '', 'dataTag': '', 'dataTypeId': 0}] 
+[2021-01-21 10:59:42] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:59:42] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/customer/querylist{'pageIndex': 1, 'pageSize': 123, 'selectType': 1, 'topLabel': 'tab_jihuahuifang', 'orderBy': {'orderByField': 'updateTime', 'orderByType': 'desc'}, 'isFllowUp': '', 'labelTimeSpan': 4, 'isDataLable': '', 'dataTag': '', 'dataTypeId': 0}] 
+[2021-01-21 10:59:43] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:59:43] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/customer/querylist{'pageIndex': 1, 'pageSize': 183, 'selectType': 1, 'topLabel': 'tab_jihuahuifang', 'orderBy': {'orderByField': 'updateTime', 'orderByType': 'desc'}, 'isFllowUp': '', 'labelTimeSpan': 5, 'isDataLable': '', 'dataTag': '', 'dataTypeId': 0}] 
+[2021-01-21 10:59:43] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:59:43] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/customer/querylist{'pageIndex': 1, 'pageSize': 129, 'selectType': 1, 'topLabel': 'tab_jihuahuifang', 'orderBy': {'orderByField': 'updateTime', 'orderByType': 'desc'}, 'isFllowUp': '', 'labelTimeSpan': 6, 'isDataLable': '', 'dataTag': '', 'dataTypeId': 0}] 
+[2021-01-21 10:59:44] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:59:44] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/customer/querylist{'pageIndex': 1, 'pageSize': 189, 'selectType': 1, 'topLabel': 'tab_jihuahuifang', 'orderBy': {'orderByField': 'updateTime', 'orderByType': 'desc'}, 'isFllowUp': '', 'labelTimeSpan': 7, 'isDataLable': '', 'dataTag': '', 'dataTypeId': 0}] 
+[2021-01-21 10:59:44] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:59:44] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/customer/querylist{'pageIndex': 1, 'pageSize': 122, 'selectType': 1, 'topLabel': 'tab_jihuahuifang', 'orderBy': {'orderByField': 'updateTime', 'orderByType': 'desc'}, 'isFllowUp': '', 'labelTimeSpan': 8, 'isDataLable': '', 'dataTag': '', 'dataTypeId': 0}] 
+[2021-01-21 10:59:45] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:59:45] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/customer/querylist{'pageIndex': 1, 'pageSize': 204, 'selectType': 1, 'topLabel': 'tab_jihuahuifang', 'orderBy': {'orderByField': 'updateTime', 'orderByType': 'desc'}, 'isFllowUp': '', 'labelTimeSpan': 9999, 'isDataLable': '', 'dataTag': '', 'dataTypeId': 0}] 
+[2021-01-21 10:59:45] [INFO] >> TestCase.py >> 第75行  - 用例：校验报价成功的数据是否有报价历史 
+[2021-01-21 10:59:45] [INFO] >> CustomerList.py >> 第405行  - 筛选报价成功数据 
+[2021-01-21 10:59:45] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/customer/querylist{'pageIndex': 1, 'pageSize': 45, 'selectType': 1, 'quoteStatus': [1], 'topLabel': 'tab_quanbukehu', 'orderBy': {'orderByField': 'updateTime', 'orderByType': 'desc'}, 'isFllowUp': '', 'isDataLable': '', 'dataTag': '', 'dataTypeId': 0, 'isMaintain': 1, 'firstSearch': True}] 
+[2021-01-21 10:59:45] [INFO] >> CustomerList.py >> 第412行  - 返回筛选结果 
+[2021-01-21 10:59:45] [INFO] >> CustomerList.py >> 第420行  - 获取报价历史 
+[2021-01-21 10:59:45] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/Renewal/GetQuoteHistory{'buid': 600971318}] 
+[2021-01-21 10:59:45] [INFO] >> CustomerList.py >> 第425行  - 返回报价历史结果 
+[2021-01-21 10:59:45] [INFO] >> TestCase.py >> 第85行  - 用例：校验切换报价历史是否成功 
+[2021-01-21 10:59:45] [INFO] >> CustomerList.py >> 第405行  - 筛选报价成功数据 
+[2021-01-21 10:59:45] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/customer/querylist{'pageIndex': 1, 'pageSize': 45, 'selectType': 1, 'quoteStatus': [1], 'topLabel': 'tab_quanbukehu', 'orderBy': {'orderByField': 'updateTime', 'orderByType': 'desc'}, 'isFllowUp': '', 'isDataLable': '', 'dataTag': '', 'dataTypeId': 0, 'isMaintain': 1, 'firstSearch': True}] 
+[2021-01-21 10:59:46] [INFO] >> CustomerList.py >> 第412行  - 返回筛选结果 
+[2021-01-21 10:59:46] [INFO] >> CustomerList.py >> 第420行  - 获取报价历史 
+[2021-01-21 10:59:46] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/Renewal/GetQuoteHistory{'buid': 600971318}] 
+[2021-01-21 10:59:46] [INFO] >> CustomerList.py >> 第425行  - 返回报价历史结果 
+[2021-01-21 10:59:46] [INFO] >> CustomerList.py >> 第433行  - 根据报价历史id切换报价历史 
+[2021-01-21 10:59:46] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/Renewal/GetQuoteRecord{'id': '93de9abf-d304-4b35-b87d-1e6362f94f6c'}] 
+[2021-01-21 10:59:46] [INFO] >> CustomerList.py >> 第438行  - 报价历史已切换 
+[2021-01-21 10:59:46] [INFO] >> TestCase.py >> 第105行  - 用例：下级账户计划回访数据量对比,使用账号：18612938273 
+[2021-01-21 10:59:46] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/identity/connect/token{'grant_type': 'password', 'username': '18612938273', 'password': '91bihu.com', 'scope': 'employee_center car_business smart_car_mgts', 'client_id': 'bot', 'client_secret': 'secret'}] 
+[2021-01-21 10:59:46] [INFO] >> Headers.py >> 第64行  - 返回token 
+[2021-01-21 10:59:46] [INFO] >> CustomerList.py >> 第374行  - 获取接口返回的计划回访数量 
+[2021-01-21 10:59:46] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/Customer/QueryReviewCount{'pageIndex': 1, 'pageSize': 15, 'selectType': 1, 'topLabel': 'tab_jihuahuifang', 'orderBy': {'orderByField': 'updateTime', 'orderByType': 'desc'}, 'isFllowUp': '', 'labelTimeSpan': 2, 'isDataLable': '', 'dataTag': '', 'dataTypeId': 0}] 
+[2021-01-21 10:59:46] [INFO] >> CustomerList.py >> 第386行  - 列表形式返回计划回访数量：[0, 28, 34, 19, 33, 33, 21, 3, 29] 
+[2021-01-21 10:59:46] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:59:46] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/customer/querylist{'pageIndex': 1, 'pageSize': 10, 'selectType': 1, 'topLabel': 'tab_jihuahuifang', 'orderBy': {'orderByField': 'updateTime', 'orderByType': 'desc'}, 'isFllowUp': '', 'labelTimeSpan': 1, 'isDataLable': '', 'dataTag': '', 'dataTypeId': 0}] 
+[2021-01-21 10:59:46] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:59:46] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/customer/querylist{'pageIndex': 1, 'pageSize': 38, 'selectType': 1, 'topLabel': 'tab_jihuahuifang', 'orderBy': {'orderByField': 'updateTime', 'orderByType': 'desc'}, 'isFllowUp': '', 'labelTimeSpan': 2, 'isDataLable': '', 'dataTag': '', 'dataTypeId': 0}] 
+[2021-01-21 10:59:46] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:59:46] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/customer/querylist{'pageIndex': 1, 'pageSize': 44, 'selectType': 1, 'topLabel': 'tab_jihuahuifang', 'orderBy': {'orderByField': 'updateTime', 'orderByType': 'desc'}, 'isFllowUp': '', 'labelTimeSpan': 3, 'isDataLable': '', 'dataTag': '', 'dataTypeId': 0}] 
+[2021-01-21 10:59:47] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:59:47] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/customer/querylist{'pageIndex': 1, 'pageSize': 29, 'selectType': 1, 'topLabel': 'tab_jihuahuifang', 'orderBy': {'orderByField': 'updateTime', 'orderByType': 'desc'}, 'isFllowUp': '', 'labelTimeSpan': 4, 'isDataLable': '', 'dataTag': '', 'dataTypeId': 0}] 
+[2021-01-21 10:59:47] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:59:47] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/customer/querylist{'pageIndex': 1, 'pageSize': 43, 'selectType': 1, 'topLabel': 'tab_jihuahuifang', 'orderBy': {'orderByField': 'updateTime', 'orderByType': 'desc'}, 'isFllowUp': '', 'labelTimeSpan': 5, 'isDataLable': '', 'dataTag': '', 'dataTypeId': 0}] 
+[2021-01-21 10:59:47] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:59:47] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/customer/querylist{'pageIndex': 1, 'pageSize': 43, 'selectType': 1, 'topLabel': 'tab_jihuahuifang', 'orderBy': {'orderByField': 'updateTime', 'orderByType': 'desc'}, 'isFllowUp': '', 'labelTimeSpan': 6, 'isDataLable': '', 'dataTag': '', 'dataTypeId': 0}] 
+[2021-01-21 10:59:47] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:59:47] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/customer/querylist{'pageIndex': 1, 'pageSize': 31, 'selectType': 1, 'topLabel': 'tab_jihuahuifang', 'orderBy': {'orderByField': 'updateTime', 'orderByType': 'desc'}, 'isFllowUp': '', 'labelTimeSpan': 7, 'isDataLable': '', 'dataTag': '', 'dataTypeId': 0}] 
+[2021-01-21 10:59:47] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:59:47] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/customer/querylist{'pageIndex': 1, 'pageSize': 13, 'selectType': 1, 'topLabel': 'tab_jihuahuifang', 'orderBy': {'orderByField': 'updateTime', 'orderByType': 'desc'}, 'isFllowUp': '', 'labelTimeSpan': 8, 'isDataLable': '', 'dataTag': '', 'dataTypeId': 0}] 
+[2021-01-21 10:59:47] [INFO] >> CustomerList.py >> 第394行  - 循环获取计划回访每个TAB页的数据 
+[2021-01-21 10:59:47] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/customer/querylist{'pageIndex': 1, 'pageSize': 39, 'selectType': 1, 'topLabel': 'tab_jihuahuifang', 'orderBy': {'orderByField': 'updateTime', 'orderByType': 'desc'}, 'isFllowUp': '', 'labelTimeSpan': 9999, 'isDataLable': '', 'dataTag': '', 'dataTypeId': 0}] 
+[2021-01-21 10:59:48] [INFO] >> TestCase.py >> 第130行  - 用例：客户列表分配，使用账号wanyuanhao,分配人：17501110001 
+[2021-01-21 10:59:48] [INFO] >> TestCase.py >> 第131行  - 执行分配用例 
+[2021-01-21 10:59:48] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/identity/connect/token{'grant_type': 'password', 'username': 'wanyuanhao', 'password': '91bihu.com', 'scope': 'employee_center car_business smart_car_mgts', 'client_id': 'bot', 'client_secret': 'secret'}] 
+[2021-01-21 10:59:48] [INFO] >> Headers.py >> 第64行  - 返回token 
+[2021-01-21 10:59:48] [INFO] >> CustomerList.py >> 第259行  - 客户列表分配 
+[2021-01-21 10:59:48] [INFO] >> CustomerList.py >> 第266行  - 获取客户列表全部客户的数据 
+[2021-01-21 10:59:48] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/customer/querylist{'pageIndex': 1, 'pageSize': 15, 'selectType': 1, 'topLabel': 'tab_quanbukehu', 'orderBy': {'orderByField': 'updateTime', 'orderByType': 'desc'}, 'isFllowUp': '', 'isDataLable': '', 'dataTag': '', 'isOpenGuanjia': 1}] 
+[2021-01-21 10:59:48] [INFO] >> CustomerList.py >> 第272行  - 拿到前4个buid 
+[2021-01-21 10:59:48] [INFO] >> CustomerList.py >> 第284行  - 分配数据[[600976286, 601006446, 600940277, 600940273]]给ID为(287523)的用户 
+[2021-01-21 10:59:48] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/customer/DistributeCustomer{'pageIndex': 1, 'pageSize': 15, 'selectType': 1, 'topLabel': 'tab_quanbukehu', 'orderBy': {'orderByField': 'updateTime', 'orderByType': 'desc'}, 'isFllowUp': '', 'isDataLable': '', 'dataTag': '', 'distributeEmployeeIds': [287523], 'averageCount': 4, 'allocationRule': 1, 'buids': [600976286, 601006446, 600940277, 600940273]}] 
+[2021-01-21 10:59:48] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/customer/querylist{'pageIndex': 1, 'pageSize': 15, 'buids': [600976286, 601006446, 600940277, 600940273], 'selectType': 1, 'topLabel': 'tab_quanbukehu', 'orderBy': {'orderByField': 'updateTime', 'orderByType': 'desc'}, 'isFllowUp': '', 'isDataLable': '', 'dataTag': '', 'firstSearch': ''}] 
+[2021-01-21 10:59:48] [INFO] >> CustomerList.py >> 第294行  - 校验分配人员是否匹配 
+[2021-01-21 10:59:48] [INFO] >> TestCase.py >> 第139行  - 用例：使用全部客户第5条数据录入战败 
+[2021-01-21 10:59:48] [INFO] >> CustomerList.py >> 第445行  - 获取全部客户数据 
+[2021-01-21 10:59:48] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/customer/querylist{'pageIndex': 1, 'pageSize': 45, 'selectType': 1, 'topLabel': 'tab_quanbukehu', 'orderBy': {'orderByField': 'updateTime', 'orderByType': 'desc'}, 'isFllowUp': '', 'isDataLable': '', 'dataTag': '', 'dataTypeId': 0, 'lastMaintainDayRange': '', 'isMaintain': 1, 'isOpenGuanjia': 1, 'firstSearch': True}] 
+[2021-01-21 10:59:48] [INFO] >> CustomerList.py >> 第134行  - 录入战败 
+[2021-01-21 10:59:48] [INFO] >> CustomerList.py >> 第136行  - 客户列表查询京A23456是否存在 
+[2021-01-21 10:59:48] [INFO] >> CustomerList.py >> 第29行  - 获取京A23456查询结果 
+[2021-01-21 10:59:48] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/customer/querylist{'pageIndex': 1, 'pageSize': 15, 'selectType': 1, 'selectSearchValue': '京A23456', 'topLabel': 'tab_quanbukehu', 'orderBy': {'orderByField': 'updateTime', 'orderByType': 'desc'}, 'isFllowUp': '', 'isDataLable': '', 'dataTag': '', 'isOpenGuanjia': 1, 'licenseNo': '京A23456'}] 
+[2021-01-21 10:59:49] [INFO] >> CustomerList.py >> 第33行  - 客户列表查询车牌通过 
+[2021-01-21 10:59:49] [INFO] >> CustomerList.py >> 第139行  - 校验查询结果是否为真 
+[2021-01-21 10:59:49] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/CustomerDetail/SaveConsumerReview{'defeatReasonContent': '无效数据（停机、空号）', 'bizTotal': '', 'forceTotal': '', 'taxTotal': '', 'reviewContent': '自动化录入', 'singleTime': '', 'jyPrice': '', 'appointTime': '2021-01-21 10:59:48', 'reviewStatus': 4, 'reviewStatusName': '战败', 'defeatReasonId': 68255, 'buid': 601041385, 'companyType': 4}] 
+[2021-01-21 10:59:49] [INFO] >> CustomerList.py >> 第170行  - carPolicyId为None，替换成deteatId 
+[2021-01-21 10:59:49] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/CustomerDetail/SaveConsumerReview{'defeatReasonContent': '无效数据（停机、空号）', 'bizTotal': '', 'forceTotal': '', 'taxTotal': '', 'reviewContent': '自动化录入', 'singleTime': '', 'jyPrice': '', 'appointTime': '2021-01-21 10:59:48', 'defeatReasonId': 68255, 'reviewStatus': 4, 'reviewStatusName': '战败', 'buid': 601041385, 'companyType': 4, 'deteatId': 30013418, 'carPolicyId': ''}] 
+[2021-01-21 10:59:49] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/CustomerDetail/QueryUserinfoSteps?buid=601041385&groupId=0&pageIndex=1&pageSize=20None] 
+[2021-01-21 10:59:51] [INFO] >> CustomerList.py >> 第187行  - 录入战败通过 
+[2021-01-21 10:59:51] [INFO] >> chudan_and_zhanbai.py >> 第51行  - 战败列表查询 
+[2021-01-21 10:59:51] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/customer/defeatList{'pageIndex': 1, 'pageSize': 15, 'LicenseNo': '京A23456'}] 
+[2021-01-21 10:59:51] [INFO] >> chudan_and_zhanbai.py >> 第62行  - 战败列表查询通过 
+[2021-01-21 10:59:51] [INFO] >> TestCase.py >> 第149行  - 用例：使用全部客户第8条数据录入续保跟进 
+[2021-01-21 10:59:51] [INFO] >> CustomerList.py >> 第445行  - 获取全部客户数据 
+[2021-01-21 10:59:51] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/customer/querylist{'pageIndex': 1, 'pageSize': 45, 'selectType': 1, 'topLabel': 'tab_quanbukehu', 'orderBy': {'orderByField': 'updateTime', 'orderByType': 'desc'}, 'isFllowUp': '', 'isDataLable': '', 'dataTag': '', 'dataTypeId': 0, 'lastMaintainDayRange': '', 'isMaintain': 1, 'isOpenGuanjia': 1, 'firstSearch': True}] 
+[2021-01-21 10:59:51] [INFO] >> CustomerList.py >> 第463行  - [buid:600940270]录入普通跟进 
+[2021-01-21 10:59:51] [INFO] >> CustomerList.py >> 第469行  - 请求录入跟进 
+[2021-01-21 10:59:51] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/CustomerDetail/SaveConsumerReview{'defeatReasonContent': '', 'bizTotal': '', 'forceTotal': '', 'taxTotal': '', 'reviewContent': '自动化录入', 'singleTime': '', 'jyPrice': '', 'appointTime': '2021-01-22 10:59:51', 'reviewStatus': 205619, 'reviewStatusName': '自动化录入', 'isTrusted': True, 'buid': 600940270, 'companyType': 4, 'groupId': 1}] 
+[2021-01-21 10:59:51] [INFO] >> CustomerList.py >> 第471行  - 返回录入跟进响应结果：{'data': {'coverCode': 0, 'deteatId': None, 'carPolicyId': None}, 'code': 1, 'message': '成功'} 
+[2021-01-21 10:59:51] [INFO] >> TestCase.py >> 第157行  - 用例：客户列表不筛选导出全部客户TAB数据 
+[2021-01-21 10:59:51] [INFO] >> CustomerList.py >> 第479行  - 客户列表导出 
+[2021-01-21 10:59:51] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/customer/exportCustomer{'pageIndex': 1, 'pageSize': 15, 'selectType': 1, 'topLabel': 'tab_quanbukehu', 'orderBy': {'orderByField': 'updateTime', 'orderByType': 'desc'}, 'isFllowUp': '', 'isDataLable': '', 'dataTag': '', 'dataTypeId': 0, 'lastMaintainDayRange': '', 'isMaintain': 1}] 
+[2021-01-21 10:59:56] [INFO] >> CustomerList.py >> 第486行  - 返回导出响应结果：{'code': 1, 'message': '操作成功', 'data': 'https://image.91bihu.com/customer/2021/1/21/171383/b85dddde150f4b83b84ac1bffb69a171.zip'} 
+[2021-01-21 10:59:56] [INFO] >> TestCase.py >> 第163行  - 用例：客户列表筛选（战败）导出全部客户数据 
+[2021-01-21 10:59:56] [INFO] >> CustomerList.py >> 第489行  - 客户列表导出 
+[2021-01-21 10:59:56] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/customer/exportCustomer{'pageIndex': 1, 'pageSize': 15, 'selectType': 1, 'topLabel': 'tab_quanbukehu', 'customerStatusIds': [4], 'orderBy': {'orderByField': 'updateTime', 'orderByType': 'desc'}, 'isFllowUp': '', 'isDataLable': '', 'dataTag': '', 'dataTypeId': 0, 'lastMaintainDayRange': '', 'isMaintain': 1}] 
+[2021-01-21 10:59:57] [INFO] >> CustomerList.py >> 第497行  - 返回导出响应结果：{'code': 1, 'message': '操作成功', 'data': 'https://image.91bihu.com/customer/2021/1/21/171383/22183aaf995342718cc6761e8d460f4f.zip'} 
+[2021-01-21 10:59:57] [INFO] >> TestCase.py >> 第170行  - 用例：定保录入成功预约 
+[2021-01-21 10:59:57] [INFO] >> CustomerList.py >> 第445行  - 获取全部客户数据 
+[2021-01-21 10:59:57] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/customer/querylist{'pageIndex': 1, 'pageSize': 45, 'selectType': 1, 'topLabel': 'tab_quanbukehu', 'orderBy': {'orderByField': 'updateTime', 'orderByType': 'desc'}, 'isFllowUp': '', 'isDataLable': '', 'dataTag': '', 'dataTypeId': 0, 'lastMaintainDayRange': '', 'isMaintain': 1, 'isOpenGuanjia': 1, 'firstSearch': True}] 
+[2021-01-21 10:59:57] [INFO] >> CustomerList.py >> 第506行  - 定保录入成功预约 
+[2021-01-21 10:59:57] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/CustomerDetail/SaveConsumerReview{'groupId': 7, 'defeatReasonContent': '', 'maintainAmount': '1000', 'reviewContent': '自动化录入内容', 'singleTime': '2021-01-06', 'appointTime': '2021-01-22 10:59:57', 'reviewStatusName': '成功预约', 'reviewStatus': 9, 'contentCategoryId': 8193, 'contentCategoryInfo': '自动化录入', 'isTrusted': True, 'deteatId': None, 'carPolicyId': None, 'buid': 600940267, 'companyType': 4}] 
+[2021-01-21 10:59:57] [INFO] >> CustomerList.py >> 第514行  - 校验响应结果：{'data': {'coverCode': 0, 'deteatId': None, 'carPolicyId': None}, 'code': 1, 'message': '成功'} 
+[2021-01-21 10:59:57] [INFO] >> CustomerList.py >> 第516行  - 定保录入成功:{'data': {'coverCode': 0, 'deteatId': None, 'carPolicyId': None}, 'code': 1, 'message': '成功'} 
+[2021-01-21 10:59:57] [INFO] >> TestCase.py >> 第178行  - 用例：定保录入战败 
+[2021-01-21 10:59:57] [INFO] >> CustomerList.py >> 第445行  - 获取全部客户数据 
+[2021-01-21 10:59:57] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/customer/querylist{'pageIndex': 1, 'pageSize': 45, 'selectType': 1, 'topLabel': 'tab_quanbukehu', 'orderBy': {'orderByField': 'updateTime', 'orderByType': 'desc'}, 'isFllowUp': '', 'isDataLable': '', 'dataTag': '', 'dataTypeId': 0, 'lastMaintainDayRange': '', 'isMaintain': 1, 'isOpenGuanjia': 1, 'firstSearch': True}] 
+[2021-01-21 10:59:57] [INFO] >> CustomerList.py >> 第534行  - 定保录入战败 
+[2021-01-21 10:59:57] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/CustomerDetail/SaveConsumerReview{'groupId': 7, 'defeatReasonContent': '自动化录入', 'maintainAmount': 0, 'reviewContent': '自动化录入内容', 'singleTime': '', 'appointTime': '2021-01-22 10:59:57', 'reviewStatusName': '战败', 'reviewStatus': 4, 'defeatReasonId': 8193, 'contentCategoryId': 8193, 'contentCategoryInfo': '自动化录入', 'isTrusted': True, 'deteatId': None, 'carPolicyId': None, 'buid': 600940267, 'companyType': 4}] 
+[2021-01-21 10:59:57] [INFO] >> CustomerList.py >> 第543行  - 校验响应结果：{'data': {'coverCode': 1, 'deteatId': None, 'carPolicyId': 67}, 'code': 1, 'message': '系统监测您今天已存在定保预约出单/战败记录，重新提交后会覆盖原预约出单/战败记录，确认执行？'} 
+[2021-01-21 10:59:57] [INFO] >> CustomerList.py >> 第548行  - 定保出单重复，确认覆盖 
+[2021-01-21 10:59:57] [INFO] >> CustomerList.py >> 第534行  - 定保录入战败 
+[2021-01-21 10:59:57] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/CustomerDetail/SaveConsumerReview{'groupId': 7, 'defeatReasonContent': '自动化录入', 'maintainAmount': 0, 'reviewContent': '自动化录入内容', 'singleTime': '', 'appointTime': '2021-01-22 10:59:57', 'reviewStatusName': '战败', 'reviewStatus': 4, 'defeatReasonId': 8193, 'contentCategoryId': 8193, 'contentCategoryInfo': '自动化录入', 'isTrusted': True, 'deteatId': None, 'carPolicyId': 67, 'buid': 600940267, 'companyType': 4}] 
+[2021-01-21 10:59:58] [INFO] >> CustomerList.py >> 第543行  - 校验响应结果：{'data': {'coverCode': 0, 'deteatId': None, 'carPolicyId': None}, 'code': 1, 'message': '成功'} 
+[2021-01-21 10:59:58] [INFO] >> CustomerList.py >> 第545行  - 定保录入成功 
+[2021-01-21 10:59:58] [INFO] >> TestCase.py >> 第186行  - 用例：批量续保文件上传 
+[2021-01-21 10:59:58] [INFO] >> CustomerList.py >> 第564行  - 上传文件 
+[2021-01-21 10:59:58] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/BatchRenewal/BatchRenewalUploadNone] 
+[2021-01-21 10:59:58] [INFO] >> CustomerList.py >> 第571行  - 文件已上传到服务器：BatchRenewal/2021/1/21/171383/ac65efbe2f824d2ab1584ab6558a2c64.xlsx 
+[2021-01-21 10:59:58] [INFO] >> CustomerList.py >> 第572行  - 默认FindDeptId: 2869（部门ID），只适用于wanyuanhao账号，上传城市为【北京】 
+[2021-01-21 10:59:58] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/BatchRenewal/BatchRenewalMethod{'cityId': 1, 'channelType': 2, 'isHistoryRenewal': 0, 'batchRenewalType': 1, 'FindDeptId': 2869, 'isCoverSalesman': 0, 'isAddWechat': 0, 'fileName': '自动化上传.xlsx', 'filePath': 'BatchRenewal/2021/1/21/171383/ac65efbe2f824d2ab1584ab6558a2c64.xlsx', 'businessType': 0}] 
+[2021-01-21 10:59:58] [INFO] >> CustomerList.py >> 第580行  - 文件上传成功：{'data': {'isValid': True, 'name': '自动化上传.xlsx', 'batchRenewalId': 401378}, 'code': 1, 'message': '上传成功'} 
+[2021-01-21 10:59:58] [INFO] >> CustomerList.py >> 第595行  - 通过上传响应结果校验列表是否存在该批次，响应信息:{'data': {'isValid': True, 'name': '自动化上传.xlsx', 'batchRenewalId': 401378}, 'code': 1, 'message': '上传成功'} 
+[2021-01-21 10:59:58] [INFO] >> CustomerList.py >> 第599行  - 等待3秒获取列表批次，校验ID是否存在列表 
+[2021-01-21 11:00:01] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/BatchRenewal/GetBatchRenewalListMethod{'pageIndex': 1, 'pageSize': 15}] 
+[2021-01-21 11:00:01] [INFO] >> TestCase.py >> 第195行  - 用例：工作看板人员效能统计，校验录入出单、保费是否有统计 
+[2021-01-21 11:00:01] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/stats/api/v1/Panel/EmpEffectTotalNew{'deptId': [], 'categoryinfoId': [], 'searchEmployeeId': [], 'dataRangeTime': ['2021-01-21 00:00:00', '2021-01-21 23:59:59'], 'pageIndex': 1, 'pageSize': 50, 'total': 1, 'compId': '171383', 'employeeId': '171383'}] 
+[2021-01-21 11:00:01] [INFO] >> TestCase.py >> 第198行  - 校验人员效能响应结果是否为None ：{'code': 1, 'message': '成功', 'data': {'employeeId': 0, 'employeeName': None, 'compId': 0, 'insurancedCount': 0, 'defeatCount': 0, 'insuranceAmount': 0.0, 'bizAmount': 0.0, 'forceAmount': 0.0, 'taxAmount': 0.0, 'jyPrice': 0.0, 'reviewCount': 0, 'actualReviewCount': 0, 'planReviewCount': 0, 'dueToStoretCount': 0, 'entryCount': 0, 'callTime': 0.0, 'callCount': 0, 'avgCallTime': 0.0, 'renewalInquiryCount': 0, 'quotationCount': 0, 'quotationNumber': 0, 'smsSendCount': 0}} 
+[2021-01-21 11:00:01] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/customer/quotationReceiptList{'pageIndex': 1, 'pageSize': 15, 'appearTimeRange': ['2021-01-21 00:00:00', '2021-01-21 23:59:59']}] 
+[2021-01-21 11:00:01] [INFO] >> TestCase.py >> 第212行  - 获取客户列表buid 
+[2021-01-21 11:00:01] [INFO] >> CustomerList.py >> 第445行  - 获取全部客户数据 
+[2021-01-21 11:00:01] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/customer/querylist{'pageIndex': 1, 'pageSize': 45, 'selectType': 1, 'topLabel': 'tab_quanbukehu', 'orderBy': {'orderByField': 'updateTime', 'orderByType': 'desc'}, 'isFllowUp': '', 'isDataLable': '', 'dataTag': '', 'dataTypeId': 0, 'lastMaintainDayRange': '', 'isMaintain': 1, 'isOpenGuanjia': 1, 'firstSearch': True}] 
+[2021-01-21 11:00:02] [INFO] >> CustomerList.py >> 第48行  - 根据buid录入出单，默认录入人保 
+[2021-01-21 11:00:02] [INFO] >> CustomerList.py >> 第51行  - 客户列表查询京N90037是否存在 
+[2021-01-21 11:00:02] [INFO] >> CustomerList.py >> 第29行  - 获取京N90037查询结果 
+[2021-01-21 11:00:02] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/customer/querylist{'pageIndex': 1, 'pageSize': 15, 'selectType': 1, 'selectSearchValue': '京N90037', 'topLabel': 'tab_quanbukehu', 'orderBy': {'orderByField': 'updateTime', 'orderByType': 'desc'}, 'isFllowUp': '', 'isDataLable': '', 'dataTag': '', 'isOpenGuanjia': 1, 'licenseNo': '京N90037'}] 
+[2021-01-21 11:00:02] [INFO] >> CustomerList.py >> 第33行  - 客户列表查询车牌通过 
+[2021-01-21 11:00:02] [INFO] >> CustomerList.py >> 第56行  - 查询结果拿第一个buid 
+[2021-01-21 11:00:02] [INFO] >> CustomerList.py >> 第65行  - 发起录入出单请求 
+[2021-01-21 11:00:02] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/CustomerDetail/SaveConsumerReview{'defeatReasonContent': '', 'bizTotal': '1000.99', 'forceTotal': '500.11', 'taxTotal': '15.01', 'reviewContent': '自动化录入', 'singleTime': '2021-01-21', 'jyPrice': '222', 'appointTime': '2021-01-21 11:00:02', 'reviewStatus': 9, 'reviewStatusName': '成功出单', 'source': 4, 'buid': 600940267, 'companyType': 4}] 
+[2021-01-21 11:00:02] [INFO] >> CustomerList.py >> 第68行  - message响应成功 
+[2021-01-21 11:00:04] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/CustomerDetail/QueryUserinfoSteps?buid=600940267&groupId=0&pageIndex=1&pageSize=20None] 
+[2021-01-21 11:00:04] [INFO] >> CustomerList.py >> 第74行  - 获取响应message校验是否出单成功 
+[2021-01-21 11:00:04] [INFO] >> CustomerList.py >> 第79行  - 出单成功 
+[2021-01-21 11:00:09] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/stats/api/v1/Panel/EmpEffectTotalNew{'deptId': [], 'categoryinfoId': [], 'searchEmployeeId': [], 'dataRangeTime': ['2021-01-21 00:00:00', '2021-01-21 23:59:59'], 'pageIndex': 1, 'pageSize': 50, 'total': 1, 'compId': '171383', 'employeeId': '171383'}] 
+[2021-01-21 11:00:09] [INFO] >> TestCase.py >> 第226行  - 二次获取人员效能响应结果，断言响应结果是否为None ：{'code': 1, 'message': '成功', 'data': {'employeeId': 0, 'employeeName': None, 'compId': 0, 'insurancedCount': 0, 'defeatCount': 0, 'insuranceAmount': 0.0, 'bizAmount': 0.0, 'forceAmount': 0.0, 'taxAmount': 0.0, 'jyPrice': 0.0, 'reviewCount': 0, 'actualReviewCount': 0, 'planReviewCount': 0, 'dueToStoretCount': 0, 'entryCount': 0, 'callTime': 0.0, 'callCount': 0, 'avgCallTime': 0.0, 'renewalInquiryCount': 0, 'quotationCount': 0, 'quotationNumber': 0, 'smsSendCount': 0}} 
+[2021-01-21 11:00:09] [INFO] >> TestCase.py >> 第230行  - 历史出单台次：0+1，出单后台次：0 
