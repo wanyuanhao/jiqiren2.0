@@ -9,118 +9,7 @@ import requests
 from requests_toolbelt import MultipartEncoder
 from module.customer_management.CustomerList import CustomerList
 
-s = {"data": {"pageIndex": 1, "pageSize": 15, "totalCount": 97, "dataList": [
-    {"id": 401334, "fileName": "批续模板1.1.xlsx", "isCompleted": 0, "isAgainRenewal": 0,
-     "createTime": "2021-01-07 14:28:59", "totalCount": 0, "errorDataCount": 0, "uploadTotalCount": 0,
-     "successfullCount": 0, "partSuccessedCount": 0, "failedCount": 0, "untreatedCount": 0, "employeeId": 171383,
-     "userName": "万园浩", "startExecuteTime": "0001-01-01 00:00:00", "isDistributed": False, "taskStatus": 0,
-     "cityId": 18, "channelPattern": "{\"ChannelType\":2,\"SelectedSources\":[],\"IsHistoryRenewal\":0}",
-     "batchRenewalType": 1, "filePath": "BatchRenewal/2021/1/7/171383/93ebda87f0484356be519cf381cd754f.xlsx",
-     "progress": 0.0, "businessType": 0},
-    {"id": 401332, "fileName": "sz-15-17-1-12-13(1).xlsx", "isCompleted": 1, "isAgainRenewal": 0,
-     "createTime": "2021-01-06 21:13:40", "totalCount": 1995, "errorDataCount": 5, "uploadTotalCount": 2000,
-     "successfullCount": 0, "partSuccessedCount": 0, "failedCount": 0, "untreatedCount": 0, "employeeId": 171383,
-     "userName": "万园浩", "startExecuteTime": "0001-01-01 00:00:00", "isDistributed": False, "taskStatus": 0,
-     "cityId": 18, "channelPattern": "{\"ChannelType\":2,\"SelectedSources\":[],\"IsHistoryRenewal\":0}",
-     "batchRenewalType": 1, "filePath": "BatchRenewal/2021/1/6/171383/ecb2978dfa76463a9c6780d94c27844b.xlsx",
-     "progress": 0.0, "businessType": 0},
-    {"id": 401328, "fileName": "定保模板 (1).xlsx", "isCompleted": 1, "isAgainRenewal": 0,
-     "createTime": "2021-01-06 13:47:38", "totalCount": 25, "errorDataCount": 0, "uploadTotalCount": 25,
-     "successfullCount": 0, "partSuccessedCount": 0, "failedCount": 0, "untreatedCount": 0, "employeeId": 171383,
-     "userName": "万园浩", "startExecuteTime": "0001-01-01 00:00:00", "isDistributed": False, "taskStatus": 0,
-     "cityId": 18, "channelPattern": "{\"ChannelType\":2,\"SelectedSources\":[],\"IsHistoryRenewal\":0}",
-     "batchRenewalType": 1, "filePath": "BatchRenewal/2021/1/6/171383/6e5b2db43c86452e846f6d6c48cabac5.xlsx",
-     "progress": 0.0, "businessType": 1},
-    {"id": 401327, "fileName": "批续模板1.1.xlsx", "isCompleted": 1, "isAgainRenewal": 0,
-     "createTime": "2021-01-06 13:45:42", "totalCount": 23, "errorDataCount": 0, "uploadTotalCount": 23,
-     "successfullCount": 0, "partSuccessedCount": 0, "failedCount": 0, "untreatedCount": 0, "employeeId": 171383,
-     "userName": "万园浩", "startExecuteTime": "0001-01-01 00:00:00", "isDistributed": False, "taskStatus": 0,
-     "cityId": 18, "channelPattern": "{\"ChannelType\":2,\"SelectedSources\":[],\"IsHistoryRenewal\":0}",
-     "batchRenewalType": 1, "filePath": "BatchRenewal/2021/1/6/171383/b706edfdf14841d8aa071c7586eb8a03.xlsx",
-     "progress": 0.0, "businessType": 0},
-    {"id": 401324, "fileName": "批续模板1.1.xlsx", "isCompleted": 1, "isAgainRenewal": 0,
-     "createTime": "2021-01-06 10:28:18", "totalCount": 35, "errorDataCount": 0, "uploadTotalCount": 35,
-     "successfullCount": 0, "partSuccessedCount": 0, "failedCount": 0, "untreatedCount": 0, "employeeId": 171383,
-     "userName": "万园浩", "startExecuteTime": "0001-01-01 00:00:00", "isDistributed": False, "taskStatus": 0,
-     "cityId": 18, "channelPattern": "{\"ChannelType\":2,\"SelectedSources\":[],\"IsHistoryRenewal\":0}",
-     "batchRenewalType": 1, "filePath": "BatchRenewal/2021/1/6/171383/6ad963cc92fa4d109d32152b94d767ab.xlsx",
-     "progress": 0.0, "businessType": 0},
-    {"id": 401322, "fileName": "批续模板1.1.xlsx", "isCompleted": 1, "isAgainRenewal": 0,
-     "createTime": "2021-01-06 10:26:48", "totalCount": 6, "errorDataCount": 0, "uploadTotalCount": 6,
-     "successfullCount": 0, "partSuccessedCount": 0, "failedCount": 0, "untreatedCount": 0, "employeeId": 171383,
-     "userName": "万园浩", "startExecuteTime": "0001-01-01 00:00:00", "isDistributed": False, "taskStatus": 0,
-     "cityId": 18, "channelPattern": "{\"ChannelType\":2,\"SelectedSources\":[],\"IsHistoryRenewal\":0}",
-     "batchRenewalType": 1, "filePath": "BatchRenewal/2021/1/6/171383/8fd099a2dd154a8f867eadcfd317ec9a.xlsx",
-     "progress": 0.0, "businessType": 0},
-    {"id": 401321, "fileName": "批续模板1.1.xlsx", "isCompleted": 1, "isAgainRenewal": 0,
-     "createTime": "2021-01-06 10:26:17", "totalCount": 1, "errorDataCount": 0, "uploadTotalCount": 1,
-     "successfullCount": 0, "partSuccessedCount": 0, "failedCount": 0, "untreatedCount": 0, "employeeId": 171383,
-     "userName": "万园浩", "startExecuteTime": "0001-01-01 00:00:00", "isDistributed": False, "taskStatus": 0,
-     "cityId": 18, "channelPattern": "{\"ChannelType\":2,\"SelectedSources\":[],\"IsHistoryRenewal\":0}",
-     "batchRenewalType": 1, "filePath": "BatchRenewal/2021/1/6/171383/83c67bb0547c4a18899d3f988dd158af.xlsx",
-     "progress": 0.0, "businessType": 0},
-    {"id": 401317, "fileName": "批续模板1.1.xlsx", "isCompleted": 1, "isAgainRenewal": 1,
-     "createTime": "2021-01-06 10:17:55", "totalCount": 1, "errorDataCount": 0, "uploadTotalCount": 1,
-     "successfullCount": 0, "partSuccessedCount": 0, "failedCount": 1, "untreatedCount": 0, "employeeId": 171383,
-     "userName": "万园浩", "startExecuteTime": "2021-01-06 10:18:02", "isDistributed": False, "taskStatus": 2,
-     "cityId": 18, "channelPattern": "{\"ChannelType\":2,\"SelectedSources\":[1,4],\"IsHistoryRenewal\":0}",
-     "batchRenewalType": 0, "filePath": "BatchRenewal/2021/1/6/171383/f91326b56e7748d380091ca5c2595f99.xlsx",
-     "progress": 100.0, "businessType": 0},
-    {"id": 401316, "fileName": "批续模板1.1.xlsx", "isCompleted": 1, "isAgainRenewal": 0,
-     "createTime": "2021-01-06 10:17:11", "totalCount": 1, "errorDataCount": 0, "uploadTotalCount": 1,
-     "successfullCount": 0, "partSuccessedCount": 0, "failedCount": 0, "untreatedCount": 0, "employeeId": 171383,
-     "userName": "万园浩", "startExecuteTime": "0001-01-01 00:00:00", "isDistributed": False, "taskStatus": 0,
-     "cityId": 18, "channelPattern": "{\"ChannelType\":2,\"SelectedSources\":[],\"IsHistoryRenewal\":0}",
-     "batchRenewalType": 1, "filePath": "BatchRenewal/2021/1/6/171383/07f05b88ae6940128fc94eab2314b115.xlsx",
-     "progress": 0.0, "businessType": 0},
-    {"id": 401303, "fileName": "123.xlsx", "isCompleted": 1, "isAgainRenewal": 0, "createTime": "2020-12-28 11:03:07",
-     "totalCount": 142, "errorDataCount": 8, "uploadTotalCount": 150, "successfullCount": 0, "partSuccessedCount": 0,
-     "failedCount": 0, "untreatedCount": 0, "employeeId": 421967, "userName": "葛经理",
-     "startExecuteTime": "0001-01-01 00:00:00", "isDistributed": False, "taskStatus": 0, "cityId": 18,
-     "channelPattern": "{\"ChannelType\":2,\"SelectedSources\":[],\"IsHistoryRenewal\":0}", "batchRenewalType": 1,
-     "filePath": "BatchRenewal/2020/12/28/171383/421967/b2722c7b206a41f7a3357c137ca6a38b.xlsx", "progress": 0.0,
-     "businessType": 1}, {"id": 401302, "fileName": "定保模板2020.12.2-修复1.xlsx", "isCompleted": 1, "isAgainRenewal": 0,
-                          "createTime": "2020-12-28 11:02:29", "totalCount": 137, "errorDataCount": 2,
-                          "uploadTotalCount": 139, "successfullCount": 0, "partSuccessedCount": 0, "failedCount": 0,
-                          "untreatedCount": 0, "employeeId": 421967, "userName": "葛经理",
-                          "startExecuteTime": "0001-01-01 00:00:00", "isDistributed": False, "taskStatus": 0,
-                          "cityId": 18,
-                          "channelPattern": "{\"ChannelType\":2,\"SelectedSources\":[],\"IsHistoryRenewal\":0}",
-                          "batchRenewalType": 1,
-                          "filePath": "BatchRenewal/2020/12/28/171383/421967/f871b875e12746169639e8f296cd6540.xlsx",
-                          "progress": 0.0, "businessType": 1},
-    {"id": 401301, "fileName": "定保模板2020.12.2-修复1.xlsx", "isCompleted": 1, "isAgainRenewal": 0,
-     "createTime": "2020-12-28 11:01:42", "totalCount": 137, "errorDataCount": 2, "uploadTotalCount": 139,
-     "successfullCount": 0, "partSuccessedCount": 0, "failedCount": 0, "untreatedCount": 0, "employeeId": 421967,
-     "userName": "葛经理", "startExecuteTime": "0001-01-01 00:00:00", "isDistributed": False, "taskStatus": 0,
-     "cityId": 18, "channelPattern": "{\"ChannelType\":2,\"SelectedSources\":[],\"IsHistoryRenewal\":0}",
-     "batchRenewalType": 1, "filePath": "BatchRenewal/2020/12/28/171383/421967/eb73ab97c4e048d2911b43d0aa2a67e7.xlsx",
-     "progress": 0.0, "businessType": 1},
-    {"id": 401300, "fileName": "定保模板2020.12.2-修复1.xlsx", "isCompleted": 1, "isAgainRenewal": 0,
-     "createTime": "2020-12-28 11:01:27", "totalCount": 137, "errorDataCount": 2, "uploadTotalCount": 139,
-     "successfullCount": 0, "partSuccessedCount": 0, "failedCount": 0, "untreatedCount": 0, "employeeId": 421967,
-     "userName": "葛经理", "startExecuteTime": "0001-01-01 00:00:00", "isDistributed": False, "taskStatus": 0,
-     "cityId": 18, "channelPattern": "{\"ChannelType\":2,\"SelectedSources\":[],\"IsHistoryRenewal\":0}",
-     "batchRenewalType": 1, "filePath": "BatchRenewal/2020/12/28/171383/421967/c7922e5a58e94453926b29d75300a8a7.xlsx",
-     "progress": 0.0, "businessType": 1},
-    {"id": 401298, "fileName": "定保模板2020.12.2-修复1.xlsx", "isCompleted": 1, "isAgainRenewal": 0,
-     "createTime": "2020-12-28 10:58:11", "totalCount": 137, "errorDataCount": 2, "uploadTotalCount": 139,
-     "successfullCount": 0, "partSuccessedCount": 0, "failedCount": 0, "untreatedCount": 0, "employeeId": 421967,
-     "userName": "葛经理", "startExecuteTime": "0001-01-01 00:00:00", "isDistributed": False, "taskStatus": 0,
-     "cityId": 18, "channelPattern": "{\"ChannelType\":2,\"SelectedSources\":[],\"IsHistoryRenewal\":0}",
-     "batchRenewalType": 1, "filePath": "BatchRenewal/2020/12/28/171383/421967/1802c4bbdc1f44febe1cc7754546e2ff.xlsx",
-     "progress": 0.0, "businessType": 1},
-    {"id": 401297, "fileName": "定保模板2020.12.2-修复1.xlsx", "isCompleted": 1, "isAgainRenewal": 0,
-     "createTime": "2020-12-28 10:54:15", "totalCount": 137, "errorDataCount": 2, "uploadTotalCount": 139,
-     "successfullCount": 0, "partSuccessedCount": 0, "failedCount": 0, "untreatedCount": 0, "employeeId": 421967,
-     "userName": "葛经理", "startExecuteTime": "0001-01-01 00:00:00", "isDistributed": False, "taskStatus": 0,
-     "cityId": 18, "channelPattern": "{\"ChannelType\":2,\"SelectedSources\":[],\"IsHistoryRenewal\":0}",
-     "batchRenewalType": 1, "filePath": "BatchRenewal/2020/12/28/171383/421967/0857878ad2ba43108f789262db5f3539.xlsx",
-     "progress": 0.0, "businessType": 1}]}, "code": 1, "message": "成功"}
-upload_id = s['data']['dataList'][0]['id']
-print(upload_id)
-
-
+# 指定文件push
 # # 集合
 # info = ["a",'b','c','d']
 # info = set(info)
@@ -325,5 +214,32 @@ print(upload_id)
 # read_excel('./ttt.xlsx')
 # -----------------------------------------------------------------------------
 
-# s = [4,3,7,1]
-# print(sorted(s,reverse=True))
+a = [i for i in range(1, 33)]
+b = []
+c = []
+d = []
+s = [b, c, d]
+
+def avg(name,data):
+    sum = 0
+    n = 0
+    for i in data:
+        result = len(data) // len(name)
+        yu = len(data) % len(name)
+        if len(data) > len(name):
+            name[n].append(i)
+            sum += 1
+            if sum % result == 0:
+                n += 1
+                if n == len(name):
+                    m =0
+                    for y in data[-yu:]:
+                        name[m].append(y)
+                        m+=1
+                    break
+        else:
+            name = "数据量小于分配人员"
+    return name
+
+result = avg(s,a)
+print(result)

@@ -1,5 +1,5 @@
 import requests
-from config.Logs import Logs
+from Logs.Logs import Logs
 
 
 class Requests_util:

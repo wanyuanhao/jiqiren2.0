@@ -4,7 +4,8 @@ import HTMLTestRunner
 import sender_mail
 import datetime
 from config.Headers import Headers
-from config import Logs
+from Logs import Logs
+
 
 def run_test_case():
     path = os.path.dirname(os.path.dirname(__file__))

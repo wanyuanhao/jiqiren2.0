@@ -1,7 +1,7 @@
 from util.Requests_util import Requests_util
 import configparser
 import os
-from config import Logs
+from Logs import Logs
 
 r = Requests_util()
 # 找到配置文件路径
@@ -24,7 +24,7 @@ class Headers:
             url = urls + '/identity/connect/token'
             data = {'grant_type': 'password',
                     'username': user,
-                    'password': '91bihu.com',
+                    'password': 'wyh12345',
                     'scope': 'employee_center car_business smart_car_mgts',
                     'client_id': 'bot',
                     'client_secret': 'secret'}
@@ -51,7 +51,7 @@ class Headers:
             url = urls + '/identity/connect/token'
             data = {'grant_type': 'password',
                     'username': user,
-                    'password': '91bihu.com',
+                    'password': 'wyh12345',
                     'scope': 'employee_center car_business smart_car_mgts',
                     'client_id': 'bot',
                     'client_secret': 'secret'}
