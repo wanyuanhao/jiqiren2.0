@@ -1,8 +1,7 @@
 # -*-coding:utf-8
 from util.Requests_util import Requests_util
-from config.Headers import Headers
 import configparser, os
-from config import Logs
+from Logs import Logs
 
 
 class Interface_quote:

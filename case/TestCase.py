@@ -6,7 +6,7 @@ from module.customer_management.Interface_quote import Interface_quote
 import configparser
 import os
 from config.Headers import Headers
-from config import Logs
+from Logs import Logs
 from module.workpanel.WorkPanel import WorkPanel
 import datetime
 from time import sleep
@@ -48,23 +48,21 @@ class TestCase(unittest.TestCase):
             self.assertTrue(result[0])
 
     def test_case02(self):
-        u'顶级账户计划回访数据量对比，使用账号：jiao'
-        self.logger.info('用例：顶级账户计划回访数据量对比，使用账号：jiao')
-        token = Headers().tokens('jiao')
-        self.assertTrue(token)
+        u'顶级账户计划回访数据量对比'
+        self.logger.info('用例：顶级账户计划回访数据量对比')
         # i+1是计划回访的页码
         # result+10 是在接口返回的数量上+10，避免库里的数据比接口返回的数量多
         plan_name = ["今日", '明日', '两日', '三日', '四日', '五日', '六日', '七日', '七日后']
-        result = self.customer.plan_count(token)
+        result = self.customer.plan_count(self.headers)
         for i in range(len(result)):
             if i + 1 == 9:
-                plan_count = self.customer.plan_counts(token, result[i] + 10, 9999)
+                plan_count = self.customer.plan_counts(self.headers, result[i] + 10, 9999)
                 ss = f"接口返回数量：{result[i]}", f'实际条数：{plan_count[0]},f"接口响应：{plan_count[1]}"'
                 if result[i] != plan_count[0]:
                     self.logger.info('计划回访{0}数量不一致:{1}'.format(plan_name[i], ss))
                 self.assertTrue(result[i] == plan_count[0])
             else:
-                plan_count = self.customer.plan_counts(token, result[i] + 10, i + 1)
+                plan_count = self.customer.plan_counts(self.headers, result[i] + 10, i + 1)
                 ss = f"接口返回数量：{result[i]}", f'实际条数：{plan_count[0]},f"接口响应：{plan_count[1]}"'
                 if result[i] != plan_count[0]:
                     self.logger.info('计划回访{0}数量不一致:{1}'.format(plan_name[i], ss))
@@ -102,8 +100,8 @@ class TestCase(unittest.TestCase):
 
     def test_case05(self):
         u'下级账户计划回访数据量对比,使用账号：18612938273'
-        self.logger.info('用例：下级账户计划回访数据量对比,使用账号：18612938273')
-        token = Headers().tokens('18612938273')
+        self.logger.info('用例：下级账户计划回访数据量对比,使用账号：16363501234')
+        token = Headers().tokens('16363501234')
         self.assertTrue(token)
         # i+1是计划回访的页码
         # result+10 是在接口返回的数量上+10，避免库里的数据比接口返回的数量多
@@ -233,7 +231,7 @@ class TestCase(unittest.TestCase):
                     self.assertTrue(str(insuranceAmount +1738.11) == str(pre_insuranceAmount))
                     break
         else:
-            self.logger.info(f'客户列表无数据，无法线下走流程。响应：{response}')
+            self.logger.info(f'客户列表无数据。响应：{response}')
             self.assertTrue(False)
 
 

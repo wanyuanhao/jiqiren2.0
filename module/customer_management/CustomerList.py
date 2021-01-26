@@ -3,7 +3,7 @@ from util.Requests_util import Requests_util
 # from config.Headers import Headers
 import datetime, json
 import os, configparser
-from config import Logs
+from Logs import Logs
 # 后引入的包，有的方法里面存在time所以改名为times
 import time as times
 

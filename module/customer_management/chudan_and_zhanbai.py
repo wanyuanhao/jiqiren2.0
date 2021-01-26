@@ -2,7 +2,7 @@ from util.Requests_util import Requests_util
 # from config.Headers import Headers
 import datetime
 import os, configparser
-from config import Logs
+from Logs import Logs
 
 
 # 出单、战败列表查询
