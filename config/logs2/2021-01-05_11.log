@@ -1,8 +1,0 @@
-[2021-01-05 11:00:43] [INFO] >> Test_case.py >> 第174行  - 用例：定保录入战败 
-[2021-01-05 11:00:43] [INFO] >> CustomerList.py >> 第436行  - 获取全部客户数据 
-[2021-01-05 11:00:46] [INFO] >> CustomerList.py >> 第522行  - 定保录入战败 
-[2021-01-05 11:01:09] [INFO] >> CustomerList.py >> 第530行  - 校验响应结果：{'data': {'coverCode': 1, 'deteatId': None, 'carPolicyId': 52}, 'code': 1, 'message': '系统监测您今天已存在定保预约出单/战败记录，重新提交后会覆盖原预约出单/战败记录，确认执行？'} 
-[2021-01-05 11:01:14] [INFO] >> CustomerList.py >> 第535行  - 定保出单重复，确认覆盖 
-[2021-01-05 11:01:22] [INFO] >> CustomerList.py >> 第522行  - 定保录入战败 
-[2021-01-05 11:01:27] [INFO] >> CustomerList.py >> 第530行  - 校验响应结果：{'data': {'coverCode': 0, 'deteatId': None, 'carPolicyId': None}, 'code': 1, 'message': '成功'} 
-[2021-01-05 11:01:29] [INFO] >> CustomerList.py >> 第532行  - 定保录入成功 
