@@ -201,24 +201,29 @@ class TestCase(unittest.TestCase):
         # 获取出单列表出单时间是今天的buid
         chudan_re = self.chudan.query_chudan(self.headers, self.today_Ymd)
         today_chudan_buid = []
+        self.logger.info("获取出单列表出单时间是今天的buid")
         if chudan_re is not None and len(chudan_re['data']) > 0:
             for i in chudan_re['data']:
                 today_chudan_buid.append(i['buid'])
         else:
             self.logger.info(f'出单列表没有今日出单数据：{chudan_re}')
         # 获取客户列表的buid
-        self.logger.info('获取客户列表buid')
+        self.logger.info(f"出单时间是今天的buid:{today_chudan_buid}")
+        self.logger.info('获取客户列表数据')
         response = self.customer.query(self.headers)
+        self.logger.info(f"{response}")
         # 校验客户列表是否有数据
         if len(response['data']) > 0:
             for i in response['data']:
                 # 校验客户列表的buid是否在今日出过单
                 if i['buid'] not in today_chudan_buid:
                     # 如果未出单则拿这个buid录入出单，默认录入出单总金额 1738.11
+                    self.logger.info(f"校验出此buid：{i['buid']}|{i['licenseNo']}今日未录入出单，发起出单录入请求")
                     result = self.customer.enter_chudan(i['licenseNo'], self.headers)
                     # 校验是否成功录入出单
                     self.assertTrue(result[0])
-                    # 出单录入成功后等待5秒，防止数据延迟
+                    self.logger.info("出单录入成功后等待5秒，防止统计延迟。出单响应：{0}".format(result))
+                    # 出单录入成功后等待5秒，防止统计延迟
                     sleep(5)
                     pre_result_count = self.work.today_personnel_work('171383', self.headers)
                     self.logger.info(f'二次获取人员效能响应结果，断言响应结果是否为None ：{pre_result_count}')
