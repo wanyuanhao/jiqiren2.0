@@ -74,6 +74,7 @@ class TestCase(unittest.TestCase):
         result = self.customer.shaixuan_baojiachenggong(self.headers)
         # 判断结果是否为真
         self.assertTrue(result)
+        self.logger.info(f"使用{result['data'][0]['buid']}获取报价历史，车牌：{result['data'][0]['licenseNo']}")
         lishi_result = self.customer.quote_lishi(result['data'][0]['buid'], self.headers)
         # 判断结果是否为真
         self.assertTrue(lishi_result)
@@ -246,5 +247,5 @@ if __name__ == '__main__':
     # unittest.main(verbosity=2)
     runner = unittest.TextTestRunner(verbosity=2)
     suite = unittest.TestSuite()
-    suite.addTest(TestCase("test_case13"))
+    suite.addTest(TestCase("test_case03"))
     runner.run(suite)

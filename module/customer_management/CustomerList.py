@@ -409,10 +409,10 @@ class CustomerList:
                 "dataTag": "", "dataTypeId": 0, "isMaintain": 1, "firstSearch": True}
         result = self.r.request(url, 'post', data, headers, 'json')
         if len(result['data']) > 0:
-            self.logger.info('返回筛选结果')
+            self.logger.info(f'返回筛选结果{result}')
             return result
         else:
-            self.logger.error('没有报价成功数据')
+            self.logger.info(f'没有报价成功数据{result}')
             return False
 
     def quote_lishi(self, buid, headers):
@@ -422,10 +422,10 @@ class CustomerList:
         data = {"buid": buid}
         result = self.r.request(url, 'post', data, headers, 'json')
         if len(result['data']) > 0:
-            self.logger.info('返回报价历史结果')
+            self.logger.info(f'返回报价历史结果：{result}')
             return result
         else:
-            self.logger.error(f'buid：{buid}，无报价历史')
+            self.logger.info(f'无报价历史：{result}')
             return False
 
     def qiehuan_quote_lishi(self, id, headers):
