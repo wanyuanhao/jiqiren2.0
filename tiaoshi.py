@@ -9,7 +9,6 @@ import requests
 from requests_toolbelt import MultipartEncoder
 from module.customer_management.CustomerList import CustomerList
 
-# 指定文件push
 # # 集合
 # info = ["a",'b','c','d']
 # info = set(info)
