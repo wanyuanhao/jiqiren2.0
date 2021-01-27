@@ -17,7 +17,8 @@ if __name__ == '__main__':
     logger = Logs.Logs('run_case').logger
     logger.info('登录账户获取touken')
     Headers.token_update_config('wanyuanhao')
-    time = datetime.datetime.now().strftime('%Y-%m-%d')
+    times = datetime.datetime.now()
+    time = times.strftime('%Y-%m-%d')
     # wb写入内容，没有文件会创建，有文件会覆盖文件内容
     report_path = open(f"./test_report/{time}result.html", 'wb')
     runner = HTMLTestRunner.HTMLTestRunner(stream=report_path, title=u"自动化测试报告(详情请看附件)", description="执行结果",verbosity=2)
@@ -31,7 +32,12 @@ if __name__ == '__main__':
     report = file.read()
     file.close()
 
+    log_path = os.path.dirname(__file__)
+    log_file = open(f"../Logs/LogInfo/{times.strftime('%Y-%m-%d_%H')}.log", "rb")
+    log_report = log_file.read()
+    log_file.close()
+
     # 发送邮件
     logger.info('发送邮件')
     sendmail = sender_mail.SendMail()
-    sendmail.send_mail(report)
+    sendmail.send_mail(report,log_report)
