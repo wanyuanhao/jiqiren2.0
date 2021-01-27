@@ -214,32 +214,48 @@ from module.customer_management.CustomerList import CustomerList
 # read_excel('./ttt.xlsx')
 # -----------------------------------------------------------------------------
 
-a = [i for i in range(1, 33)]
-b = []
-c = []
-d = []
-s = [b, c, d]
+# a = [i for i in range(1, 33)]
+# b = []
+# c = []
+# d = []
+# s = [b, c, d]
+#
+# def avg(name,data):
+#     sum = 0
+#     n = 0
+#     for i in data:
+#         result = len(data) // len(name)
+#         yu = len(data) % len(name)
+#         if len(data) > len(name):
+#             name[n].append(i)
+#             sum += 1
+#             if sum % result == 0:
+#                 n += 1
+#                 if n == len(name):
+#                     m =0
+#                     for y in data[-yu:]:
+#                         name[m].append(y)
+#                         m+=1
+#                     break
+#         else:
+#             name = "数据量小于分配人员"
+#     return name
+#
+# result = avg(s,a)
+# print(result)
 
-def avg(name,data):
-    sum = 0
-    n = 0
-    for i in data:
-        result = len(data) // len(name)
-        yu = len(data) % len(name)
-        if len(data) > len(name):
-            name[n].append(i)
-            sum += 1
-            if sum % result == 0:
-                n += 1
-                if n == len(name):
-                    m =0
-                    for y in data[-yu:]:
-                        name[m].append(y)
-                        m+=1
-                    break
-        else:
-            name = "数据量小于分配人员"
-    return name
+import unittest
 
-result = avg(s,a)
-print(result)
+class Test(unittest.TestCase):
+
+    def test01(self):
+        print("1")
+    def test02(self):
+        print("2")
+    def test03(self):
+        print("3")
+if __name__ == '__main__':
+    suite = unittest.TestSuite()
+    suite.addTest(Test("test03"))
+    runner = unittest.TextTestRunner()
+    runner.run(suite)
