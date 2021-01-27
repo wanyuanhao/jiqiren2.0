@@ -32,6 +32,7 @@ if __name__ == '__main__':
     report = file.read()
     file.close()
 
+    # 邮件中添加日志文件
     log_path = os.path.dirname(__file__)
     log_file = open(f"../Logs/LogInfo/{times.strftime('%Y-%m-%d_%H')}.log", "rb")
     log_report = log_file.read()
