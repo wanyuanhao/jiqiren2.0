@@ -14,7 +14,7 @@ def run_test_case():
 
 
 if __name__ == '__main__':
-    logger = Logs.Logs('run_case').logger()
+    logger = Logs.Logs('run_case').logger
     logger.info('登录账户获取touken')
     Headers.token_update_config('wanyuanhao')
     times = datetime.datetime.now()
