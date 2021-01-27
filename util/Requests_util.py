@@ -1,10 +1,10 @@
 import requests
-from Logs.Logs import Logs
+from Logs import Logs
 
 
 class Requests_util:
     def __init__(self):
-        self.logger = Logs().logger
+        self.logger = Logs.Logs().logger
 
     def request(self, url, method, params=None, headers=None, content_type=None,**kwargs):
         self.logger.info(f"请求参：[{url}{params}{kwargs}]")
