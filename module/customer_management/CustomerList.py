@@ -563,7 +563,9 @@ class CustomerList:
         try:
             self.logger.info('上传文件')
             url = self.urls + '/carbusiness/api/v1/BatchRenewal/BatchRenewalUpload'
-            form_data = {'file': (filename, open(filepath, 'rb').read())}
+            with open(filepath,'rb') as files:
+                filedata = files.read()
+            form_data = {'file': (filename, filedata)}
             result_response = self.r.request(url, 'post', headers=headers, files=form_data)
             if result_response['message'] == '成功':
                 file_path = result_response["data"]["filePath"]
