@@ -6,7 +6,7 @@ import datetime
 
 class SendMail:
     @classmethod
-    def send_mail(self, report,logreport):
+    def send_mail(self, report, log_report=None):
         sender = "wanyuanhao@91bihu.com"
         receiver = ["wanyuanhao@91bihu.com"]
         auth_code = "ExhBzsuHyxTW9bTp"
@@ -23,8 +23,8 @@ class SendMail:
         file["Content-Type"] = "application/octet-stream"
         file["Content-Disposition"] = f'attachment; filename="{time}result.html"'
 
-        # 添加LOG附件
-        logfile = MIMEText(logreport, "base64", "gb2312")
+        # 添加logger附件
+        logfile = MIMEText(log_report, "base64", "gb2312")
         logfile["Content-Type"] = "application/octet-stream"
         logfile["Content-Disposition"] = f'attachment; filename="{time}logger.log"'
 

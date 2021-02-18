@@ -219,7 +219,7 @@ class TestCase(unittest.TestCase):
                 # 校验客户列表的buid是否在今日出过单
                 if i['buid'] not in today_chudan_buid:
                     # 如果未出单则拿这个buid录入出单，默认录入出单总金额 1738.11
-                    self.logger.info(f"校验出此buid：{i['buid']}|{i['licenseNo']}今日未录入出单，发起出单录入请求")
+                    self.logger.info(f"校验出此buid：{i['buid']}|车牌：{i['licenseNo']}今日未录入出单，发起出单录入请求")
                     result = self.customer.enter_chudan(i['licenseNo'], self.headers)
                     # 校验是否成功录入出单
                     self.assertTrue(result[0])
@@ -241,11 +241,10 @@ class TestCase(unittest.TestCase):
             self.assertTrue(False)
 
 
-
 if __name__ == '__main__':
     print('执行Case')
     # unittest.main(verbosity=2)
     runner = unittest.TextTestRunner(verbosity=2)
     suite = unittest.TestSuite()
-    suite.addTest(TestCase("test_case03"))
+    suite.addTest(TestCase("test_case13"))
     runner.run(suite)

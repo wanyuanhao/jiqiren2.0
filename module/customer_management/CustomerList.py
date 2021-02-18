@@ -328,7 +328,7 @@ class CustomerList:
         '获取出单总数'
         self.logger.info('获取出单总数')
         url = self.urls + '/carbusiness/api/v1/customer/quotationReceiptCount'
-        data = {"pageIndex": 1, "pageSize": 15}
+        data = {'pageIndex': 1, 'pageSize': 15}
         result = self.r.request(url, 'post', data, headers, 'json')
         return result
 
@@ -563,7 +563,10 @@ class CustomerList:
         try:
             self.logger.info('上传文件')
             url = self.urls + '/carbusiness/api/v1/BatchRenewal/BatchRenewalUpload'
-            form_data = {'file': (filename, open(filepath, 'rb').read())}
+            with  open(filepath, 'rb') as files:
+                filedata = files.read()
+            form_data = {'file': (filename, filedata)}
+            # form_data = {'file': (filename, open(filepath, 'rb').read())}
             result_response = self.r.request(url, 'post', headers=headers, files=form_data)
             if result_response['message'] == '成功':
                 file_path = result_response["data"]["filePath"]
