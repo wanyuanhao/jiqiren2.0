@@ -240,6 +240,10 @@ class TestCase(unittest.TestCase):
             self.logger.info(f'客户列表无数据。响应：{response}')
             self.assertTrue(False)
 
+    def test_case15(self):
+        self.logger.info("用例15：修改客户状态")
+
+
 
 if __name__ == '__main__':
     print('执行Case')

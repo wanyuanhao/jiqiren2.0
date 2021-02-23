@@ -77,7 +77,7 @@ class CustomerList:
                         if result['ReviewStatusName'] == '成功出单' and int(result['Source']) == source and float(
                                 result['BizTotal']) == 1000.99:
                             self.logger.info('出单成功')
-                            return [True,response]
+                            return [True, response]
                     else:
                         self.logger.info('获取出单结果的Buid({0})不匹配：{1}'.format(buid, response))
                         return [False]
@@ -112,7 +112,7 @@ class CustomerList:
                             if result['ReviewStatusName'] == '成功出单' and int(result['Source']) == source and float(
                                     result['BizTotal']) == 1000.99:
                                 self.logger.info('出单成功')
-                                return [True,response]
+                                return [True, response]
                         else:
                             self.logger.info('获取出单结果的Buid({0})不匹配：{1}'.format(buid, response))
                             return [False]
@@ -157,7 +157,7 @@ class CustomerList:
                     # 断言录入结果和实际录入结果是否一致
                     if assert_result['ReviewStatusName'] == '战败':
                         self.logger.info('录入战败通过')
-                        return [True,response]
+                        return [True, response]
                     else:
                         self.logger.info(
                             '录入结果和实际结果不符，校验字段（[ReviewStatusName]是否等于战败）车牌：{0}[{1}]'.format(licenseno, assert_result))
@@ -185,7 +185,7 @@ class CustomerList:
                         # 断言录入结果和实际录入结果是否一致
                         if assert_result['ReviewStatusName'] == '战败':
                             self.logger.info('录入战败通过')
-                            return [True,response]
+                            return [True, response]
                         else:
                             self.logger.info('录入结果和实际结果不符，校验字段（[ReviewStatusName]是否等于战败）车牌：{0}[{1}]'.format(licenseno,
                                                                                                             assert_result))
@@ -613,6 +613,68 @@ class CustomerList:
             self.logger.error(f'assert_upload方法执行异常：{e}')
             return [False]
 
+    def modify_state(self, buid, headers):
+        self.logger.info('执行modify_state方法')
+        try:
+            url = self.urls + '/carbusiness/api/v1/customer/modifyCustomer'
+            data = {"pageIndex": 1, "pageSize": 15, "selectType": 1, "topLabel": "tab_quanbukehu",
+                    "orderBy": {"orderByField": "updateTime", "orderByType": "desc"}, "isFllowUp": "",
+                    "isDataLable": "", "dataTag": "", "dataTypeId": 0, "lastMaintainDayRange": "",
+                    "isMaintain": 1, "isOpenGuanjia": 1, "modifyCustomerStatus": 0, "buids": [buid]}
+            result = self.r.request(url, 'post', data, headers, 'json')
+            if result['message'] == '操作成功':
+                self.logger.info(f"客户状态修改成功：{result}")
+                url2 = self.urls + '/carbusiness/api/v1/customer/querylist'
+                data2 = {"pageIndex": 1, "pageSize": 45, "buids": [buid], "selectType": 1,
+                         "topLabel": "tab_quanbukehu", "orderBy": {"orderByField": "updateTime", "orderByType": "desc"},
+                         "isFllowUp": "", "isDataLable": "", "dataTag": "", "dataTypeId": 0,
+                         "lastMaintainDayRange": "", "isMaintain": 1, "firstSearch": True}
+                result = self.r.request(url2, 'post', data2, headers, 'json')
+                self.logger.info('校验状态是否修改成功：{0}'.format(result))
+                if result['data'][0]['customerStatusName'] == '首访客户':
+                    return [True, result]
+                else:
+                    self.logger.info(f'状态修改失败：{result}')
+                    return [False]
+            else:
+                self.logger.info(f'响应结果异常：{result}')
+                return [False, result]
+        except Exception as e:
+            self.logger.error(f'modify_state方法执行异常：{e}')
+            return [False]
+
+    def modify_category(self, buid, headers):
+        self.logger.info('执行modify_category方法')
+        try:
+            url = self.urls + '/carbusiness/api/v1/customer/modifyCustomer'
+            data = {"pageIndex": 1, "pageSize": 15, "buids": [buid], "selectType": 1, "topLabel": "tab_quanbukehu",
+                    "orderBy": {"orderByField": "updateTime", "orderByType": "desc"}, "isFllowUp": "",
+                    "isDataLable": "", "dataTag": "", "dataTypeId": 0, "lastMaintainDayRange": "", "isMaintain": 1,
+                    "modifyCategoryinfoId": 100034}
+            result = self.r.request(url, 'post', data, headers, 'json')
+            if result['message'] == '操作成功':
+                self.logger.info(f"客户类别修改成功：{result}")
+                url2 = self.urls + '/carbusiness/api/v1/CustomerDetail/Detial'
+                data2 = {"buid": f"{buid}"}
+                result = self.r.request(url2, 'get', data2, headers=headers)
+                self.logger.info('校验类别是否修改成功：{0}'.format(result))
+                if result['data']['categoryinfoName'] == '类别测试':
+                    return [True, result]
+                else:
+                    self.logger.info(f'客户类别和录入的不符：{result}')
+                return [False]
+            else:
+                self.logger.info(f'修改客户类别响应异常：{result}')
+                return [False]
+        except Exception as e:
+            self.logger.error(f'modify_category方法执行异常：{e}')
+        return [False]
+
 
 if __name__ == '__main__':
     print('CustomerList')
+    headers = {
+        'Authorization': 'Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjRFOTAzNEM5NzQ1RDZCNTlBNzgzMzBDQThFRUMwN0RDRTc4NDQ2NTMiLCJ0eXAiOiJKV1QiLCJ4NXQiOiJUcEEweVhSZGExbW5nekRLanV3SDNPZUVSbE0ifQ.eyJuYmYiOjE2MTQwNjQ5NTQsImV4cCI6MTYxNTM2MDk1NCwiaXNzIjoiaHR0cHM6Ly9pZGVudGl0eS45MWJpaHUuY29tIiwiYXVkIjpbImh0dHBzOi8vaWRlbnRpdHkuOTFiaWh1LmNvbS9yZXNvdXJjZXMiLCJjYXJfYnVzaW5lc3MiLCJlbXBsb3llZV9jZW50ZXIiLCJzbWFydF9jYXJfbWd0cyJdLCJjbGllbnRfaWQiOiJib3QiLCJzdWIiOiIxNzEzODMiLCJhdXRoX3RpbWUiOjE2MTQwNjQ5NTQsImlkcCI6ImxvY2FsIiwiZW1wbG95ZWVJZCI6IjE3MTM4MyIsImNvbXBJZCI6IjE3MTM4MyIsInVzZXJOYW1lIjoi5LiH5Zut5rWpIiwidXNlckFjY291bnQiOiJ3YW55dWFuaGFvIiwiRGVwdElkIjoiMjg2OSIsIklzQWRtaW4iOiJUcnVlIiwiUm9sZVR5cGUiOiIzIiwiUm9sZUlkcyI6IjQwMDMzIiwibG9naW5DbGllbnRUeXBlIjoiMiIsImxvZ2luU3RhbXAiOiIxNjE0MDY0OTU1LWQ3ZjZkOWZmLTk0MmQtNGFjZS1iZjViLWM0OGRiOGM3ZDdjOCIsInNjb3BlIjpbImNhcl9idXNpbmVzcyIsImVtcGxveWVlX2NlbnRlciIsInNtYXJ0X2Nhcl9tZ3RzIl0sImFtciI6WyJwd2QiXX0.cRsfL_BhodxV3Fus9sAJ-ZVHzTJJdKtKJ32TMzzAU6IxkorI14Y2RwM4REKzH9enzqdB4ZA_UvYC-G4wk12jcH6jOfpHh6a9zOaRzLYHoj-Iy8TT44Bt1HfDwzzoZAsnUjmnyOuiycvnhtMeB4_6XV_S8klWApnEZHOLJevAp4LpsqXthBgzFvZ8XessixzBqsNbnMQPwYk12b1nbFUTUDaO16nafbQetBGR_0PDLA5A-PqpiSg7U_JLVsBuOoW3jO_l6Wt4vlujUuhlFeskQYUuti-VgGFIxH9kWVQ67MwwpshJ015Xu03zhaO-UssWhgFl_6FlxIjBScj1z9vkRA'}
+    cus = CustomerList()
+    result = cus.modify_state(601069635, headers)
+    print(result)

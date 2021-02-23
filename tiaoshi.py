@@ -258,20 +258,3 @@ from module.customer_management.CustomerList import CustomerList
 #     suite.addTest(Test("test03"))
 #     runner = unittest.TextTestRunner()
 #     runner.run(suite)
-
-
-s = [1, 8, 6, 9, 2]
-
-for i in range(len(s) - 1):
-    for y in range(len(s) - i - 1):
-        if s[y] > s[y + 1]:
-            s[y], s[y + 1] = s[y + 1], s[y]
-print(s)
-
-# for i in range(len(a)):
-#     if  a[i] == ",":
-#         pass
-#     else:
-#         b.append(int(a[i]))
-# print(b)
-
