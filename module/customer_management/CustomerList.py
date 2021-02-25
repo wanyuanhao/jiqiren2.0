@@ -629,6 +629,7 @@ class CustomerList:
                          "topLabel": "tab_quanbukehu", "orderBy": {"orderByField": "updateTime", "orderByType": "desc"},
                          "isFllowUp": "", "isDataLable": "", "dataTag": "", "dataTypeId": 0,
                          "lastMaintainDayRange": "", "isMaintain": 1, "firstSearch": True}
+                self.logger.info(f"获取{buid}修改后的信息")
                 result = self.r.request(url2, 'post', data2, headers, 'json')
                 self.logger.info('校验状态是否修改成功：{0}'.format(result))
                 if result['data'][0]['customerStatusName'] == '首访客户':
@@ -656,6 +657,7 @@ class CustomerList:
                 self.logger.info(f"客户类别修改成功：{result}")
                 url2 = self.urls + '/carbusiness/api/v1/CustomerDetail/Detial'
                 data2 = {"buid": f"{buid}"}
+                self.logger.info(f"获取修改后的信息并进行校验")
                 result = self.r.request(url2, 'get', data2, headers=headers)
                 self.logger.info('校验类别是否修改成功：{0}'.format(result))
                 if result['data']['categoryinfoName'] == '类别测试':

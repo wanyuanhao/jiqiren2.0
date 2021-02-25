@@ -258,3 +258,22 @@ from module.customer_management.CustomerList import CustomerList
 #     suite.addTest(Test("test03"))
 #     runner = unittest.TextTestRunner()
 #     runner.run(suite)
+
+# a=(1,2,3,4,5)
+# b =[6,7,8,9]
+# c = {'a':'1',"b":"2"}
+# d = {"a1","a2","c3"}
+# e = "abcd"
+# f = [{'a':'1',"b":"2"},{"a1","a2","c3"}]
+# g = {'a':[1,2,3],"b":"8"}
+# h = {'a':[{'a':'1',"b":"2"}],"b":"2"}
+# i = 1
+# j = 1.1
+# k = True
+
+a = [3,2,5,6,1]
+for i in range(len(a)-1):
+    for y in range(len(a)-1):
+        if a[y]>a[y+1]:
+            a[y],a[y+1]=a[y+1],a[y]
+print(a)

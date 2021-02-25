@@ -242,6 +242,17 @@ class TestCase(unittest.TestCase):
 
     def test_case15(self):
         self.logger.info("用例15：修改客户状态")
+        response = self.customer.query(self.headers)
+        buid = response['data'][13]['buid']
+        result = self.customer.modify_state(buid,self.headers)
+        self.assertTrue(result[0])
+
+    def test_case16(self):
+        self.logger.info("用例15：修改客户类别")
+        response = self.customer.query(self.headers)
+        buid = response['data'][14]['buid']
+        result = self.customer.modify_category(buid,self.headers)
+        self.assertTrue(result[0])
 
 
 
@@ -250,5 +261,5 @@ if __name__ == '__main__':
     # unittest.main(verbosity=2)
     runner = unittest.TextTestRunner(verbosity=2)
     suite = unittest.TestSuite()
-    suite.addTest(TestCase("test_case13"))
+    suite.addTest(TestCase("test_case16"))
     runner.run(suite)
