@@ -1,6 +1,5 @@
-# /run/test_report
-# /Logs/LogInfo
-# *.html
-# *.xml
-# a.txt
-b.txt
+/run/test_report
+/Logs/LogInfo
+*.html
+*.xml
+*.log
