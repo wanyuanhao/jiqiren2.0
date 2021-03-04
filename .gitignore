@@ -1,4 +1,4 @@
 # /run/test_report
-*.log
+#*.log
 *.html
 *.xml
