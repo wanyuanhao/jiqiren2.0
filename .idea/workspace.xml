@@ -3,11 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d9da34b2-f9ab-4a51-9133-c5dfd8a4d0a2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/TestCase.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/TestCase.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/Headers.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/Headers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/config.ini" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module/customer_management/CustomerList.py" beforeDir="false" afterPath="$PROJECT_DIR$/module/customer_management/CustomerList.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tiaoshi.py" beforeDir="false" afterPath="$PROJECT_DIR$/tiaoshi.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,21 +12,90 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/jiqiren2_0$run_case.coverage" NAME="run_case Coverage Results" MODIFIED="1612450741807" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/run" />
-    <SUITE FILE_PATH="coverage/jiqiren2_0$Headers.coverage" NAME="Headers Coverage Results" MODIFIED="1614138150179" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/config" />
+    <SUITE FILE_PATH="coverage/jiqiren2_0$Headers.coverage" NAME="Headers Coverage Results" MODIFIED="1614827766722" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/config" />
     <SUITE FILE_PATH="coverage/jiqiren2_0$TestCase.coverage" NAME="TestCase Coverage Results" MODIFIED="1614136174298" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case" />
-    <SUITE FILE_PATH="coverage/jiqiren2_0$tiaoshi.coverage" NAME="tiaoshi Coverage Results" MODIFIED="1614245560216" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/jiqiren2_0$Requests_util.coverage" NAME="Requests_util Coverage Results" MODIFIED="1614067366372" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/util" />
-    <SUITE FILE_PATH="coverage/jiqiren2_0$CustomerList.coverage" NAME="CustomerList Coverage Results" MODIFIED="1614075189783" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/module/customer_management" />
+    <SUITE FILE_PATH="coverage/jiqiren2_0$tiaoshi.coverage" NAME="tiaoshi Coverage Results" MODIFIED="1614826439135" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/jiqiren2_0$Requests_util.coverage" NAME="Requests_util Coverage Results" MODIFIED="1614676046808" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/util" />
+    <SUITE FILE_PATH="coverage/jiqiren2_0$CustomerList.coverage" NAME="CustomerList Coverage Results" MODIFIED="1614828230153" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/module/customer_management" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="jiqiren2.0" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tiaoshi.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="355">
-              <caret line="272" lean-forward="true" selection-start-line="272" selection-end-line="272" />
+            <state relative-caret-position="96">
+              <caret line="280" column="7" lean-forward="true" selection-start-line="280" selection-start-column="7" selection-end-line="280" selection-end-column="7" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/module/customer_management/CustomerList.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-167">
+              <caret line="613" column="26" lean-forward="true" selection-start-line="613" selection-start-column="26" selection-end-line="613" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/Headers.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="72">
+              <caret line="53" column="32" lean-forward="true" selection-start-line="53" selection-start-column="32" selection-end-line="53" selection-end-column="32" />
+              <folding>
+                <element signature="e#0#44#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/config.ini">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="9" lean-forward="true" selection-start-line="8" selection-start-column="34" selection-end-line="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/util/Requests_util.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="264">
+              <caret line="12" column="85" selection-start-line="12" selection-start-column="85" selection-end-line="12" selection-end-column="85" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/case/TestCase.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="5880">
+              <caret line="255" selection-start-line="255" selection-end-line="255" />
+              <folding>
+                <element signature="e#19#34#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/util/MYdb.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="74">
+              <caret line="36" column="20" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
+              <folding>
+                <element signature="e#0#14#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -76,7 +140,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -102,13 +165,7 @@
             <path>
               <item name="jiqiren2.0" type="b2602c69:ProjectViewProjectNode" />
               <item name="jiqiren2.0" type="462c0819:PsiDirectoryNode" />
-              <item name="module" type="462c0819:PsiDirectoryNode" />
-              <item name="customer_management" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jiqiren2.0" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jiqiren2.0" type="462c0819:PsiDirectoryNode" />
-              <item name="run" type="462c0819:PsiDirectoryNode" />
+              <item name="spider" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="jiqiren2.0" type="b2602c69:ProjectViewProjectNode" />
@@ -119,6 +176,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -272,12 +330,12 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.TestCase" />
-      <item itemvalue="Python.tiaoshi" />
       <item itemvalue="Python.CustomerList" />
-      <item itemvalue="Python.run_case" />
       <item itemvalue="Python.Headers" />
       <item itemvalue="Python.Requests_util" />
+      <item itemvalue="Python.TestCase" />
+      <item itemvalue="Python.run_case" />
+      <item itemvalue="Python.tiaoshi" />
     </list>
     <recent_temporary>
       <list>
@@ -310,7 +368,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48485000" />
+    <option name="totallyTimeSpent" value="48867000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -323,13 +381,12 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.15718885" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.16148068" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="1" weight="0.23719376" />
+      <window_info anchor="bottom" id="Terminal" order="1" weight="0.701559" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="3" />
       <window_info anchor="bottom" id="Version Control" order="4" />
@@ -449,8 +506,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/case/TestCase.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5856">
-          <caret line="254" selection-start-line="254" selection-end-line="254" />
+        <state relative-caret-position="5880">
+          <caret line="255" selection-start-line="255" selection-end-line="255" />
           <folding>
             <element signature="e#19#34#0" expanded="true" />
           </folding>
@@ -459,8 +516,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/module/customer_management/CustomerList.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1877">
-          <caret line="672" column="22" lean-forward="true" selection-start-line="672" selection-start-column="22" selection-end-line="672" selection-end-column="22" />
+        <state relative-caret-position="-167">
+          <caret line="613" column="26" lean-forward="true" selection-start-line="613" selection-start-column="26" selection-end-line="613" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -476,8 +533,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/Headers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="43" column="48" selection-start-line="43" selection-start-column="48" selection-end-line="43" selection-end-column="48" />
+        <state relative-caret-position="72">
+          <caret line="53" column="32" lean-forward="true" selection-start-line="53" selection-start-column="32" selection-end-line="53" selection-end-column="32" />
           <folding>
             <element signature="e#0#44#0" expanded="true" />
           </folding>
@@ -486,8 +543,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/util/Requests_util.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="101">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        <state relative-caret-position="264">
+          <caret line="12" column="85" selection-start-line="12" selection-start-column="85" selection-end-line="12" selection-end-column="85" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
@@ -496,8 +553,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/util/MYdb.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="623">
-          <caret line="50" column="18" selection-start-line="50" selection-start-column="18" selection-end-line="50" selection-end-column="18" />
+        <state relative-caret-position="74">
+          <caret line="36" column="20" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>
@@ -516,8 +573,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tiaoshi.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="355">
-          <caret line="272" lean-forward="true" selection-start-line="272" selection-end-line="272" />
+        <state relative-caret-position="96">
+          <caret line="280" column="7" lean-forward="true" selection-start-line="280" selection-start-column="7" selection-end-line="280" selection-end-column="7" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>

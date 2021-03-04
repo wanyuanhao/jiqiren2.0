@@ -1,3 +1,3 @@
-/run/test_report
-*.log
-*.html
+# /run/test_report
+# *.log
+# *.html
