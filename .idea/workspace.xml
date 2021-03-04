@@ -2,27 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d9da34b2-f9ab-4a51-9133-c5dfd8a4d0a2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Logs/LogInfo/2021-01-26_09.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Logs/LogInfo/2021-01-26_10.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Logs/LogInfo/2021-01-26_11.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Logs/LogInfo/2021-01-26_21.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Logs/LogInfo/2021-01-27_14.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Logs/LogInfo/2021-01-27_15.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Logs/LogInfo/2021-01-27_17.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Logs/LogInfo/2021-01-27_18.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Logs/LogInfo/2021-02-02_10.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Logs/LogInfo/2021-02-02_14.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Logs/LogInfo/2021-02-04_22.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Logs/LogInfo/2021-02-18_16.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Logs/LogInfo/2021-02-23_15.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Logs/LogInfo/2021-02-23_16.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Logs/LogInfo/2021-02-23_18.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Logs/LogInfo/2021-02-24_11.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Logs/LogInfo/2021-03-02_17.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Logs/LogInfo/2021-03-04_10.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Logs/LogInfo/2021-03-04_11.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tiaoshi.py" beforeDir="false" afterPath="$PROJECT_DIR$/tiaoshi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/LogInfo/2021-01-26_09.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/LogInfo/2021-01-26_10.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/LogInfo/2021-01-26_11.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/LogInfo/2021-01-26_21.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/LogInfo/2021-01-27_14.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/LogInfo/2021-01-27_15.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/LogInfo/2021-01-27_17.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/LogInfo/2021-01-27_18.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/LogInfo/2021-02-02_10.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/LogInfo/2021-02-02_14.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/LogInfo/2021-02-04_22.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/LogInfo/2021-02-18_16.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/LogInfo/2021-02-23_15.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/LogInfo/2021-02-23_16.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/LogInfo/2021-02-23_18.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/LogInfo/2021-02-24_11.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/LogInfo/2021-03-02_17.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/LogInfo/2021-03-04_10.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/LogInfo/2021-03-04_11.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/test_report/2021-01-27result.html" beforeDir="false" afterPath="$PROJECT_DIR$/run/test_report/2021-01-27result.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -55,11 +56,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Logs/LogInfo/2021-01-26_09.log">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="353">
-              <caret line="170" column="133" selection-start-line="170" selection-start-column="133" selection-end-line="170" selection-end-column="133" />
+            <state relative-caret-position="96">
+              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/run/test_report/2021-01-27result.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="96">
+              <caret line="4" column="6" lean-forward="true" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -153,10 +163,11 @@
         <option value="$PROJECT_DIR$/module/customer_management/CustomerList.py" />
         <option value="$PROJECT_DIR$/run/test_report/2021-02-04result.html" />
         <option value="$PROJECT_DIR$/yz.txt.py" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/yz.py" />
         <option value="$PROJECT_DIR$/tiaoshi.py" />
         <option value="$PROJECT_DIR$/Logs/LogInfo/2021-01-26_09.log" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/run/test_report/2021-01-27result.html" />
       </list>
     </option>
   </component>
@@ -181,13 +192,13 @@
             <path>
               <item name="jiqiren2.0" type="b2602c69:ProjectViewProjectNode" />
               <item name="jiqiren2.0" type="462c0819:PsiDirectoryNode" />
-              <item name="Logs" type="462c0819:PsiDirectoryNode" />
+              <item name="run" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="jiqiren2.0" type="b2602c69:ProjectViewProjectNode" />
               <item name="jiqiren2.0" type="462c0819:PsiDirectoryNode" />
-              <item name="Logs" type="462c0819:PsiDirectoryNode" />
-              <item name="LogInfo" type="462c0819:PsiDirectoryNode" />
+              <item name="run" type="462c0819:PsiDirectoryNode" />
+              <item name="test_report" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -385,7 +396,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51457000" />
+    <option name="totallyTimeSpent" value="51903000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -596,10 +607,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/Logs/LogInfo/2021-01-26_09.log">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="4" column="5" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
+        <state relative-caret-position="161">
+          <caret line="162" column="47" lean-forward="true" selection-start-line="162" selection-start-column="47" selection-end-line="162" selection-end-column="47" />
         </state>
       </provider>
     </entry>
@@ -613,10 +624,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Logs/LogInfo/2021-01-26_09.log">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="170" column="133" selection-start-line="170" selection-start-column="133" selection-end-line="170" selection-end-column="133" />
+        <state relative-caret-position="96">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/run/test_report/2021-01-27result.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="4" column="6" lean-forward="true" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
         </state>
       </provider>
     </entry>
