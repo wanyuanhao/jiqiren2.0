@@ -3,3 +3,5 @@
 *.html
 *.xml
 *.log
+.idea
+__pycache__
