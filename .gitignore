@@ -1,3 +1,4 @@
 # /run/test_report
-# *.log
-# *.html
+*.log
+*.html
+*.xml
