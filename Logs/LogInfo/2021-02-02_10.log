@@ -1,0 +1,7 @@
+[2021-02-02 10:49:08] [INFO] >> CustomerList.py >> 第329行  - 获取出单总数 
+[2021-02-02 10:49:08] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/customer/quotationReceiptCount{'pageIndex': 1, 'pageSize': 15}{}] 
+[2021-02-02 10:49:08] [ERROR] >> Requests_util.py >> 第24行  - headers类型错误：<class 'str'> 
+[2021-02-02 10:49:42] [INFO] >> CustomerList.py >> 第329行  - 获取出单总数 
+[2021-02-02 10:49:42] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/customer/quotationReceiptCount{'pageIndex': 1, 'pageSize': 15}{}] 
+[2021-02-02 10:50:06] [INFO] >> CustomerList.py >> 第329行  - 获取出单总数 
+[2021-02-02 10:50:06] [INFO] >> Requests_util.py >> 第10行  - 请求参：[https://bot.91bihu.com/carbusiness/api/v1/customer/quotationReceiptCount{'pageIndex': 1, 'pageSize': 15}{}] 

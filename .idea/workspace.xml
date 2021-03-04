@@ -2,7 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d9da34b2-f9ab-4a51-9133-c5dfd8a4d0a2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logs/LogInfo/2021-01-26_09.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logs/LogInfo/2021-01-26_10.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logs/LogInfo/2021-01-26_11.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logs/LogInfo/2021-01-26_21.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logs/LogInfo/2021-01-27_14.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logs/LogInfo/2021-01-27_15.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logs/LogInfo/2021-01-27_17.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logs/LogInfo/2021-01-27_18.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logs/LogInfo/2021-02-02_10.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logs/LogInfo/2021-02-02_14.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logs/LogInfo/2021-02-04_22.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logs/LogInfo/2021-02-18_16.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logs/LogInfo/2021-02-23_15.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logs/LogInfo/2021-02-23_16.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logs/LogInfo/2021-02-23_18.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logs/LogInfo/2021-02-24_11.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logs/LogInfo/2021-03-02_17.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logs/LogInfo/2021-03-04_10.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logs/LogInfo/2021-03-04_11.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tiaoshi.py" beforeDir="false" afterPath="$PROJECT_DIR$/tiaoshi.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,8 +46,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tiaoshi.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="282" column="7" selection-start-line="282" selection-start-column="7" selection-end-line="282" selection-end-column="7" />
+            <state relative-caret-position="335">
+              <caret line="279" selection-start-line="279" selection-end-line="279" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -36,33 +56,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
-              <caret line="4" column="5" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/yz.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Logs/LogInfo/2021-01-26_09.log">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="281">
-              <caret line="161" column="33" lean-forward="true" selection-start-line="161" selection-start-column="33" selection-end-line="161" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/run/test_report/2021-02-04result.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="15" column="20" lean-forward="true" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
+            <state relative-caret-position="353">
+              <caret line="170" column="133" selection-start-line="170" selection-start-column="133" selection-end-line="170" selection-end-column="133" />
             </state>
           </provider>
         </entry>
@@ -71,7 +68,7 @@
         <entry file="file://$PROJECT_DIR$/module/customer_management/CustomerList.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-167">
-              <caret line="613" column="26" lean-forward="true" selection-start-line="613" selection-start-column="26" selection-end-line="613" selection-end-column="26" />
+              <caret line="613" column="26" selection-start-line="613" selection-start-column="26" selection-end-line="613" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -80,7 +77,7 @@
         <entry file="file://$PROJECT_DIR$/config/Headers.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="72">
-              <caret line="53" column="32" lean-forward="true" selection-start-line="53" selection-start-column="32" selection-end-line="53" selection-end-column="32" />
+              <caret line="53" column="32" selection-start-line="53" selection-start-column="32" selection-end-line="53" selection-end-column="32" />
               <folding>
                 <element signature="e#0#44#0" expanded="true" />
               </folding>
@@ -155,10 +152,11 @@
         <option value="$PROJECT_DIR$/config/Headers.py" />
         <option value="$PROJECT_DIR$/module/customer_management/CustomerList.py" />
         <option value="$PROJECT_DIR$/run/test_report/2021-02-04result.html" />
-        <option value="$PROJECT_DIR$/Logs/LogInfo/2021-01-26_09.log" />
-        <option value="$PROJECT_DIR$/tiaoshi.py" />
         <option value="$PROJECT_DIR$/yz.txt.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/yz.py" />
+        <option value="$PROJECT_DIR$/tiaoshi.py" />
+        <option value="$PROJECT_DIR$/Logs/LogInfo/2021-01-26_09.log" />
       </list>
     </option>
   </component>
@@ -183,7 +181,13 @@
             <path>
               <item name="jiqiren2.0" type="b2602c69:ProjectViewProjectNode" />
               <item name="jiqiren2.0" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
+              <item name="Logs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jiqiren2.0" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jiqiren2.0" type="462c0819:PsiDirectoryNode" />
+              <item name="Logs" type="462c0819:PsiDirectoryNode" />
+              <item name="LogInfo" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -381,7 +385,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51020000" />
+    <option name="totallyTimeSpent" value="51457000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -524,7 +528,7 @@
     <entry file="file://$PROJECT_DIR$/module/customer_management/CustomerList.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-167">
-          <caret line="613" column="26" lean-forward="true" selection-start-line="613" selection-start-column="26" selection-end-line="613" selection-end-column="26" />
+          <caret line="613" column="26" selection-start-line="613" selection-start-column="26" selection-end-line="613" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -541,7 +545,7 @@
     <entry file="file://$PROJECT_DIR$/config/Headers.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
-          <caret line="53" column="32" lean-forward="true" selection-start-line="53" selection-start-column="32" selection-end-line="53" selection-end-column="32" />
+          <caret line="53" column="32" selection-start-line="53" selection-start-column="32" selection-end-line="53" selection-end-column="32" />
           <folding>
             <element signature="e#0#44#0" expanded="true" />
           </folding>
@@ -585,30 +589,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Logs/LogInfo/2021-01-26_09.log">
+    <entry file="file://$PROJECT_DIR$/yz.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="161" column="33" lean-forward="true" selection-start-line="161" selection-start-column="33" selection-end-line="161" selection-end-column="33" />
+        <state relative-caret-position="24">
+          <caret line="1" column="10" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="4" column="5" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tiaoshi.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="282" column="7" selection-start-line="282" selection-start-column="7" selection-end-line="282" selection-end-column="7" />
+        <state relative-caret-position="335">
+          <caret line="279" selection-start-line="279" selection-end-line="279" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/yz.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/Logs/LogInfo/2021-01-26_09.log">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="4" column="5" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
+        <state relative-caret-position="353">
+          <caret line="170" column="133" selection-start-line="170" selection-start-column="133" selection-end-line="170" selection-end-column="133" />
         </state>
       </provider>
     </entry>
