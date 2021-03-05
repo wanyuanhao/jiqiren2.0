@@ -277,3 +277,5 @@ for i in range(len(a)-1):
         if a[y]>a[y+1]:
             a[y],a[y+1]=a[y+1],a[y]
 print(a)
+
+print("回滚验证")
