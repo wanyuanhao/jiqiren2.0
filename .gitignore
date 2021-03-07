@@ -1,4 +1,9 @@
 # /run/test_report
 # /Logs/LogInfo
-*.log
+/run/test_report
+/Logs/LogInfo
 *.html
+*.xml
+*.log
+.idea
+__pycache__

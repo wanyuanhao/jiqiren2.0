@@ -243,18 +243,39 @@ from module.customer_management.CustomerList import CustomerList
 # result = avg(s,a)
 # print(result)
 
-import unittest
+# import unittest
+#
+# class Test(unittest.TestCase):
+#
+#     def test01(self):
+#         print("1")
+#     def test02(self):
+#         print("2")
+#     def test03(self):
+#         print("3")
+# if __name__ == '__main__':
+#     suite = unittest.TestSuite()
+#     suite.addTest(Test("test03"))
+#     runner = unittest.TextTestRunner()
+#     runner.run(suite)
 
-class Test(unittest.TestCase):
+# a=(1,2,3,4,5)
+# b =[6,7,8,9]
+# c = {'a':'1',"b":"2"}
+# d = {"a1","a2","c3"}
+# e = "abcd"
+# f = [{'a':'1',"b":"2"},{"a1","a2","c3"}]
+# g = {'a':[1,2,3],"b":"8"}
+# h = {'a':[{'a':'1',"b":"2"}],"b":"2"}
+# i = 1
+# j = 1.1
+# k = True
 
-    def test01(self):
-        print("1")
-    def test02(self):
-        print("2")
-    def test03(self):
-        print("3")
-if __name__ == '__main__':
-    suite = unittest.TestSuite()
-    suite.addTest(Test("test03"))
-    runner = unittest.TextTestRunner()
-    runner.run(suite)
+a = [3,2,5,6,1]
+for i in range(len(a)-1):
+    for y in range(len(a)-1):
+        if a[y]>a[y+1]:
+            a[y],a[y+1]=a[y+1],a[y]
+print(a)
+
+print("回滚验证")
