@@ -12,7 +12,7 @@ class Logs(object):
         self.class_name = class_name
         day = time.strftime("%Y-%m-%d_%H")
         file_dir = os.path.dirname(__file__)
-        self.mkdir(file_dir+'/LogInfo/')
+        self.mkdir(file_dir + '/LogInfo/')
         file = file_dir + f'/LogInfo/{day}.log'
         self.logger = logging.Logger(self.class_name)
         self.logger.setLevel(logging.INFO)
@@ -29,28 +29,21 @@ class Logs(object):
         self.logger.addHandler(self.logfile)
         self.logger.addHandler(self.control)
 
-    def mkdir(self,path):
-
+    def mkdir(self, path):
         # 去除首位空格
         path = path.strip()
         # 去除尾部 \ 符号
         path = path.rstrip("\\")
-
-        # 判断路径是否存在
-        # 存在     True
-        # 不存在   False
+        # 判断目录是否存在
         isExists = os.path.isdir(path)
 
-        # 判断结果
         if not isExists:
             # 如果不存在则创建目录
-            # 创建目录操作函数
             os.mkdir(path)
-            return True
         else:
-            # 如果目录存在则不创建，并提示目录已存在
-            return False
+            pass
+
 
 if __name__ == '__main__':
-    l =Logs()
+    l = Logs()
     l.logger.info("11")
