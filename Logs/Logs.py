@@ -36,9 +36,7 @@ class Logs(object):
         path = path.rstrip("\\")
         # 判断目录是否存在
         isExists = os.path.isdir(path)
-
         if not isExists:
-            # 如果不存在则创建目录
             os.mkdir(path)
         else:
             pass
