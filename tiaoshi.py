@@ -271,11 +271,96 @@ from module.customer_management.CustomerList import CustomerList
 # j = 1.1
 # k = True
 
-a = [3,2,5,6,1]
-for i in range(len(a)-1):
-    for y in range(len(a)-1):
-        if a[y]>a[y+1]:
-            a[y],a[y+1]=a[y+1],a[y]
-print(a)
 
-print("回滚验证")
+Isquote = {
+    "LicenseNo": "苏A8G6Z9",
+    "CityCode": 8,
+    "EngineNo": "J90805",
+    "CarVin": "LFV2A21K8G4043336",
+    "RegisterDate": "2016-05-24",
+    "MoldName": "大众FV7146BBDBG轿车",
+    "MoldNameUrlEncode": "",
+    "ForceTax": 0,
+    "CustKey": "6FD1DD6DA67D6EC6C78EBA0D4B9B39E9",
+    "Agent": 189469,
+    "ChildAgent": 189469,
+    "SecCode": "6FD1DD6DA67D6EC6C78EBA0D4B9B39E9",
+    "CarOwnersName": "徐胜",
+    "IdCard": "5130291981******37",
+    "OwnerIdCardType": 1,
+    "InsuredName": "徐胜",
+    "InsuredIdCard": "5130291981******37",
+    "InsuredIdType": 1,
+    "InsuredMobile": "",
+    "HolderIdCard": "5130291981******37",
+    "HolderName": "徐胜",
+    "BizTimeStamp": "1620576000",
+    "VehicleAlias": "大众FV7146BBDBG轿车/大众FV7146BBDBG轿车/1.395/5/0.00/13880",
+    "NewBuid": 207365606,
+    "BoLi": 0,
+    "SheShui": 0,
+    "HuaHen": [],
+    "SiJi": 50000,
+    "ChengKe": 10000,
+    "CheSun": 0,
+    "SanZhe": 300000,
+    "SheBeiSunshi": 0,
+    "BjmSheBeiSunshi": 0,
+    "HcJingShenSunShi": 0,
+    "HcSanFangTeYue": 0,
+    "HcXiuLiChang": 0,
+    "HcXiuLiChangType": 0,
+    "SanZheJieJiaRi": 300000,
+    "HcHuoWuZeRen": 0,
+    "YongYaoSanZhe": 10000,
+    "YongYaoSiJi": 10000,
+    "YongYaoChengKe": 10000,
+    "JingShenSiJi": 0,
+    "JingShenChengKe": 0
+}
+
+
+def Quote(quoteinfo):
+    if type(quoteinfo) is dict and len(quoteinfo) > 1:
+        city = quoteinfo["CityCode"]
+        chesun = quoteinfo['CheSun']
+        sanzhe = quoteinfo['SanZhe']
+        if city > 0:
+            # 车损和三者大于0则发起报价
+            if chesun > 0 and sanzhe > 0:
+                return '请求成功'
+            # 车损和三者小于0，提示选择险种
+            elif chesun < 0 and sanzhe < 0:
+                return '请选择保价险种'
+            # 校验车损险是否投保，
+            elif chesun <= 0 and sanzhe > 0:
+                huahen = quoteinfo['HuaHen']
+                if type(huahen) == int:
+                    if huahen == 0:
+                        return '请求成功'
+                    else:
+                        return '投保划痕险，必须投保车损险'
+                elif type(huahen) == list:
+                    if len(huahen):
+                        return '投保划痕险，必须投保车损险'
+                    else:
+                        return '请求成功'
+            else:
+                return '暂不支持'
+
+
+        else:
+            return '请选择投保城市'
+    else:
+        return '请求参数不正确'
+
+
+# result = Quote(Isquote)
+# print(result)
+import json
+
+conf = configparser.ConfigParser()
+conf.read('./config/config.ini', encoding='utf-8')
+to = conf.get('headers', 'token')
+tos = json.loads(to)
+print(type(tos))

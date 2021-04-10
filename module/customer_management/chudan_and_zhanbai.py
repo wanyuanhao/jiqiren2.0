@@ -1,7 +1,7 @@
 from util.Requests_util import Requests_util
 # from config.Headers import Headers
 import datetime
-import os, configparser
+import os, configparser,json
 from Logs import Logs
 
 
@@ -12,7 +12,7 @@ class chudan_zhanbai:
         path = os.path.dirname(__file__)
         config.read(path + '..\..\..\config\config.ini', encoding='utf-8')
         self.logger = Logs.Logs().logger
-        self.headers = eval(config.get('headers', 'token'))
+        self.headers = json.loads(config.get('headers', 'token'))
         self.urls = config.get('host', 'url')
         self.r = Requests_util()
 

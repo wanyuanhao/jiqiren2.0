@@ -1,6 +1,6 @@
 from util.Requests_util import Requests_util
 import configparser
-import os
+import os,json
 from Logs import Logs
 
 r = Requests_util()
@@ -39,7 +39,7 @@ class Headers:
             else:
                 token = {'Authorization': 'Bearer ' + response['data']['access_token']}
                 # 把token存到config文件
-                configs.set('headers', 'token', str(token))
+                configs.set('headers', 'token',json.dumps(token))
                 # 修改配置文件
                 logger.info('token更新到config文件中')
                 configs.write(open(path + '\config.ini', 'w', encoding='utf-8'))
@@ -66,7 +66,7 @@ class Headers:
             else:
                 token = {'Authorization': 'Bearer ' + response['access_token']}
                 logger.info('返回token')
-                return token
+                return json.dumps(token)
         except Exception as e:
             logger.error(f'token_update_config执行报错：{e}')
             return False

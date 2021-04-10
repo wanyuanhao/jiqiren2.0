@@ -1,6 +1,6 @@
 # -*-coding:utf-8
 from util.Requests_util import Requests_util
-import configparser, os
+import configparser, os,json
 from Logs import Logs
 
 
@@ -12,7 +12,7 @@ class Interface_quote:
         self.logger = Logs.Logs().logger
         self.r = Requests_util()
         self.urls = config.get('host', 'url')
-        self.headers = eval(config.get('headers', 'token'))
+        self.headers = json.loads(config.get('headers', 'token'))
 
     def xubao(self, licenseno, city):
         try:
@@ -31,10 +31,10 @@ class Interface_quote:
                 response = self.r.request(url, 'post', data, headers=self.headers, content_type='json')
                 if response['code'] == 1:
                     self.logger.info('新增车牌成功')
-                    return True
+                    return [True,response]
                 else:
                     self.logger.info('获取续保结果异常：{0}'.format(response))
-                    return False
+                    return [False]
             elif response['code'] == 2:
                 url = self.urls + '/carbusiness/api/v1/Renewal/SubmitRenewalAsync'
                 data = {"licenseNo": licenseno, "cityCode": city, "renewalSource": "", "carType": 1, "typeId": 1,
@@ -43,36 +43,26 @@ class Interface_quote:
                 response = self.r.request(url, 'post', data, headers=self.headers, content_type='json')
                 if response['code'] == 1:
                     self.logger.info('新增车牌成功')
-                    return True
+                    return [True,response]
                 else:
                     self.logger.info('获取续保结果异常：{0}'.format(response))
-                    return False
+                    return [False]
             else:
                 self.logger.info('续保响应结果异常:{0}'.format(response))
-                return False
+                return [False]
         except Exception as e:
             self.logger.error(f'续保执行异常：{e}')
-            return False
+            return [False]
 
     def baojia(self, response):
-        msg = response['message']
-
-    def tiaoshi(self):
-        response = {'data': [1, 1], 'code': 1, 'message': '成功'}
-        if response['message'] == '成功':
-            if response['data'] is not None:
-                is_pass = True
-                print(int(len(response['data'])))
-                print(response)
-                return is_pass
+        try:
+            if response[0]:
+                res = response[1]
+                buid = res['data']['buid']
             else:
-                is_pass = False
-                return is_pass
-        else:
-            print('已出保单查询响应msg为空：{0}'.format(response))
-            return
-
+                return [False,'续保失败，不能发起报价']
+        except Exception as e:
+            return '报价执行异常',f'{e}'
 
 if __name__ == '__main__':
     i = Interface_quote()
-    result = i.xubao('京D12345', 1)

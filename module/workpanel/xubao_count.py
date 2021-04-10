@@ -2,7 +2,7 @@ import unittest
 from util.Requests_util import Requests_util
 from config.Headers import Headers
 import configparser
-import os
+import os,json
 
 
 class Test_Case(unittest.TestCase):
@@ -14,8 +14,7 @@ class Test_Case(unittest.TestCase):
         config = configparser.ConfigParser()
         path = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
         config.read(path + '/config/config.ini', encoding='utf-8')
-        header = config.get('headers', 'token')
-        cls.headers = eval(header)
+        cls.headers = json.loads(config.get('headers', 'token'))
         cls.r = Requests_util()
         cls.host = 'https://bot.91bihu.com'  # 线上
 
