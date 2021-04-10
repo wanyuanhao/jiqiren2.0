@@ -37,7 +37,7 @@ class TestCase(unittest.TestCase):
 
     def test_case01(self):
         u'新增车牌—>录入出单'
-        self.logger.info('※※※test_case01：新增数据——录入出单流程')
+        self.logger.info('➤➤➤test_case01：新增数据——录入出单流程')
         result = self.xinzeng.xubao(self.licenseno, self.city)
         print(type(self.headers))
         self.assertTrue(result[0])
@@ -50,7 +50,7 @@ class TestCase(unittest.TestCase):
 
     def test_case02(self):
         u'顶级账户计划回访数据量对比'
-        self.logger.info('※※※test_case02：顶级账户计划回访数据量对比')
+        self.logger.info('➤➤➤test_case02：顶级账户计划回访数据量对比')
         # i+1是计划回访的页码
         # result+10 是在接口返回的数量上+10，避免库里的数据比接口返回的数量多
         plan_name = ["今日", '明日', '两日', '三日', '四日', '五日', '六日', '七日', '七日后']
@@ -71,7 +71,7 @@ class TestCase(unittest.TestCase):
 
     def test_case03(self):
         '校验报价成功的数据是否有报价历史'
-        self.logger.info('※※※test_case03：校验报价成功的数据是否有报价历史')
+        self.logger.info('➤➤➤test_case03：校验报价成功的数据是否有报价历史')
         result = self.customer.shaixuan_baojiachenggong(self.headers)
         # 判断结果是否为真
         self.assertTrue(result)
@@ -82,7 +82,7 @@ class TestCase(unittest.TestCase):
 
     def test_case04(self):
         '校验切换报价历史是否成功'
-        self.logger.info('※※※test_case04：校验切换报价历史是否成功')
+        self.logger.info('➤➤➤test_case04：校验切换报价历史是否成功')
         result = self.customer.shaixuan_baojiachenggong(self.headers)
         # 判断结果是否为真
         self.assertTrue(result)
@@ -102,7 +102,7 @@ class TestCase(unittest.TestCase):
 
     def test_case05(self):
         u'下级账户计划回访数据量对比,使用账号：18612938273'
-        self.logger.info('※※※test_case05：下级账户计划回访数据量对比,使用账号：wanyuanhao')
+        self.logger.info('➤➤➤test_case05：下级账户计划回访数据量对比,使用账号：wanyuanhao')
         token = Headers().tokens('wanyuanhao')
         self.assertTrue(token)
         # i+1是计划回访的页码
@@ -127,7 +127,7 @@ class TestCase(unittest.TestCase):
 
     def test_case06(self):
         '客户列表分配，使用账号wanyuanhao,分配人：17501110001'
-        self.logger.info('※※※test_case06：客户列表分配，使用账号wanyuanhao,分配人：17501110001')
+        self.logger.info('➤➤➤test_case06：客户列表分配，使用账号wanyuanhao,分配人：17501110001')
         self.logger.info('执行分配用例')
         token = Headers().tokens('wanyuanhao')
         self.assertTrue(token)
@@ -136,7 +136,7 @@ class TestCase(unittest.TestCase):
 
     def test_case07(self):
         '使用全部客户第5条数据录入战败'
-        self.logger.info('※※※test_case07：使用全部客户第5条数据录入战败')
+        self.logger.info('➤➤➤test_case07：使用全部客户第5条数据录入战败')
         query_result = self.customer.query(self.headers)
         licenseno = query_result['data'][4]['licenseNo']
         result = self.customer.enter_zhanbai(licenseno, self.headers)
@@ -146,7 +146,7 @@ class TestCase(unittest.TestCase):
 
     def test_case08(self):
         '使用全部客户第8条数据录入续保跟进'
-        self.logger.info('※※※test_case08：使用全部客户第8条数据录入续保跟进')
+        self.logger.info('➤➤➤test_case08：使用全部客户第8条数据录入续保跟进')
         query_result = self.customer.query(self.headers)
         buid = query_result['data'][7]['buid']
         response = self.customer.enter_genjin(buid, self.headers)
@@ -154,20 +154,20 @@ class TestCase(unittest.TestCase):
 
     def test_case09(self):
         '客户列表不筛选导出全部客户TAB数据'
-        self.logger.info('※※※test_case09：客户列表不筛选导出全部客户TAB数据')
+        self.logger.info('➤➤➤test_case09：客户列表不筛选导出全部客户TAB数据')
         result = self.customer.export_customer(self.headers)
         self.assertTrue(result['message'] == '操作成功' or result['message'] == '未找到对应的内容')
 
     def test_case10(self):
         '客户列表筛选（战败）导出全部客户数据'
-        self.logger.info('※※※test_case10：客户列表筛选（战败）导出全部客户数据')
+        self.logger.info('➤➤➤test_case10：客户列表筛选（战败）导出全部客户数据')
         # [4] 是战败的筛选条件
         result = self.customer.export_customer(self.headers, [4])
         self.assertTrue(result['message'] == '操作成功' or result['message'] == '未找到对应的内容')
 
     def test_case11(self):
         '客户列表第9条数据录入定保成功预约'
-        self.logger.info('※※※test_case11：定保录入成功预约')
+        self.logger.info('➤➤➤test_case11：定保录入成功预约')
         query_result = self.customer.query(self.headers)
         buid = query_result['data'][8]['buid']
         result = self.customer.enter_dingbao_chudan(buid, self.headers)
@@ -175,7 +175,7 @@ class TestCase(unittest.TestCase):
 
     def test_case12(self):
         '客户列表第10条数据录入定保成功预约'
-        self.logger.info('※※※test_case12：定保录入战败')
+        self.logger.info('➤➤➤test_case12：定保录入战败')
         query_result = self.customer.query(self.headers)
         buid = query_result['data'][0]['buid']
         result = self.customer.enter_dingbao_zhanbai(buid, self.headers)
@@ -183,7 +183,7 @@ class TestCase(unittest.TestCase):
 
     def test_case13(self):
         '批量续保文件上传，上传完成后校验批次ID是否存在列表'
-        self.logger.info('※※※test_case13：批量续保文件上传')
+        self.logger.info('➤➤➤test_case13：批量续保文件上传')
         path = os.path.dirname(__file__) + '/自动化上传.xlsx'
         response = self.customer.upload_file('自动化上传.xlsx', path, self.headers)
         self.assertTrue(response[0], True)
@@ -192,7 +192,7 @@ class TestCase(unittest.TestCase):
 
     def test_case14(self):
         '工作看板人员效能统计，校验录入出单、保费是否有统计'
-        self.logger.info('※※※test_case14：工作看板人员效能统计，校验录入出单、保费是否有统计')
+        self.logger.info('➤➤➤test_case14：工作看板人员效能统计，校验录入出单、保费是否有统计')
         # 获取没有录入战败前工作看板的历史统计结果
         result_count = self.work.today_personnel_work('171383', self.headers)
         self.logger.info(f'校验人员效能响应结果是否为None ：{result_count}')
@@ -243,7 +243,7 @@ class TestCase(unittest.TestCase):
 
     def test_case15(self):
         u'修改客户状态'
-        self.logger.info("※※※test_case15：修改客户状态")
+        self.logger.info("➤➤➤test_case15：修改客户状态")
         response = self.customer.query(self.headers)
         buid = response['data'][13]['buid']
         result = self.customer.modify_state(buid,self.headers)
@@ -251,7 +251,7 @@ class TestCase(unittest.TestCase):
 
     def test_case16(self):
         u'修改客户类别'
-        self.logger.info("※※※test_case16：修改客户类别")
+        self.logger.info("➤➤➤test_case16：修改客户类别")
         response = self.customer.query(self.headers)
         buid = response['data'][14]['buid']
         result = self.customer.modify_category(buid,self.headers)

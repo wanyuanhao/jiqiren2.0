@@ -66,7 +66,7 @@ class Headers:
             else:
                 token = {'Authorization': 'Bearer ' + response['access_token']}
                 logger.info('返回token')
-                return json.dumps(token)
+                return token
         except Exception as e:
             logger.error(f'token_update_config执行报错：{e}')
             return False
