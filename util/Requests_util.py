@@ -22,7 +22,7 @@ class Requests_util:
         except Exception as e:
             if type(headers) is not dict:
                 self.logger.error(f'headers类型错误：{type(headers)}')
-                return f'headers类型错误：{type(headers)}'
+                return f'headers类型错误或缺少请求协议：{type(headers)}'
             self.logger.error(f'request方法执行异常,url：{e}')
             return f'request方法执行异常：{e}'
 
