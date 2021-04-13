@@ -8,10 +8,11 @@ from urllib3 import encode_multipart_formdata
 import requests
 from requests_toolbelt import MultipartEncoder
 from module.customer_management.CustomerList import CustomerList
-import json,time
+import json, time
+
 conf = configparser.ConfigParser()
-conf.read('./config/config.ini',encoding='utf-8')
-header = json.loads(conf.get('headers','token'))
+conf.read('./config/config.ini', encoding='utf-8')
+header = json.loads(conf.get('headers', 'token'))
 
 # # 集合
 # info = ["a",'b','c','d']
@@ -369,257 +370,325 @@ def Quote(quoteinfo):
 # tos = json.loads(to)
 # print(type(tos))
 from util import Requests_util
+
 r = Requests_util.Requests_util()
 quote_body = {
-    "buid":601151202,
-    "carInfo":{
-        "paAutoModelCode":"",
-        "vehicleSource":0,
-        "discountChange":0,
-        "isLoans":0,
-        "licenseNo":"苏AW0F08",
-        "licenseType":0,
-        "engineNo":"448900",
-        "carVin":"LFV3A23C8F3040080",
-        "registerDate":"2015-05-19",
-        "vehicleName":"大众FV7187FBDBG轿车/迈腾1.8TSI DSG舒适型/1.798/5/0.0/176800.0/2015",
-        "purchasePrice":176800,
-        "seatCount":5,
-        "exhaustScale":1.798,
-        "carType":1,
-        "carUsedType":1,
-        "carTonCount":0,
-        "drivlicenseCartypeValue":"",
-        "isTransferCar":0,
-        "transferDate":"0001-01-01",
-        "beneFiciary":"",
-        "remark":"",
-        "modelName":"大众FV7187FBDBG轿车",
-        "isNewCar":2,
-        "tonCount":0,
-        "autoMoldCode":"DZAAWD0073",
-        "autoMoldCodeSource":"",
-        "renewalCarType":0,
-        "vehicleSourcefield":"",
-        "specialDiscount":0,
-        "seatUpdated":"",
-        "specialOption":"",
-        "actualDiscounts":"",
-        "vehicleAlias":"大众FV7187FBDBG轿车/迈腾1.8TSI DSG舒适型/1.798/5/0.0/176800",
-        "vehicleYear":"",
-        "discountJson":"",
-        "isPaFloorPrice":0,
-        "sendInsurance":0,
-        "invoiceType":0,
-        "cityCode":8
+    "buid": 601151202,
+    "carInfo": {
+        "paAutoModelCode": "",
+        "vehicleSource": 0,
+        "discountChange": 0,
+        "isLoans": 0,
+        "licenseNo": "苏AW0F08",
+        "licenseType": 0,
+        "engineNo": "448900",
+        "carVin": "LFV3A23C8F3040080",
+        "registerDate": "2015-05-19",
+        "vehicleName": "大众FV7187FBDBG轿车/迈腾1.8TSI DSG舒适型/1.798/5/0.0/176800.0/2015",
+        "purchasePrice": 176800,
+        "seatCount": 5,
+        "exhaustScale": 1.798,
+        "carType": 1,
+        "carUsedType": 1,
+        "carTonCount": 0,
+        "drivlicenseCartypeValue": "",
+        "isTransferCar": 0,
+        "transferDate": "0001-01-01",
+        "beneFiciary": "",
+        "remark": "",
+        "modelName": "大众FV7187FBDBG轿车",
+        "isNewCar": 2,
+        "tonCount": 0,
+        "autoMoldCode": "DZAAWD0073",
+        "autoMoldCodeSource": "",
+        "renewalCarType": 0,
+        "vehicleSourcefield": "",
+        "specialDiscount": 0,
+        "seatUpdated": "",
+        "specialOption": "",
+        "actualDiscounts": "",
+        "vehicleAlias": "大众FV7187FBDBG轿车/迈腾1.8TSI DSG舒适型/1.798/5/0.0/176800",
+        "vehicleYear": "",
+        "discountJson": "",
+        "isPaFloorPrice": 0,
+        "sendInsurance": 0,
+        "invoiceType": 0,
+        "cityCode": 8
     },
-    "preRenewalInfo":{
-        "relevantPeopleInfo":{
-            "holderInfo":{
-                "name":"罗虎成",
-                "idCard":"422422198001200095",
-                "idCardType":1,
-                "mobile":"",
-                "address":"",
-                "eMail":"",
-                "nation":"",
-                "authority":"",
-                "certiStartDate":"",
-                "certiEndDate":"",
-                "isTemp":0,
-                "mobileOwner":"",
-                "mobileIdCard":""
+    "preRenewalInfo": {
+        "relevantPeopleInfo": {
+            "holderInfo": {
+                "name": "罗虎成",
+                "idCard": "422422198001200095",
+                "idCardType": 1,
+                "mobile": "",
+                "address": "",
+                "eMail": "",
+                "nation": "",
+                "authority": "",
+                "certiStartDate": "",
+                "certiEndDate": "",
+                "isTemp": 0,
+                "mobileOwner": "",
+                "mobileIdCard": ""
             },
-            "operator":"",
-            "salerInfo":"",
-            "insuredInfo":{
-                "name":"罗虎成",
-                "idCard":"422422198001200095",
-                "idCardType":1,
-                "mobile":"",
-                "address":"",
-                "eMail":"",
-                "nation":"",
-                "authority":"",
-                "certiStartDate":"",
-                "certiEndDate":"",
-                "isTemp":0,
-                "sameWithHolder":0,
-                "mobileOwner":"",
-                "mobileIdCard":""
+            "operator": "",
+            "salerInfo": "",
+            "insuredInfo": {
+                "name": "罗虎成",
+                "idCard": "422422198001200095",
+                "idCardType": 1,
+                "mobile": "",
+                "address": "",
+                "eMail": "",
+                "nation": "",
+                "authority": "",
+                "certiStartDate": "",
+                "certiEndDate": "",
+                "isTemp": 0,
+                "sameWithHolder": 0,
+                "mobileOwner": "",
+                "mobileIdCard": ""
             },
-            "ownerInfo":{
-                "name":"罗虎成",
-                "idCard":"422422198001200095",
-                "idCardType":1,
-                "isTemp":0,
-                "sameWithHolder":0
+            "ownerInfo": {
+                "name": "罗虎成",
+                "idCard": "422422198001200095",
+                "idCardType": 1,
+                "isTemp": 0,
+                "sameWithHolder": 0
             }
         },
-        "xianZhong":{
-            "jiaoQiang":{
-                "baoE":0
+        "xianZhong": {
+            "jiaoQiang": {
+                "baoE": 0
             },
-            "cheSun":{
-                "buJiMianBaoFei":0,
-                "buJiMian":1,
-                "depreciationPrice":0,
-                "chesunShow":101483.2,
-                "baoE":101483.2,
-                "baoFei":1864.08
+            "cheSun": {
+                "buJiMianBaoFei": 0,
+                "buJiMian": 1,
+                "depreciationPrice": 0,
+                "chesunShow": 101483.2,
+                "baoE": 101483.2,
+                "baoFei": 1864.08
             },
-            "sanZhe":{
-                "buJiMian":1,
-                "buJiMianBaoFei":0,
-                "baoE":1000000,
-                "baoFei":755.5
+            "sanZhe": {
+                "buJiMian": 1,
+                "buJiMianBaoFei": 0,
+                "baoE": 1000000,
+                "baoFei": 755.5
             },
-            "siJi":{
-                "buJiMian":0,
-                "buJiMianBaoFei":0,
-                "baoE":0,
-                "baoFei":0
+            "siJi": {
+                "buJiMian": 0,
+                "buJiMianBaoFei": 0,
+                "baoE": 0,
+                "baoFei": 0
             },
-            "chengKe":{
-                "buJiMian":0,
-                "buJiMianBaoFei":0,
-                "baoE":0,
-                "baoFei":0
+            "chengKe": {
+                "buJiMian": 0,
+                "buJiMianBaoFei": 0,
+                "baoE": 0,
+                "baoFei": 0
             },
-            "sheBei":{
-                "buJiMian":0,
-                "buJiMianBaoFei":0,
-                "baoE":0,
-                "baoFei":0
+            "sheBei": {
+                "buJiMian": 0,
+                "buJiMianBaoFei": 0,
+                "baoE": 0,
+                "baoFei": 0
             },
-            "huaHen":{
-                "buJiMian":0,
-                "buJiMianBaoFei":0,
-                "baoE":0,
-                "baoFei":0
+            "huaHen": {
+                "buJiMian": 0,
+                "buJiMianBaoFei": 0,
+                "baoE": 0,
+                "baoFei": 0
             },
-            "yongYaoSanZhe":{
-                "baoE":0,
-                "baoFei":0
+            "yongYaoSanZhe": {
+                "baoE": 0,
+                "baoFei": 0
             },
-            "yongYaoSiJi":{
-                "baoE":0,
-                "baoFei":0
+            "yongYaoSiJi": {
+                "baoE": 0,
+                "baoFei": 0
             },
-            "yongYaoChengKe":{
-                "baoE":0,
-                "baoFei":0
+            "yongYaoChengKe": {
+                "baoE": 0,
+                "baoFei": 0
             },
-            "zengZhiJiuYuan":{
-                "baoE":0,
-                "baoFei":0
+            "zengZhiJiuYuan": {
+                "baoE": 0,
+                "baoFei": 0
             },
-            "zengZhiAnJian":{
-                "zengZhiAnJianJson":"",
-                "baoE":0,
-                "baoFei":0
+            "zengZhiAnJian": {
+                "zengZhiAnJianJson": "",
+                "baoE": 0,
+                "baoFei": 0
             },
-            "zengZhiDaiJia":{
-                "baoE":0,
-                "baoFei":0
+            "zengZhiDaiJia": {
+                "baoE": 0,
+                "baoFei": 0
             },
-            "zengZhiSongJian":{
-                "zengZhiSongJianJson":"",
-                "baoE":0,
-                "baoFei":0
+            "zengZhiSongJian": {
+                "zengZhiSongJianJson": "",
+                "baoE": 0,
+                "baoFei": 0
             },
-            "cheLunSunShi":{
-                "baoE":0,
-                "baoFei":0
+            "cheLunSunShi": {
+                "baoE": 0,
+                "baoFei": 0
             },
-            "faDongJiSunHuaiChuWai":{
-                "baoE":0,
-                "baoFei":0
+            "faDongJiSunHuaiChuWai": {
+                "baoE": 0,
+                "baoFei": 0
             },
-            "mianPeiCheSun":{
-                "baoE":0,
-                "baoFei":0
+            "mianPeiCheSun": {
+                "baoE": 0,
+                "baoFei": 0
             },
-            "mianPeiSanZhe":{
-                "baoE":0,
-                "baoFei":0
+            "mianPeiSanZhe": {
+                "baoE": 0,
+                "baoFei": 0
             },
-            "mianPeiSiJi":{
-                "baoE":0,
-                "baoFei":0
+            "mianPeiSiJi": {
+                "baoE": 0,
+                "baoFei": 0
             },
-            "mianPeiChengKe":{
-                "baoE":0,
-                "baoFei":0
+            "mianPeiChengKe": {
+                "baoE": 0,
+                "baoFei": 0
             },
-            "jingShenSanZhe":{
-                "baoE":0,
-                "baoFei":0
+            "jingShenSanZhe": {
+                "baoE": 0,
+                "baoFei": 0
             },
-            "jingShenSiJi":{
-                "baoE":0,
-                "baoFei":0
+            "jingShenSiJi": {
+                "baoE": 0,
+                "baoFei": 0
             },
-            "jingShenChengKe":{
-                "baoE":0,
-                "baoFei":0
+            "jingShenChengKe": {
+                "baoE": 0,
+                "baoFei": 0
             },
-            "xiuLiBuChang":{
-                "days":0,
-                "xiShu":0,
-                "baoE":0,
-                "baoFei":0
+            "xiuLiBuChang": {
+                "days": 0,
+                "xiShu": 0,
+                "baoE": 0,
+                "baoFei": 0
             },
-            "sanZheJieJiaRi":{
-                "baoE":0,
-                "baoFei":0
+            "sanZheJieJiaRi": {
+                "baoE": 0,
+                "baoFei": 0
             }
         }
     },
-    "quoteInfo":{
-        "bizStartDateTime":"2021/05/05 00:00:00",
-        "forceStartDateTime":"2021/05/05 00:00:00",
-        "selectBF":1,
-        "quoteSource":[
+    "quoteInfo": {
+        "bizStartDateTime": "2021/05/05 00:00:00",
+        "forceStartDateTime": "2021/05/05 00:00:00",
+        "selectBF": 1,
+        "quoteSource": [
             4
         ],
-        "submitSource":[
+        "submitSource": [
 
         ],
-        "cityCode":8,
-        "quotePlan":0
+        "cityCode": 8,
+        "quotePlan": 0
     },
-    "sheBeis":[
+    "sheBeis": [
 
     ],
-    "jiaYi":"",
-    "isSumbit":0,
-    "isZongGai":1,
-    "isPaFloorPrice":0,
-    "tempRequestInfo":{
-        "discountChangeInfo":{
+    "jiaYi": "",
+    "isSumbit": 0,
+    "isZongGai": 1,
+    "isPaFloorPrice": 0,
+    "tempRequestInfo": {
+        "discountChangeInfo": {
 
         }
     },
-    "multiChannels":[
+    "multiChannels": [
         {
-            "channelId":42993,
-            "source":4,
-            "channelName":"万园浩-人保车险-胡甜甜-人保车险-智能",
-            "discountChange":0
+            "channelId": 42993,
+            "source": 4,
+            "channelName": "万园浩-人保车险-胡甜甜-人保车险-智能",
+            "discountChange": 0
         }
     ]
 }
 
-quote_time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-quote_url = 'https://bot.91bihu.com/carbusiness/api/v1/Renewal/SubmitQuote'
+# quote_time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+# quote_url = 'https://bot.91bihu.com/carbusiness/api/v1/Renewal/SubmitQuote'
+#
+# quote_result= r.request(quote_url,'post',quote_body,headers=header,content_type='json')
+#
+# time.sleep(60)
+#
+# url = 'https://bot.91bihu.com/carbusiness/api/v1/Renewal/GetQuote'
+# data = {"buid":601151202}
+# result = r.request(url,'post',data,headers=header,content_type='json')
+# print(result['data']['quoteResultInfos'])
+#
 
-quote_result= r.request(quote_url,'post',quote_body,headers=header,content_type='json')
 
-time.sleep(60)
+# 多线程
+import threading
 
-url = 'https://bot.91bihu.com/carbusiness/api/v1/Renewal/GetQuote'
-data = {"buid":601151202}
-result = r.request(url,'post',data,headers=header,content_type='json')
-print(result['data']['quoteResultInfos'])
+
+def func(a):
+    print("1", a)
+    time.sleep(5)
+    print(a)
+
+
+thread = threading.Thread
+
+
+# thread(target=func('aa')).start()
+# thread(target=func('bb')).start()
+# print(threading.current_thread())
+
+class MYThearding(threading.Thread):
+    sum = 0
+    locks = threading.Lock()
+
+    def run(self):
+        sum2 = 0
+        with MYThearding.locks:
+            for i in range(1000000):
+                MYThearding.sum += 1
+                sum2 += 1
+        print(MYThearding.sum)
+        print(sum2)
+
+
+# thread1 = MYThearding()
+# thread2 = MYThearding()
+# thread3 = MYThearding()
+#
+# thread1.start()
+# thread2.start()
+# time.sleep(5)
+# thread3.start()
+#
+# thread1.join()
+# thread2.join()
+
+import multiprocessing  # 导入进程模块
+import datetime
+import time
+
+
+def function(data,name):
+    with  MYThearding.locks:
+        sum = data + 100
+        print(sum,name)
+        time.sleep(5)
+        print('over')
+        return datetime.datetime.now()
+
+
+if __name__ == '__main__':
+    p = multiprocessing.Process(target=function, args=(123,'哈哈'))  # 创建一个进程，args传参 必须是元组
+    time.sleep(3)
+    s1 = p.start()  # 运行线程p
+    p1 = multiprocessing.Process(target=function, args=(23,'呵呵'))  # 创建一个进程，args传参 必须是元组
+    time.sleep(2)
+    s2 = p1.start()  # 运行线程p
 

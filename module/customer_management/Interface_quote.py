@@ -27,36 +27,37 @@ class Interface_quote:
                 data = {"licenseNo": licenseno, "cityCode": city, "renewalSource": "", "carType": 1, "typeId": 1,
                         "sixDigitsAfterIdCard": "", "renewalType": 4, "buid": 0}
                 # 获取续保响应结果
-                self.logger.info('获取续保响应结果')
+                self.logger.info(f'{licenseno}获取续保响应结果')
                 response = self.r.request(url, 'post', data, headers=self.headers, content_type='json')
                 if response['code'] == 1:
-                    self.logger.info('新增车牌成功')
-                    return [True, response]
+                    self.logger.info(f'{licenseno}新增成功')
+                    return [True, response,city]
                 else:
-                    self.logger.info('获取续保结果异常：{0}'.format(response))
+                    self.logger.info(f'{licenseno}获取续保结果异常：{response}')
                     return [False]
             elif response['code'] == 2:
                 url = self.urls + '/carbusiness/api/v1/Renewal/SubmitRenewalAsync'
                 data = {"licenseNo": licenseno, "cityCode": city, "renewalSource": "", "carType": 1, "typeId": 1,
                         "sixDigitsAfterIdCard": "", "renewalType": 4, "buid": 0}
-                self.logger.info('获取续保响应结果')
+                self.logger.info(f'{licenseno}获取续保响应结果')
                 response = self.r.request(url, 'post', data, headers=self.headers, content_type='json')
                 if response['code'] == 1:
-                    self.logger.info('新增车牌成功')
-                    return [True, response]
+                    self.logger.info(f'{licenseno}新增成功')
+                    return [True, response,city]
                 else:
-                    self.logger.info('获取续保结果异常：{0}'.format(response))
+                    self.logger.info(f'{licenseno}获取续保结果异常：{response}')
                     return [False]
             else:
-                self.logger.info('续保响应结果异常:{0}'.format(response))
+                self.logger.info(f'{licenseno}获取续保结果异常：{response}')
                 return [False]
         except Exception as e:
-            self.logger.error(f'续保执行异常：{e}')
+            self.logger.error(f'{licenseno}续保执行异常：{e}')
             return [False]
 
-    def quote(self, xubaoResponse, headers):
+    def quote(self, xubaoResponse, headers, quote_source):
         try:
             if xubaoResponse[0]:
+                city = xubaoResponse[2]
                 res = xubaoResponse[1]
                 url = self.urls + '/carbusiness/api/v1/Renewal/GetRenewalInfo'
                 buid = res['data']['buid']
@@ -68,7 +69,6 @@ class Interface_quote:
                     carvin = response['data']["carInfo"]['carVin']
                     license = response['data']["carInfo"]["licenseNo"]
                     EngineNo = response['data']["carInfo"]["engineNo"]
-                    cityCode = response['data']["carInfo"]["cityCode"]
                     IsNewCar = response['data']["carInfo"]["isNewCar"]
                     carType = response['data']["carInfo"]["carType"]
                     registerDate = response['data']["carInfo"]["registerDate"]
@@ -152,7 +152,7 @@ class Interface_quote:
                             "isPaFloorPrice": isPaFloorPrice,
                             "sendInsurance": sendInsurance,
                             "invoiceType": invoiceType,
-                            "cityCode": cityCode
+                            "cityCode": city
                         },
                         "preRenewalInfo": {
                             "relevantPeopleInfo": {
@@ -205,8 +205,8 @@ class Interface_quote:
                                     "buJiMianBaoFei": 0,
                                     "buJiMian": 1,
                                     "depreciationPrice": 0,
-                                    "chesunShow": 101483.2,
-                                    "baoE": 101483.2,
+                                    "chesunShow":1,
+                                    "baoE": 1,
                                     "baoFei": 0
                                 },
                                 "sanZhe": {
@@ -327,7 +327,7 @@ class Interface_quote:
                             "submitSource": [
 
                             ],
-                            "cityCode": cityCode,
+                            "cityCode": city,
                             "quotePlan": 0
                         },
                         "sheBeis": [
@@ -345,7 +345,7 @@ class Interface_quote:
                         "multiChannels": [
                             {
                                 "channelId": 42993,
-                                "source": 4,
+                                "source": quote_source,
                                 "channelName": "万园浩-人保车险-胡甜甜-人保车险-智能",
                                 "discountChange": 0
                             }
@@ -353,13 +353,18 @@ class Interface_quote:
                     }
                     SendQuoteTime = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
                     quote_url = 'https://bot.91bihu.com/carbusiness/api/v1/Renewal/SubmitQuote'
+                    self.logger.info(f'{license}发起报价请求')
                     quote_result = self.r.request(quote_url, 'post', quote_body, headers, content_type='json')
+
                     if quote_result['message'] == '请求发送成功':
+                        self.logger.info(f'{license}报价请求通过')
                         time.sleep(60)
                         url = 'https://bot.91bihu.com/carbusiness/api/v1/Renewal/GetQuote'
                         data = {"buid": buid}
+                        self.logger.info(f'{license}获取报价结果')
                         result = self.r.request(url, 'post', data, headers=headers, content_type='json')
                         if len(result) > 0:
+                            self.logger.info(f'{license}校验报价结果是否返回')
                             if result['message'] == '获取成功':
                                 sendtimes1 = (datetime.datetime.now() + datetime.timedelta(minutes=3)).strftime(
                                     "%Y-%m-%d %H:%M:%S")
@@ -368,6 +373,7 @@ class Interface_quote:
                                 # 发送报价时间在上下3分钟内，则算本次报价请求
                                 if result['data']['quetoTime'] > sendtimes2 and result['data']['quetoTime'] <sendtimes1:
                                     MoneyResult = result['data']['quoteResultInfos']
+                                    self.logger.info(f'{license}报价通过：{MoneyResult}')
                                     return [True, MoneyResult]
                                 else:
                                     return [False, f'等待1分钟后，获取到的请求时间小于请求时间{SendQuoteTime}']
@@ -392,4 +398,4 @@ if __name__ == '__main__':
     headers = json.loads(config.get('headers', 'token'))
     i = Interface_quote()
     xubao = i.xubao('苏AW0F08', 8)
-    print(i.quote(xubao, headers))
+    print(i.quote(xubao, headers, 4))
