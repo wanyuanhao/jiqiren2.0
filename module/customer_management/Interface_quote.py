@@ -56,12 +56,16 @@ class Interface_quote:
 
     def quote(self, xubaoResponse, headers, quote_source):
         try:
+            # 校验续保结果是不是True
             if xubaoResponse[0]:
+                # 续保城市
                 city = xubaoResponse[2]
+                # 续保响应信息
                 res = xubaoResponse[1]
                 url = self.urls + '/carbusiness/api/v1/Renewal/GetRenewalInfo'
                 buid = res['data']['buid']
                 data = {"buid": f'{buid}', "renewalDay": 90}
+                # 获取续保结果
                 response = self.r.request(url, 'post', data, self.headers, 'json')
                 if response['message'] == '续保成功':
                     buid = response['data']["buid"]
@@ -96,9 +100,11 @@ class Interface_quote:
                     holderInfoidCard = response['data']["preRenewalInfo"]["relevantPeopleInfo"]['holderInfo']['idCard']
                     holderInfoididCardType = response['data']["preRenewalInfo"]["relevantPeopleInfo"]['holderInfo'][
                         'idCardType']
+                    # 默认关系人
                     sparename = '万园浩'
                     spareidcar = '37152219901014873X'
                     spareidtype = '1'
+                    # 如果续保结果里没有完整的关系人信息就用默认设置的关系人
                     if holderInfoname and holderInfoidCard and holderInfoididCardType:
                         sparename = holderInfoname
                         spareidcar = holderInfoidCard
@@ -107,7 +113,7 @@ class Interface_quote:
                         sparename = insuredInfoname
                         spareidcar = insuredInfoname
                         spareidtype = insuredInfoname
-
+                    # 起保时间
                     StartQuoteTime = (datetime.datetime.now() + datetime.timedelta(days=1)).strftime(
                         "%Y-%m-%d %H:%M:%S")
                     quote_body = {
@@ -350,6 +356,7 @@ class Interface_quote:
                             }
                         ]
                     }
+                    # 发送报价时间
                     SendQuoteTime = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
                     quote_url = 'https://bot.91bihu.com/carbusiness/api/v1/Renewal/SubmitQuote'
                     self.logger.info(f'{license}发起报价请求')

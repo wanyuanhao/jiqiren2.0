@@ -670,29 +670,43 @@ class MYThearding(threading.Thread):
 # thread1.join()
 # thread2.join()
 
-import multiprocessing  # 导入进程模块
-import datetime
-import time
+# import multiprocessing  # 导入进程模块
+# import datetime
+# import time
+#
+#
+# def function(data,name):
+#     for i in range(5):
+#         print('func',i)
+#         time.sleep(2)
+# def pr(Time):
+#     for i in range(5):
+#         print('pr',i)
+#         time.sleep(2)
+#     return Time
+#
+#
+#
+# if __name__ == '__main__':
+#     p = multiprocessing.Process(target=function, args=(123,'哈哈'))  # 创建一个进程，args传参 必须是元组
+#     s1 = p.start()  # 运行线程p
+#     p1 = multiprocessing.Process(target=function, args=(23,'呵呵'))  # 创建一个进程，args传参 必须是元组
+#     s2 = p1.start()  # 运行线程p
+#     p.join()
+#     print('结束')
 
 
-def function(data,name):
-    with  MYThearding.locks:
-        sum = data + 100
-        print(sum,name)
-        time.sleep(5)
-        print('over')
-        return pr(datetime.datetime.now())
-def pr(Time):
-    print(Time)
-    return Time
-
-
-
-if __name__ == '__main__':
-    p = multiprocessing.Process(target=function, args=(123,'哈哈'))  # 创建一个进程，args传参 必须是元组
-    time.sleep(3)
-    s1 = p.start()  # 运行线程p
-    p1 = multiprocessing.Process(target=function, args=(23,'呵呵'))  # 创建一个进程，args传参 必须是元组
-    time.sleep(2)
-    s2 = p1.start()  # 运行线程p
-
+# def distribute(seq):
+#     if len(seq) >=3:
+#         n = len(seq) // 3  # Will work in both Python 2 and 3
+#         s = len(seq) % 3
+#         lists = [list(x) for x in zip(seq[:n], seq[n:2*n], seq[2*n:3*n])]
+#         if s > 0:
+#             tail = seq[3*n:]
+#             lists.append(tail)
+#         return lists
+#     else:
+#         return seq
+#
+#
+# print(distribute(['a','b','c','d','e','f','g','h','i','j']))
