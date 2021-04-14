@@ -710,3 +710,12 @@ class MYThearding(threading.Thread):
 #
 #
 # print(distribute(['a','b','c','d','e','f','g','h','i','j']))
+dis=[['a','b'],'1111']
+for i in dis:
+    if type(i) == list:
+        for x in i:
+            print(x)
+    else:
+        for y in dis:
+            print(y)
+        break

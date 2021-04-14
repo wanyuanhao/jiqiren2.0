@@ -3,6 +3,7 @@ from module.customer_management.Interface_quote import Interface_quote
 import configparser, os, json
 import threading
 from Logs.Logs import Logs
+import time
 
 
 class RunQuote:
@@ -34,29 +35,28 @@ class RunQuote:
                 for i in list_license:
                     if type(i) == list:
                         # 循环续保报价小列表的车牌
-                        for license in i:
-                            response = self.interface.xubao(license, city)
+                        for licenseNo in i:
                             self.thread = threading.Thread(target=self.interface.quote,
-                                                           args=(response, headers, quote_source))
+                                                           args=(licenseNo, headers, quote_source, city))
                             self.thread.start()
                         # 等待上一轮报价执行结束
                         self.logger.info(f'等待报价进程结束：{i}')
                         self.thread.join()
                     else:
-                        self.logger.info(f'发起续保：{i}')
-                        response = self.interface.xubao(i, city)
                         self.thread = threading.Thread(target=self.interface.quote,
-                                                       args=(response, headers, quote_source))
+                                                       args=(i, headers, quote_source, city))
                         self.logger.info(f'发起报价：{i}')
                         self.thread.start()
-                    self.thread.join()
-                self.logger.info('报价结束➽➽➽➽➽➽➽')
+                self.thread.join()
             else:
                 self.logger.info('请传入车牌')
                 return '请传入车牌'
         except Exception as e:
             self.logger.error(f'Quote_licenseno执行异常：{e}')
             return f'Quote_licenseno执行异常：{e}'
+        finally:
+            self.logger.info('报价结束➽➽➽➽➽➽➽')
+            return '报价结束➽➽➽➽➽➽➽'
 
 
 if __name__ == '__main__':
@@ -66,6 +66,5 @@ if __name__ == '__main__':
     headers = json.loads(conf.get('headers', 'token'))
     MyQuote = RunQuote()
     sult = MyQuote.Quote_licenseno(
-        ['苏AW7Q70', '苏AY855N', '苏A1A96M', '苏AW0F08', '苏A8G6Z9', '京FF1234', '京PME088', '辽A3N35X', '苏BD11331', '京JV0107'],
+        ['苏B6B267','苏B5B819','苏B8W707','苏AY801E','苏A73PP7'],
         8, headers=headers, quote_source=4)
-    print(sult)

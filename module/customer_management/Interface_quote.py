@@ -30,7 +30,7 @@ class Interface_quote:
                 self.logger.info(f'{licenseno}获取续保响应结果')
                 response = self.r.request(url, 'post', data, headers=self.headers, content_type='json')
                 if response['code'] == 1:
-                    self.logger.info(f'{licenseno}新增成功')
+                    self.logger.info(f'{licenseno}新增成功，返回结果：{[True, response, city]}')
                     return [True, response, city]
                 else:
                     self.logger.info(f'{licenseno}获取续保结果异常：{response}')
@@ -42,7 +42,7 @@ class Interface_quote:
                 self.logger.info(f'{licenseno}获取续保响应结果')
                 response = self.r.request(url, 'post', data, headers=self.headers, content_type='json')
                 if response['code'] == 1:
-                    self.logger.info(f'{licenseno}新增成功')
+                    self.logger.info(f'{licenseno}新增成功，返回结果：{[True, response, city]}')
                     return [True, response, city]
                 else:
                     self.logger.info(f'{licenseno}获取续保结果异常：{response}')
@@ -54,8 +54,12 @@ class Interface_quote:
             self.logger.error(f'{licenseno}续保执行异常：{e}')
             return [False]
 
-    def quote(self, xubaoResponse, headers, quote_source):
+    def quote(self, licenseNo, headers, quote_source, city):
         try:
+            self.logger.info(f'执行报价方法，传入参数：{licenseNo, headers, quote_source, city}')
+            # 调用续保
+            self.logger.info(f'{licenseNo}调用续保方法')
+            xubaoResponse = self.xubao(licenseNo, city)
             # 校验续保结果是不是True
             if xubaoResponse[0]:
                 # 续保城市
@@ -66,6 +70,8 @@ class Interface_quote:
                 buid = res['data']['buid']
                 data = {"buid": f'{buid}', "renewalDay": 90}
                 # 获取续保结果
+                self.logger.info(f'休眠20秒获取【{licenseNo}】续保信息')
+                time.sleep(20)
                 response = self.r.request(url, 'post', data, self.headers, 'json')
                 if response['message'] == '续保成功':
                     buid = response['data']["buid"]
@@ -327,7 +333,7 @@ class Interface_quote:
                             "forceStartDateTime": f"{StartQuoteTime}",
                             "selectBF": 0,
                             "quoteSource": [
-                                4
+                                quote_source
                             ],
                             "submitSource": [
 
@@ -359,11 +365,12 @@ class Interface_quote:
                     # 发送报价时间
                     SendQuoteTime = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
                     quote_url = 'https://bot.91bihu.com/carbusiness/api/v1/Renewal/SubmitQuote'
-                    self.logger.info(f'{license}发起报价请求')
+                    self.logger.info(f'{license}续保成功，发起报价请求')
                     quote_result = self.r.request(quote_url, 'post', quote_body, headers, content_type='json')
 
                     if quote_result['message'] == '请求发送成功':
                         self.logger.info(f'{license}报价请求通过')
+                        self.logger.info(f'休眠60秒获取【{license}】报价结果')
                         time.sleep(60)
                         url = 'https://bot.91bihu.com/carbusiness/api/v1/Renewal/GetQuote'
                         data = {"buid": buid}
@@ -381,22 +388,27 @@ class Interface_quote:
                                 if result['data']['quetoTime'] > sendtimes2 and result['data'][
                                     'quetoTime'] < sendtimes1:
                                     MoneyResult = result['data']['quoteResultInfos']
-                                    self.logger.info(f'{license}报价通过：{MoneyResult}')
-                                    return [True, MoneyResult]
+                                    self.logger.info(f'{license}报价通过：{result}')
+                                    return [True, f'{license}报价通过：{result}']
                                 else:
+                                    self.logger.info(f'等待1分钟后，获取到的请求时间小于请求时间{SendQuoteTime}')
                                     return [False, f'等待1分钟后，获取到的请求时间小于请求时间{SendQuoteTime}']
 
                             else:
+                                self.logger.info(f'获取报价结果失败:{result}')
                                 return [False, f'获取报价结果失败:{result}']
                         else:
+                            self.logger.info( f'获取报价结果失败:{result}')
                             return [False, f'获取报价结果失败:{result}']
                     else:
+                        self.logger.info(f'报价请求失败：{quote_result}')
                         return [False, f'报价请求失败：{quote_result}']
 
                 else:
-                    return [False, '续保失败，不能发起报价']
+                    self.logger.info(f'【{licenseNo}】续保失败，不能发起报价')
+                    return [False, f'【{licenseNo}】续保失败，不能发起报价']
         except Exception as e:
-            print(e)
+            self.logger.error('报价执行异常', f'{e}')
             return '报价执行异常', f'{e}'
 
 
@@ -405,6 +417,3 @@ if __name__ == '__main__':
     path = os.path.dirname(__file__)
     config.read(path + '\..\..\config\config.ini', encoding='utf-8')
     headers = json.loads(config.get('headers', 'token'))
-    i = Interface_quote()
-    xubao = i.xubao('苏AW0F08', 8)
-    print(i.quote(xubao, headers, 4))
