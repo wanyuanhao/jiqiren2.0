@@ -31,7 +31,7 @@ class Interface_quote:
                 response = self.r.request(url, 'post', data, headers=self.headers, content_type='json')
                 if response['code'] == 1:
                     self.logger.info(f'{licenseno}新增成功')
-                    return [True, response,city]
+                    return [True, response, city]
                 else:
                     self.logger.info(f'{licenseno}获取续保结果异常：{response}')
                     return [False]
@@ -43,7 +43,7 @@ class Interface_quote:
                 response = self.r.request(url, 'post', data, headers=self.headers, content_type='json')
                 if response['code'] == 1:
                     self.logger.info(f'{licenseno}新增成功')
-                    return [True, response,city]
+                    return [True, response, city]
                 else:
                     self.logger.info(f'{licenseno}获取续保结果异常：{response}')
                     return [False]
@@ -65,7 +65,6 @@ class Interface_quote:
                 response = self.r.request(url, 'post', data, self.headers, 'json')
                 if response['message'] == '续保成功':
                     buid = response['data']["buid"]
-
                     carvin = response['data']["carInfo"]['carVin']
                     license = response['data']["carInfo"]["licenseNo"]
                     EngineNo = response['data']["carInfo"]["engineNo"]
@@ -205,7 +204,7 @@ class Interface_quote:
                                     "buJiMianBaoFei": 0,
                                     "buJiMian": 1,
                                     "depreciationPrice": 0,
-                                    "chesunShow":1,
+                                    "chesunShow": 1,
                                     "baoE": 1,
                                     "baoFei": 0
                                 },
@@ -371,7 +370,9 @@ class Interface_quote:
                                 sendtimes2 = (datetime.datetime.now() + datetime.timedelta(minutes=-3)).strftime(
                                     "%Y-%m-%d %H:%M:%S")
                                 # 发送报价时间在上下3分钟内，则算本次报价请求
-                                if result['data']['quetoTime'] > sendtimes2 and result['data']['quetoTime'] <sendtimes1:
+                                self.logger.info(f'校验返回的发送报价时间和获取到的发送报价时间是否在这个区间：{result}')
+                                if result['data']['quetoTime'] > sendtimes2 and result['data'][
+                                    'quetoTime'] < sendtimes1:
                                     MoneyResult = result['data']['quoteResultInfos']
                                     self.logger.info(f'{license}报价通过：{MoneyResult}')
                                     return [True, MoneyResult]
@@ -388,6 +389,7 @@ class Interface_quote:
                 else:
                     return [False, '续保失败，不能发起报价']
         except Exception as e:
+            print(e)
             return '报价执行异常', f'{e}'
 
 

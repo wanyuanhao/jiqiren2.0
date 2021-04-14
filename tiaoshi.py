@@ -681,7 +681,11 @@ def function(data,name):
         print(sum,name)
         time.sleep(5)
         print('over')
-        return datetime.datetime.now()
+        return pr(datetime.datetime.now())
+def pr(Time):
+    print(Time)
+    return Time
+
 
 
 if __name__ == '__main__':
