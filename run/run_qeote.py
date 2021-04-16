@@ -79,4 +79,4 @@ if __name__ == '__main__':
     # 多线程
     # MyQuote.quote_multiline(licenseNo, 8, headers=headers, quote_source=1)
     # 单线程
-    MyQuote.quote_one(licenseNo, 8, headers=headers, quote_source=1)
+    MyQuote.quote_one(['苏A8VZ66'], 8, headers=headers, quote_source=1)
