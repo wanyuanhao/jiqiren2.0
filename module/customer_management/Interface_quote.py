@@ -72,8 +72,8 @@ class Interface_quote:
                 buid = res['data']['buid']
                 data = {"buid": f'{buid}', "renewalDay": 90}
                 # 获取续保结果
-                self.logger.info(f'休眠20秒获取【{licenseNo}】续保信息')
-                time.sleep(20)
+                self.logger.info(f'休眠15秒获取【{licenseNo}】续保信息')
+                time.sleep(15)
                 response = self.r.request(url, 'post', data, self.headers, 'json')
                 if response['message'] == '续保成功':
                     buid = response['data']["buid"]
@@ -374,52 +374,54 @@ class Interface_quote:
                         ]
                     }
                     # 发送报价时间
-                    SendQuoteTime = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-                    quote_url = 'https://bot.91bihu.com/carbusiness/api/v1/Renewal/SubmitQuote'
-                    self.logger.info(f'{license}续保成功，发起报价请求')
-                    quote_result = self.r.request(quote_url, 'post', quote_body, headers, content_type='json')
+                    if carvin is not None and EngineNo is not None and modelName is not None and carvin != 'None' and EngineNo != 'None' and modelName != 'None':
+                        SendQuoteTime = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+                        quote_url = 'https://bot.91bihu.com/carbusiness/api/v1/Renewal/SubmitQuote'
+                        self.logger.info(f'{license}续保成功，发起报价请求')
+                        quote_result = self.r.request(quote_url, 'post', quote_body, headers, content_type='json')
+                        if quote_result['message'] == '请求发送成功':
+                            self.logger.info(f'{license}报价请求通过')
+                            self.logger.info(f'休眠40秒获取【{license}】报价结果')
+                            time.sleep(40)
+                            url = 'https://bot.91bihu.com/carbusiness/api/v1/Renewal/GetQuote'
+                            data = {"buid": buid}
+                            self.logger.info(f'{license}获取报价结果')
+                            result = self.r.request(url, 'post', data, headers=headers, content_type='json')
+                            if len(result) > 0:
+                                self.logger.info(f'{license}校验报价结果是否返回')
+                                if result['message'] == '获取成功':
+                                    sendtimes1 = (datetime.datetime.now() + datetime.timedelta(minutes=3)).strftime(
+                                        "%Y-%m-%d %H:%M:%S")
+                                    sendtimes2 = (datetime.datetime.now() + datetime.timedelta(minutes=-3)).strftime(
+                                        "%Y-%m-%d %H:%M:%S")
+                                    # 发送报价时间在上下3分钟内，则算本次报价请求
+                                    self.logger.info(f'校验返回的发送报价时间和获取到的发送报价时间是否在这个区间：{result}')
+                                    if result['data']['quetoTime'] > sendtimes2 and result['data'][
+                                        'quetoTime'] < sendtimes1:
+                                        self.logger.info(f'{license}报价通过：{result}')
+                                        return self.quote_parser([True, result, licenseNo])
+                                    else:
+                                        self.logger.info(f'等待1分钟后，获取到的请求时间小于请求时间{SendQuoteTime}')
+                                        return self.quote_parser(
+                                            [False, f'等待1分钟后，获取到的请求时间小于请求时间{SendQuoteTime}', licenseNo])
 
-                    if quote_result['message'] == '请求发送成功':
-                        self.logger.info(f'{license}报价请求通过')
-                        self.logger.info(f'休眠60秒获取【{license}】报价结果')
-                        time.sleep(60)
-                        url = 'https://bot.91bihu.com/carbusiness/api/v1/Renewal/GetQuote'
-                        data = {"buid": buid}
-                        self.logger.info(f'{license}获取报价结果')
-                        result = self.r.request(url, 'post', data, headers=headers, content_type='json')
-                        if len(result) > 0:
-                            self.logger.info(f'{license}校验报价结果是否返回')
-                            if result['message'] == '获取成功':
-                                sendtimes1 = (datetime.datetime.now() + datetime.timedelta(minutes=3)).strftime(
-                                    "%Y-%m-%d %H:%M:%S")
-                                sendtimes2 = (datetime.datetime.now() + datetime.timedelta(minutes=-3)).strftime(
-                                    "%Y-%m-%d %H:%M:%S")
-                                # 发送报价时间在上下3分钟内，则算本次报价请求
-                                self.logger.info(f'校验返回的发送报价时间和获取到的发送报价时间是否在这个区间：{result}')
-                                if result['data']['quetoTime'] > sendtimes2 and result['data'][
-                                    'quetoTime'] < sendtimes1:
-                                    self.logger.info(f'{license}报价通过：{result}')
-                                    return self.quote_parser([True, result,licenseNo])
                                 else:
-                                    self.logger.info(f'等待1分钟后，获取到的请求时间小于请求时间{SendQuoteTime}')
-                                    return self.quote_parser([False, f'等待1分钟后，获取到的请求时间小于请求时间{SendQuoteTime}',licenseNo])
-
+                                    self.logger.info(f'获取报价结果失败:{result}')
+                                    return self.quote_parser([False, f'获取报价结果失败:{result}', licenseNo])
                             else:
                                 self.logger.info(f'获取报价结果失败:{result}')
-                                return self.quote_parser([False, f'获取报价结果失败:{result}',licenseNo])
+                                return self.quote_parser([False, f'报价结果响应为空:{result}', licenseNo])
                         else:
-                            self.logger.info(f'获取报价结果失败:{result}')
-                            return self.quote_parser([False, f'报价结果响应为空:{result}',licenseNo])
+                            self.logger.info(f'{licenseNo}报价请求失败：{quote_result}')
+                            return self.quote_parser([False, f'报价请求失败：{quote_result}', licenseNo])
                     else:
-                        self.logger.info(f'报价请求失败：{quote_result}')
-                        return self.quote_parser([False, f'报价请求失败：{quote_result}',licenseNo])
-
+                        return self.quote_parser([False, f'车辆信息不全，不能发起报价：{response}', licenseNo])
                 else:
                     self.logger.info(f'【{licenseNo}】续保失败，不能发起报价')
-                    return self.quote_parser([False, f'【{licenseNo}】续保失败，不能发起报价',licenseNo])
+                    return self.quote_parser([False, f'【{licenseNo}】续保失败，不能发起报价', licenseNo])
         except Exception as e:
             self.logger.error('报价执行异常', f'{e}')
-            return self.quote_parser([False, f'报价执行异常:{e}',licenseNo])
+            return self.quote_parser([False, f'报价执行异常:{e}', licenseNo])
 
     def quote_parser(self, responses):
         licenseNo = None
@@ -444,8 +446,8 @@ class Interface_quote:
 
             else:
                 response = responses[1]
-                licenseNo = response[2]
-                self.logger.info(f'续保或报价失败：{response}')
+                licenseNo = responses[2]
+                self.logger.info(f'{licenseNo}续保或报价失败：{response}')
         except Exception as e:
             self.logger.error(f"▁▂▃▄▅▆▇█▇▆▅▄▃▂▁quote_parser执行异常：{e}")
             response = f"▁▂▃▄▅▆▇█▇▆▅▄▃▂▁quote_parser执行异常：{e}"
@@ -456,7 +458,8 @@ class Interface_quote:
     def update_result(self, licenseNo, biz=0, force=0, quote_result=None, is_pass=None, response=None):
         try:
             times = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-            self.logger.info(f"{licenseNo}报价结果插入到数据库")
+            self.logger.info(
+                f"{licenseNo}报价结果插入到数据库:is_pass:{is_pass},biz：{biz},force:{force},quote_result:{quote_result},response:{response}")
             if is_pass:
                 sql = f"insert into quote_result(licenseNo,biz_money,force_money,createTime,quote_result,is_pass) values(\"{licenseNo}\",{biz},{force},'{times}',\"{quote_result}\",'{is_pass}')"
                 self.Mydb.execute(sql)
@@ -464,10 +467,9 @@ class Interface_quote:
                 sql = f"insert into quote_result(licenseNo,biz_money,force_money,createTime,quote_result,is_pass,response) values(\"{licenseNo}\",{biz},{force},'{times}',\"{quote_result}\",'{is_pass}',\"{response}\")"
                 self.Mydb.execute(sql)
         except Exception as e:
-            self.logger.error(f'执行update_result方法报错：{e}')
+            self.logger.error(f'执行update_result方法报错,插入内容:{licenseNo}：{e}')
             sql = f"insert into quote_result(licenseNo,response) value(\"{licenseNo}\",\"{e}\")"
             self.Mydb.execute(sql)
-
 
 
 if __name__ == '__main__':
