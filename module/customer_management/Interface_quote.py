@@ -73,7 +73,7 @@ class Interface_quote:
                 data = {"buid": f'{buid}', "renewalDay": 90}
                 # 获取续保结果
                 self.logger.info(f'休眠15秒获取【{licenseNo}】续保信息')
-                time.sleep(15)
+                time.sleep(20)
                 response = self.r.request(url, 'post', data, self.headers, 'json')
                 if response['message'] == '续保成功':
                     buid = response['data']["buid"]
@@ -382,7 +382,7 @@ class Interface_quote:
                         if quote_result['message'] == '请求发送成功':
                             self.logger.info(f'{license}报价请求通过')
                             self.logger.info(f'休眠40秒获取【{license}】报价结果')
-                            time.sleep(40)
+                            time.sleep(60)
                             url = 'https://bot.91bihu.com/carbusiness/api/v1/Renewal/GetQuote'
                             data = {"buid": buid}
                             self.logger.info(f'{license}获取报价结果')

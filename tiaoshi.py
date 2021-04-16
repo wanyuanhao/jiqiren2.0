@@ -710,3 +710,20 @@ class MYThearding(threading.Thread):
 #
 #
 # print(distribute(['a','b','c','d','e','f','g','h','i','j']))
+from Logs.Logs import Logs
+
+
+def a(name):
+    Logs(name).logger.info('aaa')
+    print('aaaa')
+
+
+def b(name):
+    Logs(name).logger.info('bbb')
+    print('bbb')
+
+
+a1 = threading.Thread(target=a,args=('AAAA',),name='AAAA')
+b1 = threading.Thread(target=b,args=('BBB',),name='BBB')
+a1.start()
+b1.start()
