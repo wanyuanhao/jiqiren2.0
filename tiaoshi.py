@@ -710,12 +710,63 @@ class MYThearding(threading.Thread):
 #
 #
 # print(distribute(['a','b','c','d','e','f','g','h','i','j']))
-dis=[['a','b'],'1111']
-for i in dis:
-    if type(i) == list:
-        for x in i:
-            print(x)
-    else:
-        for y in dis:
-            print(y)
-        break
+import multiprocessing
+
+class T(multiprocessing.Process):
+    su = 0
+    locks = threading.Lock()
+
+    def run(self):
+        return self.parser('A',1,'AA')
+
+    @classmethod
+    def parser(self, name, age, sex):
+        # with Threads.locks:
+            names = name
+            ages = age
+            sexs = sex
+            for i in range(1000000):
+                T.su += 1
+            print(['姓名》》', names, ages, sexs,T.su])
+
+
+
+if __name__ == '__main__':
+    t1 = T()
+    t2 = T()
+    t3 = T()
+    t4 = T()
+    t1.start()
+    t2.start()
+    t3.start()
+    t4.start()
+
+class t(threading.Thread    ):
+    su = 0
+    locks = threading.Lock()
+
+    def run(self):
+        return self.parser('A',1,'AA')
+
+    @classmethod
+    def parser(self, name, age, sex):
+        # with Threads.locks:
+        names = name
+        ages = age
+        sexs = sex
+        for i in range(1000000):
+            t.su += 1
+        print(['姓名》》', names, ages, sexs,t.su])
+
+
+
+if __name__ == '__main__':
+    t11 = t()
+    t22 = t()
+    t33 = t()
+    t44 = t()
+    t11.start()
+    t22.start()
+    t33.start()
+    t44.start()
+

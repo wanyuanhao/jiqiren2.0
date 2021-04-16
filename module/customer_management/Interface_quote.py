@@ -2,6 +2,7 @@
 from util.Requests_util import Requests_util
 import configparser, os, json, time, datetime
 from Logs import Logs
+from util.MYdb import MYdb
 
 
 class Interface_quote:
@@ -13,6 +14,7 @@ class Interface_quote:
         self.r = Requests_util()
         self.urls = config.get('host', 'url')
         self.headers = json.loads(config.get('headers', 'token'))
+        self.Mydb = MYdb()
 
     def xubao(self, licenseno, city):
         try:
@@ -102,6 +104,11 @@ class Interface_quote:
                     insuredInfoididCardType = response['data']["preRenewalInfo"]["relevantPeopleInfo"]['insuredInfo'][
                         'idCardType']
 
+                    ownerInfoname = response['data']["preRenewalInfo"]["relevantPeopleInfo"]['ownerInfo']['name']
+                    ownerInfoidCard = response['data']["preRenewalInfo"]["relevantPeopleInfo"]['ownerInfo']['idCard']
+                    ownerInfoidCardType = response['data']["preRenewalInfo"]["relevantPeopleInfo"]['ownerInfo'][
+                        'idCardType']
+
                     holderInfoname = response['data']["preRenewalInfo"]["relevantPeopleInfo"]['holderInfo']['name']
                     holderInfoidCard = response['data']["preRenewalInfo"]["relevantPeopleInfo"]['holderInfo']['idCard']
                     holderInfoididCardType = response['data']["preRenewalInfo"]["relevantPeopleInfo"]['holderInfo'][
@@ -111,14 +118,18 @@ class Interface_quote:
                     spareidcar = '37152219901014873X'
                     spareidtype = '1'
                     # 如果续保结果里没有完整的关系人信息就用默认设置的关系人
-                    if holderInfoname and holderInfoidCard and holderInfoididCardType:
-                        sparename = holderInfoname
-                        spareidcar = holderInfoidCard
-                        spareidtype = holderInfoididCardType
-                    elif insuredInfoname and insuredInfoidCard and insuredInfoididCardType:
-                        sparename = insuredInfoname
-                        spareidcar = insuredInfoname
-                        spareidtype = insuredInfoname
+                    if holderInfoname is False and holderInfoidCard is False and holderInfoididCardType is False:
+                        holderInfoname = sparename
+                        holderInfoidCard = sparename
+                        holderInfoididCardType = sparename
+                    if insuredInfoname is False and insuredInfoidCard is False and insuredInfoididCardType is False:
+                        insuredInfoname = sparename
+                        insuredInfoidCard = spareidcar
+                        insuredInfoididCardType = spareidtype
+                    if ownerInfoname is False and ownerInfoidCard is False and ownerInfoidCardType is False:
+                        ownerInfoname = sparename
+                        ownerInfoidCard = spareidcar
+                        ownerInfoidCardType = spareidtype
                     # 起保时间
                     StartQuoteTime = (datetime.datetime.now() + datetime.timedelta(days=1)).strftime(
                         "%Y-%m-%d %H:%M:%S")
@@ -168,9 +179,9 @@ class Interface_quote:
                         "preRenewalInfo": {
                             "relevantPeopleInfo": {
                                 "holderInfo": {
-                                    "name": f"{sparename}",
-                                    "idCard": f"{spareidcar}",
-                                    "idCardType": spareidtype,
+                                    "name": f"{holderInfoname}",
+                                    "idCard": f"{holderInfoidCard}",
+                                    "idCardType": holderInfoididCardType,
                                     "mobile": "",
                                     "address": "",
                                     "eMail": "",
@@ -185,9 +196,9 @@ class Interface_quote:
                                 "operator": "",
                                 "salerInfo": "",
                                 "insuredInfo": {
-                                    "name": f"{sparename}",
-                                    "idCard": f"{spareidcar}",
-                                    "idCardType": spareidtype,
+                                    "name": f"{insuredInfoname}",
+                                    "idCard": f"{insuredInfoidCard}",
+                                    "idCardType": insuredInfoididCardType,
                                     "mobile": "",
                                     "address": "",
                                     "eMail": "",
@@ -201,9 +212,9 @@ class Interface_quote:
                                     "mobileIdCard": ""
                                 },
                                 "ownerInfo": {
-                                    "name": f"{sparename}",
-                                    "idCard": f"{spareidcar}",
-                                    "idCardType": spareidtype,
+                                    "name": f"{ownerInfoname}",
+                                    "idCard": f"{ownerInfoidCard}",
+                                    "idCardType": ownerInfoidCardType,
                                     "isTemp": 0,
                                     "sameWithHolder": 0
                                 }
@@ -387,29 +398,71 @@ class Interface_quote:
                                 self.logger.info(f'校验返回的发送报价时间和获取到的发送报价时间是否在这个区间：{result}')
                                 if result['data']['quetoTime'] > sendtimes2 and result['data'][
                                     'quetoTime'] < sendtimes1:
-                                    MoneyResult = result['data']['quoteResultInfos']
                                     self.logger.info(f'{license}报价通过：{result}')
-                                    return [True, f'{license}报价通过：{result}']
+                                    return self.quote_parser([True, result,licenseNo])
                                 else:
                                     self.logger.info(f'等待1分钟后，获取到的请求时间小于请求时间{SendQuoteTime}')
-                                    return [False, f'等待1分钟后，获取到的请求时间小于请求时间{SendQuoteTime}']
+                                    return self.quote_parser([False, f'等待1分钟后，获取到的请求时间小于请求时间{SendQuoteTime}',licenseNo])
 
                             else:
                                 self.logger.info(f'获取报价结果失败:{result}')
-                                return [False, f'获取报价结果失败:{result}']
+                                return self.quote_parser([False, f'获取报价结果失败:{result}',licenseNo])
                         else:
-                            self.logger.info( f'获取报价结果失败:{result}')
-                            return [False, f'获取报价结果失败:{result}']
+                            self.logger.info(f'获取报价结果失败:{result}')
+                            return self.quote_parser([False, f'报价结果响应为空:{result}',licenseNo])
                     else:
                         self.logger.info(f'报价请求失败：{quote_result}')
-                        return [False, f'报价请求失败：{quote_result}']
+                        return self.quote_parser([False, f'报价请求失败：{quote_result}',licenseNo])
 
                 else:
                     self.logger.info(f'【{licenseNo}】续保失败，不能发起报价')
-                    return [False, f'【{licenseNo}】续保失败，不能发起报价']
+                    return self.quote_parser([False, f'【{licenseNo}】续保失败，不能发起报价',licenseNo])
         except Exception as e:
             self.logger.error('报价执行异常', f'{e}')
-            return '报价执行异常', f'{e}'
+            return self.quote_parser([False, f'报价执行异常:{e}',licenseNo])
+
+    def quote_parser(self, responses):
+        licenseNo = None
+        is_pass = False
+        is_biz = 0
+        is_force = 0
+        is_quote_result = ""
+        response = responses
+        try:
+            if responses[0]:
+                response = responses[1]
+                licenseNo = responses[2]
+                is_quote_result = quote_money_result = response['data']["quoteResultInfos"]
+                if quote_money_result:
+                    is_biz = biz = quote_money_result[0]['bizTotal']
+                    is_force = force = quote_money_result[0]['forceTotal']
+                    if biz or force:
+                        is_pass = True
+                else:
+                    is_pass = False
+                    self.logger.info('quoteResultInfos响应字段为空')
+
+            else:
+                response = responses[1]
+                licenseNo = response[2]
+                self.logger.info(f'续保或报价失败：{response}')
+        except Exception as e:
+            self.logger.error(f"▁▂▃▄▅▆▇█▇▆▅▄▃▂▁quote_parser执行异常：{e}")
+            response = f"▁▂▃▄▅▆▇█▇▆▅▄▃▂▁quote_parser执行异常：{e}"
+        finally:
+            self.update_result(licenseNo, response=response, is_pass=is_pass, biz=is_biz, force=is_force,
+                               quote_result=is_quote_result)
+
+    def update_result(self, licenseNo, biz=0, force=0, quote_result=None, is_pass=None, response=None):
+        times = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        self.logger.info(f"{licenseNo}报价结果插入到数据库")
+        if is_pass:
+            sql = f"insert into quote_result(licenseNo,biz_money,force_money,createTime,quote_result,is_pass) value(\"{licenseNo}\",{biz},{force},'{times}',\"{quote_result}\",'{is_pass}')"
+            self.Mydb.execute(sql)
+        else:
+            sql = f"insert into quote_result(licenseNo,biz_money,force_money,createTime,quote_result,is_pass,response) value(\"{licenseNo}\",{biz},{force},'{times}',\"{quote_result}\",'{is_pass}',\"{response}\")"
+            self.Mydb.execute(sql)
+
 
 
 if __name__ == '__main__':
@@ -417,3 +470,6 @@ if __name__ == '__main__':
     path = os.path.dirname(__file__)
     config.read(path + '\..\..\config\config.ini', encoding='utf-8')
     headers = json.loads(config.get('headers', 'token'))
+    i = Interface_quote()
+    # z1 ="[{'jiaYiTotal': None, 'jiaYiSeatCount': 0, 'xianZhong': {'buJiMianFuJiaTotalAmount': 0.0, 'cheSun': {'buJiMianBaoFei': 0.0, 'buJiMian': 1.0, 'depreciationPrice': 0.0, 'negotiatedPrice': 0.0, 'chesunShow': 70200.2, 'baoE': 70200.2, 'baoFei': 759.24}, 'sanZhe': {'buJiMian': 1.0, 'buJiMianBaoFei': 0.0, 'baoE': 1000000.0, 'baoFei': 528.63}, 'siJi': {'buJiMian': 0.0, 'buJiMianBaoFei': 0.0, 'baoE': 0.0, 'baoFei': 0.0}, 'chengKe': {'buJiMian': 0.0, 'buJiMianBaoFei': 0.0, 'baoE': 0.0, 'baoFei': 0.0}, 'daoQiang': {'buJiMian': 0.0, 'buJiMianBaoFei': 0.0, 'baoE': 0.0, 'baoFei': 0.0}, 'huaHen': {'buJiMian': 0.0, 'buJiMianBaoFei': 0.0, 'baoE': 0.0, 'baoFei': 0.0}, 'boLi': {'baoE': 0.0, 'baoFei': 0.0}, 'ziRan': {'buJiMian': 0.0, 'buJiMianBaoFei': 0.0, 'baoE': 0.0, 'baoFei': 0.0}, 'sheShui': {'buJiMian': 0.0, 'buJiMianBaoFei': 0.0, 'baoE': 0.0, 'baoFei': 0.0}, 'sanFangTeYue': {'baoE': 0.0, 'baoFei': 0.0}, 'xiuLiChang': {'xiLiChangNumber': 0.0, 'baoE': 0.0, 'baoFei': 0.0}, 'sheBei': {'buJiMian': 0.0, 'buJiMianBaoFei': 0.0, 'baoE': 0.0, 'baoFei': 0.0}, 'sanZheJieJiaRi': {'baoE': 0.0, 'baoFei': 0.0}, 'xiuLiBuChang': {'days': 0, 'xiShu': 0.0, 'baoE': 0.0, 'baoFei': 0.0}, 'forceTotal': 0.0, 'taxTotal': 0.0, 'bizTotal': 0.0, 'yongYaoSanZhe': {'baoE': 0.0, 'baoFei': 0.0}, 'yongYaoSiJi': {'baoE': 0.0, 'baoFei': 0.0}, 'yongYaoChengKe': {'baoE': 0.0, 'baoFei': 0.0}, 'zengZhiJiuYuan': {'baoE': 0.0, 'baoFei': 0.0}, 'zengZhiAnJian': {'zengZhiAnJianJson': '', 'baoE': 0.0, 'baoFei': 0.0}, 'zengZhiDaiJia': {'baoE': 0.0, 'baoFei': 0.0}]"
+    # i.update_result('AAAAA',1.2,3.1,z1,True,z1)

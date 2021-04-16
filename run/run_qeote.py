@@ -66,5 +66,5 @@ if __name__ == '__main__':
     headers = json.loads(conf.get('headers', 'token'))
     MyQuote = RunQuote()
     sult = MyQuote.Quote_licenseno(
-        ['苏B6B267','苏B5B819','苏B8W707','苏AY801E','苏A73PP7'],
+        ['苏AW9C78','苏A11C6H','苏AR6Z11','苏AR8L32','苏AR1X80'],
         8, headers=headers, quote_source=4)
