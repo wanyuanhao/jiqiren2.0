@@ -458,10 +458,10 @@ class Interface_quote:
             times = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
             self.logger.info(f"{licenseNo}报价结果插入到数据库")
             if is_pass:
-                sql = f"insert into quote_result(licenseNo,biz_money,force_money,createTime,quote_result,is_pass) value(\"{licenseNo}\",{biz},{force},'{times}',\"{quote_result}\",'{is_pass}')"
+                sql = f"insert into quote_result(licenseNo,biz_money,force_money,createTime,quote_result,is_pass) values(\"{licenseNo}\",{biz},{force},'{times}',\"{quote_result}\",'{is_pass}')"
                 self.Mydb.execute(sql)
             else:
-                sql = f"insert into quote_result(licenseNo,biz_money,force_money,createTime,quote_result,is_pass,response) value(\"{licenseNo}\",{biz},{force},'{times}',\"{quote_result}\",'{is_pass}',\"{response}\")"
+                sql = f"insert into quote_result(licenseNo,biz_money,force_money,createTime,quote_result,is_pass,response) values(\"{licenseNo}\",{biz},{force},'{times}',\"{quote_result}\",'{is_pass}',\"{response}\")"
                 self.Mydb.execute(sql)
         except Exception as e:
             self.logger.error(f'执行update_result方法报错：{e}')
