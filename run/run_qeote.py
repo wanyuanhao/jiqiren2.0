@@ -44,8 +44,7 @@ class RunQuote:
                             threads.append(self.thread)
                         # 等待上一轮报价执行结束
                         self.logger.info(f'等待报价进程结束：{i}')
-                        for thr in threads:
-                            thr.join()
+                        threads[0].join(),threads[1].join(),threads[2].join(),threads[3].join()
                     else:
                         self.thread = threading.Thread(target=self.interface.quote,
                                                        args=(i, headers, quote_source, city))
@@ -77,6 +76,6 @@ if __name__ == '__main__':
     # licenseNo = ['苏A8VZ66', '苏A9D0V7', '苏AQ917W', '苏ABJ126', '苏AV729T', '苏A199CJ', '苏A29C8T', '苏A2R2J0', '苏A9D0V7']
     licenseNo = ['苏AE8A52', '苏AW456P', '苏AY596L', '苏AY621K', '苏AB5B50', '苏A80Z0L', '苏A1B26Z', '苏A76D0U', '苏A6U28S']
     # 多线程
-    # MyQuote.quote_multiline(licenseNo, 8, headers=headers, quote_source=1)
+    MyQuote.quote_multiline( ['苏A80Z0L', '苏A1B26Z', '苏A76D0U', '苏A6U28S'], 8, headers=headers, quote_source=4)
     # 单线程
-    MyQuote.quote_one(['苏A8VZ66'], 8, headers=headers, quote_source=1)
+    # MyQuote.quote_one(['苏A8VZ66'], 8, headers=headers, quote_source=1)

@@ -1,13 +1,14 @@
 import pymysql
 from warnings import filterwarnings
 from Logs.Logs import Logs
-
+import threading
 filterwarnings("ignore", category=pymysql.Warning)
 
 
 class MYdb:
     def __init__(self):
-        self.conn = pymysql.connect(host='39.99.156.212', user='root',passwd= 'Hao1014', database='bihu_quote',port=3306)
+        self.conn = pymysql.connect(host='39.99.156.212', user='root', passwd='Hao1014', database='bihu_quote',
+                                    port=3306)
         self.cur = self.conn.cursor(cursor=pymysql.cursors.DictCursor)
         self.logger = Logs().logger
 
@@ -26,10 +27,11 @@ class MYdb:
 
     def execute(self, sql):
         try:
-            self.logger.info(f"execute入参：{sql}")
-            row = self.cur.execute(sql)
-            self.conn.commit()
-            return row
+            while threading.Lock():
+                self.logger.info(f"execute入参：{sql}")
+                row = self.cur.execute(sql)
+                self.conn.commit()
+                return row
         except Exception as e:
             self.conn.rollback()
             self.logger.info(f"数据库操作异常,回滚操作。异常信息：{e}")
@@ -55,4 +57,3 @@ if __name__ == '__main__':
     result3 = db.query(sql)
     print(result3)
     db.commit()
-

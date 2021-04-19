@@ -3,9 +3,11 @@ from util.Requests_util import Requests_util
 import configparser, os, json, time, datetime
 from Logs import Logs
 from util.MYdb import MYdb
+import threading
 
 
 class Interface_quote:
+    lock = threading.Lock()
     def __init__(self):
         config = configparser.ConfigParser()
         path = os.path.dirname(__file__)
@@ -56,9 +58,9 @@ class Interface_quote:
             self.logger.error(f'{licenseno}续保执行异常：{e}')
             return [False]
 
-    def quote(self, licenseNo, headers, quote_source, city):
+    def quote(self, licenseNo, header, quote_source, city):
         try:
-            self.logger.info(f'执行报价方法，传入参数：{licenseNo, headers, quote_source, city}')
+            self.logger.info(f'执行报价方法，传入参数：{licenseNo, header, quote_source, city}')
             # 调用续保
             self.logger.info(f'{licenseNo}调用续保方法')
             xubaoResponse = self.xubao(licenseNo, city)
@@ -74,7 +76,7 @@ class Interface_quote:
                 # 获取续保结果
                 self.logger.info(f'休眠20秒获取【{licenseNo}】续保信息')
                 time.sleep(20)
-                response = self.r.request(url, 'post', data, self.headers, 'json')
+                response = self.r.request(url, 'post', data, header, 'json')
                 if response['message'] == '续保成功':
                     buid = response['data']["buid"]
                     carvin = response['data']["carInfo"]['carVin']
@@ -378,39 +380,17 @@ class Interface_quote:
                         SendQuoteTime = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
                         quote_url = 'https://bot.91bihu.com/carbusiness/api/v1/Renewal/SubmitQuote'
                         self.logger.info(f'{license}续保成功，发起报价请求')
-                        quote_result = self.r.request(quote_url, 'post', quote_body, headers, content_type='json')
+                        quote_result = self.r.request(quote_url, 'post', quote_body, header, content_type='json')
                         if quote_result['message'] == '请求发送成功':
                             self.logger.info(f'{license}报价请求通过')
                             self.logger.info(f'休眠60秒获取【{license}】报价结果')
                             time.sleep(60)
-                            url = 'https://bot.91bihu.com/carbusiness/api/v1/Renewal/GetQuote'
-                            data = {"buid": buid}
-                            self.logger.info(f'{license}获取报价结果')
-                            result = self.r.request(url, 'post', data, headers=headers, content_type='json')
-                            if len(result) > 0:
-                                self.logger.info(f'{license}校验报价结果是否返回')
-                                if result['message'] == '获取成功':
-                                    sendtimes1 = (datetime.datetime.now() + datetime.timedelta(minutes=3)).strftime(
-                                        "%Y-%m-%d %H:%M:%S")
-                                    sendtimes2 = (datetime.datetime.now() + datetime.timedelta(minutes=-3)).strftime(
-                                        "%Y-%m-%d %H:%M:%S")
-                                    # 发送报价时间在上下3分钟内，则算本次报价请求
-                                    self.logger.info(f'校验返回的发送报价时间和获取到的发送报价时间是否在这个区间：{result}')
-                                    if result['data']['quetoTime'] > sendtimes2 and result['data'][
-                                        'quetoTime'] < sendtimes1:
-                                        self.logger.info(f'{license}报价通过：{result}')
-                                        return self.quote_parser([True, result, licenseNo])
-                                    else:
-                                        self.logger.info(f'等待1分钟后，获取到的请求时间小于请求时间{SendQuoteTime}')
-                                        return self.quote_parser(
-                                            [False, f'等待1分钟后，获取到的请求时间小于请求时间{SendQuoteTime}', licenseNo])
 
-                                else:
-                                    self.logger.info(f'获取报价结果失败:{result}')
-                                    return self.quote_parser([False, f'获取报价结果失败:{result}', licenseNo])
-                            else:
-                                self.logger.info(f'获取报价结果失败:{result}')
-                                return self.quote_parser([False, f'报价结果响应为空:{result}', licenseNo])
+                            with Interface_quote.lock:
+                                print("▁▂▃▄▅▆▇█▇▆▅▄▃▂▁",datetime.datetime.now())
+                                self.obtain_quote(buid, licenseNo, SendQuoteTime,header)
+                                time.sleep(5)
+
                         else:
                             self.logger.info(f'{licenseNo}报价请求失败：{quote_result}')
                             return self.quote_parser([False, f'报价请求失败：{quote_result}', licenseNo])
@@ -471,12 +451,46 @@ class Interface_quote:
             sql = f"insert into quote_result(licenseNo,response) value(\"{licenseNo}\",\"{e}\")"
             self.Mydb.execute(sql)
 
+    def obtain_quote(self, buid, licenseNo, sendTime,header):
+        try :
+            url = 'https://bot.91bihu.com/carbusiness/api/v1/Renewal/GetQuote'
+            data = {"buid": buid}
+            self.logger.info(f'{licenseNo}获取报价结果')
+            result = self.r.request(url, 'post', data, headers=header, content_type='json')
+            if len(result) > 0:
+                self.logger.info(f'{licenseNo}校验报价结果是否返回')
+                if result['message'] == '获取成功':
+                    sendtimes1 = (datetime.datetime.now() + datetime.timedelta(minutes=3)).strftime(
+                        "%Y-%m-%d %H:%M:%S")
+                    sendtimes2 = (datetime.datetime.now() + datetime.timedelta(minutes=-3)).strftime(
+                        "%Y-%m-%d %H:%M:%S")
+                    # 发送报价时间在上下3分钟内，则算本次报价请求
+                    self.logger.info(f'校验返回的发送报价时间和获取到的发送报价时间是否在这个区间：{result}')
+                    if result['data']['quetoTime'] > sendtimes2 and result['data'][
+                        'quetoTime'] < sendtimes1:
+                        self.logger.info(f'{licenseNo}报价通过：{result}')
+                        return self.quote_parser([True, result, licenseNo])
+                    else:
+                        self.logger.info(f'等待1分钟后，获取到的请求时间小于请求时间{sendTime}')
+                        return self.quote_parser(
+                            [False, f'等待1分钟后，获取到的请求时间小于请求时间{sendTime}', licenseNo])
+
+                else:
+                    self.logger.info(f'获取报价结果失败:{result}')
+                    return self.quote_parser([False, f'获取报价结果失败:{result}', licenseNo])
+            else:
+                self.logger.info(f'获取报价结果失败:{result}')
+                return self.quote_parser([False, f'报价结果响应为空:{result}', licenseNo])
+        except Exception as e:
+            self.logger.error('obtain_quote执行异常', f'{e}')
+            return self.quote_parser([False, f'obtain_quote执行异常:{e}', licenseNo])
+
 
 if __name__ == '__main__':
     config = configparser.ConfigParser()
     path = os.path.dirname(__file__)
     config.read(path + '\..\..\config\config.ini', encoding='utf-8')
-    headers = json.loads(config.get('headers', 'token'))
+    header = json.loads(config.get('headers', 'token'))
     i = Interface_quote()
     # z1 ="[{'jiaYiTotal': None, 'jiaYiSeatCount': 0, 'xianZhong': {'buJiMianFuJiaTotalAmount': 0.0, 'cheSun': {'buJiMianBaoFei': 0.0, 'buJiMian': 1.0, 'depreciationPrice': 0.0, 'negotiatedPrice': 0.0, 'chesunShow': 70200.2, 'baoE': 70200.2, 'baoFei': 759.24}, 'sanZhe': {'buJiMian': 1.0, 'buJiMianBaoFei': 0.0, 'baoE': 1000000.0, 'baoFei': 528.63}, 'siJi': {'buJiMian': 0.0, 'buJiMianBaoFei': 0.0, 'baoE': 0.0, 'baoFei': 0.0}, 'chengKe': {'buJiMian': 0.0, 'buJiMianBaoFei': 0.0, 'baoE': 0.0, 'baoFei': 0.0}, 'daoQiang': {'buJiMian': 0.0, 'buJiMianBaoFei': 0.0, 'baoE': 0.0, 'baoFei': 0.0}, 'huaHen': {'buJiMian': 0.0, 'buJiMianBaoFei': 0.0, 'baoE': 0.0, 'baoFei': 0.0}, 'boLi': {'baoE': 0.0, 'baoFei': 0.0}, 'ziRan': {'buJiMian': 0.0, 'buJiMianBaoFei': 0.0, 'baoE': 0.0, 'baoFei': 0.0}, 'sheShui': {'buJiMian': 0.0, 'buJiMianBaoFei': 0.0, 'baoE': 0.0, 'baoFei': 0.0}, 'sanFangTeYue': {'baoE': 0.0, 'baoFei': 0.0}, 'xiuLiChang': {'xiLiChangNumber': 0.0, 'baoE': 0.0, 'baoFei': 0.0}, 'sheBei': {'buJiMian': 0.0, 'buJiMianBaoFei': 0.0, 'baoE': 0.0, 'baoFei': 0.0}, 'sanZheJieJiaRi': {'baoE': 0.0, 'baoFei': 0.0}, 'xiuLiBuChang': {'days': 0, 'xiShu': 0.0, 'baoE': 0.0, 'baoFei': 0.0}, 'forceTotal': 0.0, 'taxTotal': 0.0, 'bizTotal': 0.0, 'yongYaoSanZhe': {'baoE': 0.0, 'baoFei': 0.0}, 'yongYaoSiJi': {'baoE': 0.0, 'baoFei': 0.0}, 'yongYaoChengKe': {'baoE': 0.0, 'baoFei': 0.0}, 'zengZhiJiuYuan': {'baoE': 0.0, 'baoFei': 0.0}, 'zengZhiAnJian': {'zengZhiAnJianJson': '', 'baoE': 0.0, 'baoFei': 0.0}, 'zengZhiDaiJia': {'baoE': 0.0, 'baoFei': 0.0}]"
     # i.update_result('AAAAA',1.2,3.1,z1,True,z1)

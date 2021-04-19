@@ -644,31 +644,33 @@ thread = threading.Thread
 # thread(target=func('bb')).start()
 # print(threading.current_thread())
 
-class MYThearding(threading.Thread):
-    sum = 0
-    locks = threading.Lock()
+# class MYThearding(threading.Thread):
 
-    def run(self):
-        sum2 = 0
-        with MYThearding.locks:
-            for i in range(1000000):
-                MYThearding.sum += 1
-                sum2 += 1
-        print(MYThearding.sum)
-        print(sum2)
+locks = threading.Lock()
+
+def run():
+    sum2 = 0
+
+    with locks:
+        print(datetime.datetime.now())
+        time.sleep(3)
+        for i in range(1000000):
+            sum2 += 1
+
+    print(sum2)
 
 
-# thread1 = MYThearding()
-# thread2 = MYThearding()
-# thread3 = MYThearding()
+thread1 = threading.Thread(target=run)
+thread2 = threading.Thread(target=run)
+thread3 = threading.Thread(target=run)
+
+thread1.start()
+thread2.start()
+thread3.start()
 #
-# thread1.start()
-# thread2.start()
-# time.sleep(5)
-# thread3.start()
-#
-# thread1.join()
-# thread2.join()
+thread1.join()
+thread2.join()
+thread3.join()
 
 # import multiprocessing  # 导入进程模块
 # import datetime
@@ -711,8 +713,8 @@ class MYThearding(threading.Thread):
 #
 # print(distribute(['a','b','c','d','e','f','g','h','i','j']))
 from Logs.Logs import Logs
-
-
+import multiprocessing
+import pre
 def a(name):
     Logs(name).logger.info('aaa')
     print('aaaa')
@@ -721,9 +723,17 @@ def a(name):
 def b(name):
     Logs(name).logger.info('bbb')
     print('bbb')
+pr = pre.prec()
+def run(aa):
+    try:
+        for i in aa:
+            a1 = multiprocessing.Process(target=pr.prec,args=('AAAA',))
+            a1.start()
+    except Exception:
+        print('异常')
+    # b1 = multiprocessing.Process(target=b,args=('BBB',),name='BBB')
+    #
+    # b1.start()
 
-
-a1 = threading.Thread(target=a,args=('AAAA',),name='AAAA')
-b1 = threading.Thread(target=b,args=('BBB',),name='BBB')
-a1.start()
-b1.start()
+# if __name__ == '__main__':
+    # run([a])
