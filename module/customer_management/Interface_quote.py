@@ -385,12 +385,9 @@ class Interface_quote:
                             self.logger.info(f'{license}报价请求通过')
                             self.logger.info(f'休眠60秒获取【{license}】报价结果')
                             time.sleep(60)
-
                             with Interface_quote.lock:
-                                print("▁▂▃▄▅▆▇█▇▆▅▄▃▂▁",datetime.datetime.now())
                                 self.obtain_quote(buid, licenseNo, SendQuoteTime,header)
-                                time.sleep(5)
-
+                                time.sleep(1)
                         else:
                             self.logger.info(f'{licenseNo}报价请求失败：{quote_result}')
                             return self.quote_parser([False, f'报价请求失败：{quote_result}', licenseNo])

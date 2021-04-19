@@ -13,7 +13,7 @@ class Logs(object):
         day = time.strftime("%Y-%m-%d_%H")
         file_dir = os.path.dirname(__file__)
         self.mkdir(file_dir + '/LogInfo/')
-        file = file_dir + f'/LogInfo/{class_name}{day}.log'
+        file = file_dir + f'/LogInfo/{day}.log'
         self.logger = logging.Logger(self.class_name)
         self.logger.setLevel(logging.INFO)
         self.logfile = logging.FileHandler(file, encoding='utf-8')
