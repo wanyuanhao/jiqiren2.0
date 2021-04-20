@@ -10,10 +10,6 @@ from requests_toolbelt import MultipartEncoder
 from module.customer_management.CustomerList import CustomerList
 import json, time
 
-conf = configparser.ConfigParser()
-conf.read('./config/config.ini', encoding='utf-8')
-header = json.loads(conf.get('headers', 'token'))
-
 # # 集合
 # info = ["a",'b','c','d']
 # info = set(info)
@@ -215,7 +211,7 @@ header = json.loads(conf.get('headers', 'token'))
 #     json.dumps(datas,ensure_ascii=True)
 #     print(datas)
 #
-# read_excel('./ttt.xlsx')
+# read_excel('./111.xlsx')
 # -----------------------------------------------------------------------------
 
 # a = [i for i in range(1, 33)]
@@ -277,89 +273,6 @@ header = json.loads(conf.get('headers', 'token'))
 # k = True
 
 
-Isquote = {
-    "LicenseNo": "苏A8G6Z9",
-    "CityCode": 8,
-    "EngineNo": "J90805",
-    "CarVin": "LFV2A21K8G4043336",
-    "RegisterDate": "2016-05-24",
-    "MoldName": "大众FV7146BBDBG轿车",
-    "MoldNameUrlEncode": "",
-    "ForceTax": 0,
-    "CustKey": "6FD1DD6DA67D6EC6C78EBA0D4B9B39E9",
-    "Agent": 189469,
-    "ChildAgent": 189469,
-    "SecCode": "6FD1DD6DA67D6EC6C78EBA0D4B9B39E9",
-    "CarOwnersName": "徐胜",
-    "IdCard": "5130291981******37",
-    "OwnerIdCardType": 1,
-    "InsuredName": "徐胜",
-    "InsuredIdCard": "5130291981******37",
-    "InsuredIdType": 1,
-    "InsuredMobile": "",
-    "HolderIdCard": "5130291981******37",
-    "HolderName": "徐胜",
-    "BizTimeStamp": "1620576000",
-    "VehicleAlias": "大众FV7146BBDBG轿车/大众FV7146BBDBG轿车/1.395/5/0.00/13880",
-    "NewBuid": 207365606,
-    "BoLi": 0,
-    "SheShui": 0,
-    "HuaHen": [],
-    "SiJi": 50000,
-    "ChengKe": 10000,
-    "CheSun": 0,
-    "SanZhe": 300000,
-    "SheBeiSunshi": 0,
-    "BjmSheBeiSunshi": 0,
-    "HcJingShenSunShi": 0,
-    "HcSanFangTeYue": 0,
-    "HcXiuLiChang": 0,
-    "HcXiuLiChangType": 0,
-    "SanZheJieJiaRi": 300000,
-    "HcHuoWuZeRen": 0,
-    "YongYaoSanZhe": 10000,
-    "YongYaoSiJi": 10000,
-    "YongYaoChengKe": 10000,
-    "JingShenSiJi": 0,
-    "JingShenChengKe": 0
-}
-
-
-def Quote(quoteinfo):
-    if type(quoteinfo) is dict and len(quoteinfo) > 1:
-        city = quoteinfo["CityCode"]
-        chesun = quoteinfo['CheSun']
-        sanzhe = quoteinfo['SanZhe']
-        if city > 0:
-            # 车损和三者大于0则发起报价
-            if chesun > 0 and sanzhe > 0:
-                return '请求成功'
-            # 车损和三者小于0，提示选择险种
-            elif chesun < 0 and sanzhe < 0:
-                return '请选择保价险种'
-            # 校验车损险是否投保，
-            elif chesun <= 0 and sanzhe > 0:
-                huahen = quoteinfo['HuaHen']
-                if type(huahen) == int:
-                    if huahen == 0:
-                        return '请求成功'
-                    else:
-                        return '投保划痕险，必须投保车损险'
-                elif type(huahen) == list:
-                    if len(huahen):
-                        return '投保划痕险，必须投保车损险'
-                    else:
-                        return '请求成功'
-            else:
-                return '暂不支持'
-
-
-        else:
-            return '请选择投保城市'
-    else:
-        return '请求参数不正确'
-
-
 # result = Quote(Isquote)
 # print(result)
 # import json
@@ -369,249 +282,6 @@ def Quote(quoteinfo):
 # to = conf.get('headers', 'token')
 # tos = json.loads(to)
 # print(type(tos))
-from util import Requests_util
-
-r = Requests_util.Requests_util()
-quote_body = {
-    "buid": 601151202,
-    "carInfo": {
-        "paAutoModelCode": "",
-        "vehicleSource": 0,
-        "discountChange": 0,
-        "isLoans": 0,
-        "licenseNo": "苏AW0F08",
-        "licenseType": 0,
-        "engineNo": "448900",
-        "carVin": "LFV3A23C8F3040080",
-        "registerDate": "2015-05-19",
-        "vehicleName": "大众FV7187FBDBG轿车/迈腾1.8TSI DSG舒适型/1.798/5/0.0/176800.0/2015",
-        "purchasePrice": 176800,
-        "seatCount": 5,
-        "exhaustScale": 1.798,
-        "carType": 1,
-        "carUsedType": 1,
-        "carTonCount": 0,
-        "drivlicenseCartypeValue": "",
-        "isTransferCar": 0,
-        "transferDate": "0001-01-01",
-        "beneFiciary": "",
-        "remark": "",
-        "modelName": "大众FV7187FBDBG轿车",
-        "isNewCar": 2,
-        "tonCount": 0,
-        "autoMoldCode": "DZAAWD0073",
-        "autoMoldCodeSource": "",
-        "renewalCarType": 0,
-        "vehicleSourcefield": "",
-        "specialDiscount": 0,
-        "seatUpdated": "",
-        "specialOption": "",
-        "actualDiscounts": "",
-        "vehicleAlias": "大众FV7187FBDBG轿车/迈腾1.8TSI DSG舒适型/1.798/5/0.0/176800",
-        "vehicleYear": "",
-        "discountJson": "",
-        "isPaFloorPrice": 0,
-        "sendInsurance": 0,
-        "invoiceType": 0,
-        "cityCode": 8
-    },
-    "preRenewalInfo": {
-        "relevantPeopleInfo": {
-            "holderInfo": {
-                "name": "罗虎成",
-                "idCard": "422422198001200095",
-                "idCardType": 1,
-                "mobile": "",
-                "address": "",
-                "eMail": "",
-                "nation": "",
-                "authority": "",
-                "certiStartDate": "",
-                "certiEndDate": "",
-                "isTemp": 0,
-                "mobileOwner": "",
-                "mobileIdCard": ""
-            },
-            "operator": "",
-            "salerInfo": "",
-            "insuredInfo": {
-                "name": "罗虎成",
-                "idCard": "422422198001200095",
-                "idCardType": 1,
-                "mobile": "",
-                "address": "",
-                "eMail": "",
-                "nation": "",
-                "authority": "",
-                "certiStartDate": "",
-                "certiEndDate": "",
-                "isTemp": 0,
-                "sameWithHolder": 0,
-                "mobileOwner": "",
-                "mobileIdCard": ""
-            },
-            "ownerInfo": {
-                "name": "罗虎成",
-                "idCard": "422422198001200095",
-                "idCardType": 1,
-                "isTemp": 0,
-                "sameWithHolder": 0
-            }
-        },
-        "xianZhong": {
-            "jiaoQiang": {
-                "baoE": 0
-            },
-            "cheSun": {
-                "buJiMianBaoFei": 0,
-                "buJiMian": 1,
-                "depreciationPrice": 0,
-                "chesunShow": 101483.2,
-                "baoE": 101483.2,
-                "baoFei": 1864.08
-            },
-            "sanZhe": {
-                "buJiMian": 1,
-                "buJiMianBaoFei": 0,
-                "baoE": 1000000,
-                "baoFei": 755.5
-            },
-            "siJi": {
-                "buJiMian": 0,
-                "buJiMianBaoFei": 0,
-                "baoE": 0,
-                "baoFei": 0
-            },
-            "chengKe": {
-                "buJiMian": 0,
-                "buJiMianBaoFei": 0,
-                "baoE": 0,
-                "baoFei": 0
-            },
-            "sheBei": {
-                "buJiMian": 0,
-                "buJiMianBaoFei": 0,
-                "baoE": 0,
-                "baoFei": 0
-            },
-            "huaHen": {
-                "buJiMian": 0,
-                "buJiMianBaoFei": 0,
-                "baoE": 0,
-                "baoFei": 0
-            },
-            "yongYaoSanZhe": {
-                "baoE": 0,
-                "baoFei": 0
-            },
-            "yongYaoSiJi": {
-                "baoE": 0,
-                "baoFei": 0
-            },
-            "yongYaoChengKe": {
-                "baoE": 0,
-                "baoFei": 0
-            },
-            "zengZhiJiuYuan": {
-                "baoE": 0,
-                "baoFei": 0
-            },
-            "zengZhiAnJian": {
-                "zengZhiAnJianJson": "",
-                "baoE": 0,
-                "baoFei": 0
-            },
-            "zengZhiDaiJia": {
-                "baoE": 0,
-                "baoFei": 0
-            },
-            "zengZhiSongJian": {
-                "zengZhiSongJianJson": "",
-                "baoE": 0,
-                "baoFei": 0
-            },
-            "cheLunSunShi": {
-                "baoE": 0,
-                "baoFei": 0
-            },
-            "faDongJiSunHuaiChuWai": {
-                "baoE": 0,
-                "baoFei": 0
-            },
-            "mianPeiCheSun": {
-                "baoE": 0,
-                "baoFei": 0
-            },
-            "mianPeiSanZhe": {
-                "baoE": 0,
-                "baoFei": 0
-            },
-            "mianPeiSiJi": {
-                "baoE": 0,
-                "baoFei": 0
-            },
-            "mianPeiChengKe": {
-                "baoE": 0,
-                "baoFei": 0
-            },
-            "jingShenSanZhe": {
-                "baoE": 0,
-                "baoFei": 0
-            },
-            "jingShenSiJi": {
-                "baoE": 0,
-                "baoFei": 0
-            },
-            "jingShenChengKe": {
-                "baoE": 0,
-                "baoFei": 0
-            },
-            "xiuLiBuChang": {
-                "days": 0,
-                "xiShu": 0,
-                "baoE": 0,
-                "baoFei": 0
-            },
-            "sanZheJieJiaRi": {
-                "baoE": 0,
-                "baoFei": 0
-            }
-        }
-    },
-    "quoteInfo": {
-        "bizStartDateTime": "2021/05/05 00:00:00",
-        "forceStartDateTime": "2021/05/05 00:00:00",
-        "selectBF": 1,
-        "quoteSource": [
-            4
-        ],
-        "submitSource": [
-
-        ],
-        "cityCode": 8,
-        "quotePlan": 0
-    },
-    "sheBeis": [
-
-    ],
-    "jiaYi": "",
-    "isSumbit": 0,
-    "isZongGai": 1,
-    "isPaFloorPrice": 0,
-    "tempRequestInfo": {
-        "discountChangeInfo": {
-
-        }
-    },
-    "multiChannels": [
-        {
-            "channelId": 42993,
-            "source": 4,
-            "channelName": "万园浩-人保车险-胡甜甜-人保车险-智能",
-            "discountChange": 0
-        }
-    ]
-}
 
 # quote_time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 # quote_url = 'https://bot.91bihu.com/carbusiness/api/v1/Renewal/SubmitQuote'
@@ -626,51 +296,6 @@ quote_body = {
 # print(result['data']['quoteResultInfos'])
 #
 
-
-# 多线程
-import threading
-
-
-def func(a):
-    print("1", a)
-    time.sleep(5)
-    print(a)
-
-
-thread = threading.Thread
-
-
-# thread(target=func('aa')).start()
-# thread(target=func('bb')).start()
-# print(threading.current_thread())
-
-# class MYThearding(threading.Thread):
-
-locks = threading.Lock()
-
-def run():
-    sum2 = 0
-
-    with locks:
-        print(datetime.datetime.now())
-        time.sleep(3)
-        for i in range(1000000):
-            sum2 += 1
-
-    print(sum2)
-
-
-thread1 = threading.Thread(target=run)
-thread2 = threading.Thread(target=run)
-thread3 = threading.Thread(target=run)
-
-thread1.start()
-thread2.start()
-thread3.start()
-#
-thread1.join()
-thread2.join()
-thread3.join()
 
 # import multiprocessing  # 导入进程模块
 # import datetime
@@ -713,27 +338,67 @@ thread3.join()
 #
 # print(distribute(['a','b','c','d','e','f','g','h','i','j']))
 from Logs.Logs import Logs
-import multiprocessing
-import pre
-def a(name):
-    Logs(name).logger.info('aaa')
-    print('aaaa')
-
-
-def b(name):
-    Logs(name).logger.info('bbb')
-    print('bbb')
-pr = pre.prec()
-def run(aa):
-    try:
-        for i in aa:
-            a1 = multiprocessing.Process(target=pr.prec,args=('AAAA',))
-            a1.start()
-    except Exception:
-        print('异常')
-    # b1 = multiprocessing.Process(target=b,args=('BBB',),name='BBB')
-    #
-    # b1.start()
-
+# import multiprocessing
+# import pre
+#
+#
+# class asd():
+#     def __init__(self):
+#         print('asd')
+#     def a(self):
+#         print('a')
+#
+#
+#
+# class dda(pre.aa):
+#     # def __init__(self):
+#     #     print('dda')
+#     def a(self,name,age,sex):
+#         time.sleep(3)
+#         print(name,age,sex)
+#     def b(self):
+#         multiline = []
+#         for i in range(2):
+#             self.bb = multiprocessing.Process(target=self.a,args=('哈哈',21,'未知'))
+#             self.bb.start()
+#             multiline.append(self.bb)
+#         for y in multiline:
+#              y.join()
+#
+#
 # if __name__ == '__main__':
-    # run([a])
+#     d = dda()
+#     d.b()
+
+import xlrd
+
+
+
+def read_excel(path,sheetName):
+    # 打开文件
+    workbook = xlrd.open_workbook(path)
+    # 获取所有sheet
+    sheet_list = workbook.sheet_names()
+    sheet_data = workbook.sheet_by_name(sheetName)
+    row_value = sheet_data.row_values(0)
+    row = sheet_data.nrows
+    col = sheet_data.ncols
+
+    list = []
+
+
+    for i in range(1,row):
+        data = {}
+        for y in range(col):
+            a =sheet_data.cell(i,y).ctype
+            vs = sheet_data.cell_value(i,y)
+            print(type(vs),a)
+            data[row_value[y]]= vs
+        list.append(data)
+    print(list)
+
+
+if __name__ == '__main__':
+    path = os.path.dirname(__file__) + '/util/test.xls'
+    print(path)
+    read_excel(path,'Sheet1')
