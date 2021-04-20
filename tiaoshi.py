@@ -370,7 +370,6 @@ def Quote(quoteinfo):
 # tos = json.loads(to)
 # print(type(tos))
 from util import Requests_util
-
 r = Requests_util.Requests_util()
 quote_body = {
     "buid": 601151202,
