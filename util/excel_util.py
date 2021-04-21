@@ -7,7 +7,7 @@ xlrd中单元格的数据类型
 成我们想要的数据类型
 0 empty,1 string, 2 number, 3 date, 4 boolean, 5 error
 '''
-class ExcelData():
+class ExcelData:
     # 初始化方法
     def __init__(self, data_path, sheetname):
         #定义一个属性接收文件路径
@@ -56,7 +56,7 @@ class ExcelData():
         # 返回从excel中获取到的数据：以列表存字典的形式返回
         return datas
 if __name__ == "__main__":
-    data_path = "./ttt.xlsx"
+    data_path = "./test.xls"
     sheetname = "Sheet1"
     get_data = ExcelData(data_path, sheetname)
     datas = get_data.readExcel()

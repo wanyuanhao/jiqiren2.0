@@ -1,19 +1,20 @@
 # -*-coding:utf-8
-from util.Requests_util import Requests_util
+from util.request_util import RequestsUtil
 import configparser, os, json, time, datetime
-from Logs import Logs
-from util.MYdb import MYdb
+from logs import logs
+from util.mysql_db import MYdb
 import threading
 
 
-class Interface_quote:
+class InterfaceQuote:
     lock = threading.Lock()
+
     def __init__(self):
         config = configparser.ConfigParser()
         path = os.path.dirname(__file__)
         config.read(path + '\..\..\config\config.ini', encoding='utf-8')
-        self.logger = Logs.Logs().logger
-        self.r = Requests_util()
+        self.logger = logs.Logs().logger
+        self.r = RequestsUtil()
         self.urls = config.get('host', 'url')
         self.headers = json.loads(config.get('headers', 'token'))
         self.Mydb = MYdb()
@@ -385,8 +386,8 @@ class Interface_quote:
                             self.logger.info(f'{license}报价请求通过')
                             self.logger.info(f'休眠60秒获取【{license}】报价结果')
                             time.sleep(60)
-                            with Interface_quote.lock:
-                                self.obtain_quote(buid, licenseNo, SendQuoteTime,header)
+                            with InterfaceQuote.lock:
+                                self.obtain_quote(buid, licenseNo, SendQuoteTime, header)
                                 time.sleep(1)
                         else:
                             self.logger.info(f'{licenseNo}报价请求失败：{quote_result}')
@@ -448,8 +449,8 @@ class Interface_quote:
             sql = f"insert into quote_result(licenseNo,response) value(\"{licenseNo}\",\"{e}\")"
             self.Mydb.execute(sql)
 
-    def obtain_quote(self, buid, licenseNo, sendTime,header):
-        try :
+    def obtain_quote(self, buid, licenseNo, sendTime, header):
+        try:
             url = 'https://bot.91bihu.com/carbusiness/api/v1/Renewal/GetQuote'
             data = {"buid": buid}
             self.logger.info(f'{licenseNo}获取报价结果')
@@ -482,12 +483,16 @@ class Interface_quote:
             self.logger.error('obtain_quote执行异常', f'{e}')
             return self.quote_parser([False, f'obtain_quote执行异常:{e}', licenseNo])
 
+    def insert_excel(self):
+        pass
+
+
 
 if __name__ == '__main__':
     config = configparser.ConfigParser()
     path = os.path.dirname(__file__)
     config.read(path + '\..\..\config\config.ini', encoding='utf-8')
     header = json.loads(config.get('headers', 'token'))
-    i = Interface_quote()
+    i = InterfaceQuote()
     # z1 ="[{'jiaYiTotal': None, 'jiaYiSeatCount': 0, 'xianZhong': {'buJiMianFuJiaTotalAmount': 0.0, 'cheSun': {'buJiMianBaoFei': 0.0, 'buJiMian': 1.0, 'depreciationPrice': 0.0, 'negotiatedPrice': 0.0, 'chesunShow': 70200.2, 'baoE': 70200.2, 'baoFei': 759.24}, 'sanZhe': {'buJiMian': 1.0, 'buJiMianBaoFei': 0.0, 'baoE': 1000000.0, 'baoFei': 528.63}, 'siJi': {'buJiMian': 0.0, 'buJiMianBaoFei': 0.0, 'baoE': 0.0, 'baoFei': 0.0}, 'chengKe': {'buJiMian': 0.0, 'buJiMianBaoFei': 0.0, 'baoE': 0.0, 'baoFei': 0.0}, 'daoQiang': {'buJiMian': 0.0, 'buJiMianBaoFei': 0.0, 'baoE': 0.0, 'baoFei': 0.0}, 'huaHen': {'buJiMian': 0.0, 'buJiMianBaoFei': 0.0, 'baoE': 0.0, 'baoFei': 0.0}, 'boLi': {'baoE': 0.0, 'baoFei': 0.0}, 'ziRan': {'buJiMian': 0.0, 'buJiMianBaoFei': 0.0, 'baoE': 0.0, 'baoFei': 0.0}, 'sheShui': {'buJiMian': 0.0, 'buJiMianBaoFei': 0.0, 'baoE': 0.0, 'baoFei': 0.0}, 'sanFangTeYue': {'baoE': 0.0, 'baoFei': 0.0}, 'xiuLiChang': {'xiLiChangNumber': 0.0, 'baoE': 0.0, 'baoFei': 0.0}, 'sheBei': {'buJiMian': 0.0, 'buJiMianBaoFei': 0.0, 'baoE': 0.0, 'baoFei': 0.0}, 'sanZheJieJiaRi': {'baoE': 0.0, 'baoFei': 0.0}, 'xiuLiBuChang': {'days': 0, 'xiShu': 0.0, 'baoE': 0.0, 'baoFei': 0.0}, 'forceTotal': 0.0, 'taxTotal': 0.0, 'bizTotal': 0.0, 'yongYaoSanZhe': {'baoE': 0.0, 'baoFei': 0.0}, 'yongYaoSiJi': {'baoE': 0.0, 'baoFei': 0.0}, 'yongYaoChengKe': {'baoE': 0.0, 'baoFei': 0.0}, 'zengZhiJiuYuan': {'baoE': 0.0, 'baoFei': 0.0}, 'zengZhiAnJian': {'zengZhiAnJianJson': '', 'baoE': 0.0, 'baoFei': 0.0}, 'zengZhiDaiJia': {'baoE': 0.0, 'baoFei': 0.0}]"
     # i.update_result('AAAAA',1.2,3.1,z1,True,z1)

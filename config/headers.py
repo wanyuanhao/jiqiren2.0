@@ -1,9 +1,9 @@
-from util.Requests_util import Requests_util
+from util.request_util import RequestsUtil
 import configparser
 import os,json
-from Logs import Logs
+from logs import logs
 
-r = Requests_util()
+r = RequestsUtil()
 # 找到配置文件路径
 path = os.path.dirname(__file__)
 # 把读取配置的类包赋值
@@ -13,7 +13,7 @@ configs.read(path + '\config.ini', encoding='utf-8')
 # 读取配置文件的指定配置
 users = configs.get('host', 'user')
 urls = configs.get('host', 'url')
-logger = Logs.Logs().logger
+logger = logs.Logs().logger
 
 
 class Headers:

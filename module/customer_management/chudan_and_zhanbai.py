@@ -1,20 +1,20 @@
-from util.Requests_util import Requests_util
+from util.request_util import RequestsUtil
 # from config.Headers import Headers
 import datetime
 import os, configparser,json
-from Logs import Logs
+from logs import logs
 
 
 # 出单、战败列表查询
-class chudan_zhanbai:
+class ChudanZhanbai:
     def __init__(self):
         config = configparser.ConfigParser()
         path = os.path.dirname(__file__)
         config.read(path + '..\..\..\config\config.ini', encoding='utf-8')
-        self.logger = Logs.Logs().logger
+        self.logger = logs.Logs().logger
         self.headers = json.loads(config.get('headers', 'token'))
         self.urls = config.get('host', 'url')
-        self.r = Requests_util()
+        self.r = RequestsUtil()
 
     def query_chudan(self,headers ,todaytime):
         url = self.urls+'/carbusiness/api/v1/customer/quotationReceiptList'

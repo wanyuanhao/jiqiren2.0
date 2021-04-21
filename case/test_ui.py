@@ -10,7 +10,7 @@ driver.implicitly_wait(5)
 driver.find_element_by_id("userName").send_keys("niepan45")
 driver.find_element_by_id("Password").send_keys("91bihu.com")
 sleep(8)
-class Test_Case_ui(unittest.TestCase):
+class TestCaseUI(unittest.TestCase):
     @classmethod
     def tearDownClass(cls):
         driver.quit()

@@ -1,9 +1,9 @@
 # -*-conding:utf-8
-from util.Requests_util import Requests_util
+from util.request_util import RequestsUtil
 # from config.Headers import Headers
 import datetime, json
 import os, configparser
-from Logs import Logs
+from logs import logs
 # 后引入的包，有的方法里面存在time所以改名为times
 import time as times
 
@@ -14,8 +14,8 @@ class CustomerList:
         conf = configparser.ConfigParser()
         path = os.path.dirname(__file__)
         conf.read(path + '..\..\..\config\config.ini', encoding='utf-8')
-        self.logger = Logs.Logs().logger
-        self.r = Requests_util()
+        self.logger = logs.Logs().logger
+        self.r = RequestsUtil()
         self.urls = conf.get('host', 'url')
 
     # 根据车牌查询是否已在客户列表
@@ -400,7 +400,7 @@ class CustomerList:
         count = result['data']
         return [len(count), result]
 
-    def shaixuan_baojiachenggong(self, headers):
+    def shai_xuan_bao_jia_cheng_gong(self, headers):
         '筛选报价成功数据'
         self.logger.info('筛选报价成功数据')
         url = self.urls + '/carbusiness/api/v1/customer/querylist'
@@ -428,7 +428,7 @@ class CustomerList:
             self.logger.info(f'无报价历史：{result}')
             return False
 
-    def qiehuan_quote_lishi(self, id, headers):
+    def qie_huan_quote_lishi(self, id, headers):
         '根据报价历史id切换报价历史'
         self.logger.info('根据报价历史id切换报价历史')
         url = self.urls + '/carbusiness/api/v1/Renewal/GetQuoteRecord'
