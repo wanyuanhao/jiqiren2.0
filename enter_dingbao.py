@@ -1,11 +1,11 @@
 # -*- encoding:utf-8 -*-
-from config.Headers import Headers
-from util.Requests_util import Requests_util
+from config.headers import Headers
+from util.requestsutil import RequestsUtil
 
 # 循环录入定保信息
 # 筛选获取有微信好友的buid
 headers = Headers().tokens('pyq123456')
-r = Requests_util()
+r = RequestsUtil()
 # count是获取客户列表的数据量
 count = 50
 url = 'https://bot.91bihu.com/carbusiness/api/v1/customer/querylist'

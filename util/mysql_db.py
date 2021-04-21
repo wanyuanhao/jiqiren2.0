@@ -1,6 +1,6 @@
 import pymysql
 from warnings import filterwarnings
-from Logs.Logs import Logs
+from logs.logs import Logs
 import threading
 filterwarnings("ignore", category=pymysql.Warning)
 

@@ -6,14 +6,14 @@ import os
 import time
 
 
-class Logs(object):
+class Logs:
 
     def __init__(self, class_name=None):
         self.class_name = class_name
         day = time.strftime("%Y-%m-%d_%H")
         file_dir = os.path.dirname(__file__)
-        self.mkdir(file_dir + '/LogInfo/')
-        file = file_dir + f'/LogInfo/{day}.log'
+        self.mkdir(file_dir + '/log_Info/')
+        file = file_dir + f'/log_Info/{day}.log'
         self.logger = logging.Logger(self.class_name)
         self.logger.setLevel(logging.INFO)
         self.logfile = logging.FileHandler(file, encoding='utf-8')

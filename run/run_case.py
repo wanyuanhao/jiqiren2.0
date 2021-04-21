@@ -3,13 +3,13 @@ import os
 import HTMLTestRunner
 import sender_mail
 import datetime
-from config.Headers import Headers
-from Logs import Logs
+from config.headers import Headers
+from logs import logs
 
 
 def run_test_case():
     path = os.path.dirname(os.path.dirname(__file__))
-    result = unittest.defaultTestLoader.discover(path + "/case", pattern="TestCase.py", top_level_dir=None)
+    result = unittest.defaultTestLoader.discover(path + "/case", pattern="test_case.py", top_level_dir=None)
     return result
 
 
@@ -22,7 +22,7 @@ def file_dir(path):
 
 
 if __name__ == '__main__':
-    logger = Logs.Logs('run_case').logger
+    logger = logs.Logs('run_case').logger
     logger.info('登录账户获取touken')
     Headers.token_update_config('wanyuanhao')
     times = datetime.datetime.now()
@@ -45,7 +45,7 @@ if __name__ == '__main__':
 
     # 邮件中添加日志文件
     log_path = os.path.dirname(__file__)
-    log_file = open(f"../Logs/LogInfo/{times.strftime('%Y-%m-%d_%H')}.log", "rb")
+    log_file = open(f"../logs/log_info/{times.strftime('%Y-%m-%d_%H')}.log", "rb")
     log_report = log_file.read()
     log_file.close()
 

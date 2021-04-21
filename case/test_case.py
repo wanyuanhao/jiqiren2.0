@@ -1,13 +1,13 @@
 # -*- coding:utf-8
 import unittest
-from module.customer_management.CustomerList import CustomerList
-from module.customer_management.chudan_and_zhanbai import chudan_zhanbai
-from module.customer_management.Interface_quote import Interface_quote
+from module.customer_management.customer_list import CustomerList
+from module.customer_management.chudan_and_zhanbai import ChudanZhanbai
+from module.customer_management.Interface_quote import InterfaceQuote
 import configparser
 import os,json
-from config.Headers import Headers
-from Logs import Logs
-from module.workpanel.WorkPanel import WorkPanel
+from config.headers import Headers
+from logs import logs
+from module.work_panel.work_panel import WorkPanel
 import datetime
 from time import sleep
 
@@ -16,15 +16,15 @@ class TestCase(unittest.TestCase):
     # 调登录接口拿到token
     @classmethod
     def setUpClass(cls):
-        cls.logger = Logs.Logs().logger
+        cls.logger = logs.Logs().logger
         conf = configparser.ConfigParser()
         '''读取配置文件'''
         path = os.path.join(os.getcwd(), '..\config\config.ini')
         conf.read(path, encoding='utf-8')  # 文件路径
         cls.licenseno = conf.get("baojia", "licenseno")  # 获取配置文件指定的值
         cls.city = conf.get("baojia", "city")
-        cls.xinzeng = Interface_quote()
-        cls.chudan = chudan_zhanbai()
+        cls.xinzeng = InterfaceQuote()
+        cls.chudan = ChudanZhanbai()
         cls.customer = CustomerList()
         cls.headers = json.loads(conf.get('headers', 'token'))
         cls.urls = conf.get('host', 'url')
@@ -72,7 +72,7 @@ class TestCase(unittest.TestCase):
     def test_case03(self):
         '校验报价成功的数据是否有报价历史'
         self.logger.info('➤➤➤test_case03：校验报价成功的数据是否有报价历史')
-        result = self.customer.shaixuan_baojiachenggong(self.headers)
+        result = self.customer.shai_xuan_bao_jia_cheng_gong(self.headers)
         # 判断结果是否为真
         self.assertTrue(result)
         self.logger.info(f"使用{result['data'][0]['buid']}获取报价历史，车牌：{result['data'][0]['licenseNo']}")
@@ -83,7 +83,7 @@ class TestCase(unittest.TestCase):
     def test_case04(self):
         '校验切换报价历史是否成功'
         self.logger.info('➤➤➤test_case04：校验切换报价历史是否成功')
-        result = self.customer.shaixuan_baojiachenggong(self.headers)
+        result = self.customer.shai_xuan_bao_jia_cheng_gong(self.headers)
         # 判断结果是否为真
         self.assertTrue(result)
         for index in range(len(result['data'])):
@@ -94,7 +94,7 @@ class TestCase(unittest.TestCase):
                 if len(lishi_result['data']) > 1:
                     id = lishi_result['data'][1]['id']
                     time1 = lishi_result['data'][1]['quoteTime']
-                    lishi = self.customer.qiehuan_quote_lishi(id, self.headers)
+                    lishi = self.customer.qie_huan_quote_lishi(id, self.headers)
                     time = lishi['data']['quetoTime']
                     print(time, time1)
                     self.assertEqual(time, time1)

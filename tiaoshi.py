@@ -2,12 +2,12 @@ import configparser
 import datetime
 import os
 import unittest
-from module.customer_management.CustomerList import CustomerList
+from module.customer_management.customer_list import CustomerList
 import sys
 from urllib3 import encode_multipart_formdata
 import requests
 from requests_toolbelt import MultipartEncoder
-from module.customer_management.CustomerList import CustomerList
+from module.customer_management.customer_list import CustomerList
 import json, time
 
 # # 集合
@@ -337,7 +337,7 @@ import json, time
 #
 #
 # print(distribute(['a','b','c','d','e','f','g','h','i','j']))
-from Logs.Logs import Logs
+from logs.logs import Logs
 # import multiprocessing
 # import pre
 #

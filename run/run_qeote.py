@@ -1,18 +1,18 @@
 import multiprocessing
-from module.customer_management.Interface_quote import Interface_quote
+from module.customer_management.Interface_quote import InterfaceQuote
 import configparser, os, json
 import threading
-from Logs.Logs import Logs
+from logs.logs import Logs
 import time
 
 
 class RunQuote:
 
     def __init__(self):
-        self.interface = Interface_quote()
+        self.interface = InterfaceQuote()
         self.logger = Logs().logger
 
-    def avg(self, List):
+    def list_avg(self, List):
         if len(List) >= 4:
             n = len(List) // 4
             Tail = len(List) % 4
@@ -30,7 +30,7 @@ class RunQuote:
             if Licenses:
                 # 把一个大列表拆分成小列表
                 self.logger.info('拆成4个一组的列表')
-                list_license = self.avg(Licenses)
+                list_license = self.list_avg(Licenses)
                 self.logger.info(f'拆分结果：{list_license}')
                 str_threads = []
                 for i in list_license:
@@ -44,7 +44,9 @@ class RunQuote:
                             threads.append(self.thread)
                         # 等待上一轮报价执行结束
                         self.logger.info(f'等待报价进程结束：{i}')
-                        threads[0].join(),threads[1].join(),threads[2].join(),threads[3].join()
+                        for thread in threads:
+                            thread.join()
+                        # threads[0].join(),threads[1].join(),threads[2].join(),threads[3].join()
                     else:
                         self.thread = threading.Thread(target=self.interface.quote,
                                                        args=(i, headers, quote_source, city))
@@ -74,8 +76,8 @@ if __name__ == '__main__':
     headers = json.loads(conf.get('headers', 'token'))
     MyQuote = RunQuote()
     # licenseNo = ['苏A8VZ66', '苏A9D0V7', '苏AQ917W', '苏ABJ126', '苏AV729T', '苏A199CJ', '苏A29C8T', '苏A2R2J0', '苏A9D0V7']
-    licenseNo = ['苏AE8A52', '苏AW456P', '苏AY596L', '苏AY621K', '苏AB5B50', '苏A80Z0L', '苏A1B26Z', '苏A76D0U', '苏A6U28S']
+    licenseNo = ['苏AE8A52', '苏AW456P', '苏AY596L', '苏A6U28S']
     # 多线程
-    MyQuote.quote_multiline(licenseNo, 8, headers=headers, quote_source=4)
+    MyQuote.quote_multiline(['苏A6U28S'], 8, headers=headers, quote_source=4)
     # 单线程
     # MyQuote.quote_one(['苏A8VZ66'], 8, headers=headers, quote_source=1)
