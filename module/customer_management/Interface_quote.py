@@ -4,6 +4,7 @@ import configparser, os, json, time, datetime
 from logs import logs
 from util.mysql_db import MYdb
 import threading
+import xlwt
 
 
 class InterfaceQuote:
@@ -483,9 +484,19 @@ class InterfaceQuote:
             self.logger.error('obtain_quote执行异常', f'{e}')
             return self.quote_parser([False, f'obtain_quote执行异常:{e}', licenseNo])
 
-    def insert_excel(self):
-        pass
+    def insert_excel(self, tab_name,content_list, report_name, sheet_name):
 
+        workbook = xlwt.Workbook(encoding='utf-8')
+        worksheet = workbook.add_sheet(sheet_name)
+        for x in range(len(tab_name)):
+            worksheet.write(0,x,label = f"{tab_name[x]}")
+            workbook.save(f'{report_name}.xls')
+        for i in range(len(content_list)):
+            content = content_list[i]
+            for y in range(len(content)):
+                worksheet.write(i+1, y, label=f"{content[y]}")
+                # 保存
+                workbook.save(f'{report_name}.xls')
 
 
 if __name__ == '__main__':
@@ -494,5 +505,8 @@ if __name__ == '__main__':
     config.read(path + '\..\..\config\config.ini', encoding='utf-8')
     header = json.loads(config.get('headers', 'token'))
     i = InterfaceQuote()
-    # z1 ="[{'jiaYiTotal': None, 'jiaYiSeatCount': 0, 'xianZhong': {'buJiMianFuJiaTotalAmount': 0.0, 'cheSun': {'buJiMianBaoFei': 0.0, 'buJiMian': 1.0, 'depreciationPrice': 0.0, 'negotiatedPrice': 0.0, 'chesunShow': 70200.2, 'baoE': 70200.2, 'baoFei': 759.24}, 'sanZhe': {'buJiMian': 1.0, 'buJiMianBaoFei': 0.0, 'baoE': 1000000.0, 'baoFei': 528.63}, 'siJi': {'buJiMian': 0.0, 'buJiMianBaoFei': 0.0, 'baoE': 0.0, 'baoFei': 0.0}, 'chengKe': {'buJiMian': 0.0, 'buJiMianBaoFei': 0.0, 'baoE': 0.0, 'baoFei': 0.0}, 'daoQiang': {'buJiMian': 0.0, 'buJiMianBaoFei': 0.0, 'baoE': 0.0, 'baoFei': 0.0}, 'huaHen': {'buJiMian': 0.0, 'buJiMianBaoFei': 0.0, 'baoE': 0.0, 'baoFei': 0.0}, 'boLi': {'baoE': 0.0, 'baoFei': 0.0}, 'ziRan': {'buJiMian': 0.0, 'buJiMianBaoFei': 0.0, 'baoE': 0.0, 'baoFei': 0.0}, 'sheShui': {'buJiMian': 0.0, 'buJiMianBaoFei': 0.0, 'baoE': 0.0, 'baoFei': 0.0}, 'sanFangTeYue': {'baoE': 0.0, 'baoFei': 0.0}, 'xiuLiChang': {'xiLiChangNumber': 0.0, 'baoE': 0.0, 'baoFei': 0.0}, 'sheBei': {'buJiMian': 0.0, 'buJiMianBaoFei': 0.0, 'baoE': 0.0, 'baoFei': 0.0}, 'sanZheJieJiaRi': {'baoE': 0.0, 'baoFei': 0.0}, 'xiuLiBuChang': {'days': 0, 'xiShu': 0.0, 'baoE': 0.0, 'baoFei': 0.0}, 'forceTotal': 0.0, 'taxTotal': 0.0, 'bizTotal': 0.0, 'yongYaoSanZhe': {'baoE': 0.0, 'baoFei': 0.0}, 'yongYaoSiJi': {'baoE': 0.0, 'baoFei': 0.0}, 'yongYaoChengKe': {'baoE': 0.0, 'baoFei': 0.0}, 'zengZhiJiuYuan': {'baoE': 0.0, 'baoFei': 0.0}, 'zengZhiAnJian': {'zengZhiAnJianJson': '', 'baoE': 0.0, 'baoFei': 0.0}, 'zengZhiDaiJia': {'baoE': 0.0, 'baoFei': 0.0}]"
+    tab = ["姓名","性别","年龄","入职日期"]
+    data = [["张三", "男", 21,"2012-13-15"], ["李四", "女", 18,"2021-15"], ["女警", "女", 20,"2021.10.15"]]
     # i.update_result('AAAAA',1.2,3.1,z1,True,z1)
+    times = datetime.datetime.now().strftime("%Y-%m-%d_%H")
+    i.insert_excel(tab,data, times, 'shee')
