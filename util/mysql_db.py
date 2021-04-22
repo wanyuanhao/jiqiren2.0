@@ -2,6 +2,7 @@ import pymysql
 from warnings import filterwarnings
 from logs.logs import Logs
 import threading
+
 filterwarnings("ignore", category=pymysql.Warning)
 
 
@@ -17,13 +18,16 @@ class MYdb:
         self.conn.close()
 
     def query(self, sql, fetch='all'):
-        self.cur.execute(sql)
-        if fetch == 'all':
-            result = self.cur.fetchall()
-            return result
-        else:
-            result = self.cur.fetchone()
-            return result
+        try:
+            self.cur.execute(sql)
+            if fetch == 'all':
+                result = self.cur.fetchall()
+                return result
+            else:
+                result = self.cur.fetchone()
+                return result
+        except Exception as e:
+            return f"查询数据库异常：{e}"
 
     def execute(self, sql):
         try:
@@ -47,13 +51,4 @@ class MYdb:
 
 
 if __name__ == '__main__':
-    sql = "select * from account "
-    money = 120
-    sql1 = "update account set money = money-{} where id =1".format(money)
-    sql2 = "update account set money = money+{} where id =2".format(money)
     db = MYdb()
-    result = db.execute(sql1)
-    result2 = db.execute(sql2)
-    result3 = db.query(sql)
-    print(result3)
-    db.commit()

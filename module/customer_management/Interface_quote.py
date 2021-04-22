@@ -484,19 +484,48 @@ class InterfaceQuote:
             self.logger.error('obtain_quote执行异常', f'{e}')
             return self.quote_parser([False, f'obtain_quote执行异常:{e}', licenseNo])
 
-    def insert_excel(self, tab_name,content_list, report_name, sheet_name):
+    def insert_excel(self, head_name, content_list, report_name, sheet_name):
 
         workbook = xlwt.Workbook(encoding='utf-8')
         worksheet = workbook.add_sheet(sheet_name)
-        for x in range(len(tab_name)):
-            worksheet.write(0,x,label = f"{tab_name[x]}")
+        for x in range(len(head_name)):
+            worksheet.write(0, x, label=f"{head_name[x]}")
             workbook.save(f'{report_name}.xls')
         for i in range(len(content_list)):
             content = content_list[i]
             for y in range(len(content)):
-                worksheet.write(i+1, y, label=f"{content[y]}")
+                worksheet.write(i + 1, y, label=f"{content[y]}")
                 # 保存
                 workbook.save(f'{report_name}.xls')
+
+    def insert_dict(self, content, sheet_name, excel_name):
+        try:
+            workbook = xlwt.Workbook(encoding='utf-8')
+            worksheet = workbook.add_sheet(sheet_name)
+            if len(content) and type(content) == list:
+                tab = content[0]
+                if type(tab) is dict:
+                    index = 0
+                    for y in tab.keys():
+                        worksheet.write(0, index, label=f"{y}")
+                        index += 1
+                        workbook.save(f"{excel_name}.xls")
+                # 循环列表
+                for i in range(len(content)):
+                    value_index = 0
+                    if type(content[i]) is dict:
+                        # 循环字典
+                        for data in content[i].values():
+                            if type(data) == type(datetime.datetime.now()):
+                                data = datetime.datetime.strftime(data, '%Y-%m-%d')
+                            worksheet.write(i + 1, value_index, label=f"{data}")
+                            workbook.save(f"{excel_name}.xls")
+                            value_index += 1
+                    else:
+                        return '传入参数必须为字典'
+
+        except Exception as e:
+            return f'insert_dict方法执行异常：{e}'
 
 
 if __name__ == '__main__':
@@ -505,8 +534,13 @@ if __name__ == '__main__':
     config.read(path + '\..\..\config\config.ini', encoding='utf-8')
     header = json.loads(config.get('headers', 'token'))
     i = InterfaceQuote()
-    tab = ["姓名","性别","年龄","入职日期"]
-    data = [["张三", "男", 21,"2012-13-15"], ["李四", "女", 18,"2021-15"], ["女警", "女", 20,"2021.10.15"]]
+    # tab = ["姓名","性别","年龄","入职日期"]
+    # data = [["张三", "男", 21,"2012-13-15"], ["李四", "女", 18,"2021-15"], ["女警", "女", 20,"2021.10.15"]]
     # i.update_result('AAAAA',1.2,3.1,z1,True,z1)
-    times = datetime.datetime.now().strftime("%Y-%m-%d_%H")
-    i.insert_excel(tab,data, times, 'shee')
+    # times = datetime.datetime.now().strftime("%Y-%m-%d_%H")
+    # i.insert_excel(tab,data, times, 'shee')
+    from util.mysql_db import MYdb
+
+    mydb = MYdb()
+    result = mydb.query("select licenseNo,biz_money,createTime from quote_result limit 2")
+    i.insert_dict(result, 'sheet', 'mysqldata')

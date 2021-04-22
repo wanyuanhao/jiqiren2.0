@@ -1,5 +1,4 @@
 import configparser
-import datetime
 import os
 import unittest
 from module.customer_management.customer_list import CustomerList
@@ -369,36 +368,47 @@ from logs.logs import Logs
 # if __name__ == '__main__':
 #     d = dda()
 #     d.b()
-
-import xlrd
-
-
-
-def read_excel(path,sheetName):
-    # 打开文件
-    workbook = xlrd.open_workbook(path)
-    # 获取所有sheet
-    sheet_list = workbook.sheet_names()
-    sheet_data = workbook.sheet_by_name(sheetName)
-    row_value = sheet_data.row_values(0)
-    row = sheet_data.nrows
-    col = sheet_data.ncols
-
-    list = []
-
-
-    for i in range(1,row):
-        data = {}
-        for y in range(col):
-            a =sheet_data.cell(i,y).ctype
-            vs = sheet_data.cell_value(i,y)
-            print(type(vs),a)
-            data[row_value[y]]= vs
-        list.append(data)
-    print(list)
-
-
-if __name__ == '__main__':
-    path = os.path.dirname(__file__) + '/util/test.xls'
-    print(path)
-    read_excel(path,'Sheet1')
+# ·················································
+# import xlrd
+#
+#
+#
+# def read_excel(path,sheetName):
+#     # 打开文件
+#     workbook = xlrd.open_workbook(path)
+#     # 获取所有sheet
+#     sheet_list = workbook.sheet_names()
+#     sheet_data = workbook.sheet_by_name(sheetName)
+#     row_value = sheet_data.row_values(0)
+#     row = sheet_data.nrows
+#     col = sheet_data.ncols
+#
+#     list = []
+#
+#
+#     for i in range(1,row):
+#         data = {}
+#         for y in range(col):
+#             a =sheet_data.cell(i,y).ctype
+#             vs = sheet_data.cell_value(i,y)
+#             print(type(vs),a)
+#             data[row_value[y]]= vs
+#         list.append(data)
+#     print(list)
+#
+#
+# if __name__ == '__main__':
+#     path = os.path.dirname(__file__) + '/util/test.xls'
+#     print(path)
+#     read_excel(path,'Sheet1')
+# ```````````````````````````````````````````````````````````````````````````````````````````
+from util.mysql_db import MYdb
+import datetime
+mydb = MYdb()
+def pull():
+    sql  = "select id,licenseNo,createTime from quote_result where id = 137"
+    result = mydb.query(sql)
+    return result
+result = pull()
+print(result)
+date = result[0]['createTime']
