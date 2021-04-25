@@ -1,5 +1,5 @@
 # -*-coding:utf-8
-from util.requestsutil import RequestsUtil
+from util.requests_util import RequestsUtil
 import configparser, os, json, time, datetime
 from logs import logs
 from util.mysql_db import MYdb
@@ -543,4 +543,5 @@ if __name__ == '__main__':
 
     mydb = MYdb()
     result = mydb.query("select licenseNo,biz_money,createTime from quote_result limit 2")
-    i.insert_dict(result, 'sheet', 'mysqldata')
+    # i.insert_dict(result, 'sheet', 'mysqldata')
+    print(result)

@@ -1,4 +1,4 @@
-from util.requestsutil import RequestsUtil
+from util.requests_util import RequestsUtil
 # from config.Headers import Headers
 import datetime
 import os, configparser,json

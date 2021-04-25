@@ -1,6 +1,6 @@
 # -*- encoding:utf-8 -*-
 from config.headers import Headers
-from util.requestsutil import RequestsUtil
+from util.requests_util import RequestsUtil
 
 # 循环录入定保信息
 # 筛选获取有微信好友的buid

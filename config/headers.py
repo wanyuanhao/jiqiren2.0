@@ -1,4 +1,4 @@
-from util.requestsutil import RequestsUtil
+from util.requests_util import RequestsUtil
 import configparser
 import os,json
 from logs import logs

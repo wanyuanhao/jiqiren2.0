@@ -337,6 +337,8 @@ import json, time
 #
 # print(distribute(['a','b','c','d','e','f','g','h','i','j']))
 from logs.logs import Logs
+
+
 # import multiprocessing
 # import pre
 #
@@ -402,13 +404,53 @@ from logs.logs import Logs
 #     print(path)
 #     read_excel(path,'Sheet1')
 # ```````````````````````````````````````````````````````````````````````````````````````````
-from util.mysql_db import MYdb
-import datetime
-mydb = MYdb()
-def pull():
-    sql  = "select id,licenseNo,createTime from quote_result where id = 137"
-    result = mydb.query(sql)
-    return result
-result = pull()
-print(result)
-date = result[0]['createTime']
+
+
+# for i in range(len(list1)):
+#     index = i
+#     for y in range(i + 1, len(list1)):
+#         if list1[index] > list1[y]:
+#             index = y
+#     list1[i], list1[index] = list1[index], list1[i]
+# print(list1)
+#
+# for i in range(len(list1)):
+#     for y in range(len(list1) - 1):
+#         if list1[y] > list1[y + 1]:
+#             list1[y], list1[y + 1] = list1[y + 1], list1[y]
+# print(list1)
+
+
+# lis = [i for i in range(30)]
+# result = avg_list(lis)
+# print(result)
+
+
+#
+# s = [[] for i in range(3)]
+# print(s)
+# dat = [ i for i in range(30)]
+# # print(group_list(dat,4))
+
+# 把传入的参数平均分配 1、计算参数长度 2、用长度整除人得到平均数 3、循环人，给没人分算出的平均数
+
+def group_avg(data_list,numbers):
+    if len(data_list) >= numbers:
+        res_list = []
+        # 平均分配数
+        res = len(data_list)//numbers
+        y = len(data_list)% numbers
+        index1 = 0
+        index2 = res
+        for i in range(numbers):
+            res_list.append(data_list[index1:index2])
+            index1 = index2
+            index2+=res
+        if y > 0:
+            res_list.append(data_list[index1:])
+        return res_list
+    else:
+        return '数据不够分配'
+
+print(group_avg([i for i in range(8)],4))
+
