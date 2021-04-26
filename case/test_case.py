@@ -19,7 +19,7 @@ class TestCase(unittest.TestCase):
         cls.logger = logs.Logs().logger
         conf = configparser.ConfigParser()
         '''读取配置文件'''
-        path = os.path.join(os.getcwd(), '..\config\config.ini')
+        path = os.path.dirname(os.path.dirname(__file__))+ '\config\config.ini'
         conf.read(path, encoding='utf-8')  # 文件路径
         cls.licenseno = conf.get("baojia", "licenseno")  # 获取配置文件指定的值
         cls.city = conf.get("baojia", "city")
@@ -262,7 +262,10 @@ class TestCase(unittest.TestCase):
 if __name__ == '__main__':
     print('执行Case')
     # unittest.main(verbosity=2)
-    runner = unittest.TextTestRunner(verbosity=2)
+    # runner = unittest.TextTestRunner(verbosity=2)
+    # suite = unittest.TestSuite()
+    # suite.addTest((TestCase("test_case01")))
+    # print(runner.run(suite))
     suite = unittest.TestSuite()
-    suite.addTest((TestCase("test_case01")))
-    print(runner.run(suite))
+    suite.addTest(TestCase('setUpClass'))
+    unittest.TextTestRunner().run(suite)

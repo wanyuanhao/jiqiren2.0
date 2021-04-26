@@ -78,6 +78,6 @@ if __name__ == '__main__':
     # licenseNo = ['苏A8VZ66', '苏A9D0V7', '苏AQ917W', '苏ABJ126', '苏AV729T', '苏A199CJ', '苏A29C8T', '苏A2R2J0', '苏A9D0V7']
     licenseNo = ['苏AE8A52', '苏AW456P', '苏AY596L', '苏A6U28S']
     # 多线程
-    MyQuote.quote_multiline(['苏A6U28S'], 8, headers=headers, quote_source=4)
+    MyQuote.quote_multiline(licenseNo, 8, headers=headers, quote_source=4)
     # 单线程
     # MyQuote.quote_one(['苏A8VZ66'], 8, headers=headers, quote_source=1)

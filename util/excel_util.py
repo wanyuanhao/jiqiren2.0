@@ -58,6 +58,7 @@ class ExcelData:
 if __name__ == "__main__":
     data_path = "./test.xls"
     sheetname = "Sheet1"
+    print(data_path)
     get_data = ExcelData(data_path, sheetname)
     datas = get_data.readExcel()
     print(datas)

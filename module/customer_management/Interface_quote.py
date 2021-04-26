@@ -499,6 +499,9 @@ class InterfaceQuote:
                 workbook.save(f'{report_name}.xls')
 
     def insert_dict(self, content, sheet_name, excel_name):
+        code = 0
+        data = None
+        msg = '失败'
         try:
             workbook = xlwt.Workbook(encoding='utf-8')
             worksheet = workbook.add_sheet(sheet_name)
@@ -521,11 +524,16 @@ class InterfaceQuote:
                             worksheet.write(i + 1, value_index, label=f"{data}")
                             workbook.save(f"{excel_name}.xls")
                             value_index += 1
+                            msg = '成功'
                     else:
-                        return '传入参数必须为字典'
+                        msg = '传入参数必须为字典'
 
         except Exception as e:
-            return f'insert_dict方法执行异常：{e}'
+            msg = f'insert_dict方法执行异常：{e}'
+            code = 1000
+        finally:
+            results = {'code': code, 'data': data, 'message': msg}
+            return results
 
 
 if __name__ == '__main__':
@@ -534,14 +542,4 @@ if __name__ == '__main__':
     config.read(path + '\..\..\config\config.ini', encoding='utf-8')
     header = json.loads(config.get('headers', 'token'))
     i = InterfaceQuote()
-    # tab = ["姓名","性别","年龄","入职日期"]
-    # data = [["张三", "男", 21,"2012-13-15"], ["李四", "女", 18,"2021-15"], ["女警", "女", 20,"2021.10.15"]]
-    # i.update_result('AAAAA',1.2,3.1,z1,True,z1)
-    # times = datetime.datetime.now().strftime("%Y-%m-%d_%H")
-    # i.insert_excel(tab,data, times, 'shee')
-    from util.mysql_db import MYdb
 
-    mydb = MYdb()
-    result = mydb.query("select licenseNo,biz_money,createTime from quote_result limit 2")
-    # i.insert_dict(result, 'sheet', 'mysqldata')
-    print(result)
